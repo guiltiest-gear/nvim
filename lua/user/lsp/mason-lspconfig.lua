@@ -3,4 +3,10 @@ if not status_ok then
     return
 end
 
-mason_lspconfig.setup()
+mason_lspconfig.setup{
+    ensure_installed = {
+        "sumneko_lua",
+        "clangd",
+        "marksman",
+    }
+}
