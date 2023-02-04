@@ -14,7 +14,6 @@ null_ls.setup {
         formatting.stylua,
         formatting.markdownlint,
         diagnostics.markdownlint,
-        diagnostics.luacheck,
-        formatting.clang_format
+        diagnostics.luacheck
     }
 }
