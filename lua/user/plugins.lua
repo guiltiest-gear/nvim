@@ -146,7 +146,8 @@ return packer.startup(function(use)
     use {
         'L3MON4D3/LuaSnip',
         after = 'friendly-snippets',
-        run = 'make install_jsregexp'
+        run = 'make install_jsregexp',
+        tag = "v1.*"
     }
 
     use 'rafamadriz/friendly-snippets'
