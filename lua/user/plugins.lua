@@ -174,25 +174,6 @@ return packer.startup(function(use)
     -- vim-illuminate
     use 'RRethy/vim-illuminate'
 
-    -- vim-eunuch
-    use {
-        'tpope/vim-eunuch',
-        cmd = {
-            'Remove',
-            'Delete',
-            'Move',
-            'Chmod',
-            'Mkdir',
-            'Cfind',
-            'Clocate',
-            'Lfind',
-            'Llocate',
-            'Wall',
-            'SudoWrite',
-            'SudoEdit'
-        }
-    }
-
     -- vim-cool
     use 'romainl/vim-cool'
 
