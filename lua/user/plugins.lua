@@ -174,6 +174,9 @@ return packer.startup(function(use)
     -- vim-illuminate
     use 'RRethy/vim-illuminate'
 
+    -- nvim-scrollbar
+    use 'petertriho/nvim-scrollbar'
+
     -- vim-cool
     use 'romainl/vim-cool'
 
