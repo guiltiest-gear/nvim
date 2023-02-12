@@ -88,3 +88,11 @@ map("n", "<leader>hC", ":HopChar2<CR>", opts)
 map("n", "<leader>hp", ":HopPattern<CR>", opts)
 map("n", "<leader>hl", ":HopLine<CR>", opts)
 map("n", "<leader>ha", ":HopAnywhere<CR>", opts)
+
+-- nvim-hlslens keymaps
+map("n", "n", [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
+map("n", "N", [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
+map("n", "*", [[*<Cmd>lua require('hlslens').start()<CR>]], opts)
+map("n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], opts)
+map("n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], opts)
+map("n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], opts)

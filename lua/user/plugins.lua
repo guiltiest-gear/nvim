@@ -192,6 +192,9 @@ return packer.startup(function(use)
         requires = 'kevinhwang91/promise-async'
     }
 
+    -- nvim-hlslens
+    use 'kevinhwang91/nvim-hlslens'
+
     -- neodim
     use {
         'zbirenbaum/neodim',
