@@ -114,7 +114,8 @@ local mappings = {
         c = "Hop to a character",
         C = "Hop to a bigram",
         p = "Hop to an arbitrary pattern",
-        l = "Hop to a line"
+        l = "Hop to a line",
+        a = "Hop anywhere"
     }
 }
 
