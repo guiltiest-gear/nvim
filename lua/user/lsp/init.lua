@@ -6,6 +6,6 @@ end
 require 'user.lsp.mason'
 require 'user.lsp.mason-lspconfig'
 require 'user.lsp.null-ls'
-require 'user.lsp.settings.sumneko_lua'
+require 'user.lsp.settings.lua_ls'
 require 'user.lsp.settings.marksman'
 require 'user.lsp.settings.clangd'
