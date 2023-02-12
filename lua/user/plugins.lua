@@ -180,6 +180,9 @@ return packer.startup(function(use)
     -- hop.nvim
     use 'phaazon/hop.nvim'
 
+    -- fidget.nvim
+    use 'j-hui/fidget.nvim'
+
     -- vim-cool
     use 'romainl/vim-cool'
 
