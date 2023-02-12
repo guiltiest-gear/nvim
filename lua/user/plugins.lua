@@ -186,6 +186,12 @@ return packer.startup(function(use)
     -- fidget.nvim
     use 'j-hui/fidget.nvim'
 
+    -- nvim-ufo
+    use {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async'
+    }
+
     -- vim-cool
     use 'romainl/vim-cool'
 

@@ -41,9 +41,9 @@ opt.tabstop = 4
 
 -- Code folding
 opt.foldenable = true
-opt.foldmethod = 'indent'
-opt.foldlevelstart = 10
-opt.foldnestmax = 10
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldcolumn = '1'
 
 -- Decrease update time
 opt.timeoutlen = 500
