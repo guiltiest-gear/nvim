@@ -124,6 +124,9 @@ return packer.startup(function(use)
         run = ':TSUpdate'
     }
 
+    -- hlargs.nvim
+    use 'm-demare/hlargs.nvim'
+
     -- toggleterm.nvim
     use {
         'akinsho/toggleterm.nvim',
