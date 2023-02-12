@@ -192,6 +192,12 @@ return packer.startup(function(use)
         requires = 'kevinhwang91/promise-async'
     }
 
+    -- neodim
+    use {
+        'zbirenbaum/neodim',
+        event = "LspAttach"
+    }
+
     -- vim-cool
     use 'romainl/vim-cool'
 
