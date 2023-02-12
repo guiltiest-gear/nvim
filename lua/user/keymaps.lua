@@ -80,3 +80,10 @@ map("n", "<leader>t", ":Twilight<CR>", opts)
 
 -- Jump back to alpha
 map("n", "<leader>a", ":Alpha<CR>", opts)
+
+-- Hop keymaps
+map("n", "<leader>hw", ":HopWord<CR>", opts)
+map("n", "<leader>hc", ":HopChar1<CR>", opts)
+map("n", "<leader>hC", ":HopChar2<CR>", opts)
+map("n", "<leader>hp", ":HopPattern<CR>", opts)
+map("n", "<leader>hl", ":HopLine<CR>", opts)

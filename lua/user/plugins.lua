@@ -177,6 +177,9 @@ return packer.startup(function(use)
     -- nvim-scrollbar
     use 'petertriho/nvim-scrollbar'
 
+    -- hop.nvim
+    use 'phaazon/hop.nvim'
+
     -- vim-cool
     use 'romainl/vim-cool'
 
