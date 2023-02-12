@@ -180,6 +180,15 @@ return packer.startup(function(use)
     -- hop.nvim
     use 'phaazon/hop.nvim'
 
+    -- windows.nvim
+    use {
+        'anuvyklack/windows.nvim',
+        requires = {
+            'anuvyklack/middleclass',
+            'anuvyklack/animation.nvim'
+        }
+    }
+
     -- vim-cool
     use 'romainl/vim-cool'
 
