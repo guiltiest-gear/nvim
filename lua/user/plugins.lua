@@ -201,6 +201,9 @@ return packer.startup(function(use)
         event = "LspAttach"
     }
 
+    -- colorful-winsep.nvim
+    use 'nvim-zh/colorful-winsep.nvim'
+
     -- vim-cool
     use 'romainl/vim-cool'
 
