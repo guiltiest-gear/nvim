@@ -33,3 +33,6 @@ gitsigns.setup {
         col = 1
     }
 }
+
+-- scrollbar integration
+require ('scrollbar.handlers.gitsigns').setup()
