@@ -49,10 +49,6 @@ opt.foldcolumn = '1'
 opt.timeoutlen = 500
 opt.updatetime = 200
 
--- Disable netrw
-g.loaded = 1
-g.loaded_netrwPlugin = 1
-
 -- Disable swapfile
 opt.swapfile = false
 
@@ -83,3 +79,26 @@ opt.fillchars = [[vert:|,horiz:-,eob: ]]
 
 -- Enable lazy redraw for performance
 opt.lazyredraw = true
+
+-- Disable certain builtins
+local disabled_built_ins = {
+    "netrw",
+    "netrwPlugin",
+    "netrwSettings",
+    "netrwFileHandlers",
+    "gzip",
+    "zip",
+    "zipPlugin",
+    "tar",
+    "tarPlugin",
+    "vimball",
+    "vimballPlugin",
+    "2html_plugin",
+    "logipat",
+    "getscript",
+    "getscriptPlugin"
+}
+
+for _, plugin in pairs(disabled_built_ins) do
+    g["loaded_" .. plugin] = 1
+end
