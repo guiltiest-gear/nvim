@@ -204,6 +204,9 @@ return packer.startup(function(use)
     -- colorful-winsep.nvim
     use 'nvim-zh/colorful-winsep.nvim'
 
+    -- numb.nvim
+    use 'nacro90/numb.nvim'
+
     -- vim-cool
     use 'romainl/vim-cool'
 
