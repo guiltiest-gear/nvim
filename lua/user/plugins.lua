@@ -207,6 +207,12 @@ return packer.startup(function(use)
     -- numb.nvim
     use 'nacro90/numb.nvim'
 
+    -- windows.nvim
+    use {
+        'anuvyklack/windows.nvim',
+        requires = 'anuvyklack/middleclass'
+    }
+
     -- vim-cool
     use 'romainl/vim-cool'
 
