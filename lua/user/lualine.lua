@@ -7,9 +7,8 @@ lualine.setup {
     options = {
         icons_enabled = true,
         theme = 'tokyonight',
-        component_separators = { left = '|', right = '|' },
-        section_separators = { left = '', right = '' },
-        disabled_filetypes = { "alpha", "packer", "mason" },
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
         disabled_filetypes = { "alpha", "packer", "mason", "NvimTree" },
         always_divide_middle = true,
         globalstatus = true
