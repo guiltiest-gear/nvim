@@ -60,10 +60,20 @@ return packer.startup(function(use)
     use 'windwp/nvim-autopairs'
 
     -- nvim-surround
-    use 'kylechui/nvim-surround'
+    use {
+        'kylechui/nvim-surround',
+        config = function ()
+            require('nvim-surround').setup()
+        end
+    }
 
     -- Comment.nvim
-    use 'numToStr/Comment.nvim'
+    use {
+        'numToStr/Comment.nvim',
+        config = function ()
+            require('Comment').setup()
+        end
+    }
 
     -- indent-blankline.nvim
     use 'lukas-reineke/indent-blankline.nvim'
@@ -125,7 +135,13 @@ return packer.startup(function(use)
     }
 
     -- hlargs.nvim
-    use 'm-demare/hlargs.nvim'
+    use {
+        'm-demare/hlargs.nvim',
+        requires = 'nvim-treesitter/nvim-treesitter',
+        config = function ()
+            require('hlslens').setup()
+        end
+    }
 
     -- toggleterm.nvim
     use {
@@ -171,7 +187,10 @@ return packer.startup(function(use)
     -- Twilight
     use {
         'folke/twilight.nvim',
-        cmd = 'Twilight'
+        cmd = 'Twilight',
+        config = function ()
+            require('twilight').setup()
+        end
     }
 
     -- vim-illuminate
@@ -193,7 +212,12 @@ return packer.startup(function(use)
     }
 
     -- nvim-hlslens
-    use 'kevinhwang91/nvim-hlslens'
+    use {
+        'kevinhwang91/nvim-hlslens',
+        config = function ()
+            require('hlargs').setup()
+        end
+    }
 
     -- neodim
     use {
@@ -202,15 +226,28 @@ return packer.startup(function(use)
     }
 
     -- colorful-winsep.nvim
-    use 'nvim-zh/colorful-winsep.nvim'
+    use {
+        'nvim-zh/colorful-winsep.nvim',
+        config = function ()
+            require('colorful-winsep').setup()
+        end
+    }
 
     -- numb.nvim
-    use 'nacro90/numb.nvim'
+    use {
+        'nacro90/numb.nvim',
+        config = function ()
+            require('numb').setup()
+        end
+    }
 
     -- windows.nvim
     use {
         'anuvyklack/windows.nvim',
-        requires = 'anuvyklack/middleclass'
+        requires = 'anuvyklack/middleclass',
+        config = function ()
+            require('windows').setup()
+        end
     }
 
     -- nvim-navic
