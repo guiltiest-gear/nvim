@@ -102,3 +102,14 @@ local disabled_built_ins = {
 for _, plugin in pairs(disabled_built_ins) do
     g["loaded_" .. plugin] = 1
 end
+
+-- Disable provider warnings in the healthcheck
+local disabled_providers = {
+    "node",
+    "perl",
+    "python3"
+}
+
+for _, provider in pairs(disabled_providers) do
+    g["loaded_" .. provider] = 0
+end
