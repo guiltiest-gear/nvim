@@ -97,6 +97,7 @@ g.loaded_logipat = 1
 g.loaded_getscript = 1
 g.loaded_getscriptPlugin = 1
 g.loaded_tutor_mode_plugin = 1
+g.loaded_fzf = 1
 
 -- Disable provider warnings in the healthcheck
 g.loaded_node_provider = 0
