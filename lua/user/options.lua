@@ -98,12 +98,6 @@ g.loaded_getscript = 1
 g.loaded_getscriptPlugin = 1
 
 -- Disable provider warnings in the healthcheck
-local disabled_providers = {
-    "node",
-    "perl",
-    "python3"
-}
-
-for _, provider in pairs(disabled_providers) do
-    g["loaded_" .. provider] = 0
-end
+g.loaded_node_provider = 0
+g.loaded_perl_provider = 0
+g.loaded_python3_provider = 0
