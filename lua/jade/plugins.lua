@@ -66,7 +66,10 @@ return packer.startup(function(use)
     use 'numToStr/Comment.nvim'
 
     -- indent-blankline.nvim
-    use 'lukas-reineke/indent-blankline.nvim'
+    use {
+        'lukas-reineke/indent-blankline.nvim',
+        after = 'nvim-treesitter'
+    }
 
     -- telescope.nvim
     use {
@@ -125,7 +128,10 @@ return packer.startup(function(use)
     }
 
     -- hlargs.nvim
-    use 'm-demare/hlargs.nvim'
+    use {
+        'm-demare/hlargs.nvim',
+        after = 'nvim-treesitter'
+    }
 
     -- toggleterm.nvim
     use {
@@ -171,7 +177,8 @@ return packer.startup(function(use)
     -- Twilight
     use {
         'folke/twilight.nvim',
-        cmd = 'Twilight'
+        cmd = 'Twilight',
+        after = 'nvim-treesitter'
     }
 
     -- vim-illuminate
