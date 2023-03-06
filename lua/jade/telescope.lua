@@ -8,6 +8,11 @@ telescope.setup {
         path_display = { "smart" },
         file_ignore_patterns = { ".git/" }
     },
+    pickers = {
+        find_files = {
+            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
+        }
+    },
     extensions = {
         fzf = {
             theme = "tokyonight",
