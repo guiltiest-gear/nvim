@@ -144,7 +144,8 @@ return packer.startup(function(use)
             'hrsh7th/cmp-path',
             'saadparwaiz1/cmp_luasnip',
             'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-nvim-lua'
+            'hrsh7th/cmp-nvim-lua',
+            'neovim/nvim-lspconfig'
         }
     }
 
@@ -153,11 +154,9 @@ return packer.startup(function(use)
         'L3MON4D3/LuaSnip',
         after = 'friendly-snippets',
         run = 'make install_jsregexp',
-        tag = "v1.*"
         tag = 'v1.*',
+        requires = 'rafamadriz/friendly-snippets'
     }
-
-    use 'rafamadriz/friendly-snippets'
 
     -- LSP
     use {
