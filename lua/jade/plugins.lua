@@ -1,21 +1,21 @@
 -- Automatically install packer
 local fn = vim.fn
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system({
-        "git",
-        "clone",
-        "--depth",
-        "1",
-        "https://github.com/wbthomason/packer.nvim",
+        'git',
+        'clone',
+        '--depth',
+        '1',
+        'https://github.com/wbthomason/packer.nvim',
         install_path,
     })
-    print("Installing packer close and reopen Neovim...")
+    print('Installing packer close and reopen Neovim...')
     vim.cmd([[packadd packer.nvim]])
 end
 
 -- Use a protected call so there aren't any errors on first use
-local status_ok, packer = pcall(require, "packer")
+local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
     return
 end
@@ -24,7 +24,7 @@ end
 packer.init {
     display = {
         open_fn = function()
-            return require("packer.util").float { border = "rounded" }
+            return require('packer.util').float { border = 'rounded' }
         end
     }
 }
@@ -154,6 +154,7 @@ return packer.startup(function(use)
         after = 'friendly-snippets',
         run = 'make install_jsregexp',
         tag = "v1.*"
+        tag = 'v1.*',
     }
 
     use 'rafamadriz/friendly-snippets'
@@ -202,7 +203,7 @@ return packer.startup(function(use)
     -- neodim
     use {
         'zbirenbaum/neodim',
-        event = "LspAttach"
+        event = 'LspAttach'
     }
 
     -- colorful-winsep.nvim
