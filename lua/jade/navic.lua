@@ -1,4 +1,4 @@
-local status_ok, navic = pcall(require, "nvim-navic")
+local status_ok, navic = pcall(require, 'nvim-navic')
 if not status_ok then
     return
 end
@@ -33,8 +33,8 @@ navic.setup {
         TypeParameter = ' '
     },
     highlight = false,
-    separator = " > ",
+    separator = ' > ',
     depth_limit = 0,
-    depth_limit_indicator = "..",
+    depth_limit_indicator = '..',
     safe_output = true
 }
