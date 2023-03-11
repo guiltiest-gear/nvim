@@ -12,6 +12,9 @@ map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
+-- Quit neovim
+map("n", "<leader>q", ":q<CR>", opts)
+
 -- Replace ^ and $ with B and E respectively
 map("n", "B", "^", opts)
 map("n", "E", "$", opts)

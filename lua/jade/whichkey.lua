@@ -58,6 +58,7 @@ local mappings = {
     ["a"] = "Alpha",
     ["e"] = "Explorer",
     ["t"] = "Toggle twilight",
+    ["q"] = "Quit neovim",
     f = {
         name = "Find",
         f = "Find files",
