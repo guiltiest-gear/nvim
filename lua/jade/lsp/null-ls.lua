@@ -17,6 +17,6 @@ null_ls.setup {
         formatting.markdownlint,
         diagnostics.markdownlint,
         diagnostics.luacheck,
-        code_actions.gitsigns
+        -- code_actions.gitsigns
     }
 }
