@@ -126,6 +126,9 @@ cmp.setup {
         ghost_text = true
     },
     enabled = function()
+        -- Disable nvim-cmp in a telescope prompt
+        buftype = vim.api.nvim_buf_get_option(0, 'buftype')
+        if buftype == 'prompt' then return false end
         -- Disable completion in comments
         local context = require 'cmp.config.context'
         -- Keep command mode completion enabled when cursor is in a comment
