@@ -215,7 +215,10 @@ return packer.startup(function(use)
     -- windows.nvim
     use {
         'anuvyklack/windows.nvim',
-        requires = 'anuvyklack/middleclass'
+        requires = {
+            'anuvyklack/middleclass',
+            'anuvyklack/animation.nvim'
+        }
     }
 
     -- nvim-navic
