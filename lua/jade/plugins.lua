@@ -221,12 +221,6 @@ return packer.startup(function(use)
         }
     }
 
-    -- nvim-navic
-    use {
-        'SmiteshP/nvim-navic',
-        requires = 'neovim/nvim-lspconfig'
-    }
-
     -- vim-cool
     use 'romainl/vim-cool'
 
