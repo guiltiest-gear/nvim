@@ -111,7 +111,7 @@ cmp.setup {
         { name = 'nvim_lua' },
         { name = 'luasnip' },
         { name = 'buffer' },
-        { name = 'path' },
+        { name = 'async_path' },
         { name = 'calc' }
     },
     confirm_opts = {
