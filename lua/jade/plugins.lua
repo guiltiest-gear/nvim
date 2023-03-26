@@ -37,7 +37,7 @@ return packer.startup(function(use)
     -- Have packer manage itself
     use 'wbthomason/packer.nvim'
 
-    -- nvim-lualine and nvim-web-devicons
+    -- nvim-lualine
     use {
         'nvim-lualine/lualine.nvim',
         requires = 'nvim-tree/nvim-web-devicons'
@@ -53,7 +53,7 @@ return packer.startup(function(use)
     -- gitsigns.nvim
     use 'lewis6991/gitsigns.nvim'
 
-    -- Tokyonight.nvim colorscheme
+    -- tokyonight.nvim colorscheme
     use 'folke/tokyonight.nvim'
 
     -- nvim-autopairs
@@ -146,8 +146,7 @@ return packer.startup(function(use)
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-nvim-lua',
             'hrsh7th/cmp-cmdline',
-            'hrsh7th/cmp-calc',
-            'neovim/nvim-lspconfig'
+            'hrsh7th/cmp-calc'
         }
     }
 
@@ -159,15 +158,13 @@ return packer.startup(function(use)
         requires = 'rafamadriz/friendly-snippets'
     }
 
-    -- LSP
-    use {
-        'williamboman/mason-lspconfig.nvim',
-        'neovim/nvim-lspconfig'
-    }
+    -- nvim-lspconfig
+    use 'neovim/nvim-lspconfig'
 
     -- mason.nvim
     use {
         'williamboman/mason.nvim',
+        requires = 'williamboman/mason-lspconfig.nvim',
         run = ':MasonUpdate'
     }
 
