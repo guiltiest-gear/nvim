@@ -11,9 +11,9 @@ git clone https://codeberg.org/j4de/nvim-config.git ~/.config/nvim
 ## Screenshots
 
 ![A screenshot of my neovim config first opening, with alpha-nvim
-being the startpage](https://codeberg.org/j4de/nvim/src/branch/master/assets/opening.jpg)
+being the startpage](https://codeberg.org/j4de/nvim/raw/branch/master/assets/opening.jpg)
 ![A screenshot of various files open, including init.lua, plugins.lua,
-which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/src/branch/master/assets/editing.jpg)
+which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/branch/master/assets/editing.jpg)
 
 ## Plugins
 
