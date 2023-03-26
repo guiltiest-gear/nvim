@@ -226,6 +226,9 @@ return packer.startup(function(use)
         }
     }
 
+    -- lsp_lines.nvim
+    use 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
+
     -- vim-cool
     use 'romainl/vim-cool'
 
