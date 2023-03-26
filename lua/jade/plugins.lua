@@ -161,9 +161,14 @@ return packer.startup(function(use)
 
     -- LSP
     use {
-        'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
         'neovim/nvim-lspconfig'
+    }
+
+    -- mason.nvim
+    use {
+        'williamboman/mason.nvim',
+        run = ':MasonUpdate'
     }
 
     -- null-ls.nvim
