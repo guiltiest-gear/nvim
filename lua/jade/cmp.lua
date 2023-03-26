@@ -15,13 +15,6 @@ local check_backspace = function()
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s')
 end
 
--- If you want insert `(` after select function or method item
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-cmp.event:on(
-    'confirm_done',
-    cmp_autopairs.on_confirm_done()
-)
-
 local kind_icons = {
     Text = '',
     Method = '',
