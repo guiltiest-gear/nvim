@@ -227,6 +227,12 @@ return packer.startup(function(use)
     -- lsp_lines.nvim
     use 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
 
+    -- nvim-genghis
+    use {
+        'chrisgrieser/nvim-genghis',
+        requires = 'stevearc/dressing.nvim'
+    }
+
     -- vim-cool
     use 'romainl/vim-cool'
 
