@@ -130,28 +130,7 @@ return packer.startup(function(use)
     -- hlargs.nvim
     use {
         'm-demare/hlargs.nvim',
-        requires = 'nvim-treesitter/nvim-treesitter',
-        ft = {
-            'c',
-            'cpp',
-            'cs',
-            'go',
-            'java',
-            'js',
-            'jsx',
-            'jl',
-            'lua',
-            'nix',
-            'php',
-            'py',
-            'r',
-            'rb',
-            'rs',
-            'tsx',
-            'ts',
-            'vim',
-            'zig'
-        }
+        requires = 'nvim-treesitter/nvim-treesitter'
     }
 
     -- toggleterm.nvim
