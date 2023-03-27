@@ -2,6 +2,13 @@
 
 This isn't anything all too special, just your standard config.
 
+## **IMPORTANT NOTICE**
+
+***All*** treesitter parsers will be installed because I like syntax highlighting
+wherever I can get it. Maybe edit treesitter.lua first to only enable the
+parsers you need. Hopefully you won't have bricks for brains like me and enable
+only what you need.
+
 ## Installation
 
 ```bash
