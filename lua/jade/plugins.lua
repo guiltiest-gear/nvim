@@ -232,6 +232,16 @@ return packer.startup(function(use)
         requires = {
             'stevearc/dressing.nvim',
             'hrsh7th/cmp-omni'
+        },
+        cmd = {
+            "New",
+            "Duplicate",
+            "NewFromSelection",
+            "Rename",
+            "Move",
+            "CopyFilename",
+            "CopyFilepath",
+            "Chmodx"
         }
     }
 
