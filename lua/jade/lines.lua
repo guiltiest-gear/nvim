@@ -8,3 +8,6 @@ lsp_lines.setup()
 vim.diagnostic.config({
     virtual_text = false
 })
+
+-- Toggle lsp_lines
+vim.keymap.set("", "<leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
