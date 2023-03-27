@@ -231,14 +231,14 @@ return packer.startup(function(use)
         'chrisgrieser/nvim-genghis',
         requires = 'stevearc/dressing.nvim',
         cmd = {
-            "New",
-            "Duplicate",
-            "NewFromSelection",
-            "Rename",
-            "Move",
-            "CopyFilename",
-            "CopyFilepath",
-            "Chmodx"
+            'New',
+            'Duplicate',
+            'NewFromSelection',
+            'Rename',
+            'Move',
+            'CopyFilename',
+            'CopyFilepath',
+            'Chmodx'
         }
     }
 
