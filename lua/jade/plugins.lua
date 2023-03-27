@@ -128,7 +128,10 @@ return packer.startup(function(use)
     }
 
     -- hlargs.nvim
-    use 'm-demare/hlargs.nvim'
+    use {
+        'm-demare/hlargs.nvim',
+        requires = 'nvim-treesitter/nvim-treesitter'
+    }
 
     -- toggleterm.nvim
     use {
