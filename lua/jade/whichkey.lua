@@ -118,6 +118,16 @@ local mappings = {
         p = "Hop to an arbitrary pattern",
         l = "Hop to a line",
         a = "Hop anywhere"
+    },
+    G = {
+        name = "nvim-genghis",
+        p = "Copy filepath",
+        n = "Copy filename",
+        x = "Make the current file executable",
+        r = "Rename the current file",
+        m = "Move and rename the current file",
+        c = "Create a new file",
+        d = "Duplicate the current file"
     }
 }
 
