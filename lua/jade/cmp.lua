@@ -163,3 +163,8 @@ cmp.setup.cmdline(':', {
         }
     })
 })
+
+-- Directory autocompletion in dressing.nvim
+require('cmp').setup.filetype('DressingInput', {
+    sources = cmp.config.sources { { name = 'omni' } }
+})
