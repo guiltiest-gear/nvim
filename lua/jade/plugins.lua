@@ -236,6 +236,9 @@ return packer.startup(function(use)
     -- relative-toggle.nvim
     use 'cpea2506/relative-toggle.nvim'
 
+    -- nvim-spider
+    use 'chrisgrieser/nvim-spider'
+
     -- vim-cool
     use 'romainl/vim-cool'
 
