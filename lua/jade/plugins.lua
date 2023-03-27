@@ -233,6 +233,9 @@ return packer.startup(function(use)
         requires = 'stevearc/dressing.nvim'
     }
 
+    -- relative-toggle.nvim
+    use 'cpea2506/relative-toggle.nvim'
+
     -- vim-cool
     use 'romainl/vim-cool'
 
