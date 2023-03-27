@@ -17,10 +17,6 @@ map("n", "<C-l>", "<C-w>l", opts)
 -- Quit neovim
 map("n", "<leader>q", ":qa<CR>", opts)
 
--- Replace ^ and $ with B and E respectively
-map("n", "B", "^", opts)
-map("n", "E", "$", opts)
-
 -- Resize splits with arrow keys
 map("n", "<M-l>", ":vertical resize +1<CR>", opts)
 map("n", "<M-h>", ":vertical resize -1<CR>", opts)
