@@ -146,8 +146,7 @@ return packer.startup(function(use)
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-nvim-lua',
             'hrsh7th/cmp-cmdline',
-            'hrsh7th/cmp-calc',
-            'hrsh7th/cmp-omni'
+            'hrsh7th/cmp-calc'
         }
     }
 
@@ -230,7 +229,10 @@ return packer.startup(function(use)
     -- nvim-genghis
     use {
         'chrisgrieser/nvim-genghis',
-        requires = 'stevearc/dressing.nvim'
+        requires = {
+            'stevearc/dressing.nvim',
+            'hrsh7th/cmp-omni'
+        }
     }
 
     -- relative-toggle.nvim
