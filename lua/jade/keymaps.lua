@@ -17,9 +17,6 @@ map("n", "<C-l>", "<C-w>l", opts)
 -- Quit neovim
 map("n", "<leader>q", ":qa<CR>", opts)
 
--- Toggle lsp_lines
-vmap("", "<leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
-
 -- Replace ^ and $ with B and E respectively
 map("n", "B", "^", opts)
 map("n", "E", "$", opts)
