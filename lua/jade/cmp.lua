@@ -112,7 +112,8 @@ cmp.setup {
         { name = 'luasnip' },
         { name = 'buffer' },
         { name = 'async_path' },
-        { name = 'calc' }
+        { name = 'calc' },
+        { name = 'omni' }
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
