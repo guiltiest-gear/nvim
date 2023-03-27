@@ -23,17 +23,6 @@ autocmd('TermOpen', {
     command = 'setlocal nonumber norelativenumber'
 })
 
--- Enable and disable relative numbers when entering an exiting insert mode
-autocmd('InsertEnter', {
-    pattern = '',
-    command = 'set norelativenumber'
-})
-
-autocmd('InsertLeave', {
-    pattern = '',
-    command = 'set relativenumber'
-})
-
 -- Automatically rebalance windows on vim resize
 autocmd('VimResized', {
     pattern = '',
