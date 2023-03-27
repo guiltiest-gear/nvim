@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
-local vmap = vim.keymap.set
-local genghis = require('genghis')
 
 -- Set comma as my leader key
 map("", "<Space>", "<Nop>", opts)
@@ -105,10 +103,11 @@ map("n", "<C-w>|", ":WindowsMaximizeHorizontally<CR>", opts)
 map("n", "<C-w>=", ":WindowsEqualize<CR>", opts)
 
 -- nvim-genghis keymaps
-vmap("n", "<leader>Gp", genghis.copyFilepath)
-vmap("n", "<leader>Gn", genghis.copyFilename)
-vmap("n", "<leader>Gx", genghis.chmodx)
-vmap("n", "<leader>Gr", genghis.renameFile)
-vmap("n", "<leader>Gm", genghis.moveAndRenameFile)
-vmap("n", "<leader>Gc", genghis.createNewFile)
-vmap("n", "<leader>Gd", genghis.duplicateFile)
+map("n", "<leader>Gn", ":New<CR>", opts)
+map("n", "<leader>Gd", ":Duplicate<CR>", opts)
+map("n", "<leader>GN", ":NewFromSelection<CR>", opts)
+map("n", "<leader>Gr", ":Rename<CR>", opts)
+map("n", "<leader>Gm", ":Move<CR>", opts)
+map("n", "<leader>Gf", ":CopyFilename<CR>", opts)
+map("n", "<leader>GF", ":CopyFilepath<CR>", opts)
+map("n", "<leader>Gx", ":Chmodx<CR>", opts)
