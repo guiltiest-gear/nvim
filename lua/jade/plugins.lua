@@ -229,10 +229,7 @@ return packer.startup(function(use)
     -- nvim-genghis
     use {
         'chrisgrieser/nvim-genghis',
-        requires = {
-            'stevearc/dressing.nvim',
-            'hrsh7th/cmp-omni'
-        },
+        requires = 'stevearc/dressing.nvim',
         cmd = {
             "New",
             "Duplicate",
