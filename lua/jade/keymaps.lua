@@ -1,5 +1,6 @@
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
+local vmap = vim.keymap.set
 
 -- Set comma as my leader key
 map("", "<Space>", "<Nop>", opts)
@@ -16,7 +17,7 @@ map("n", "<C-l>", "<C-w>l", opts)
 map("n", "<leader>q", ":qa<CR>", opts)
 
 -- Toggle lsp_lines
-vim.keymap.set("", "<leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
+vmap("", "<leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
 
 -- Replace ^ and $ with B and E respectively
 map("n", "B", "^", opts)
