@@ -15,6 +15,9 @@ map("n", "<C-l>", "<C-w>l", opts)
 -- Quit neovim
 map("n", "<leader>q", ":qa<CR>", opts)
 
+-- Quick write
+map("n", "<leader>w", ":w<CR>", opts)
+
 -- Resize splits with arrow keys
 map("n", "<M-l>", ":vertical resize +1<CR>", opts)
 map("n", "<M-h>", ":vertical resize -1<CR>", opts)
