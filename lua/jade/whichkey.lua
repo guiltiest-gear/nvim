@@ -60,6 +60,7 @@ local mappings = {
     ["t"] = "Toggle twilight",
     ["l"] = "Toggle lsp_lines",
     ["q"] = "Quit neovim",
+    ["w"] = "Save the current file",
     f = {
         name = "Find",
         f = "Find files",
