@@ -26,8 +26,8 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/a1918b
 
 * [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 * [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-* [alpha-nvim](https://github.com/goolord/alpha-nvim)
 * [alpha-nvim-fortune](https://github.com/BlakeJC94/alpha-nvim-fortune)
+* [alpha-nvim](https://github.com/goolord/alpha-nvim)
 * [animation.nvim](https://github.com/anuvyklack/animation.nvim)
 * [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim)
 * [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
