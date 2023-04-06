@@ -300,6 +300,12 @@ require('lazy').setup({
         event = 'LspAttach'
     },
 
+    {
+        'folke/trouble.nvim',
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        event = 'LspAttach'
+    },
+
     -- vim-cool
     {
         'romainl/vim-cool',

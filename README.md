@@ -76,6 +76,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/a1918b
 * [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 * [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 * [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+* [trouble.nvim](https://github.com/folke/trouble.nvim)
 * [twilight.nvim](https://github.com/folke/twilight.nvim)
 * [vim-cool](https://github.com/romainl/vim-cool)
 * [vim-illuminate](https://github.com/RRethy/vim-illuminate)
