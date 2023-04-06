@@ -13,7 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Plugin section
-require('lazy').setup({
+local plugins = {
     -- nvim-lualine
     {
         'nvim-lualine/lualine.nvim',
@@ -311,4 +311,27 @@ require('lazy').setup({
         'romainl/vim-cool',
         event = 'VeryLazy'
     },
-})
+}
+
+-- options section
+local opts = {
+    defaults = {
+        lazy = true
+    },
+    custom_keys = {},
+    performance = {
+        disabled_plugins = {
+            'gzip',
+            'matchit',
+            'matchparen',
+            'netrwPlugin',
+            'tarPlugin',
+            'tohtml',
+            'tutor',
+            'zipPlugin'
+        }
+    }
+}
+
+-- Load the plugins and options
+require('lazy').setup(plugins, opts)
