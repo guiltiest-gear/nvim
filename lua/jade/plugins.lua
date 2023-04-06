@@ -319,18 +319,6 @@ local opts = {
         lazy = true
     },
     custom_keys = {},
-    performance = {
-        disabled_plugins = {
-            'gzip',
-            'matchit',
-            'matchparen',
-            'netrwPlugin',
-            'tarPlugin',
-            'tohtml',
-            'tutor',
-            'zipPlugin'
-        }
-    }
 }
 
 -- Load the plugins and options
