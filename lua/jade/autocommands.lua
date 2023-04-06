@@ -29,12 +29,6 @@ autocmd('VimResized', {
     command = 'wincmd ='
 })
 
--- Automatically run :PackerSync whenever plugins.lua is modified
--- autocmd('BufWritePost', {
---     pattern = 'plugins.lua',
---     command = 'source <afile> | PackerSync'
--- })
-
 -- close man and help with just <q>
 autocmd('FileType', {
     pattern = {
