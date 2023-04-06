@@ -1,4 +1,3 @@
-require 'jade.impatient'
 require 'jade.options'
 require 'jade.keymaps'
 require 'jade.autocommands'

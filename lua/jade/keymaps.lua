@@ -1,6 +1,5 @@
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
-
 -- Set comma as my leader key
 map("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -41,12 +40,8 @@ map("n", "<leader>fR", ":Telescope registers<CR>", opts)
 map("n", "<leader>fk", ":Telescope keymaps<CR>", opts)
 map("n", "<leader>fc", ":Telescope commands<CR>", opts)
 
--- Packer commands
-map("n", "<leader>pu", ":PackerUpdate<CR>", opts)
-map("n", "<leader>pc", ":PackerCompile<CR>", opts)
-map("n", "<leader>pi", ":PackerInstall<CR>", opts)
-map("n", "<leader>ps", ":PackerSync<CR>", opts)
-map("n", "<leader>pS", ":PackerStatus<CR>", opts)
+-- Lazy keymap
+map("n", "<leader>L", ":Lazy<CR>", opts)
 
 -- Alias replace all with S
 map("n", "S", ":%s//g<Left><Left>", { noremap = true })

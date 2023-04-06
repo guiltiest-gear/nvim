@@ -61,6 +61,7 @@ local mappings = {
     ["l"] = "Toggle lsp_lines",
     ["q"] = "Quit neovim",
     ["w"] = "Save the current file",
+    ["L"] = "Open Lazy",
     f = {
         name = "Find",
         f = "Find files",
@@ -77,14 +78,6 @@ local mappings = {
         name = "Illuminate",
         t = "Toggle vim-illuminate globally",
         b = "Toggle vim-illuminate per buffer"
-    },
-    p = {
-        name = "Packer",
-        u = "Update",
-        c = "Compile",
-        i = "Install",
-        s = "Sync",
-        S = "Status"
     },
     b = {
         name = "Buffer",
