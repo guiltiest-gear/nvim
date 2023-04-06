@@ -248,6 +248,12 @@ return packer.startup(function(use)
     -- relative-toggle.nvim
     use 'cpea2506/relative-toggle.nvim'
 
+    -- nvim-navic
+    use {
+        'SmiteshP/nvim-navic',
+        requires = 'neovim/nvim-lspconfig'
+    }
+
     -- vim-cool
     use 'romainl/vim-cool'
 
