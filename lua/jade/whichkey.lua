@@ -61,7 +61,6 @@ local mappings = {
     ["l"] = "Toggle lsp_lines",
     ["q"] = "Quit neovim",
     ["w"] = "Save the current file",
-    ["L"] = "Open Lazy",
     f = {
         name = "Find",
         f = "Find files",
@@ -132,6 +131,14 @@ local mappings = {
         q = "Open up quickfix",
         l = "Open up location list",
         r = "Open up lsp references"
+    },
+    L = {
+        name = "Lazy.nvim",
+        l = "Open lazy.nvim",
+        u = "Update plugins",
+        s = "Sync plugins",
+        L = "Open the log",
+        c = "Clean plugins",
     }
 }
 
