@@ -3,6 +3,8 @@ if not status_ok then
     return
 end
 
+local navic = require('nvim-navic')
+
 lualine.setup {
     options = {
         icons_enabled = true,
@@ -16,7 +18,16 @@ lualine.setup {
     sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff' },
-        lualine_c = { 'filename' },
+        lualine_c = { 'filename',
+            {
+                function()
+                    return navic.get_location()
+                end,
+                cond = function()
+                    return navic.is_available()
+                end
+            }
+        },
         lualine_x = { 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' }
