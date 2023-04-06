@@ -61,6 +61,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/a1918b
 * [nvim-genghis](https://github.com/chrisgrieser/nvim-genghis)
 * [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens)
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+* [nvim-navic](https://github.com/SmiteshP/nvim-navic)
 * [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar)
 * [nvim-surround](https://github.com/kylechui/nvim-surround)
 * [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
