@@ -41,16 +41,28 @@ require('lazy').setup({
     },
 
     -- nvim-autopairs
-    'windwp/nvim-autopairs',
+    {
+        'windwp/nvim-autopairs',
+        event = 'VeryLazy'
+    },
 
     -- nvim-surround
-    'kylechui/nvim-surround',
+    {
+        'kylechui/nvim-surround',
+        event = 'VeryLazy'
+    },
 
     -- Comment.nvim
-    'numToStr/Comment.nvim',
+    {
+        'numToStr/Comment.nvim',
+        event = 'VeryLazy'
+    },
 
     -- indent-blankline.nvim
-    'lukas-reineke/indent-blankline.nvim',
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        event = 'VeryLazy'
+    },
 
     -- telescope.nvim
     {
@@ -64,14 +76,16 @@ require('lazy').setup({
     {
         'nvim-telescope/telescope-fzf-native.nvim',
         build = 'make',
-        dependencies = 'nvim-telescope/telescope.nvim'
+        dependencies = 'nvim-telescope/telescope.nvim',
+        lazy = true
     },
 
     -- bufferline.nvim
     {
         'akinsho/bufferline.nvim',
         dependencies = 'nvim-tree/nvim-web-devicons',
-        version = 'v3.*'
+        version = 'v3.*',
+        event = 'VeryLazy'
     },
 
     -- bufdelete.nvim
@@ -115,19 +129,22 @@ require('lazy').setup({
     -- nvim-treesitter
     {
         'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate'
+        build = ':TSUpdate',
+        event = 'VeryLazy'
     },
 
     -- hlargs.nvim
     {
         'm-demare/hlargs.nvim',
-        dependencies = 'nvim-treesitter/nvim-treesitter'
+        dependencies = 'nvim-treesitter/nvim-treesitter',
+        event = 'VeryLazy'
     },
 
     -- toggleterm.nvim
     {
         'akinsho/toggleterm.nvim',
-        version = '*'
+        version = '*',
+        event = 'VeryLazy'
     },
 
     -- cmp plugins
@@ -184,16 +201,28 @@ require('lazy').setup({
     },
 
     -- vim-illuminate
-    'RRethy/vim-illuminate',
+    {
+        'RRethy/vim-illuminate',
+        event = 'VeryLazy'
+    },
 
     -- nvim-scrollbar
-    'petertriho/nvim-scrollbar',
+    {
+        'petertriho/nvim-scrollbar',
+        event = 'VeryLazy'
+    },
 
     -- hop.nvim
-    'phaazon/hop.nvim',
+    {
+        'phaazon/hop.nvim',
+        event = 'VeryLazy'
+    },
 
     -- fidget.nvim
-    'j-hui/fidget.nvim',
+    {
+        'j-hui/fidget.nvim',
+        event = 'VeryLazy'
+    },
 
     -- nvim-ufo
     {
@@ -202,19 +231,34 @@ require('lazy').setup({
     },
 
     -- nvim-hlslens
-    'kevinhwang91/nvim-hlslens',
+    {
+        'kevinhwang91/nvim-hlslens',
+        keys = {
+            'n',
+            'N',
+            '*',
+            '#'
+        }
+    },
 
     -- neodim
     {
         'zbirenbaum/neodim',
-        event = 'LspAttach'
+        event = 'LspAttach',
+        branch = 'v2'
     },
 
     -- colorful-winsep.nvim
-    'nvim-zh/colorful-winsep.nvim',
+    {
+        'nvim-zh/colorful-winsep.nvim',
+        event = 'WinEnter'
+    },
 
     -- numb.nvim
-    'nacro90/numb.nvim',
+    {
+        'nacro90/numb.nvim',
+        event = 'VeryLazy'
+    },
 
     -- windows.nvim
     {
@@ -222,7 +266,8 @@ require('lazy').setup({
         dependencies = {
             'anuvyklack/middleclass',
             'anuvyklack/animation.nvim'
-        }
+        },
+        event = 'WinNew'
     },
 
     -- lsp_lines.nvim
@@ -248,7 +293,10 @@ require('lazy').setup({
     },
 
     -- relative-toggle.nvim
-    'cpea2506/relative-toggle.nvim',
+    {
+        'cpea2506/relative-toggle.nvim',
+        event = 'VeryLazy'
+    },
 
     -- nvim-navic
     {
@@ -258,5 +306,8 @@ require('lazy').setup({
     },
 
     -- vim-cool
-    'romainl/vim-cool',
+    {
+        'romainl/vim-cool',
+        event = 'VeryLazy'
+    },
 })
