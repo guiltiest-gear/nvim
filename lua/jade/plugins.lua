@@ -1,148 +1,139 @@
--- Automatically install packer
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-    PACKER_BOOTSTRAP = fn.system({
-        'git',
-        'clone',
-        '--depth',
-        '1',
-        'https://github.com/wbthomason/packer.nvim',
-        install_path,
+-- Install lazy.nvim automaticallypl
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
     })
-    print('Installing packer close and reopen Neovim...')
-    vim.cmd([[packadd packer.nvim]])
 end
-
--- Use a protected call so there aren't any errors on first use
-local status_ok, packer = pcall(require, 'packer')
-if not status_ok then
-    return
-end
-
--- Have packer use a popup window
-packer.init {
-    display = {
-        open_fn = function()
-            return require('packer.util').float { border = 'rounded' }
-        end
-    }
-}
+vim.opt.rtp:prepend(lazypath)
 
 -- Plugin section
-return packer.startup(function(use)
-    -- impatient.nvim
-    use 'lewis6991/impatient.nvim'
-
-    -- Have packer manage itself
-    use 'wbthomason/packer.nvim'
-
+require('lazy').setup({
     -- nvim-lualine
-    use {
+    {
         'nvim-lualine/lualine.nvim',
-        requires = 'nvim-tree/nvim-web-devicons'
-    }
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    },
 
     -- neogit
-    use {
+    {
         'TimUntersberger/neogit',
-        requires = 'nvim-lua/plenary.nvim',
+        dependencies = 'nvim-lua/plenary.nvim',
         cmd = 'Neogit'
-    }
+    },
 
     -- gitsigns.nvim
-    use 'lewis6991/gitsigns.nvim'
+    {
+        'lewis6991/gitsigns.nvim',
+        ft = 'gitcommit'
+    },
 
     -- tokyonight.nvim colorscheme
-    use 'folke/tokyonight.nvim'
+    {
+        'folke/tokyonight.nvim',
+        lazy = false,
+        priority = 1000
+    },
 
     -- nvim-autopairs
-    use 'windwp/nvim-autopairs'
+    'windwp/nvim-autopairs',
 
     -- nvim-surround
-    use 'kylechui/nvim-surround'
+    'kylechui/nvim-surround',
 
     -- Comment.nvim
-    use 'numToStr/Comment.nvim'
+    'numToStr/Comment.nvim',
 
     -- indent-blankline.nvim
-    use {
-        'lukas-reineke/indent-blankline.nvim',
-        after = 'nvim-treesitter'
-    }
+    'lukas-reineke/indent-blankline.nvim',
 
     -- telescope.nvim
-    use {
+    {
         'nvim-telescope/telescope.nvim',
-        requires = 'nvim-lua/plenary.nvim',
+        dependencies = 'nvim-lua/plenary.nvim',
         branch = '0.1.x',
         cmd = 'Telescope'
-    }
+    },
 
     -- telescope-fzf-native.nvim
-    use {
+    {
         'nvim-telescope/telescope-fzf-native.nvim',
-        run = 'make'
-    }
+        build = 'make',
+        dependencies = 'nvim-telescope/telescope.nvim'
+    },
 
     -- bufferline.nvim
-    use {
+    {
         'akinsho/bufferline.nvim',
-        requires = 'nvim-tree/nvim-web-devicons',
-        tag = 'v3.*'
-    }
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        version = 'v3.*'
+    },
 
     -- bufdelete.nvim
-    use {
+    {
         'famiu/bufdelete.nvim',
         cmd = {
             'Bdelete',
-            'Bwipeout',
-            'Bdelete!',
-            'Bwipeout!'
+            'Bwipeout'
         }
-    }
+    },
 
     -- nvim-tree.lua
-    use {
+    {
         'nvim-tree/nvim-tree.lua',
-        requires = 'nvim-tree/nvim-web-devicons'
-    }
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        cmd = 'NvimTreeToggle'
+    },
 
     -- which-key.nvim
-    use 'folke/which-key.nvim'
+    {
+        'folke/which-key.nvim',
+        keys = {
+            '<leader>',
+            '"',
+            "'",
+            '`'
+        }
+    },
 
     -- alpha-nvim
-    use {
+    {
         'goolord/alpha-nvim',
-        requires = {
+        dependencies = {
             'nvim-tree/nvim-web-devicons',
             'BlakeJC94/alpha-nvim-fortune'
-        }
-    }
+        },
+        lazy = false,
+        priority = 1500
+    },
 
     -- nvim-treesitter
-    use {
+    {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+        build = ':TSUpdate'
+    },
 
     -- hlargs.nvim
-    use {
+    {
         'm-demare/hlargs.nvim',
-        requires = 'nvim-treesitter/nvim-treesitter'
-    }
+        dependencies = 'nvim-treesitter/nvim-treesitter'
+    },
 
     -- toggleterm.nvim
-    use {
+    {
         'akinsho/toggleterm.nvim',
-        tag = '*'
-    }
+        version = '*'
+    },
 
     -- cmp plugins
-    use {
+    {
         'hrsh7th/nvim-cmp',
-        requires = {
+        dependencies = {
             'hrsh7th/cmp-buffer',
             'FelipeLema/cmp-async-path',
             'saadparwaiz1/cmp_luasnip',
@@ -150,89 +141,100 @@ return packer.startup(function(use)
             'hrsh7th/cmp-nvim-lua',
             'hrsh7th/cmp-cmdline',
             'hrsh7th/cmp-calc'
-        }
-    }
+        },
+        event = 'InsertEnter'
+    },
 
     -- Snippets
-    use {
+    {
         'L3MON4D3/LuaSnip',
-        run = 'make install_jsregexp',
-        tag = 'v1.*',
-        requires = 'rafamadriz/friendly-snippets'
-    }
+        build = 'make install_jsregexp',
+        version = 'v1.*',
+        dependencies = 'rafamadriz/friendly-snippets'
+    },
 
     -- nvim-lspconfig
-    use 'neovim/nvim-lspconfig'
+    'neovim/nvim-lspconfig',
 
     -- mason.nvim
-    use {
+    {
         'williamboman/mason.nvim',
-        requires = 'williamboman/mason-lspconfig.nvim',
-        run = ':MasonUpdate'
-    }
+        dependencies = 'williamboman/mason-lspconfig.nvim',
+        build = ':MasonUpdate',
+        cmd = {
+            'Mason',
+            'MasonInstall',
+            'MasonInstallAll',
+            'MasonUninstall',
+            'MasonUninstallAll',
+            'MasonLog'
+        }
+    },
 
     -- null-ls.nvim
-    use {
+    {
         'jose-elias-alvarez/null-ls.nvim',
-        requires = 'nvim-lua/plenary.nvim'
-    }
+        dependencies = 'nvim-lua/plenary.nvim'
+    },
 
     -- Twilight
-    use {
+    {
         'folke/twilight.nvim',
         cmd = 'Twilight',
-        after = 'nvim-treesitter'
-    }
+    },
 
     -- vim-illuminate
-    use 'RRethy/vim-illuminate'
+    'RRethy/vim-illuminate',
 
     -- nvim-scrollbar
-    use 'petertriho/nvim-scrollbar'
+    'petertriho/nvim-scrollbar',
 
     -- hop.nvim
-    use 'phaazon/hop.nvim'
+    'phaazon/hop.nvim',
 
     -- fidget.nvim
-    use 'j-hui/fidget.nvim'
+    'j-hui/fidget.nvim',
 
     -- nvim-ufo
-    use {
+    {
         'kevinhwang91/nvim-ufo',
-        requires = 'kevinhwang91/promise-async'
-    }
+        dependencies = 'kevinhwang91/promise-async'
+    },
 
     -- nvim-hlslens
-    use 'kevinhwang91/nvim-hlslens'
+    'kevinhwang91/nvim-hlslens',
 
     -- neodim
-    use {
+    {
         'zbirenbaum/neodim',
         event = 'LspAttach'
-    }
+    },
 
     -- colorful-winsep.nvim
-    use 'nvim-zh/colorful-winsep.nvim'
+    'nvim-zh/colorful-winsep.nvim',
 
     -- numb.nvim
-    use 'nacro90/numb.nvim'
+    'nacro90/numb.nvim',
 
     -- windows.nvim
-    use {
+    {
         'anuvyklack/windows.nvim',
-        requires = {
+        dependencies = {
             'anuvyklack/middleclass',
             'anuvyklack/animation.nvim'
         }
-    }
+    },
 
     -- lsp_lines.nvim
-    use 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
+    {
+        'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+        event = 'LspAttach'
+    },
 
     -- nvim-genghis
-    use {
+    {
         'chrisgrieser/nvim-genghis',
-        requires = 'stevearc/dressing.nvim',
+        dependencies = 'stevearc/dressing.nvim',
         cmd = {
             'New',
             'Duplicate',
@@ -243,23 +245,18 @@ return packer.startup(function(use)
             'CopyFilepath',
             'Chmodx'
         }
-    }
+    },
 
     -- relative-toggle.nvim
-    use 'cpea2506/relative-toggle.nvim'
+    'cpea2506/relative-toggle.nvim',
 
     -- nvim-navic
-    use {
+    {
         'SmiteshP/nvim-navic',
-        requires = 'neovim/nvim-lspconfig'
-    }
+        dependencies = 'neovim/nvim-lspconfig',
+        event = 'LspAttach'
+    },
 
     -- vim-cool
-    use 'romainl/vim-cool'
-
-    -- Automatically set up all my config after cloning packer.nvim
-    -- This always needs to be at the bottom of the function
-    if PACKER_BOOTSTRAP then
-        packer.sync()
-    end
-end)
+    'romainl/vim-cool',
+})
