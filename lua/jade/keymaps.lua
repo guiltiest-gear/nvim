@@ -109,3 +109,11 @@ map("n", "<leader>Gm", ":Move<CR>", opts)
 map("n", "<leader>Gf", ":CopyFilename<CR>", opts)
 map("n", "<leader>GF", ":CopyFilepath<CR>", opts)
 map("n", "<leader>Gx", ":Chmodx<CR>", opts)
+
+-- trouble.nvim keymaps
+map("n", "<leader>xx", ":TroubleToggle<CR>", opts)
+map("n", "<leader>xw", ":TroubleToggle workspace_diagnostics<CR>", opts)
+map("n", "<leader>xd", ":TroubleToggle document_diagnostics<CR>", opts)
+map("n", "<leader>xq", ":TroubleToggle quickfix<CR>", opts)
+map("n", "<leader>xl", ":TroubleToggle loclist<CR>", opts)
+map("n", "<leader>xr", ":TroubleToggle lsp_references<CR>", opts)

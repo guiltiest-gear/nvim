@@ -123,6 +123,15 @@ local mappings = {
         f = "Copy the name of the current file",
         F = "Copy the path of the current file",
         x = "Make the current file executable"
+    },
+    x = {
+        name = "Trouble",
+        x = "Toggle trouble",
+        w = "Toggle workspace diagnostics",
+        d = "Toggle document_diagnostics",
+        q = "Open up quickfix",
+        l = "Open up location list",
+        r = "Open up lsp references"
     }
 }
 
