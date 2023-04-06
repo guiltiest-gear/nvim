@@ -233,12 +233,7 @@ require('lazy').setup({
     -- nvim-hlslens
     {
         'kevinhwang91/nvim-hlslens',
-        keys = {
-            'n',
-            'N',
-            '*',
-            '#'
-        }
+        event = 'VeryLazy'
     },
 
     -- neodim
