@@ -25,7 +25,7 @@
   "lsp_lines.nvim": { "branch": "main", "commit": "dcff567b3a2d730f31b6da229ca3bb40640ec5a6" },
   "lualine.nvim": { "branch": "master", "commit": "c28a7427c3fb29322db136f0564ec58807b26747" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "a5ca8b03972b347b74b2ad2f7f23f120a514593b" },
-  "mason.nvim": { "branch": "main", "commit": "cbe2c13249819cd40e888f5c07e636c7a7bbf7e3" },
+  "mason.nvim": { "branch": "main", "commit": "489f22baed01c28e4b5ee163d36063f0db71346e" },
   "middleclass": { "branch": "master", "commit": "9fab4d5bca67262614960960ca35c4740eb2be2c" },
   "neodim": { "branch": "v2", "commit": "3ba83b4096ee71b3bfbb4c505ef10ba84633f04c" },
   "neogit": { "branch": "master", "commit": "039ff3212ec43cc4d3332956dfb54e263c8d5033" },
