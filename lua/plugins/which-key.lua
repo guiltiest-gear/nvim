@@ -64,7 +64,8 @@ return {
             ["e"] = "Explorer",
             ["t"] = "Toggle twilight",
             ["l"] = "Toggle lsp_lines",
-            ["q"] = "Quit neovim",
+            ["q"] = "Quit the current file",
+            ["Q"] = "Quit neovim",
             ["w"] = "Save the current file",
             f = {
                 name = "Find",
