@@ -176,7 +176,7 @@ local plugins = {
         build = 'make install_jsregexp',
         version = 'v1.*',
         dependencies = 'rafamadriz/friendly-snippets',
-        event = 'VeryLazy'
+        event = 'InsertEnter'
     },
 
     -- nvim-lspconfig
