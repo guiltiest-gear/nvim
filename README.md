@@ -45,7 +45,6 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/a1918b
 * [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 * [hlargs.nvim](https://github.com/m-demare/hlargs.nvim)
 * [hop.nvim](https://github.com/phaazon/hop.nvim)
-* [impatient.nvim](https://github.com/lewis6991/impatient.nvim)
 * [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 * [lazy.nvim](https://github.com/folke/lazy.nvim)
 * [lsp_lines.nvim](https://git.sr.ht/~whynothugo/lsp_lines.nvim)
