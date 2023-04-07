@@ -230,7 +230,8 @@ local plugins = {
     -- nvim-ufo
     {
         'kevinhwang91/nvim-ufo',
-        dependencies = 'kevinhwang91/promise-async'
+        dependencies = 'kevinhwang91/promise-async',
+        event = 'VeryLazy'
     },
 
     -- nvim-hlslens
