@@ -121,6 +121,3 @@ map("n", "<leader>xd", ":TroubleToggle document_diagnostics<CR>", opts)
 map("n", "<leader>xq", ":TroubleToggle quickfix<CR>", opts)
 map("n", "<leader>xl", ":TroubleToggle loclist<CR>", opts)
 map("n", "<leader>xr", ":TroubleToggle lsp_references<CR>", opts)
-
--- Toggle lsp_lines
--- vim.keymap.set("", "<leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
