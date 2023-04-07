@@ -223,6 +223,7 @@ local plugins = {
     -- hop.nvim
     {
         'phaazon/hop.nvim',
+        branch = 'v2',
         event = 'VeryLazy'
     },
 
