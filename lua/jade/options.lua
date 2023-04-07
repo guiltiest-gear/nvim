@@ -106,11 +106,6 @@ g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
 
--- Disable virtual text as it's handled by lsp_lines.nvim
-vim.diagnostic.config({
-    virtual_text = false
-})
-
 -- windows.nvim config
 o.winwidth = 10
 o.winminwidth = 10
