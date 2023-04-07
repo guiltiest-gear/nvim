@@ -171,7 +171,8 @@ local plugins = {
         'L3MON4D3/LuaSnip',
         build = 'make install_jsregexp',
         version = 'v1.*',
-        dependencies = 'rafamadriz/friendly-snippets'
+        dependencies = 'rafamadriz/friendly-snippets',
+        event = 'VeryLazy'
     },
 
     -- nvim-lspconfig
