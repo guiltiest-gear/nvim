@@ -88,7 +88,7 @@ local plugins = {
         'akinsho/bufferline.nvim',
         dependencies = 'nvim-tree/nvim-web-devicons',
         version = 'v3.*',
-        event = 'VeryLazy'
+        event = 'BufAdd'
     },
 
     -- bufdelete.nvim
