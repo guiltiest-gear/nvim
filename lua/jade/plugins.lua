@@ -197,7 +197,8 @@ local plugins = {
     -- null-ls.nvim
     {
         'jose-elias-alvarez/null-ls.nvim',
-        dependencies = 'nvim-lua/plenary.nvim'
+        dependencies = 'nvim-lua/plenary.nvim',
+        event = 'LspAttach'
     },
 
     -- Twilight
