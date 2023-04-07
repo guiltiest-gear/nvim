@@ -17,12 +17,6 @@ autocmd('TextYankPost', {
     end
 })
 
--- Disable line numbers in the terminal
-autocmd('TermOpen', {
-    pattern = '',
-    command = 'setlocal nonumber norelativenumber'
-})
-
 -- Automatically rebalance windows on vim resize
 autocmd('VimResized', {
     pattern = '',
