@@ -315,6 +315,7 @@ local plugins = {
         event = 'LspAttach'
     },
 
+    -- trouble.nvim
     {
         'folke/trouble.nvim',
         dependencies = 'nvim-tree/nvim-web-devicons',
