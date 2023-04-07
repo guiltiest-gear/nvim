@@ -44,7 +44,7 @@ local plugins = {
     -- nvim-autopairs
     {
         'windwp/nvim-autopairs',
-        event = 'VeryLazy'
+        event = 'InsertEnter'
     },
 
     -- nvim-surround
