@@ -259,7 +259,7 @@ local plugins = {
     -- numb.nvim
     {
         'nacro90/numb.nvim',
-        event = 'VeryLazy'
+        event = 'CmdlineEnter'
     },
 
     -- windows.nvim
