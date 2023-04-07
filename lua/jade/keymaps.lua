@@ -1,6 +1,6 @@
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
--- Set comma as my leader key
+-- Set space as my leader key
 map("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
