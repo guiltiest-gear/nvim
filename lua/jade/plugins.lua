@@ -231,7 +231,7 @@ local plugins = {
     -- fidget.nvim
     {
         'j-hui/fidget.nvim',
-        event = 'VeryLazy'
+        event = 'LspAttach'
     },
 
     -- nvim-ufo
