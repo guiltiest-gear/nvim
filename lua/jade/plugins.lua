@@ -55,7 +55,10 @@ local plugins = {
     -- Comment.nvim
     {
         'numToStr/Comment.nvim',
-        event = 'VeryLazy'
+        keys = {
+            'gc',
+            'gb'
+        }
     },
 
     -- indent-blankline.nvim
