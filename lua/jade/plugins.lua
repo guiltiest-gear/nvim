@@ -293,7 +293,7 @@ local plugins = {
     -- relative-toggle.nvim
     {
         'cpea2506/relative-toggle.nvim',
-        event = 'VeryLazy'
+        event = 'InsertEnter'
     },
 
     -- nvim-navic
