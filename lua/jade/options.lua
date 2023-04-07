@@ -105,8 +105,3 @@ g.loaded_fzf = 1
 g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
-
--- windows.nvim config
-o.winwidth = 10
-o.winminwidth = 10
-o.equalalways = false
