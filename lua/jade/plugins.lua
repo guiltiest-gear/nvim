@@ -171,7 +171,10 @@ local plugins = {
     },
 
     -- nvim-lspconfig
-    'neovim/nvim-lspconfig',
+    {
+        'neovim/nvim-lspconfig',
+        event = 'LspAttach'
+    },
 
     -- mason.nvim
     {
