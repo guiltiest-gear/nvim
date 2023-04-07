@@ -5,7 +5,7 @@ return {
     config = function()
         local neodim = require("neodim")
         neodim.setup({
-            alpha = 075,
+            alpha = 0.75,
             blend_color = "#000000",
             update_in_insert = {
                 enable = true,
