@@ -12,7 +12,8 @@ map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
 -- Quit neovim
-map("n", "<leader>q", ":qa<CR>", opts)
+map("n", "<leader>Q", ":qa<CR>", opts)
+map("n", "<leader>q", ":q<CR>", opts)
 
 -- Quick write
 map("n", "<leader>w", ":w<CR>", opts)
