@@ -110,17 +110,6 @@ return {
         config = true
     },
 
-    -- windows.nvim
-    {
-        'anuvyklack/windows.nvim',
-        dependencies = {
-            'anuvyklack/middleclass',
-            'anuvyklack/animation.nvim'
-        },
-        event = 'WinNew',
-        config = true
-    },
-
     -- nvim-genghis
     {
         'chrisgrieser/nvim-genghis',
