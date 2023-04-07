@@ -99,7 +99,7 @@ return {
     -- colorful-winsep.nvim
     {
         'nvim-zh/colorful-winsep.nvim',
-        event = 'WinEnter',
+        event = 'WinNew',
         config = true
     },
 
