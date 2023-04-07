@@ -50,7 +50,11 @@ local plugins = {
     -- nvim-surround
     {
         'kylechui/nvim-surround',
-        event = 'VeryLazy'
+        keys = {
+            'cs',
+            'ys',
+            'ds'
+        }
     },
 
     -- Comment.nvim
