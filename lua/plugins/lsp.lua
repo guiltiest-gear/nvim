@@ -66,6 +66,22 @@ return {
         end,
     },
 
+    -- mason-lspconfig
+    {
+        'williamboman/mason-lspconfig.nvim',
+        event = 'VeryLazy',
+        config = function()
+            local mason_lspconfig = require('mason-lspconfig')
+            mason_lspconfig.setup({
+                ensure_installed = {
+                    'lua_ls',
+                    'clangd',
+                    'marksman',
+                },
+            })
+        end,
+    },
+
     -- null-ls.nvim
     {
         'jose-elias-alvarez/null-ls.nvim',
@@ -88,21 +104,6 @@ return {
                     diagnostics.markdownlint,
                     diagnostics.luacheck,
                     -- code_actions.gitsigns
-                },
-            })
-        end,
-    },
-
-    -- mason-lspconfig
-    {
-        'williamboman/mason-lspconfig.nvim',
-        config = function()
-            local mason_lspconfig = require('mason-lspconfig')
-            mason_lspconfig.setup({
-                ensure_installed = {
-                    'lua_ls',
-                    'clangd',
-                    'marksman',
                 },
             })
         end,
