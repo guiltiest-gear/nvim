@@ -54,26 +54,6 @@ return {
         event = 'InsertEnter'
     },
 
-    -- nvim-lspconfig
-    {
-        'neovim/nvim-lspconfig',
-        event = 'VeryLazy'
-    },
-
-    -- mason.nvim
-    {
-        'williamboman/mason.nvim',
-        dependencies = 'williamboman/mason-lspconfig.nvim',
-        build = ':MasonUpdate'
-    },
-
-    -- null-ls.nvim
-    {
-        'jose-elias-alvarez/null-ls.nvim',
-        dependencies = 'nvim-lua/plenary.nvim',
-        event = 'VeryLazy'
-    },
-
     -- Twilight
     {
         'folke/twilight.nvim',
