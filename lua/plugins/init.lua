@@ -41,7 +41,27 @@ return {
     {
         'm-demare/hlargs.nvim',
         dependencies = 'nvim-treesitter/nvim-treesitter',
-        event = 'VeryLazy',
+        ft = {
+            'c',
+            'cpp',
+            'cs',
+            'go',
+            'java',
+            'js',
+            'jsx',
+            'ts',
+            'tsx',
+            'jl',
+            'lua',
+            'nix',
+            'php',
+            'py',
+            'r',
+            'rb',
+            'vim',
+            'zig',
+            'rs'
+        },
         config = true
     },
 
