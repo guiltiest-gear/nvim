@@ -79,7 +79,12 @@ return {
     -- nvim-hlslens
     {
         'kevinhwang91/nvim-hlslens',
-        event = 'VeryLazy',
+        keys = {
+            'n',
+            'N',
+            '*',
+            '#'
+        },
         config = true
     },
 
