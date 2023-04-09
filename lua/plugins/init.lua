@@ -139,6 +139,11 @@ return {
     -- vim-cool
     {
         'romainl/vim-cool',
-        event = 'VeryLazy'
+        keys = {
+            'n',
+            'N',
+            '*',
+            '#'
+        }
     }
 }
