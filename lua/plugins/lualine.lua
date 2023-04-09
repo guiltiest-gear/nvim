@@ -12,7 +12,7 @@ return {
                 theme = "tokyonight",
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },
-                disabled_filetypes = { "alpha", "mason", "NvimTree" },
+                disabled_filetypes = { "mason" },
                 always_divide_middle = true,
                 globalstatus = true,
             },
