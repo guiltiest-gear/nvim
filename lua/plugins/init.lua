@@ -65,7 +65,14 @@ return {
     {
         'phaazon/hop.nvim',
         branch = 'v2',
-        event = 'VeryLazy',
+        cmd = {
+            'HopWord',
+            'HopChar1',
+            'HopChar2',
+            'HopPattern',
+            'HopLine',
+            'HopAnywhere'
+        },
         config = true
     },
 
