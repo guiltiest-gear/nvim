@@ -11,7 +11,7 @@ return {
                 theme = "tokyonight",
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },
-                disabled_filetypes = { "mason" },
+                disabled_filetypes = { "mason", "alpha" },
                 always_divide_middle = true,
                 globalstatus = true,
             },
