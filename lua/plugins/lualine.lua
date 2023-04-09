@@ -2,7 +2,6 @@ return {
     "nvim-lualine/lualine.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
     event = 'BufNew',
-    priority = 100,
     config = function()
         local lualine = require("lualine")
         local navic = require("nvim-navic")
