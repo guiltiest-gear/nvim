@@ -1,6 +1,6 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
-    event = "VeryLazy",
+    event = "BufAdd",
     config = function()
         local blankline = require("indent_blankline")
         blankline.setup({
