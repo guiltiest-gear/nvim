@@ -18,6 +18,9 @@ map("n", "<leader>q", ":q<CR>", opts)
 -- Quick write
 map("n", "<leader>w", ":w<CR>", opts)
 
+-- Toggleterm.nvim keymap
+map("n", [[<C-\>]], ":ToggleTerm", opts)
+
 -- Resize splits with arrow keys
 map("n", "<M-l>", ":vertical resize +1<CR>", opts)
 map("n", "<M-h>", ":vertical resize -1<CR>", opts)

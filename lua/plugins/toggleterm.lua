@@ -1,12 +1,11 @@
 return {
     "akinsho/toggleterm.nvim",
     version = "*",
-    event = 'VeryLazy',
+    cmd = 'ToggleTerm',
     config = function()
         local toggleterm = require("toggleterm")
         toggleterm.setup({
             size = 20,
-            open_mapping = [[<c-\>]],
             hide_numbers = true,
             shell = vim.o.shell,
             shade_terminals = true,
