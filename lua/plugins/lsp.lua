@@ -2,7 +2,7 @@ return {
     -- nvim-lspconfig
     {
         'neovim/nvim-lspconfig',
-        event = 'LspAttach',
+        event = 'VeryLazy',
         config = function()
             local navic = require('nvim-navic')
             local lspconfig = require('lspconfig')
