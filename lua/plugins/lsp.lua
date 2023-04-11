@@ -1,8 +1,51 @@
 return {
+    -- mason.nvim
+    {
+        'williamboman/mason.nvim',
+        build = ':MasonUpdate',
+        dependencies = {
+            'williamboman/mason-lspconfig.nvim',
+            'neovim/nvim-lspconfig'
+        },
+        cmd = 'Mason',
+        config = function()
+            local mason = require('mason')
+            mason.setup({
+                ui = {
+                    icons = {
+                        package_installed = '✓',
+                        package_pending = '➜',
+                        package_uninstalled = '✗',
+                    },
+                },
+            })
+        end,
+    },
+
+    -- mason-lspconfig
+    {
+        'williamboman/mason-lspconfig.nvim',
+        event = 'LspAttach',
+        config = function()
+            local mason_lspconfig = require('mason-lspconfig')
+            mason_lspconfig.setup({
+                ensure_installed = {
+                    'lua_ls',
+                    'clangd',
+                    'marksman',
+                },
+            })
+        end,
+    },
+
     -- nvim-lspconfig
     {
         'neovim/nvim-lspconfig',
-        event = 'VeryLazy',
+        dependencies = 'williamboman/mason.nvim',
+        event = {
+            'BufReadPre',
+            'BufNewFile'
+        },
         config = function()
             local navic = require('nvim-navic')
             local lspconfig = require('lspconfig')
@@ -40,53 +83,14 @@ return {
         end,
     },
 
-    -- mason.nvim
-    {
-        'williamboman/mason.nvim',
-        build = ':MasonUpdate',
-        cmd = {
-            'Mason',
-            'MasonUpdate',
-            'MasonLog',
-            'MasonInstall',
-            'MasonUninstall',
-            'MasonUninstallAll'
-        },
-        config = function()
-            local mason = require('mason')
-            mason.setup({
-                ui = {
-                    icons = {
-                        package_installed = '✓',
-                        package_pending = '➜',
-                        package_uninstalled = '✗',
-                    },
-                },
-            })
-        end,
-    },
-
-    -- mason-lspconfig
-    {
-        'williamboman/mason-lspconfig.nvim',
-        event = 'VeryLazy',
-        config = function()
-            local mason_lspconfig = require('mason-lspconfig')
-            mason_lspconfig.setup({
-                ensure_installed = {
-                    'lua_ls',
-                    'clangd',
-                    'marksman',
-                },
-            })
-        end,
-    },
-
     -- null-ls.nvim
     {
         'jose-elias-alvarez/null-ls.nvim',
-        dependencies = 'nvim-lua/plenary.nvim',
-        event = 'VeryLazy',
+        dependencies = 'williamboman/mason.nvim',
+        event = {
+            'BufReadPre',
+            'BufNewFile'
+        },
         config = function()
             local null_ls = require('null-ls')
 
