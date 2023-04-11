@@ -83,9 +83,6 @@ map("n", "<leader>gd", ":Gitsigns diffthis HEAD<CR>", opts)
 -- Toggle twilight
 map("n", "<leader>t", ":Twilight<CR>", opts)
 
--- Jump back to alpha
-map("n", "<leader>a", ":Alpha<CR>", opts)
-
 -- Hop keymaps
 map("n", "<leader>hw", ":HopWord<CR>", opts)
 map("n", "<leader>hc", ":HopChar1<CR>", opts)

@@ -60,7 +60,6 @@ return {
         }
 
         local mappings = {
-            ["a"] = "Alpha",
             ["e"] = "Explorer",
             ["t"] = "Toggle twilight",
             ["l"] = "Toggle lsp_lines",
