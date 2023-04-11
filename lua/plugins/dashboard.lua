@@ -47,7 +47,7 @@ return {
                     {
                         icon = ' ',
                         icon_hl = 'Title',
-                        desc = 'Recently used files',
+                        desc = 'Recently used files                      ',
                         desc_hl = 'String',
                         key = 'r',
                         key_hl = 'Number',
