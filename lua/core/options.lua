@@ -80,9 +80,6 @@ opt.fillchars = [[vert:|,horiz:-,eob: ]]
 -- Enable lazy redraw for performance
 opt.lazyredraw = true
 
--- Disable the builtin statusline
-opt.laststatus = 0
-
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
