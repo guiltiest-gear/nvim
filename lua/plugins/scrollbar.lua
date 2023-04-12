@@ -1,12 +1,12 @@
 return {
-    "petertriho/nvim-scrollbar",
+    'petertriho/nvim-scrollbar',
     event = {
-        "BufReadPre",
-        "BufNewFile"
+        'BufReadPre',
+        'BufNewFile'
     },
     config = function()
-        local scrollbar = require("scrollbar")
-        local colors = require("tokyonight.colors").setup()
+        local scrollbar = require('scrollbar')
+        local colors = require('tokyonight.colors').setup()
         scrollbar.setup({
             handle = {
                 color = colors.bg_highlight,

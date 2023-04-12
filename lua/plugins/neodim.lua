@@ -1,12 +1,12 @@
 return {
-    "zbirenbaum/neodim",
-    event = "LspAttach",
-    branch = "v2",
+    'zbirenbaum/neodim',
+    event = 'LspAttach',
+    branch = 'v2',
     config = function()
-        local neodim = require("neodim")
+        local neodim = require('neodim')
         neodim.setup({
             alpha = 0.75,
-            blend_color = "#000000",
+            blend_color = '#000000',
             update_in_insert = {
                 enable = true,
                 delay = 100,
