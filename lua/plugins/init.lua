@@ -148,7 +148,6 @@ return {
     -- nvim-navic
     {
         'SmiteshP/nvim-navic',
-        dependencies = 'nvim-lualine/lualine.nvim',
         event = 'LspAttach',
         config = true
     },
