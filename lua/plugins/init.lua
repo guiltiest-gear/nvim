@@ -20,14 +20,6 @@ return {
         config = true
     },
 
-    -- telescope-fzf-native.nvim
-    {
-        'nvim-telescope/telescope-fzf-native.nvim',
-        build = 'make',
-        dependencies = 'nvim-telescope/telescope.nvim',
-        lazy = true
-    },
-
     -- bufdelete.nvim
     {
         'famiu/bufdelete.nvim',
