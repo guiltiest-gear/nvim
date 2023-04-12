@@ -27,8 +27,8 @@ map("n", [[<C-\>]], ":ToggleTerm<CR>", opts)
 -- Resize splits with arrow keys
 map("n", "<M-l>", ":vertical resize +1<CR>", opts)
 map("n", "<M-h>", ":vertical resize -1<CR>", opts)
-map("n", "<M-j>", ":resize +1<CR>", opts)
-map("n", "<M-k>", ":resize -1<CR>", opts)
+map("n", "<M-k>", ":resize +1<CR>", opts)
+map("n", "<M-j>", ":resize -1<CR>", opts)
 
 -- Buffer navigation
 map("n", "<leader>bp", ":bprev<CR>", opts)
