@@ -42,10 +42,7 @@ return {
     {
         'neovim/nvim-lspconfig',
         dependencies = 'williamboman/mason-lspconfig.nvim',
-        event = {
-            'BufReadPre',
-            'BufNewFile'
-        },
+        event = 'LspAttach',
         config = function()
             local navic = require('nvim-navic')
             local lspconfig = require('lspconfig')
