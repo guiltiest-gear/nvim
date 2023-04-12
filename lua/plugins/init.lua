@@ -148,6 +148,15 @@ return {
         config = true
     },
 
+    -- bufferline.nvim
+    {
+        'akinsho/bufferline.nvim',
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        version = 'v3.*',
+        event = 'BufEnter',
+        config = true
+    },
+
     -- trouble.nvim
     {
         'folke/trouble.nvim',
