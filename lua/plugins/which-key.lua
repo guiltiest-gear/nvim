@@ -145,6 +145,7 @@ return {
                 s = "Sync plugins",
                 L = "Open the log",
                 c = "Clean plugins",
+                p = "Profiler"
             },
         }
 
