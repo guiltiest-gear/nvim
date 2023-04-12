@@ -10,17 +10,14 @@ return {
         local navic = require("nvim-navic")
         lualine.setup({
             options = {
-                icons_enabled = true,
                 theme = "tokyonight",
                 component_separators = { left = "", right = "" },
                 section_separators = { left = "", right = "" },
-                disabled_filetypes = { "mason", "dashboard" },
-                always_divide_middle = true,
-                globalstatus = true,
+                disabled_filetypes = { "mason", "dashboard", "NvimTree" },
             },
             sections = {
                 lualine_a = { "mode" },
-                lualine_b = { "branch", "diff" },
+                lualine_b = { "branch", "diff", "diagnostics" },
                 lualine_c = {
                     "filename",
                     {
