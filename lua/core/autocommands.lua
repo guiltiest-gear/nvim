@@ -26,11 +26,11 @@ autocmd('VimResized', {
 -- close man and help with just <q>
 autocmd('FileType', {
     pattern = {
-        "help",
-        "man",
+        'help',
+        'man',
     },
     callback = function(event)
         vim.bo[event.buf].buflisted = false
-        vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+        vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = event.buf, silent = true })
     end,
 })

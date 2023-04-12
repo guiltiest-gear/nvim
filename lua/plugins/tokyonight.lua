@@ -1,9 +1,9 @@
 return {
-    "folke/tokyonight.nvim",
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-        local tokyonight = require("tokyonight")
+        local tokyonight = require('tokyonight')
         tokyonight.setup({
             transparent = true,
             lualine_bold = true,
