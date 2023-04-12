@@ -105,6 +105,7 @@ return {
             '*',
             '#'
         },
+        dependencies = 'romainl/vim-cool',
         config = true
     },
 
@@ -161,16 +162,5 @@ return {
         dependencies = 'nvim-tree/nvim-web-devicons',
         event = 'LspAttach',
         config = true
-    },
-
-    -- vim-cool
-    {
-        'romainl/vim-cool',
-        keys = {
-            'n',
-            'N',
-            '*',
-            '#'
-        }
     }
 }
