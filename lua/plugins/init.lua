@@ -118,7 +118,10 @@ return {
     -- numb.nvim
     {
         'nacro90/numb.nvim',
-        event = 'CmdlineEnter',
+        event = {
+            'BufReadPre',
+            'BufNewFile'
+        },
         config = true
     },
 
