@@ -118,17 +118,6 @@ return {
                 l = 'Hop to a line',
                 a = 'Hop anywhere',
             },
-            G = {
-                name = 'nvim-genghis',
-                n = 'Create a new file',
-                d = 'Duplicate the current file',
-                N = 'Move the current selection to a new file',
-                r = 'Rename the current file',
-                m = 'Move the current file',
-                f = 'Copy the name of the current file',
-                F = 'Copy the path of the current file',
-                x = 'Make the current file executable',
-            },
             x = {
                 name = 'Trouble',
                 x = 'Toggle trouble',
