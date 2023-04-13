@@ -118,22 +118,6 @@ return {
         config = true
     },
 
-    -- nvim-genghis
-    {
-        'chrisgrieser/nvim-genghis',
-        dependencies = 'stevearc/dressing.nvim',
-        cmd = {
-            'New',
-            'Duplicate',
-            'NewFromSelection',
-            'Rename',
-            'Move',
-            'CopyFilename',
-            'CopyFilepath',
-            'Chmodx'
-        }
-    },
-
     -- relative-toggle.nvim
     {
         'cpea2506/relative-toggle.nvim',

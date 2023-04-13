@@ -109,16 +109,6 @@ map("n", "<C-w>_", ":WindowsMaximizeVertically<CR>", opts)
 map("n", "<C-w>|", ":WindowsMaximizeHorizontally<CR>", opts)
 map("n", "<C-w>=", ":WindowsEqualize<CR>", opts)
 
--- nvim-genghis keymaps
-map("n", "<leader>Gn", ":New<CR>", opts)
-map("n", "<leader>Gd", ":Duplicate<CR>", opts)
-map("n", "<leader>GN", ":NewFromSelection<CR>", opts)
-map("n", "<leader>Gr", ":Rename<CR>", opts)
-map("n", "<leader>Gm", ":Move<CR>", opts)
-map("n", "<leader>Gf", ":CopyFilename<CR>", opts)
-map("n", "<leader>GF", ":CopyFilepath<CR>", opts)
-map("n", "<leader>Gx", ":Chmodx<CR>", opts)
-
 -- trouble.nvim keymaps
 map("n", "<leader>xx", ":TroubleToggle<CR>", opts)
 map("n", "<leader>xw", ":TroubleToggle workspace_diagnostics<CR>", opts)
