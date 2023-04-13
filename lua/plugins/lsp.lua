@@ -5,7 +5,8 @@ return {
         build = ':MasonUpdate',
         dependencies = {
             'williamboman/mason-lspconfig.nvim',
-            'neovim/nvim-lspconfig'
+            'neovim/nvim-lspconfig',
+            'stevearc/dressing.nvim'
         },
         cmd = 'Mason',
         config = function()
