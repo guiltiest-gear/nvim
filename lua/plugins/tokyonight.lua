@@ -5,6 +5,7 @@ return {
     config = function()
         local tokyonight = require('tokyonight')
         tokyonight.setup({
+            style = 'night',
             transparent = true,
             lualine_bold = true,
             terminal_colors = true,
@@ -40,6 +41,6 @@ return {
             end,
         })
 
-        vim.cmd([[colorscheme tokyonight-night]])
+        vim.cmd([[colorscheme tokyonight]])
     end,
 }
