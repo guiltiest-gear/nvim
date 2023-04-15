@@ -5,17 +5,12 @@ return {
         'BufReadPre',
         'BufNewFile'
     },
-    config = function()
-        local configs = require('nvim-treesitter.configs')
-        configs.setup({
-            -- List of parser names
-            ensure_installed = 'all',
-
-            -- List of parsers to ingnore installing
-            ignore_install = { '' },
-
-            -- Autoinstall missing parsers when enering buffer
-            auto_install = true,
-        })
+    opts = {
+        ensure_installed = 'all',
+        ignore_install = { '' },
+        auto_install = true
+    },
+    config = function(_, opts)
+        require('nvim-treesitter.configs').setup(opts)
     end,
 }
