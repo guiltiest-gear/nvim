@@ -109,15 +109,6 @@ return {
                 c = 'Checkout commit',
                 d = 'Diff',
             },
-            h = {
-                name = 'Hop',
-                w = 'Hop to a word',
-                c = 'Hop to a character',
-                C = 'Hop to a bigram',
-                p = 'Hop to an arbitrary pattern',
-                l = 'Hop to a line',
-                a = 'Hop anywhere',
-            },
             x = {
                 name = 'Trouble',
                 x = 'Toggle trouble',
