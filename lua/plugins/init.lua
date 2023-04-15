@@ -73,21 +73,6 @@ return {
         config = true
     },
 
-    -- hop.nvim
-    {
-        'phaazon/hop.nvim',
-        branch = 'v2',
-        cmd = {
-            'HopWord',
-            'HopChar1',
-            'HopChar2',
-            'HopPattern',
-            'HopLine',
-            'HopAnywhere'
-        },
-        config = true
-    },
-
     -- nvim-hlslens
     {
         'kevinhwang91/nvim-hlslens',
