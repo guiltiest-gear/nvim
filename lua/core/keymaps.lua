@@ -55,9 +55,6 @@ map("n", "<leader>LL", ":Lazy log<CR>", opts)
 map("n", "<leader>Lc", ":Lazy clean<CR>", opts)
 map("n", "<leader>Lp", ":Lazy profile<CR>", opts)
 
--- Alias replace all with S
-map("n", "S", ":%s//g<Left><Left>", { noremap = true })
-
 -- Nvim tree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
