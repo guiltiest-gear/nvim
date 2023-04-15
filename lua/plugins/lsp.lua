@@ -83,25 +83,16 @@ return {
             'BufReadPre',
             'BufNewFile',
         },
-        config = function()
-            local null_ls = require('null-ls')
-
-            -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
-            local formatting = null_ls.builtins.formatting
-            -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
-            local diagnostics = null_ls.builtins.diagnostics
-            -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/code_actions
-            -- local code_actions = null_ls.builtins.code_actions
-            null_ls.setup({
-                debug = false,
+        opts = function()
+            local nls = require('null-ls')
+            return {
                 sources = {
-                    formatting.stylua,
-                    formatting.markdownlint,
-                    diagnostics.markdownlint,
-                    diagnostics.luacheck,
-                    -- code_actions.gitsigns
-                },
-            })
+                    nls.builtins.formatting.stylua,
+                    nls.builtins.formatting.markdownlint,
+                    nls.builtins.diagnostics.markdownlint,
+                    nls.builtins.diagnostics.luacheck,
+                }
+            }
         end,
     },
 }
