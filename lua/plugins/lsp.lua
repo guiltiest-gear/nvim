@@ -6,37 +6,31 @@ return {
         dependencies = {
             'williamboman/mason-lspconfig.nvim',
             'neovim/nvim-lspconfig',
-            'stevearc/dressing.nvim'
+            'stevearc/dressing.nvim',
         },
         cmd = 'Mason',
-        config = function()
-            local mason = require('mason')
-            mason.setup({
-                ui = {
-                    icons = {
-                        package_installed = '✓',
-                        package_pending = '➜',
-                        package_uninstalled = '✗',
-                    },
+        opts = {
+            ui = {
+                icons = {
+                    package_installed = '✓',
+                    package_pending = '➜',
+                    package_uninstalled = '✗',
                 },
-            })
-        end,
+            },
+        },
     },
 
     -- mason-lspconfig
     {
         'williamboman/mason-lspconfig.nvim',
         event = 'LspAttach',
-        config = function()
-            local mason_lspconfig = require('mason-lspconfig')
-            mason_lspconfig.setup({
-                ensure_installed = {
-                    'lua_ls',
-                    'clangd',
-                    'marksman',
-                },
-            })
-        end,
+        opts = {
+            ensure_installed = {
+                'lua_ls',
+                'clangd',
+                'marksman',
+            },
+        },
     },
 
     -- nvim-lspconfig
@@ -76,7 +70,7 @@ return {
             lspconfig.marksman.setup({
                 on_attach = function(client, bufnr)
                     navic.attach(client, bufnr)
-                end
+                end,
             })
         end,
     },
@@ -87,7 +81,7 @@ return {
         dependencies = 'williamboman/mason.nvim',
         event = {
             'BufReadPre',
-            'BufNewFile'
+            'BufNewFile',
         },
         config = function()
             local null_ls = require('null-ls')
@@ -109,5 +103,5 @@ return {
                 },
             })
         end,
-    }
+    },
 }
