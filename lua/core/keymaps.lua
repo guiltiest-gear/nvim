@@ -87,14 +87,6 @@ map("n", "<leader>gd", ":Gitsigns diffthis HEAD<CR>", opts)
 -- Toggle twilight
 map("n", "<leader>t", ":Twilight<CR>", opts)
 
--- Hop keymaps
-map("n", "<leader>hw", ":HopWord<CR>", opts)
-map("n", "<leader>hc", ":HopChar1<CR>", opts)
-map("n", "<leader>hC", ":HopChar2<CR>", opts)
-map("n", "<leader>hp", ":HopPattern<CR>", opts)
-map("n", "<leader>hl", ":HopLine<CR>", opts)
-map("n", "<leader>ha", ":HopAnywhere<CR>", opts)
-
 -- nvim-hlslens keymaps
 map("n", "n", [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
 map("n", "N", [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
