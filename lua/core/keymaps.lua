@@ -118,3 +118,22 @@ map("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result
 map("n", "<leader>m", ":TSJToggle<CR>", opts)
 map("n", "<leader>s", ":TSJSplit<CR>", opts)
 map("n", "<leader>j", ":TSJJoin<CR>", opts)
+
+-- search replace keymaps
+map("v", "<C-r>", ":SearchReplaceSingleBufferVisualSelection<CR>", {})
+map("v", "<C-s>", ":SearchReplaceWithinVisualSelection<CR>", {})
+map("v", "<C-b>", ":SearchReplaceWithinVisualSelectionCWord<CR>", {})
+
+map("n", "<leader>rs", ":SearchReplaceSingleBufferSelections<CR>", {})
+map("n", "<leader>ro", ":SearchReplaceSingleBufferOpen<CR>", {})
+map("n", "<leader>rw", ":SearchReplaceSingleBufferCWord<CR>", {})
+map("n", "<leader>rW", ":SearchReplaceSingleBufferCWORD<CR>", {})
+map("n", "<leader>re", ":SearchReplaceSingleBufferCExpr<CR>", {})
+map("n", "<leader>rf", ":SearchReplaceSingleBufferCFile<CR>", {})
+
+map("n", "<leader>rbs", ":SearchReplaceMultiBufferSelections<CR>", {})
+map("n", "<leader>rbo", ":SearchReplaceMultiBufferOpen<CR>", {})
+map("n", "<leader>rbw", ":SearchReplaceMultiBufferCWord<CR>", {})
+map("n", "<leader>rbW", ":SearchReplaceMultiBufferCWORD<CR>", {})
+map("n", "<leader>rbe", ":SearchReplaceMultiBufferCExpr<CR>", {})
+map("n", "<leader>rbf", ":SearchReplaceMultiBufferCFile<CR>", {})
