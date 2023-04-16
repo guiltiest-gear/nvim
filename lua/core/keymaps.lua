@@ -31,10 +31,10 @@ map("n", "<M-k>", ":resize +1<CR>", opts)
 map("n", "<M-j>", ":resize -1<CR>", opts)
 
 -- Buffer navigation
-map("n", "<leader>bp", ":bprev<CR>", opts)
-map("n", "<leader>bn", ":bnext<CR>", opts)
-map("n", "<leader>bf", ":bfirst<CR>", opts)
-map("n", "<leader>bl", ":blast<CR>", opts)
+map("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
+map("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
+map("n", "[b", ":BufferLineCyclePrev<CR>", opts)
+map("n", "]b", ":BufferLineCycleNext<CR>", opts)
 
 -- Telescope keybindings
 map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
