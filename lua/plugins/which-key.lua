@@ -21,6 +21,9 @@ return {
             ['q'] = 'Quit the current file',
             ['Q'] = 'Quit neovim',
             ['w'] = 'Save the current file',
+            ['m'] = 'Toggle the node under cursor (split if one line, join if multiline)',
+            ['s'] = 'Split node under the cursor',
+            ['j'] = 'Join node under the cursor',
             f = {
                 name = 'Find',
                 f = 'Find files',
