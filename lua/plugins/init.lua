@@ -123,5 +123,13 @@ return {
         dependencies = 'nvim-tree/nvim-web-devicons',
         event = 'LspAttach',
         config = true
+    },
+
+    -- sentiment.nvim
+    {
+        'utilyre/sentiment.nvim',
+        version = '*',
+        event = 'VeryLazy',
+        config = true
     }
 }
