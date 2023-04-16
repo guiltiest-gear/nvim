@@ -1,6 +1,7 @@
 return {
     'folke/tokyonight.nvim',
-    event = 'UIEnter',
+    lazy = false,
+    priority = 1000,
     config = function()
         local tokyonight = require('tokyonight')
         tokyonight.setup({
