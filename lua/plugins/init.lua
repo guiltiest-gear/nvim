@@ -129,7 +129,7 @@ return {
     {
         'utilyre/sentiment.nvim',
         version = '*',
-        event = 'VeryLazy',
+        event = 'BufAdd',
         config = true
     }
 }
