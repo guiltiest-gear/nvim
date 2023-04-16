@@ -80,6 +80,24 @@ return {
                 c = 'Clean plugins',
                 p = 'Profiler'
             },
+            r = {
+                name = 'Search and replace',
+                s = 'Within a single buffer selection',
+                o = 'Within a single open buffer',
+                w = 'Within a single word',
+                W = 'Within an entire line',
+                e = 'Within a C expression',
+                f = 'Within a C file path',
+                b = {
+                    name = 'Multiple buffers',
+                    s = 'Within multiple buffer selections',
+                    o = 'Within multiple open buffers',
+                    w = 'Within multiple words',
+                    W = 'Within multiple lines',
+                    e = 'Within multiple c expressions',
+                    f = 'Within multiple file paths'
+                }
+            }
         }
 
         local opts = {
