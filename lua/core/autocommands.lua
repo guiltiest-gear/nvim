@@ -23,7 +23,7 @@ autocmd('VimResized', {
     command = 'wincmd ='
 })
 
--- close man and help with just <q>
+-- Close man and help with just <q>
 autocmd('FileType', {
     pattern = {
         'help',
