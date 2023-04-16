@@ -44,6 +44,7 @@ opt.foldenable = true
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldcolumn = '1'
+opt.foldmethod = 'syntax'
 
 -- Decrease update time
 opt.timeoutlen = 500
@@ -56,7 +57,7 @@ opt.swapfile = false
 opt.undofile = true
 
 -- cmp config
-opt.completeopt = { "menuone", "noselect" }
+opt.completeopt = { 'menuone', 'noselect' }
 
 -- Always show tabline
 opt.showtabline = 0
