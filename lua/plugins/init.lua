@@ -49,6 +49,7 @@ return {
             'php',
             'py',
             'r',
+            'R',
             'rb',
             'vim',
             'zig',
