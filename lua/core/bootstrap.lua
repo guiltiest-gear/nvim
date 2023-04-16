@@ -23,7 +23,8 @@ local opts = {
                 'tutor',
                 'zipPlugin',
                 'rplugin',
-                'editorconfig'
+                'editorconfig',
+                'matchparen'
             }
         }
     }
