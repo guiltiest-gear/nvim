@@ -40,10 +40,6 @@ return {
             },
             b = {
                 name = 'Buffer',
-                p = 'Go to previous buffer',
-                n = 'Go to next buffer',
-                f = 'Go to the first buffer',
-                l = 'Go to the last buffer',
                 k = 'Kill the current buffer',
                 K = 'Kill the current buffer forcefully',
             },
