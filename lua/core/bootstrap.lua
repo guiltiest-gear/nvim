@@ -24,7 +24,8 @@ local opts = {
                 'zipPlugin',
                 'rplugin',
                 'editorconfig',
-                'matchparen'
+                'matchparen',
+                'matchit'
             }
         }
     }
