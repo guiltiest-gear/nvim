@@ -130,7 +130,10 @@ return {
     {
         'utilyre/sentiment.nvim',
         version = '*',
-        event = 'BufAdd',
+        event = {
+            'BufReadPre',
+            'BufNewFile'
+        },
         config = true
     },
 
