@@ -65,7 +65,7 @@ return {
                     icon_hl = 'Title',
                     desc = 'Find text',
                     desc_hl = 'String',
-                    key = 't',
+                    key = 'w',
                     key_hl = 'Number',
                     action = ':Telescope live_grep',
                 },
