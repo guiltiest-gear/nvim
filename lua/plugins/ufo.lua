@@ -1,7 +1,7 @@
 return {
     'kevinhwang91/nvim-ufo',
     dependencies = 'kevinhwang91/promise-async',
-    event = 'BufEnter',
+    event = 'InsertEnter',
     opts = {
         provider_selector = function(_, filetype, buftype)
             local function handleFallbackException(bufnr, err, providerName)
