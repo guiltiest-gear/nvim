@@ -53,6 +53,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 * [mason.nvim](https://github.com/williamboman/mason.nvim)
 * [middleclass](https://github.com/anuvyklack/middleclass)
+* [mini.animate](https://github.com/echasnovski/mini.nvim/blob/main/readmes/mini-animate.md)
 * [neodim](https://github.com/zbirenbaum/neodim)
 * [neogit](https://github.com/TimUntersberger/neogit)
 * [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
