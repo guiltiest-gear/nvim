@@ -1,6 +1,6 @@
 return {
     'echasnovski/mini.animate',
-    event = 'BufEnter',
+    event = 'BufReadPost',
     opts = function()
         local animate = require('mini.animate')
         return {
