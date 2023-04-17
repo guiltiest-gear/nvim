@@ -3,10 +3,6 @@ return {
     {
         'williamboman/mason.nvim',
         build = ':MasonUpdate',
-        dependencies = {
-            'williamboman/mason-lspconfig.nvim',
-            'neovim/nvim-lspconfig',
-        },
         cmd = 'Mason',
         opts = {
             ui = {
@@ -19,24 +15,26 @@ return {
         },
     },
 
-    -- mason-lspconfig
-    {
-        'williamboman/mason-lspconfig.nvim',
-        event = 'LspAttach',
-        opts = {
-            ensure_installed = {
-                'lua_ls',
-                'clangd',
-                'marksman',
-            },
-        },
-    },
-
     -- nvim-lspconfig
     {
         'neovim/nvim-lspconfig',
-        dependencies = 'williamboman/mason-lspconfig.nvim',
-        event = 'LspAttach',
+        dependencies = {
+            'williamboman/mason.nvim',
+            {
+                'williamboman/mason-lspconfig.nvim',
+                opts = {
+                    ensure_installed = {
+                        'lua_ls',
+                        'clangd',
+                        'marksman'
+                    }
+                }
+            }
+        },
+        event = {
+            'BufReadPre',
+            'BufNewFile'
+        },
         config = function()
             local navic = require('nvim-navic')
             local lspconfig = require('lspconfig')
