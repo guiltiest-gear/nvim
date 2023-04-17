@@ -16,6 +16,9 @@ return {
         },
         renderer = {
             root_folder_modifier = ':t'
+        },
+        filters = {
+            custom = { '^.git$' }
         }
     }
 }
