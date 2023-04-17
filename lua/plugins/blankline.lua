@@ -1,6 +1,9 @@
 return {
     'lukas-reineke/indent-blankline.nvim',
-    event = 'BufAdd',
+    event = {
+        'BufReadPre',
+        'BufNewFile'
+    },
     opts = {
         char = '▏',
         use_treesitter = true,
