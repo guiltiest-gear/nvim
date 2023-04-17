@@ -14,7 +14,6 @@
   "colorful-winsep.nvim": { "branch": "main", "commit": "7c9901d019bc8b183d9cfd6354697bc3c3ec72ed" },
   "dashboard-nvim": { "branch": "master", "commit": "d5b0fff69546a3d4d742b47ca0452a41323f2f8f" },
   "dressing.nvim": { "branch": "master", "commit": "0e3e1eba147fee6e638ac1ac28f0495bcde17319" },
-  "fidget.nvim": { "branch": "main", "commit": "0ba1e16d07627532b6cae915cc992ecac249fb97" },
   "flit.nvim": { "branch": "main", "commit": "f60e4b3d49bb5a5e97cfffe66f2e671eb422078e" },
   "friendly-snippets": { "branch": "main", "commit": "b1b78a6433268fc172adb5a843e165035e83861e" },
   "gitsigns.nvim": { "branch": "main", "commit": "372d5cb485f2062ac74abc5b33054abac21d8b58" },
