@@ -106,6 +106,3 @@ g.loaded_fzf = 1
 g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
-
--- show the effects of a search / replace in a live preview window
-vim.o.inccommand = 'split'
