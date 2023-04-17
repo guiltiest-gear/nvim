@@ -98,7 +98,7 @@ return {
     {
         'nacro90/numb.nvim',
         event = {
-            'BufReadPre',
+            'BufReadPost',
             'BufNewFile'
         },
         config = true
