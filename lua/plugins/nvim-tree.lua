@@ -3,6 +3,7 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     cmd = 'NvimTreeToggle',
     opts = {
+        disable_netrw = true,
         hijack_netrw = true,
         diagnostics = {
             enable = true,
