@@ -27,7 +27,7 @@ return {
             f = {
                 name = 'Find',
                 f = 'Find files',
-                g = 'Find text',
+                w = 'Find text',
                 b = 'Find buffers',
                 h = 'Find help pages',
                 m = 'Find man pages',
