@@ -13,24 +13,26 @@ return {
                 info = '',
                 warning = '',
                 error = '',
-            }
+            },
         },
         renderer = {
-            root_folder_modifier = ':t'
+            root_folder_modifier = ':t',
+            icons = {
+                glyphs = {
+                    git = {
+                        unstaged = '✗',
+                        staged = '✓',
+                        unmerged = '',
+                        renamed = '➜',
+                        untracked = '★',
+                        deleted = '',
+                        ignored = '◌',
+                    },
+                },
+            },
         },
         filters = {
-            custom = { '^.git$' }
+            custom = { '^.git$' },
         },
-        glyphs = {
-            git = {
-                unstaged = '✗',
-                staged = '✓',
-                unmerged = '',
-                renamed = '➜',
-                untracked = '★',
-                deleted = '',
-                ignored = '◌',
-            }
-        }
-    }
+    },
 }
