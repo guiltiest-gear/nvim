@@ -20,6 +20,17 @@ return {
         },
         filters = {
             custom = { '^.git$' }
+        },
+        glyphs = {
+            git = {
+                unstaged = '✗',
+                staged = '✓',
+                unmerged = '',
+                renamed = '➜',
+                untracked = '★',
+                deleted = '',
+                ignored = '◌',
+            }
         }
     }
 }
