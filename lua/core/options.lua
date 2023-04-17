@@ -44,7 +44,6 @@ opt.foldenable = true
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldcolumn = '1'
-opt.foldmethod = 'syntax'
 
 -- Decrease update time
 opt.timeoutlen = 500
