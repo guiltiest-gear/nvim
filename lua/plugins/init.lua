@@ -148,29 +148,4 @@ return {
         dependencies = 'nvim-treesitter/nvim-treesitter',
         config = true
     },
-
-    -- search-replace.nvim
-    {
-        'roobert/search-replace.nvim',
-        cmd = {
-            'SearchReplaceSingleBufferVisualSelection',
-            'SearchReplaceWithinVisualSelection',
-            'SearchReplaceWithinVisualSelectionCWord'
-        },
-        keys = {
-            '<leader>rs',
-            '<leader>ro',
-            '<leader>rw',
-            '<leader>rW',
-            '<leader>re',
-            '<leader>rf',
-            '<leader>rbs',
-            '<leader>rbo',
-            '<leader>rbw',
-            '<leader>rbW',
-            '<leader>rbe',
-            '<leader>rbf',
-        },
-        config = true
-    }
 }
