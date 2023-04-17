@@ -1,7 +1,10 @@
 return {
     {
         'rcarriga/nvim-notify',
-        event = 'UIEnter',
+        event = {
+            'BufReadPre',
+            'BufNewFile'
+        },
         opts = {
             background_colour = '#000000',
         },
