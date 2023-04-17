@@ -6,7 +6,6 @@ return {
         dependencies = {
             'williamboman/mason-lspconfig.nvim',
             'neovim/nvim-lspconfig',
-            'stevearc/dressing.nvim',
         },
         cmd = 'Mason',
         opts = {
