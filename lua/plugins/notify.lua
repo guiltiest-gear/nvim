@@ -1,4 +1,5 @@
 return {
+    -- nvim-notify
     {
         'rcarriga/nvim-notify',
         event = {
@@ -14,6 +15,8 @@ return {
             vim.notify = notify
         end,
     },
+
+    -- nvim-lsp-notify
     {
         'mrded/nvim-lsp-notify',
         event = 'LspAttach',
