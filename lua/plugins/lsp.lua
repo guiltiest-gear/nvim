@@ -31,6 +31,15 @@ return {
                 }
             }
         },
+        keys = {
+            { "gd", "<cmd>Telescope lsp_definitions<cr>", desc = "Goto Definition" },
+            { "gr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
+            { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
+            { "gI", "<cmd>Telescope lsp_implementations<cr>", desc = "Goto Implementation" },
+            { "gy", "<cmd>Telescope lsp_type_definitions<cr>", desc = "Goto T[y]pe Definition" },
+            { "K", vim.lsp.buf.hover, desc = "Hover" },
+            { "gK", vim.lsp.buf.signature_help, desc = "Signature Help" },
+        },
         event = {
             'BufReadPre',
             'BufNewFile'
