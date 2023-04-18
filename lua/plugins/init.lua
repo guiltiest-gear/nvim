@@ -23,10 +23,7 @@ return {
     -- bufdelete.nvim
     {
         'famiu/bufdelete.nvim',
-        cmd = {
-            'Bdelete',
-            'Bwipeout'
-        }
+        cmd = 'Bdelete'
     },
 
     -- hlargs.nvim
