@@ -12,7 +12,7 @@ only what you need.
 ## Installation
 
 ```bash
-git clone --depth 1 https://codeberg.org/j4de/nvim-config.git ~/.config/nvim && nvim
+git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 ```
 
 ## Dependencies
