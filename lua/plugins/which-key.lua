@@ -10,7 +10,16 @@ return {
         local wk = require('which-key')
         local setup = {
             ignore_missing = true,
-            hidden = { '<silent>', '<cmd>', '<Cmd>', '<CR>', 'call', 'lua', '^:', '^ ' },
+            hidden = {
+                '<silent>',
+                '<cmd>',
+                '<Cmd>',
+                '<CR>',
+                'call',
+                'lua',
+                '^:',
+                '^ ',
+            },
         }
 
         local mappings = {
