@@ -1,7 +1,7 @@
 return {
     'petertriho/nvim-scrollbar',
     event = {
-        'BufReadPre',
+        'BufReadPost',
         'BufNewFile'
     },
     config = function()
