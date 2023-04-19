@@ -3,7 +3,7 @@ return {
     {
         'rcarriga/nvim-notify',
         event = {
-            'BufReadPre',
+            'BufReadPost',
             'BufNewFile'
         },
         opts = {
