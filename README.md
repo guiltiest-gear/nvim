@@ -2,12 +2,21 @@
 
 This isn't anything all too special, just your standard config.
 
-## IMPORTANT NOTICE
+## IMPORTANT NOTICES
 
-***All*** treesitter parsers will be installed because I like syntax highlighting
+1. ***All*** treesitter parsers will be installed because I like syntax highlighting
 wherever I can get it. Maybe edit treesitter.lua first to only enable the
 parsers you need. Hopefully you won't have bricks for brains like me and enable
 only what you need.
+
+2. This config is oriented with ***myself*** in mind, so there may possibly be
+confusing or otherwise strange choices made in the config. Regardless, it works
+for me. Decide for yourself if I made a janky shitbox of a config, or something
+actually usable for people other than me.
+
+3. This is a living config, assume nothing is final. Plugins will inevitably
+change and break. Again, this is a config for myself, not for the masses. Use at
+your own risk.
 
 ## Installation
 
