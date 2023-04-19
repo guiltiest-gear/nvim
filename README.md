@@ -15,6 +15,12 @@ only what you need.
 git clone --depth 1 https://codeberg.org/j4de/nvim-config.git ~/.config/nvim && nvim
 ```
 
+## Dependencies
+
+* luarocks
+* npm
+* ripgrep
+
 ## Screenshots
 
 ![A screenshot of my neovim config first opening, with alpha-nvim
