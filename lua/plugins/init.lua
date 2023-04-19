@@ -128,7 +128,7 @@ return {
         'utilyre/sentiment.nvim',
         version = '*',
         event = {
-            'BufReadPre',
+            'BufReadPost',
             'BufNewFile'
         },
         config = true
