@@ -13,6 +13,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
+    ui = {
+        custom_keys = { false }
+    },
+    install = {
+        colorscheme = { 'tokyonight' }
+    },
     performance = {
         rtp = {
             disabled_plugins = {
