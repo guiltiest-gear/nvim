@@ -4,8 +4,10 @@ return {
     opts = {
         plugins = {
             kitty = {
-                enabled = true
-            }
+                enabled = true,
+                font = '+4'
+            },
+            twilight = { enabled = false }
         }
     }
 }
