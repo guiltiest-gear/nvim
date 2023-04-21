@@ -22,7 +22,8 @@ return {
             'comment',
             'diff',
             'vim',
-            'vimdoc'
+            'vimdoc',
+            'norg'
         },
         ignore_install = { '' },
         auto_install = true
