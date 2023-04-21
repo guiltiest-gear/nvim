@@ -33,6 +33,7 @@ return {
             ['m'] = 'Toggle the node under cursor (split if one line, join if multiline)',
             ['s'] = 'Split node under the cursor',
             ['j'] = 'Join node under the cursor',
+            ['z'] = 'Toggle zen mode',
             f = {
                 name = 'Find',
                 f = 'Files',
