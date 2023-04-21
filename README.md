@@ -98,6 +98,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [vim-repeat](https://github.com/tpope/vim-repeat)
 * [which-key.nvim](https://github.com/folke/which-key.nvim)
 * [windows.nvim](https://github.com/anuvyklack/windows.nvim)
+* [zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 
 ## License
 
