@@ -29,8 +29,6 @@
   "mini.animate": { "branch": "main", "commit": "863b01e20cd5cc599eb8ca87f44ecc1f2be04920" },
   "neodim": { "branch": "v2", "commit": "11b59d9cd99c04e88257d34d7b27a58f256f9b22" },
   "neogit": { "branch": "master", "commit": "69a6ca7c41b023ebf9cad70778e227b3209b40c4" },
-  "neorg": { "branch": "main", "commit": "f742e90d6d8ec831f0bce939c37a3c04407c0e9f" },
-  "neorg-telescope": { "branch": "main", "commit": "787f95c527d4f3fe1c25600e92d939456967e944" },
   "null-ls.nvim": { "branch": "main", "commit": "f8ffcd7cb8fb3325c711d459152ef132b5b65aed" },
   "numb.nvim": { "branch": "master", "commit": "2c89245d1185e02fec1494c45bc765a38b6b40b3" },
   "nvim-autopairs": { "branch": "master", "commit": "7566a86f44bb72ba2b1a609f528a27d93241502d" },
