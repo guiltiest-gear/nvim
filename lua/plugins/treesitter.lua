@@ -18,7 +18,6 @@ return {
             'gitcommit',
             'gitignore',
             'gitattributes',
-            'bash',
             'comment',
             'diff',
             'vim',
