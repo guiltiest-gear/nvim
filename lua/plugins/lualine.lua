@@ -29,11 +29,6 @@ return {
             lualine_x = {
                 'fileformat',
                 'filetype',
-                {
-                    require('lazy.status').updates,
-                    cond = require('lazy.status').has_updates,
-                    color = { fg = '#ff9e64' }
-                }
             },
             lualine_y = { 'progress' },
             lualine_z = { 'location' },
