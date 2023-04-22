@@ -34,5 +34,9 @@ return {
         filters = {
             custom = { '^.git$' },
         },
+        update_focused_file = {
+            enable = true,
+            update_cwd = true
+        }
     },
 }
