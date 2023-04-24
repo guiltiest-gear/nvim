@@ -2,10 +2,9 @@ return {
     -- nvim-surround
     {
         'kylechui/nvim-surround',
-        keys = {
-            'cs',
-            'ys',
-            'ds'
+        event = {
+            'BufReadPost',
+            'BufNewFile'
         },
         config = true
     },
@@ -13,9 +12,9 @@ return {
     -- Comment.nvim
     {
         'numToStr/Comment.nvim',
-        keys = {
-            'gc',
-            'gb'
+        event = {
+            'BufReadPost',
+            'BufNewFile'
         },
         config = true
     },
