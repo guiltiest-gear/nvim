@@ -1,9 +1,7 @@
 return {
     'nvim-tree/nvim-tree.lua',
     dependencies = 'nvim-tree/nvim-web-devicons',
-    -- TODO: Hopefully find a better way of loading nvim-tree when opening a directory
-    lazy = false,
-    priority = 100,
+    cmd = 'NvimTreeToggle',
     opts = {
         disable_netrw = true,
         hijack_netrw = true,
