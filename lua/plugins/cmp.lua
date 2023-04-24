@@ -8,6 +8,8 @@ return {
         'hrsh7th/cmp-nvim-lua',
         'hrsh7th/cmp-cmdline',
         'hrsh7th/cmp-calc',
+        'L3MON4D3/LuaSnip',
+        'rafamadriz/friendly-snippets'
     },
     event = 'InsertEnter',
     config = function()
