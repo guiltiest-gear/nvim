@@ -8,7 +8,11 @@ return {
         'hrsh7th/cmp-nvim-lua',
         'hrsh7th/cmp-cmdline',
         'hrsh7th/cmp-calc',
-        'L3MON4D3/LuaSnip',
+        {
+            'L3MON4D3/LuaSnip',
+            build = 'make install_jsregexp',
+            version = 'v1.*'
+        },
         'rafamadriz/friendly-snippets'
     },
     event = 'InsertEnter',
