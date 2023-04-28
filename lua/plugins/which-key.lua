@@ -67,6 +67,7 @@ return {
                 r = 'Reset hunk',
                 R = 'Reset buffer',
                 s = 'Stage hunk',
+                S = 'Stage buffer',
                 u = 'Undo stage hunk',
                 o = 'Open changed file',
                 b = 'Checkout branch',
