@@ -110,15 +110,16 @@ return {
         config = true
     },
 
-    -- sentiment.nvim
+    -- vim-matchup
     {
-        'utilyre/sentiment.nvim',
-        version = '*',
+        'andymass/vim-matchup',
         event = {
             'BufReadPost',
             'BufNewFile'
         },
-        config = true
+        config = function()
+            vim.g.matchup_matchparen_offscreen = { method = 'popup' }
+        end
     },
 
     -- treesj
