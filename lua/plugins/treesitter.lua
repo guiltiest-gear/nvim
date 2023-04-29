@@ -24,7 +24,10 @@ return {
             'vimdoc'
         },
         ignore_install = { '' },
-        auto_install = true
+        auto_install = true,
+        matchup = {
+            enabled = true
+        }
     },
     config = function(_, opts)
         require('nvim-treesitter.configs').setup(opts)
