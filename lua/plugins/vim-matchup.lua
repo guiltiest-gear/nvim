@@ -1,5 +1,6 @@
 return {
     'andymass/vim-matchup',
+    dependencies = 'nvim-treesitter/nvim-treesitter',
     event = {
         'BufReadPost',
         'BufNewFile',
