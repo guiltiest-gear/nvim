@@ -54,13 +54,6 @@ return {
         config = true
     },
 
-    -- twilight.nvim
-    {
-        'folke/twilight.nvim',
-        cmd = 'Twilight',
-        config = true
-    },
-
     -- nvim-hlslens
     {
         'kevinhwang91/nvim-hlslens',

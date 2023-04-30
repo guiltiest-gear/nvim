@@ -83,9 +83,6 @@ map("n", "<leader>gb", ":Telescope git_branches<CR>", opts)
 map("n", "<leader>gc", ":Telescope git_commits<CR>", opts)
 map("n", "<leader>gd", ":Gitsigns diffthis HEAD<CR>", opts)
 
--- Toggle twilight
-map("n", "<leader>t", ":Twilight<CR>", opts)
-
 -- Toggle zen-mode
 map("n", "<leader>z", ":ZenMode<CR>", opts)
 
