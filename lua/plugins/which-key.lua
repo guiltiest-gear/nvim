@@ -25,7 +25,6 @@ return {
         local mappings = {
             ['d'] = 'Open dashboard',
             ['e'] = 'Explorer',
-            ['t'] = 'Toggle twilight',
             ['l'] = 'Toggle lsp_lines',
             ['q'] = 'Quit the current file',
             ['Q'] = 'Quit neovim',
