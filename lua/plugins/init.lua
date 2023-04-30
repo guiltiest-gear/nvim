@@ -54,7 +54,7 @@ return {
         config = true
     },
 
-    -- Twilight
+    -- twilight.nvim
     {
         'folke/twilight.nvim',
         cmd = 'Twilight',
