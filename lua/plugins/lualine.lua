@@ -14,7 +14,20 @@ return {
         },
         sections = {
             lualine_a = { 'mode' },
-            lualine_b = { 'branch', 'diff', 'diagnostics' },
+            lualine_b = {
+                'branch',
+                'diff',
+                {
+                    'diagnostics',
+                    sources = { 'nvim_lsp', 'nvim_diagnostic' },
+                    symbols = {
+                        error = '',
+                        warn = '',
+                        info = '',
+                        hint = '',
+                    }
+                },
+            },
             lualine_c = {
                 'filename',
                 {
