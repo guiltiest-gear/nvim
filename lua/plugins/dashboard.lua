@@ -34,7 +34,7 @@ return {
             },
             center = {
                 {
-                    icon = ' ',
+                    icon = '󰈞 ',
                     icon_hl = 'Title',
                     desc = 'Find file',
                     desc_hl = 'String',
@@ -52,7 +52,7 @@ return {
                     action = ':ene | startinsert',
                 },
                 {
-                    icon = ' ',
+                    icon = '󰄉 ',
                     icon_hl = 'Title',
                     desc = 'Recently used files                        ',
                     desc_hl = 'String',
@@ -61,7 +61,7 @@ return {
                     action = ':Telescope oldfiles',
                 },
                 {
-                    icon = ' ',
+                    icon = '󰊄 ',
                     icon_hl = 'Title',
                     desc = 'Find text',
                     desc_hl = 'String',
@@ -106,7 +106,7 @@ return {
                     action = ':Neogit',
                 },
                 {
-                    icon = ' ',
+                    icon = ' ',
                     icon_hl = 'Title',
                     desc = 'Quit Neovim',
                     desc_hl = 'String',
