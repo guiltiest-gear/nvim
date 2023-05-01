@@ -88,13 +88,6 @@ return {
         config = true
     },
 
-    -- nvim-navic
-    {
-        'SmiteshP/nvim-navic',
-        event = 'LspAttach',
-        config = true
-    },
-
     -- trouble.nvim
     {
         'folke/trouble.nvim',
