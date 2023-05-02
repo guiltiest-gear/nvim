@@ -28,6 +28,8 @@ autocmd('FileType', {
     pattern = {
         'help',
         'man',
+        'lspinfo',
+        'checkhealth'
     },
     callback = function(event)
         vim.bo[event.buf].buflisted = false
