@@ -34,3 +34,14 @@ autocmd('FileType', {
         vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = event.buf, silent = true })
     end,
 })
+
+-- Auto create dir when saving a file where some intermediate directory does not exist
+autocmd('BufWritePre', {
+    callback = function(event)
+        if event.match:match('^%w%w+://') then
+            return
+        end
+        local file = vim.loop.fs_realpath(event.match) or event.match
+        vim.fn.mkdir(vim.fn.fnamemodify(file, ':p:h'), 'p')
+    end
+})
