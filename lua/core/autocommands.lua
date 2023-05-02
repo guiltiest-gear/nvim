@@ -47,3 +47,11 @@ autocmd('BufWritePre', {
         vim.fn.mkdir(vim.fn.fnamemodify(file, ':p:h'), 'p')
     end
 })
+
+-- Check for spelling in text filetypes
+autocmd('FileType', {
+    pattern = { 'gitcommit', 'markdown' },
+    callback = function ()
+        vim.opt_local.spell = true
+    end
+})
