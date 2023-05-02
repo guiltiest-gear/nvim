@@ -120,3 +120,11 @@ map("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev search result
 map("n", "<leader>m", ":TSJToggle<CR>", opts)
 map("n", "<leader>s", ":TSJSplit<CR>", opts)
 map("n", "<leader>j", ":TSJJoin<CR>", opts)
+
+-- Move lines
+map("n", "<A-j>", "<cmd>m .+1<cr>==", opts)
+map("n", "<A-k>", "<cmd>m .-2<cr>==", opts)
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", opts)
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", opts)
+map("v", "<A-j>", ":m '>+1<cr>gv=gv", opts)
+map("v", "<A-k>", ":m '<-2<cr>gv=gv", opts)
