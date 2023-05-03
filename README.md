@@ -39,6 +39,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [alpha-nvim-fortune](https://github.com/BlakeJC94/alpha-nvim-fortune)
 * [alpha-nvim](https://github.com/goolord/alpha-nvim)
 * [animation.nvim](https://github.com/anuvyklack/animation.nvim)
+* [better-escape.nvim](https://github.com/max397574/better-escape.nvim)
 * [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim)
 * [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 * [cmp-async-path](https://github.com/FelipeLema/cmp-async-path)
