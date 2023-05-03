@@ -6,7 +6,8 @@ return {
             'nvim-telescope/telescope-fzf-native.nvim',
             build = 'make',
         },
-        'nvim-telescope/telescope-file-browser.nvim'
+        'nvim-telescope/telescope-file-browser.nvim',
+        'debugloop/telescope-undo.nvim'
     },
     branch = '0.1.x',
     cmd = 'Telescope',
@@ -31,6 +32,13 @@ return {
             file_browser = {
                 theme = 'tokyonight',
                 hidden = true
+            },
+            undo = {
+                side_by_side = true,
+                layout_strategy = 'vertical',
+                layout_config = {
+                    preview_height = 0.8
+                }
             }
         },
     },
@@ -38,5 +46,6 @@ return {
         -- Load the extensions
         require('telescope').load_extension('fzf')
         require('telescope').load_extension('file_browser')
+        require('telescope').load_extension('undo')
     end,
 }
