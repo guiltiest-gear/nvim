@@ -95,4 +95,11 @@ return {
         event = 'LspAttach',
         config = true
     },
+
+    -- better-escape.nvim
+    {
+        'max397574/better-escape.nvim',
+        event = 'InsertEnter',
+        config = true
+    }
 }
