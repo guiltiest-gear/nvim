@@ -10,7 +10,7 @@ return {
             theme = 'tokyonight',
             component_separators = { left = '', right = '' },
             section_separators = { left = '', right = '' },
-            disabled_filetypes = { 'mason', 'dashboard', 'NvimTree' },
+            disabled_filetypes = { 'mason', 'dashboard' },
         },
         sections = {
             lualine_a = { 'mode' },
@@ -46,6 +46,6 @@ return {
             lualine_y = { 'progress' },
             lualine_z = { 'location' },
         },
-        -- extensions = { 'lazy' }
+        extensions = { 'man', 'nvim-tree' }
     },
 }
