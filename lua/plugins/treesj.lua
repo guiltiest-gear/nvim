@@ -7,6 +7,6 @@ return {
     },
     dependencies = 'nvim-treesitter/nvim-treesitter',
     opts = {
-        max_join_length = 120
+        max_join_length = 150
     }
 }
