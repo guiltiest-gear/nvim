@@ -20,12 +20,6 @@ return {
                 {
                     'diagnostics',
                     sources = { 'nvim_lsp', 'nvim_diagnostic' },
-                    symbols = {
-                        error = ' ',
-                        warn = ' ',
-                        info = ' ',
-                        hint = ' ',
-                    }
                 },
             },
             lualine_c = {
