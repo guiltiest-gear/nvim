@@ -46,6 +46,10 @@ return {
             lualine_y = { 'progress' },
             lualine_z = { 'location' },
         },
-        extensions = { 'man', 'nvim-tree' }
+        extensions = {
+            'man',
+            'nvim-tree',
+            'toggleterm'
+        }
     },
 }
