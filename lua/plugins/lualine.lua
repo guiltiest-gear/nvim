@@ -21,10 +21,10 @@ return {
                     'diagnostics',
                     sources = { 'nvim_lsp', 'nvim_diagnostic' },
                     symbols = {
-                        error = '',
-                        warn = '',
-                        info = '',
-                        hint = '',
+                        error = ' ',
+                        warn = ' ',
+                        info = ' ',
+                        hint = ' ',
                     }
                 },
             },
