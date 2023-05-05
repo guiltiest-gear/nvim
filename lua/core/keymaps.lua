@@ -35,6 +35,8 @@ map("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
 map("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
 map("n", "[b", ":BufferLineCyclePrev<CR>", opts)
 map("n", "]b", ":BufferLineCycleNext<CR>", opts)
+map("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
+map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 
 -- Telescope keybindings
 map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
