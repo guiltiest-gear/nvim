@@ -101,5 +101,12 @@ return {
         'max397574/better-escape.nvim',
         event = 'InsertEnter',
         config = true
+    },
+
+    -- symbols-outline.nvim
+    {
+        'simrat39/symbols-outline.nvim',
+        cmd = 'SymbolsOutline',
+        config = true
     }
 }

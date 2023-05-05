@@ -131,3 +131,6 @@ map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", opts)
 map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", opts)
 map("v", "<A-j>", ":m '>+1<cr>gv=gv", opts)
 map("v", "<A-k>", ":m '<-2<cr>gv=gv", opts)
+
+-- Open symbols-outline.nvim
+map("n", "<leader>o",":SymbolsOutline<CR>", opts)
