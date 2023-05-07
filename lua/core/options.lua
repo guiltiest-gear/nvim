@@ -83,6 +83,12 @@ opt.lazyredraw = true
 -- Have the statusline only display at the bottom
 opt.laststatus = 3
 
+-- Confirm to save changed before exiting the modified buffer
+opt.confirm = true
+
+-- Hide * markup for bold and italic
+opt.conceallevel = 3
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
