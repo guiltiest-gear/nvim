@@ -57,8 +57,8 @@ return {
                 name = 'Buffer',
                 k = 'Kill the current buffer',
                 K = 'Kill the current buffer forcefully',
-                w = 'Kill every other buffer except the current one',
-                W = 'Kill every other buffer except the current one forcefully'
+                w = 'Kill every other buffer',
+                W = 'Kill every other buffer forcefully'
             },
             g = {
                 name = 'Git',
