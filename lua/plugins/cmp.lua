@@ -148,7 +148,7 @@ return {
             -- },
             enabled = function()
                 -- Disable nvim-cmp in a telescope prompt
-                buftype = vim.api.nvim_buf_get_option(0, 'buftype')
+                local buftype = vim.api.nvim_buf_get_option(0, 'buftype')
                 if buftype == 'prompt' then
                     return false
                 end
