@@ -67,8 +67,6 @@ map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- bufdelete.nvim keybind
 map("n", "<leader>bK", ":Bdelete!<CR>", opts)
 map("n", "<leader>bk", ":Bdelete<CR>", opts)
-map("n", "<leader>bw", ":Bwipeout<CR>", opts)
-map("n", "<leader>bW", ":Bwipeout!<CR>", opts)
 
 -- vim-illuminate
 map("n", "<leader>it", ":IlluminateToggle<CR>", opts)
