@@ -21,9 +21,9 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 
 ## Dependencies
 
-* luarocks
-* npm
-* ripgrep
+* luarocks (Used for installing certain mason packages)
+* npm (Used for installing certain mason packages)
+* ripgrep (Used as the searcher for telescope)
 
 ## Screenshots
 
