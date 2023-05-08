@@ -36,8 +36,6 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 
 * [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 * [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-* [alpha-nvim-fortune](https://github.com/BlakeJC94/alpha-nvim-fortune)
-* [alpha-nvim](https://github.com/goolord/alpha-nvim)
 * [animation.nvim](https://github.com/anuvyklack/animation.nvim)
 * [better-escape.nvim](https://github.com/max397574/better-escape.nvim)
 * [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim)
@@ -50,6 +48,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)
 * [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 * [colorful-winsep.nvim](https://github.com/nvim-zh/colorful-winsep.nvim)
+* [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 * [dressing.nvim](https://github.com/stevearc/dressing.nvim)
 * [flit.nvim](https://github.com/ggandor/flit.nvim)
 * [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
