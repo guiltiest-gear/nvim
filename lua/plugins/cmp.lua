@@ -143,9 +143,9 @@ return {
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
             },
-            experimental = {
-                ghost_text = true,
-            },
+            -- experimental = {
+            --     ghost_text = true,
+            -- },
             enabled = function()
                 -- Disable nvim-cmp in a telescope prompt
                 buftype = vim.api.nvim_buf_get_option(0, 'buftype')
