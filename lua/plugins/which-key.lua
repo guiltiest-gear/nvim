@@ -1,10 +1,10 @@
 return {
     'folke/which-key.nvim',
     keys = {
-        "<leader>",
+        '<leader>',
         '"',
         "'",
-        "`",
+        '`'
     },
     config = function()
         local wk = require('which-key')
@@ -18,7 +18,7 @@ return {
                 'call',
                 'lua',
                 '^:',
-                '^ ',
+                '^ '
             },
         }
 
