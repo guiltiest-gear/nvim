@@ -34,6 +34,9 @@ local opts = {
                 'matchit'
             }
         }
+    },
+    checker = {
+        enabled = true
     }
 }
 
