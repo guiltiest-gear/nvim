@@ -43,7 +43,8 @@ return {
         extensions = {
             'man',
             'nvim-tree',
-            'toggleterm'
+            'toggleterm',
+            'lazy'
         }
     },
 }
