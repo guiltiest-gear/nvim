@@ -44,7 +44,7 @@ return {
             'man',
             'nvim-tree',
             'toggleterm',
-            'lazy'
+            -- 'lazy'
         }
     },
 }
