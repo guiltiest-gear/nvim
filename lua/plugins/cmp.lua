@@ -17,13 +17,13 @@ return {
     },
     event = 'InsertEnter',
     config = function()
-        local cmp = require 'cmp'
-        local luasnip = require 'luasnip'
+        local cmp = require('cmp')
+        local luasnip = require('luasnip')
         require('luasnip.loaders.from_vscode').lazy_load()
 
         local check_backspace = function()
-            local col = vim.fn.col '.' - 1
-            return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s'
+            local col = vim.fn.col('.') - 1
+            return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s')
         end
 
         local kind_icons = {
@@ -153,12 +153,12 @@ return {
                     return false
                 end
                 -- Disable completion in comments
-                local context = require 'cmp.config.context'
+                local context = require('cmp.config.context')
                 -- Keep command mode completion enabled when cursor is in a comment
                 if vim.api.nvim_get_mode().mode == 'c' then
                     return true
                 else
-                    return not context.in_treesitter_capture 'comment' and not context.in_syntax_group 'Comment'
+                    return not context.in_treesitter_capture('comment') and not context.in_syntax_group('Comment')
                 end
             end,
         }
