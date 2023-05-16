@@ -41,13 +41,13 @@ return {
     -- nvim-hlslens
     {
         'kevinhwang91/nvim-hlslens',
+        dependencies = 'romainl/vim-cool',
         keys = {
             'n',
             'N',
             '*',
             '#'
         },
-        dependencies = 'romainl/vim-cool',
         config = true
     },
 
