@@ -1,7 +1,7 @@
 return {
     'nvimdev/dashboard-nvim',
     dependencies = {
-        'nvim-tree/nvim-web-devicons',
+        'nvim-tree/nvim-web-devicons'
     },
     event = 'VimEnter',
     opts = {
@@ -30,7 +30,7 @@ return {
                 '                                   ',
                 '                                   ',
                 '                                   ',
-                '                                   ',
+                '                                   '
             },
             center = {
                 {
@@ -40,7 +40,7 @@ return {
                     desc_hl = 'String',
                     key = 'f',
                     key_hl = 'Number',
-                    action = ':Telescope find_files',
+                    action = ':Telescope find_files'
                 },
                 {
                     icon = ' ',
@@ -49,7 +49,7 @@ return {
                     desc_hl = 'String',
                     key = 'e',
                     key_hl = 'Number',
-                    action = ':ene | startinsert',
+                    action = ':ene | startinsert'
                 },
                 {
                     icon = '󰄉 ',
@@ -58,7 +58,7 @@ return {
                     desc_hl = 'String',
                     key = 'r',
                     key_hl = 'Number',
-                    action = ':Telescope oldfiles',
+                    action = ':Telescope oldfiles'
                 },
                 {
                     icon = '󰊄 ',
@@ -67,7 +67,7 @@ return {
                     desc_hl = 'String',
                     key = 'w',
                     key_hl = 'Number',
-                    action = ':Telescope live_grep',
+                    action = ':Telescope live_grep'
                 },
                 {
                     icon = ' ',
@@ -76,7 +76,7 @@ return {
                     desc_hl = 'String',
                     key = 'c',
                     key_hl = 'Number',
-                    action = ':cd ~/.config/nvim | e ~/.config/nvim/lua/plugins/init.lua',
+                    action = ':cd ~/.config/nvim | e ~/.config/nvim/lua/plugins/init.lua'
                 },
                 {
                     icon = ' ',
@@ -85,7 +85,7 @@ return {
                     desc_hl = 'String',
                     key = 'u',
                     key_hl = 'Number',
-                    action = ':Lazy update',
+                    action = ':Lazy update'
                 },
                 {
                     icon = ' ',
@@ -94,7 +94,7 @@ return {
                     desc_hl = 'String',
                     key = 'm',
                     key_hl = 'Number',
-                    action = ':Mason',
+                    action = ':Mason'
                 },
                 {
                     icon = ' ',
@@ -103,7 +103,7 @@ return {
                     desc_hl = 'String',
                     key = 'g',
                     key_hl = 'Number',
-                    action = ':Neogit',
+                    action = ':Neogit'
                 },
                 {
                     icon = ' ',
@@ -112,10 +112,10 @@ return {
                     desc_hl = 'String',
                     key = 'q',
                     key_hl = 'Number',
-                    action = ':qa',
-                },
+                    action = ':qa'
+                }
             },
-            footer = {},
-        },
-    },
+            footer = {}
+        }
+    }
 }

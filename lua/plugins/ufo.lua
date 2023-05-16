@@ -25,6 +25,6 @@ return {
                             return handleFallbackException(bufnr, err, 'indent')
                         end)
                 end
-        end,
-    },
+        end
+    }
 }
