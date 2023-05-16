@@ -4,7 +4,7 @@ return {
     keys = {
         '<leader>m',
         '<leader>j',
-        '<leader>s',
+        '<leader>s'
     },
     opts = {
         max_join_length = 150

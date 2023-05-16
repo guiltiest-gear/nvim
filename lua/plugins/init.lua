@@ -33,7 +33,7 @@ return {
             'c',
             'cpp',
             'lua',
-            'vim',
+            'vim'
         },
         config = true
     },

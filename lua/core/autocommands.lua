@@ -34,7 +34,7 @@ autocmd('FileType', {
     callback = function(event)
         vim.bo[event.buf].buflisted = false
         vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = event.buf, silent = true })
-    end,
+    end
 })
 
 -- Auto create dir when saving a file where some intermediate directory does not exist
@@ -51,7 +51,7 @@ autocmd('BufWritePre', {
 -- Check for spelling in text filetypes
 autocmd('FileType', {
     pattern = { 'gitcommit', 'markdown' },
-    callback = function ()
+    callback = function()
         vim.opt_local.spell = true
     end
 })

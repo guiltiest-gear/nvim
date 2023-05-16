@@ -6,8 +6,8 @@ return {
             'alpha',
             'NvimTree',
             'help',
-            'text',
-        },
+            'text'
+        }
     },
     config = function(_, opts)
         require('illuminate').configure(opts)

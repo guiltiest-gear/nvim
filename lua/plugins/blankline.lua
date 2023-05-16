@@ -2,7 +2,7 @@ return {
     'lukas-reineke/indent-blankline.nvim',
     event = {
         'BufReadPost',
-        'BufNewFile',
+        'BufNewFile'
     },
     opts = {
         char = '▏',
@@ -17,7 +17,7 @@ return {
             'NvimTree',
             'dashboard',
             'Trouble',
-            'neogitstatus',
+            'neogitstatus'
         },
         context_patterns = {
             'class',
@@ -39,7 +39,7 @@ return {
             'try_statement',
             'catch_clause',
             'import_statement',
-            'operation_type',
-        },
-    },
+            'operation_type'
+        }
+    }
 }

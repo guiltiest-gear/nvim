@@ -15,7 +15,7 @@ return {
                     s = s .. n .. sym
                 end
                 return s
-            end,
-        },
-    },
+            end
+        }
+    }
 }

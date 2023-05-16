@@ -12,8 +12,8 @@ return {
                 hint = '',
                 info = '',
                 warning = '',
-                error = '',
-            },
+                error = ''
+            }
         },
         renderer = {
             root_folder_modifier = ':t',
@@ -26,17 +26,17 @@ return {
                         renamed = '➜',
                         untracked = '★',
                         deleted = '',
-                        ignored = '◌',
-                    },
-                },
-            },
+                        ignored = '◌'
+                    }
+                }
+            }
         },
         filters = {
-            custom = { '^.git$' },
+            custom = { '^.git$' }
         },
         update_focused_file = {
             enable = true,
             update_cwd = true
         }
-    },
+    }
 }
