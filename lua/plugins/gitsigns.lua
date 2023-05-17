@@ -13,7 +13,7 @@ return {
                         require('lazy').load { plugins = { 'gitsigns.nvim' } }
                     end)
                 end
-            end
+            end,
         })
     end,
     opts = {
@@ -22,43 +22,43 @@ return {
                 hl = 'GitSignsAdd',
                 text = '+',
                 numhl = 'GitSignsAddNr',
-                linehl = 'GitSignsAddLn'
+                linehl = 'GitSignsAddLn',
             },
             change = {
                 hl = 'GitSignsChange',
                 text = '~',
                 numhl = 'GitSignsChangeNr',
-                linehl = 'GitSignsChangeLn'
+                linehl = 'GitSignsChangeLn',
             },
             delete = {
                 hl = 'GitSignsDelete',
                 text = '-',
                 numhl = 'GitSignsDeleteNr',
-                linehl = 'GitSignsDeleteLn'
+                linehl = 'GitSignsDeleteLn',
             },
             topdelete = {
                 hl = 'GitSignsDelete',
                 text = '-',
                 numhl = 'GitSignsDeleteNr',
-                linehl = 'GitSignsDeleteLn'
+                linehl = 'GitSignsDeleteLn',
             },
             changedelete = {
                 hl = 'GitSignsChange',
                 text = '~',
                 numhl = 'GitSignsChangeNr',
-                linehl = 'GitSignsChangeLn'
-            }
+                linehl = 'GitSignsChangeLn',
+            },
         },
         signcolumn = true, -- Toggle with `:GitSigns toggle_signs`
         watch_gitdir = {
             interval = 1000,
-            follow_files = true
+            follow_files = true,
         },
         attach_to_untracked = true,
         current_line_blame_opts = {
             virt_text = true,
             virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
-            delay = 1000
+            delay = 1000,
         },
         sign_priority = 6,
         update_debounce = 100,
@@ -68,13 +68,13 @@ return {
             style = 'minimal',
             relative = 'cursor',
             row = 0,
-            col = 1
-        }
+            col = 1,
+        },
     },
     config = function(_, opts)
         local gitsigns = require('gitsigns')
         gitsigns.setup(opts)
         -- scrollbar integration
         require('scrollbar.handlers.gitsigns').setup()
-    end
+    end,
 }

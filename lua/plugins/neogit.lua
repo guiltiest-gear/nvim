@@ -3,6 +3,6 @@ return {
     dependencies = 'nvim-lua/plenary.nvim',
     cmd = 'Neogit',
     opts = {
-        kind = 'replace'
-    }
+        kind = 'replace',
+    },
 }

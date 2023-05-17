@@ -13,7 +13,7 @@ return {
         direction = 'float',
         close_on_exit = true,
         float_opts = {
-            border = 'curved'
-        }
-    }
+            border = 'curved',
+        },
+    },
 }

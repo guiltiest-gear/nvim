@@ -12,8 +12,8 @@ return {
         {
             'L3MON4D3/LuaSnip',
             build = 'make install_jsregexp',
-            version = 'v1.*'
-        }
+            version = 'v1.*',
+        },
     },
     event = 'InsertEnter',
     config = function()
@@ -61,14 +61,14 @@ return {
             TypeParameter = ' ',
             Unit = ' ',
             Value = ' ',
-            Variable = ' '
+            Variable = ' ',
         }
 
         cmp.setup {
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body) -- For `luasnip` users.
-                end
+                end,
             },
             mapping = cmp.mapping.preset.insert {
                 ['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -78,7 +78,7 @@ return {
                 ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
                 ['<C-e>'] = cmp.mapping {
                     i = cmp.mapping.abort(),
-                    c = cmp.mapping.close()
+                    c = cmp.mapping.close(),
                 },
                 -- Accept currently selected item. If none selected, `select` first item.
                 -- Set `select` to `false` to only confirm explicitly selected items.
@@ -97,7 +97,7 @@ return {
                     end
                 end, {
                     'i',
-                    's'
+                    's',
                 }),
                 ['<S-Tab>'] = cmp.mapping(function(fallback)
                     if cmp.visible() then
@@ -109,8 +109,8 @@ return {
                     end
                 end, {
                     'i',
-                    's'
-                })
+                    's',
+                }),
             },
             formatting = {
                 fields = { 'kind', 'abbr', 'menu' },
@@ -122,10 +122,10 @@ return {
                         luasnip = '',
                         buffer = '',
                         path = '',
-                        emoji = ''
+                        emoji = '',
                     })[entry.source.name]
                     return vim_item
-                end
+                end,
             },
             sources = {
                 { name = 'nvim_lsp' },
@@ -133,7 +133,7 @@ return {
                 { name = 'luasnip' },
                 { name = 'buffer' },
                 { name = 'async_path' },
-                { name = 'calc' }
+                { name = 'calc' },
             },
             confirm_opts = {
                 behavior = cmp.ConfirmBehavior.Replace,
@@ -160,15 +160,15 @@ return {
                 else
                     return not context.in_treesitter_capture('comment') and not context.in_syntax_group('Comment')
                 end
-            end
+            end,
         }
 
         -- cmp-cmdline setup
         cmp.setup.cmdline('/', {
             mapping = cmp.mapping.preset.cmdline(),
             sources = {
-                { name = 'buffer' }
-            }
+                { name = 'buffer' },
+            },
         })
 
         cmp.setup.cmdline(':', {
@@ -179,10 +179,10 @@ return {
                 {
                     name = 'cmdline',
                     option = {
-                        ignore_cmds = { 'Man', '!' }
-                    }
-                }
-            })
+                        ignore_cmds = { 'Man', '!' },
+                    },
+                },
+            }),
         })
-    end
+    end,
 }

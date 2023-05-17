@@ -4,9 +4,9 @@ return {
         'kylechui/nvim-surround',
         event = {
             'BufReadPost',
-            'BufNewFile'
+            'BufNewFile',
         },
-        config = true
+        config = true,
     },
 
     -- Comment.nvim
@@ -14,15 +14,15 @@ return {
         'numToStr/Comment.nvim',
         event = {
             'BufReadPost',
-            'BufNewFile'
+            'BufNewFile',
         },
-        config = true
+        config = true,
     },
 
     -- bufdelete.nvim
     {
         'famiu/bufdelete.nvim',
-        cmd = 'Bdelete'
+        cmd = 'Bdelete',
     },
 
     -- hlargs.nvim
@@ -33,9 +33,9 @@ return {
             'c',
             'cpp',
             'lua',
-            'vim'
+            'vim',
         },
-        config = true
+        config = true,
     },
 
     -- nvim-hlslens
@@ -46,30 +46,30 @@ return {
             'n',
             'N',
             '*',
-            '#'
+            '#',
         },
-        config = true
+        config = true,
     },
 
     -- colorful-winsep.nvim
     {
         'nvim-zh/colorful-winsep.nvim',
         event = 'WinNew',
-        config = true
+        config = true,
     },
 
     -- numb.nvim
     {
         'nacro90/numb.nvim',
         event = 'CmdlineEnter',
-        config = true
+        config = true,
     },
 
     -- relative-toggle.nvim
     {
         'cpea2506/relative-toggle.nvim',
         event = 'InsertEnter',
-        config = true
+        config = true,
     },
 
     -- trouble.nvim
@@ -77,13 +77,13 @@ return {
         'folke/trouble.nvim',
         dependencies = 'nvim-tree/nvim-web-devicons',
         event = 'LspAttach',
-        config = true
+        config = true,
     },
 
     -- symbols-outline.nvim
     {
         'simrat39/symbols-outline.nvim',
         cmd = 'SymbolsOutline',
-        config = true
-    }
+        config = true,
+    },
 }
