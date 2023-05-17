@@ -5,9 +5,9 @@ return {
         plugins = {
             kitty = {
                 enabled = true,
-                font = '+4'
+                font = '+4',
             },
-            twilight = { enabled = false }
-        }
-    }
+            twilight = { enabled = false },
+        },
+    },
 }

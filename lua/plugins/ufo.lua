@@ -3,7 +3,7 @@ return {
     dependencies = 'kevinhwang91/promise-async',
     event = {
         'BufReadPost',
-        'BufNewFile'
+        'BufNewFile',
     },
     opts = {
         provider_selector = function(_, filetype, buftype)
@@ -25,6 +25,6 @@ return {
                             return handleFallbackException(bufnr, err, 'indent')
                         end)
                 end
-        end
-    }
+        end,
+    },
 }

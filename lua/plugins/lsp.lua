@@ -9,10 +9,10 @@ return {
                 icons = {
                     package_installed = '✓',
                     package_pending = '➜',
-                    package_uninstalled = '✗'
-                }
-            }
-        }
+                    package_uninstalled = '✗',
+                },
+            },
+        },
     },
 
     -- nvim-lspconfig
@@ -26,10 +26,10 @@ return {
                     ensure_installed = {
                         'lua_ls',
                         'clangd',
-                        'marksman'
-                    }
-                }
-            }
+                        'marksman',
+                    },
+                },
+            },
         },
         keys = {
             { 'gd', '<cmd>Telescope lsp_definitions<cr>', desc = 'Goto Definition' },
@@ -38,21 +38,21 @@ return {
             { 'gI', '<cmd>Telescope lsp_implementations<cr>', desc = 'Goto Implementation' },
             { 'gy', '<cmd>Telescope lsp_type_definitions<cr>', desc = 'Goto T[y]pe Definition' },
             { 'K', vim.lsp.buf.hover, desc = 'Hover' },
-            { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' }
+            { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
         },
         event = {
             'BufReadPre',
-            'BufNewFile'
+            'BufNewFile',
         },
         config = function()
             local navic = require('nvim-navic')
             local lspconfig = require('lspconfig')
-            lspconfig.clangd.setup({
+            lspconfig.clangd.setup {
                 on_attach = function(client, bufnr)
                     navic.attach(client, bufnr)
-                end
-            })
-            lspconfig.lua_ls.setup({
+                end,
+            }
+            lspconfig.lua_ls.setup {
                 on_attach = function(client, bufnr)
                     navic.attach(client, bufnr)
                 end,
@@ -69,16 +69,16 @@ return {
                         },
                         telemetry = {
                             enable = false,
-                        }
-                    }
-                }
-            })
-            lspconfig.marksman.setup({
+                        },
+                    },
+                },
+            }
+            lspconfig.marksman.setup {
                 on_attach = function(client, bufnr)
                     navic.attach(client, bufnr)
-                end
-            })
-        end
+                end,
+            }
+        end,
     },
 
     -- null-ls.nvim
@@ -87,7 +87,7 @@ return {
         dependencies = 'williamboman/mason.nvim',
         event = {
             'BufReadPre',
-            'BufNewFile'
+            'BufNewFile',
         },
         opts = function()
             local nls = require('null-ls')
@@ -96,9 +96,9 @@ return {
                     nls.builtins.formatting.stylua,
                     nls.builtins.formatting.markdownlint,
                     nls.builtins.diagnostics.markdownlint,
-                    nls.builtins.diagnostics.luacheck
-                }
+                    nls.builtins.diagnostics.luacheck,
+                },
             }
-        end
-    }
+        end,
+    },
 }

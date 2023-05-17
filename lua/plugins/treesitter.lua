@@ -3,7 +3,7 @@ return {
     build = ':TSUpdate',
     event = {
         'BufReadPost',
-        'BufNewFile'
+        'BufNewFile',
     },
     opts = {
         ensure_installed = {
@@ -21,13 +21,13 @@ return {
             'comment',
             'diff',
             'vim',
-            'vimdoc'
+            'vimdoc',
         },
         ignore_install = { '' },
         auto_install = true,
         matchup = {
-            enabled = true
-        }
+            enabled = true,
+        },
     },
     config = function(_, opts)
         require('nvim-treesitter.configs').setup(opts)

@@ -4,16 +4,16 @@ return {
         'rcarriga/nvim-notify',
         event = {
             'BufReadPost',
-            'BufNewFile'
+            'BufNewFile',
         },
         opts = {
-            background_colour = '#000000'
+            background_colour = '#000000',
         },
         config = function(_, opts)
             local notify = require('notify')
             notify.setup(opts)
             vim.notify = notify
-        end
+        end,
     },
 
     -- nvim-lsp-notify
@@ -30,10 +30,10 @@ return {
                     '├',
                     '┌',
                     '┬',
-                    '┐'
+                    '┐',
                 },
-                done = false
-            }
-        }
-    }
+                done = false,
+            },
+        },
+    },
 }

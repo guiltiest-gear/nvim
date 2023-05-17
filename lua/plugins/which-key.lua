@@ -4,7 +4,7 @@ return {
         '<leader>',
         '"',
         "'",
-        '`'
+        '`',
     },
     config = function()
         local wk = require('which-key')
@@ -18,8 +18,8 @@ return {
                 'call',
                 'lua',
                 '^:',
-                '^ '
-            }
+                '^ ',
+            },
         }
 
         local mappings = {
@@ -46,17 +46,17 @@ return {
                 R = 'Registers',
                 k = 'Keymaps',
                 c = 'Commands',
-                b = 'File browser'
+                b = 'File browser',
             },
             i = {
                 name = 'Illuminate',
                 t = 'Toggle vim-illuminate globally',
-                b = 'Toggle vim-illuminate per buffer'
+                b = 'Toggle vim-illuminate per buffer',
             },
             b = {
                 name = 'Buffer',
                 k = 'Kill the current buffer',
-                K = 'Kill the current buffer forcefully'
+                K = 'Kill the current buffer forcefully',
             },
             g = {
                 name = 'Git',
@@ -73,7 +73,7 @@ return {
                 o = 'Open changed file',
                 b = 'Checkout branch',
                 c = 'Checkout commit',
-                d = 'Diff'
+                d = 'Diff',
             },
             x = {
                 name = 'Trouble',
@@ -82,7 +82,7 @@ return {
                 d = 'Toggle document_diagnostics',
                 q = 'Open up quickfix',
                 l = 'Open up location list',
-                r = 'Open up lsp references'
+                r = 'Open up lsp references',
             },
             L = {
                 name = 'Lazy.nvim',
@@ -91,8 +91,8 @@ return {
                 s = 'Sync plugins',
                 L = 'Open the log',
                 c = 'Clean plugins',
-                p = 'Profiler'
-            }
+                p = 'Profiler',
+            },
         }
 
         local opts = {
@@ -101,10 +101,10 @@ return {
             buffer = nil,
             silent = true,
             noremap = true,
-            nowait = true
+            nowait = true,
         }
 
         wk.setup(setup)
         wk.register(mappings, opts)
-    end
+    end,
 }

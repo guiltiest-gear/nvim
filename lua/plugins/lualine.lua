@@ -3,14 +3,14 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     event = {
         'BufReadPost',
-        'BufNewFile'
+        'BufNewFile',
     },
     opts = {
         options = {
             theme = 'tokyonight',
             component_separators = { left = '', right = '' },
             section_separators = { left = '', right = '' },
-            disabled_filetypes = { 'mason', 'dashboard' }
+            disabled_filetypes = { 'mason', 'dashboard' },
         },
         sections = {
             lualine_a = { 'mode' },
@@ -19,8 +19,8 @@ return {
                 'diff',
                 {
                     'diagnostics',
-                    sources = { 'nvim_lsp', 'nvim_diagnostic' }
-                }
+                    sources = { 'nvim_lsp', 'nvim_diagnostic' },
+                },
             },
             lualine_c = {
                 'filename',
@@ -30,20 +30,20 @@ return {
                     end,
                     cond = function()
                         return require('nvim-navic').is_available()
-                    end
-                }
+                    end,
+                },
             },
             lualine_x = {
                 'fileformat',
-                'filetype'
+                'filetype',
             },
             lualine_y = { 'progress' },
-            lualine_z = { 'location' }
+            lualine_z = { 'location' },
         },
         extensions = {
             'man',
             'nvim-tree',
-            'toggleterm'
-        }
-    }
+            'toggleterm',
+        },
+    },
 }

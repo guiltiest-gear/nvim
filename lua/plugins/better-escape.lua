@@ -5,7 +5,7 @@ return {
         mapping = {
             'jj',
             'jk',
-            'kk'
-        }
-    }
+            'kk',
+        },
+    },
 }
