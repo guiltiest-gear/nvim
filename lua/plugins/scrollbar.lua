@@ -8,9 +8,7 @@ return {
         local scrollbar = require('scrollbar')
         local colors = require('tokyonight.colors').setup()
         scrollbar.setup {
-            handle = {
-                color = colors.bg_highlight,
-            },
+            handle = { color = colors.bg_highlight },
             marks = {
                 Search = { color = colors.orange },
                 Error = { color = colors.error },
