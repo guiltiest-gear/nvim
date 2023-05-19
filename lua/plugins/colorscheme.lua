@@ -17,9 +17,7 @@ return {
                 bg = c.bg_dark,
                 fg = c.bg_dark,
             }
-            hl.TelescopePromptNormal = {
-                bg = prompt,
-            }
+            hl.TelescopePromptNormal = { bg = prompt }
             hl.TelescopePromptBorder = {
                 bg = prompt,
                 fg = prompt,
