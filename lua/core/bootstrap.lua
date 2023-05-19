@@ -35,7 +35,9 @@ local opts = {
             },
         },
     },
-    checker = { enabled = true },
+    checker = {
+        enabled = true,
+    },
 }
 
 -- Load the plugins and options
