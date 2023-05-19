@@ -6,7 +6,5 @@ return {
         '<leader>j',
         '<leader>s',
     },
-    opts = {
-        max_join_length = 150,
-    },
+    opts = { max_join_length = 150 },
 }
