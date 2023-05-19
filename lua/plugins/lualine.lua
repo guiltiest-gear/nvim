@@ -10,7 +10,10 @@ return {
             theme = 'tokyonight',
             component_separators = { left = '', right = '' },
             section_separators = { left = '', right = '' },
-            disabled_filetypes = { 'mason', 'dashboard' },
+            disabled_filetypes = {
+                'mason',
+                'NeogitStatus'
+            },
         },
         sections = {
             lualine_a = { 'mode' },
