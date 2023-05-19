@@ -12,6 +12,8 @@ return {
         start_in_insert = true,
         direction = 'float',
         close_on_exit = true,
-        float_opts = { border = 'curved' },
+        float_opts = {
+            border = 'curved',
+        },
     },
 }
