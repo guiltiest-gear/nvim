@@ -6,9 +6,7 @@ return {
             'BufReadPost',
             'BufNewFile',
         },
-        opts = {
-            background_colour = '#000000',
-        },
+        opts = { background_colour = '#000000' },
         config = function(_, opts)
             local notify = require('notify')
             notify.setup(opts)
