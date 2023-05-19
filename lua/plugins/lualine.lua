@@ -8,8 +8,14 @@ return {
     opts = {
         options = {
             theme = 'tokyonight',
-            component_separators = { left = '', right = '' },
-            section_separators = { left = '', right = '' },
+            component_separators = {
+                left = '',
+                right = '',
+            },
+            section_separators = {
+                left = '',
+                right = '',
+            },
             disabled_filetypes = {
                 'mason',
                 'NeogitStatus',
@@ -23,7 +29,10 @@ return {
                 'diff',
                 {
                     'diagnostics',
-                    sources = { 'nvim_lsp', 'nvim_diagnostic' },
+                    sources = {
+                        'nvim_lsp',
+                        'nvim_diagnostic',
+                    },
                 },
             },
             lualine_c = {
