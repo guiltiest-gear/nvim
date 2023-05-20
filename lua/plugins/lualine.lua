@@ -12,6 +12,7 @@ return {
             section_separators = { left = '', right = '' },
             disabled_filetypes = {
                 'mason',
+                'dashboard',
                 'NeogitStatus',
                 'NeogitCommitView',
             },
