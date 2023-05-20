@@ -42,7 +42,10 @@ return {
             },
         },
     },
-    config = function()
+    config = function(_, opts)
+        -- Load the configs
+        require('telescope').setup(opts)
+
         -- Load the extensions
         require('telescope').load_extension('fzf')
         require('telescope').load_extension('file_browser')
