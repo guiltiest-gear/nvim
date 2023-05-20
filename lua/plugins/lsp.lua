@@ -30,6 +30,16 @@ return {
                     },
                 },
             },
+            {
+                'jay-babu/mason-null-ls.nvim',
+                opts = {
+                    ensure_installed = {
+                        'stylua',
+                        'markdownlint',
+                        'luacheck',
+                    },
+                },
+            },
         },
         keys = {
             { 'gd', '<cmd>Telescope lsp_definitions<cr>', desc = 'Goto Definition' },
