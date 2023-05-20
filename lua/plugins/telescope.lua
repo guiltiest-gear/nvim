@@ -1,13 +1,13 @@
 return {
     'nvim-telescope/telescope.nvim',
     dependencies = {
+        'debugloop/telescope-undo.nvim',
         'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope-file-browser.nvim',
         {
             'nvim-telescope/telescope-fzf-native.nvim',
             build = 'make',
         },
-        'nvim-telescope/telescope-file-browser.nvim',
-        'debugloop/telescope-undo.nvim',
     },
     branch = '0.1.x',
     cmd = 'Telescope',
