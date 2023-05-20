@@ -83,7 +83,7 @@ return {
                 l = 'Open up location list',
                 r = 'Open up lsp references',
             },
-            L = {
+            l = {
                 name = 'Lazy.nvim',
                 l = 'Open lazy.nvim',
                 u = 'Update plugins',
