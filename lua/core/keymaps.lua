@@ -54,12 +54,12 @@ map('n', '<leader>fb', ':Telescope file_browser<CR>', opts)
 map('n', '<leader>u', ':Telescope undo<CR>', opts)
 
 -- Lazy keymap
-map('n', '<leader>ll', ':Lazy<CR>', opts)
-map('n', '<leader>lu', ':Lazy update<CR>', opts)
-map('n', '<leader>ls', ':Lazy sync<CR>', opts)
-map('n', '<leader>lL', ':Lazy log<CR>', opts)
-map('n', '<leader>lc', ':Lazy clean<CR>', opts)
-map('n', '<leader>lp', ':Lazy profile<CR>', opts)
+map('n', '<leader>Ll', ':Lazy<CR>', opts)
+map('n', '<leader>Lu', ':Lazy update<CR>', opts)
+map('n', '<leader>Ls', ':Lazy sync<CR>', opts)
+map('n', '<leader>LL', ':Lazy log<CR>', opts)
+map('n', '<leader>Lc', ':Lazy clean<CR>', opts)
+map('n', '<leader>Lp', ':Lazy profile<CR>', opts)
 
 -- Nvim tree
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
