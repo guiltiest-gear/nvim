@@ -46,7 +46,6 @@ return {
                 R = 'Registers',
                 k = 'Keymaps',
                 c = 'Commands',
-                b = 'File browser',
             },
             i = {
                 name = 'Illuminate',
