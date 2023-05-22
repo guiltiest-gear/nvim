@@ -84,7 +84,6 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [relative-toggle.nvim](https://github.com/cpea2506/relative-toggle.nvim)
 * [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim)
 * [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
-* [telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim)
 * [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 * [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 * [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
