@@ -19,6 +19,7 @@ return {
     -- nvim-lsp-notify
     {
         'mrded/nvim-lsp-notify',
+        dependencies = 'rcarriga/nvim-notify',
         event = 'LspAttach',
         opts = {
             icons = {
