@@ -34,7 +34,6 @@ return {
             ['s'] = 'Split node under the cursor',
             ['j'] = 'Join node under the cursor',
             ['z'] = 'Toggle zen mode',
-            ['u'] = 'Open undo tree',
             f = {
                 name = 'Find',
                 f = 'Files',

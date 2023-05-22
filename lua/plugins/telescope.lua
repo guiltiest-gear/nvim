@@ -1,7 +1,6 @@
 return {
     'nvim-telescope/telescope.nvim',
     dependencies = {
-        'debugloop/telescope-undo.nvim',
         'nvim-lua/plenary.nvim',
         {
             'nvim-telescope/telescope-fzf-native.nvim',
@@ -28,13 +27,6 @@ return {
                 override_file_sorter = true,
                 case_mode = 'smart_case',
             },
-            undo = {
-                side_by_side = true,
-                layout_strategy = 'vertical',
-                layout_config = {
-                    preview_height = 0.8,
-                },
-            },
         },
     },
     config = function(_, opts)
@@ -43,6 +35,5 @@ return {
 
         -- Load the extensions
         require('telescope').load_extension('fzf')
-        require('telescope').load_extension('undo')
     end,
 }
