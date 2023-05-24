@@ -11,6 +11,7 @@ return {
     cmd = 'Telescope',
     opts = {
         defaults = {
+            theme = 'tokyonight',
             path_display = { 'smart' },
             file_ignore_patterns = { '.git/' },
         },
