@@ -31,12 +31,12 @@ map('n', '<M-k>', '<cmd>resize +1<CR>', opts)
 map('n', '<M-j>', '<cmd>resize -1<CR>', opts)
 
 -- Lazy keymap
-map('n', '<leader>Ll', '<cmd>Lazy<CR>', opts)
-map('n', '<leader>Lu', '<cmd>Lazy update<CR>', opts)
-map('n', '<leader>Ls', '<cmd>Lazy sync<CR>', opts)
-map('n', '<leader>LL', '<cmd>Lazy log<CR>', opts)
-map('n', '<leader>Lc', '<cmd>Lazy clean<CR>', opts)
-map('n', '<leader>Lp', '<cmd>Lazy profile<CR>', opts)
+map('n', '<leader>Ll', '<cmd>lua require("lazy").home()<CR>', opts)
+map('n', '<leader>Lu', '<cmd>lua require("lazy").update()<CR>', opts)
+map('n', '<leader>Ls', '<cmd>lua require("lazy").sync()<CR>', opts)
+map('n', '<leader>LL', '<cmd>lua require("lazy").log()<CR>', opts)
+map('n', '<leader>Lc', '<cmd>lua require("lazy").clean()<CR>', opts)
+map('n', '<leader>Lp', '<cmd>lua require("lazy").profile()<CR>', opts)
 
 -- Move lines
 map('n', '<A-j>', '<cmd>m .+1<cr>==', opts)
