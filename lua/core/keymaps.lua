@@ -46,14 +46,6 @@ map('n', '<leader>LL', ':Lazy log<CR>', opts)
 map('n', '<leader>Lc', ':Lazy clean<CR>', opts)
 map('n', '<leader>Lp', ':Lazy profile<CR>', opts)
 
--- nvim-hlslens keymaps
-map('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
-map('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
-map('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], opts)
-map('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], opts)
-map('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], opts)
-map('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], opts)
-
 -- trouble.nvim keymaps
 map('n', '<leader>xx', ':TroubleToggle<CR>', opts)
 map('n', '<leader>xw', ':TroubleToggle workspace_diagnostics<CR>', opts)
