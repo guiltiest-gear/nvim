@@ -21,9 +21,9 @@ return {
         { '<leader>fR', '<cmd>Telescope registers<CR>' },
         { '<leader>fk', '<cmd>Telescope keys<CR>' },
         { '<leader>fc', '<cmd>Telescope commands<CR>' },
-        { '<leader>go', ':Telescope git_status<CR>' },
-        { '<leader>gb', ':Telescope git_branches<CR>' },
-        { '<leader>gc', ':Telescope git_commits<CR>' },
+        { '<leader>go', '<cmd>Telescope git_status<CR>' },
+        { '<leader>gb', '<cmd>Telescope git_branches<CR>' },
+        { '<leader>gc', '<cmd>Telescope git_commits<CR>' },
     },
     opts = {
         defaults = {
