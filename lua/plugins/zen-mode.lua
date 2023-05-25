@@ -1,6 +1,14 @@
 return {
     'folke/zen-mode.nvim',
-    cmd = 'ZenMode',
+    keys = {
+        {
+            '<leader>z',
+            function()
+                return require('zen-mode').toggle()
+            end,
+            desc = 'Toggle zen mode',
+        },
+    },
     opts = {
         plugins = {
             kitty = {
