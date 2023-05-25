@@ -117,11 +117,6 @@ map('n', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Prev search result
 map('x', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Prev search result' })
 map('o', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Prev search result' })
 
--- treesj keymaps
-map('n', '<leader>m', ':TSJToggle<CR>', opts)
-map('n', '<leader>s', ':TSJSplit<CR>', opts)
-map('n', '<leader>j', ':TSJJoin<CR>', opts)
-
 -- Move lines
 map('n', '<A-j>', '<cmd>m .+1<cr>==', opts)
 map('n', '<A-k>', '<cmd>m .-2<cr>==', opts)
