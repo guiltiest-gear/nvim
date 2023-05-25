@@ -98,14 +98,6 @@ map('n', '<leader>xq', ':TroubleToggle quickfix<CR>', opts)
 map('n', '<leader>xl', ':TroubleToggle loclist<CR>', opts)
 map('n', '<leader>xr', ':TroubleToggle lsp_references<CR>', opts)
 
--- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-map('n', 'n', "'Nn'[v:searchforward]", { expr = true, desc = 'Next search result' })
-map('x', 'n', "'Nn'[v:searchforward]", { expr = true, desc = 'Next search result' })
-map('o', 'n', "'Nn'[v:searchforward]", { expr = true, desc = 'Next search result' })
-map('n', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Prev search result' })
-map('x', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Prev search result' })
-map('o', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Prev search result' })
-
 -- Move lines
 map('n', '<A-j>', '<cmd>m .+1<cr>==', opts)
 map('n', '<A-k>', '<cmd>m .-2<cr>==', opts)
