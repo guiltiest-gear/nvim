@@ -15,6 +15,7 @@ return {
                 'dashboard',
                 'NeogitStatus',
                 'NeogitCommitView',
+                'NeogitPopup',
             },
         },
         sections = {
