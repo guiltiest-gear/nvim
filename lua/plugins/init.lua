@@ -98,7 +98,9 @@ return {
     -- symbols-outline.nvim
     {
         'simrat39/symbols-outline.nvim',
-        cmd = 'SymbolsOutline',
+        keys = {
+            { '<leader>o', '<cmd>SymbolsOutline<CR>', desc = 'Open symbols-outline' }
+        },
         config = true,
     },
 }
