@@ -12,18 +12,78 @@ return {
     },
     branch = '0.1.x',
     keys = {
-        { '<leader>ff', '<cmd>Telescope find_files<CR>' },
-        { '<leader>fw', '<cmd>Telescope live_grep<CR>' },
-        { '<leader>fb', '<cmd>Telescope buffers<CR>' },
-        { '<leader>fh', '<cmd>Telescope help_tags<CR>' },
-        { '<leader>fm', '<cmd>Telescope man_pages<CR>' },
-        { '<leader>fr', '<cmd>Telescope oldfiles<CR>' },
-        { '<leader>fR', '<cmd>Telescope registers<CR>' },
-        { '<leader>fk', '<cmd>Telescope keys<CR>' },
-        { '<leader>fc', '<cmd>Telescope commands<CR>' },
-        { '<leader>go', '<cmd>Telescope git_status<CR>' },
-        { '<leader>gb', '<cmd>Telescope git_branches<CR>' },
-        { '<leader>gc', '<cmd>Telescope git_commits<CR>' },
+        {
+            '<leader>ff',
+            function()
+                return require('telescope.builtin').find_files()
+            end,
+        },
+        {
+            '<leader>fw',
+            function()
+                return require('telescope.builtin').live_grep()
+            end,
+        },
+        {
+            '<leader>fb',
+            function()
+                return require('telescope.builtin').buffers()
+            end,
+        },
+        {
+            '<leader>fh',
+            function()
+                return require('telescope.builtin').help_tags()
+            end,
+        },
+        {
+            '<leader>fm',
+            function()
+                return require('telescope.builtin').man_pages()
+            end,
+        },
+        {
+            '<leader>fr',
+            function()
+                return require('telescope.builtin').oldfiles()
+            end,
+        },
+        {
+            '<leader>fR',
+            function()
+                return require('telescope.builtin').registers()
+            end,
+        },
+        {
+            '<leader>fk',
+            function()
+                return require('telescope.builtin').keys()
+            end,
+        },
+        {
+            '<leader>fc',
+            function()
+                return require('telescope.builtin').commands()
+            end,
+        },
+        {
+            '<leader>go',
+            function()
+                return require('telescope.builtin').git_status()
+            end,
+        },
+        {
+            '<leader>gb',
+            function()
+                return require('telescope.builtin').git_branches()
+            end,
+        },
+        {
+            '<leader>gc',
+            function()
+                return require('telescope.builtin').git_commits()
+            end,
+        },
     },
     opts = {
         defaults = {
