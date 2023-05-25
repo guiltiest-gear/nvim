@@ -38,17 +38,6 @@ map('n', ']b', ':BufferLineCycleNext<CR>', opts)
 map('n', '<Tab>', ':BufferLineCycleNext<CR>', opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
 
--- Telescope keybindings
-map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
-map('n', '<leader>fw', ':Telescope live_grep<CR>', opts)
-map('n', '<leader>fb', ':Telescope buffers<CR>', opts)
-map('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
-map('n', '<leader>fm', ':Telescope man_pages<CR>', opts)
-map('n', '<leader>fr', ':Telescope oldfiles<CR>', opts)
-map('n', '<leader>fR', ':Telescope registers<CR>', opts)
-map('n', '<leader>fk', ':Telescope keymaps<CR>', opts)
-map('n', '<leader>fc', ':Telescope commands<CR>', opts)
-
 -- Lazy keymap
 map('n', '<leader>Ll', ':Lazy<CR>', opts)
 map('n', '<leader>Lu', ':Lazy update<CR>', opts)
@@ -71,9 +60,6 @@ map('n', '<leader>gR', ':Gitsigns reset_buffer<CR>', opts)
 map('n', '<leader>gs', ':Gitsigns stage_hunk<CR>', opts)
 map('n', '<leader>gS', ':Gitsigns stage_buffer<CR>', opts)
 map('n', '<leader>gu', ':Gitsigns undo_stage_hunk<CR>', opts)
-map('n', '<leader>go', ':Telescope git_status<CR>', opts)
-map('n', '<leader>gb', ':Telescope git_branches<CR>', opts)
-map('n', '<leader>gc', ':Telescope git_commits<CR>', opts)
 map('n', '<leader>gd', ':Gitsigns diffthis HEAD<CR>', opts)
 
 -- nvim-hlslens keymaps
