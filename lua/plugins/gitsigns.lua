@@ -17,16 +17,66 @@ return {
     end,
     ft = 'gitcommit',
     keys = {
-        { '<leader>gj', '<cmd>Gitsigns next_hunk<CR>' },
-        { '<leader>gk', '<cmd>Gitsigns prev_hunk<CR>' },
-        { '<leader>gl', '<cmd>Gitsigns blame_line<CR>' },
-        { '<leader>gp', '<cmd>Gitsigns preview_hunk<CR>' },
-        { '<leader>gr', '<cmd>Gitsigns reset_hunk<CR>' },
-        { '<leader>gR', '<cmd>Gitsigns reset_buffer<CR>' },
-        { '<leader>gs', '<cmd>Gitsigns stage_hunk<CR>' },
-        { '<leader>gS', '<cmd>Gitsigns stage_buffer<CR>' },
-        { '<leader>gu', '<cmd>Gitsigns undo_stage_hunk<CR>' },
-        { '<leader>gd', '<cmd>Gitsigns diffthis HEAD<CR>' },
+        {
+            '<leader>gj',
+            function()
+                return require('gitsigns').next_hunk()
+            end,
+        },
+        {
+            '<leader>gk',
+            function()
+                return require('gitsigns').prev_hunk()
+            end,
+        },
+        {
+            '<leader>gl',
+            function()
+                return require('gitsigns').blame_line()
+            end,
+        },
+        {
+            '<leader>gp',
+            function()
+                return require('gitsigns').preview_hunk()
+            end,
+        },
+        {
+            '<leader>gr',
+            function()
+                return require('gitsigns').reset_hunk()
+            end,
+        },
+        {
+            '<leader>gR',
+            function()
+                return require('gitsigns').reset_buffer()
+            end,
+        },
+        {
+            '<leader>gs',
+            function()
+                return require('gitsigns').stage_hunk()
+            end,
+        },
+        {
+            '<leader>gS',
+            function()
+                return require('gitsigns').stage_buffer()
+            end,
+        },
+        {
+            '<leader>gu',
+            function()
+                return require('gitsigns').undo_stage_hunk()
+            end,
+        },
+        {
+            '<leader>gd',
+            function()
+                return require('gitsigns').diffthis()
+            end,
+        },
     },
     opts = {
         signs = {
