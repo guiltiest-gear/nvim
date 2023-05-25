@@ -46,10 +46,6 @@ map('n', '<leader>LL', ':Lazy log<CR>', opts)
 map('n', '<leader>Lc', ':Lazy clean<CR>', opts)
 map('n', '<leader>Lp', ':Lazy profile<CR>', opts)
 
--- vim-illuminate
-map('n', '<leader>it', ':IlluminateToggle<CR>', opts)
-map('n', '<leader>ib', ':IlluminateToggleBuf<CR>', opts)
-
 -- nvim-hlslens keymaps
 map('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
 map('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
