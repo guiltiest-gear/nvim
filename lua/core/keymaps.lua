@@ -60,10 +60,6 @@ map('n', '<leader>Lp', ':Lazy profile<CR>', opts)
 -- Nvim tree
 map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 
--- bufdelete.nvim keybind
-map('n', '<leader>bK', ':Bdelete!<CR>', opts)
-map('n', '<leader>bk', ':Bdelete<CR>', opts)
-
 -- vim-illuminate
 map('n', '<leader>it', ':IlluminateToggle<CR>', opts)
 map('n', '<leader>ib', ':IlluminateToggleBuf<CR>', opts)
