@@ -3,6 +3,14 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     version = '*',
     event = 'UIEnter',
+    keys = {
+        { '<S-h>', '<cmd>BufferLineCyclePrev<CR>' },
+        { '<S-l>', '<cmd>BufferLineCycleNext<CR>' },
+        { '[b', '<cmd>BufferLineCyclePrev<CR>' },
+        { ']b', '<cmd>BufferLineCycleNext<CR>' },
+        { '<Tab>', '<cmd>BufferLineCycleNext<CR>' },
+        { '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>' },
+    },
     opts = {
         options = {
             mode = 'buffers',

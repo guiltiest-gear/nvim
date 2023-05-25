@@ -30,14 +30,6 @@ map('n', '<M-h>', ':vertical resize -1<CR>', opts)
 map('n', '<M-k>', ':resize +1<CR>', opts)
 map('n', '<M-j>', ':resize -1<CR>', opts)
 
--- Buffer navigation
-map('n', '<S-h>', ':BufferLineCyclePrev<CR>', opts)
-map('n', '<S-l>', ':BufferLineCycleNext<CR>', opts)
-map('n', '[b', ':BufferLineCyclePrev<CR>', opts)
-map('n', ']b', ':BufferLineCycleNext<CR>', opts)
-map('n', '<Tab>', ':BufferLineCycleNext<CR>', opts)
-map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
-
 -- Lazy keymap
 map('n', '<leader>Ll', ':Lazy<CR>', opts)
 map('n', '<leader>Lu', ':Lazy update<CR>', opts)
