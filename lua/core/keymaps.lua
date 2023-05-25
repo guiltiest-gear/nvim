@@ -57,9 +57,6 @@ map('n', '<leader>LL', ':Lazy log<CR>', opts)
 map('n', '<leader>Lc', ':Lazy clean<CR>', opts)
 map('n', '<leader>Lp', ':Lazy profile<CR>', opts)
 
--- Nvim tree
-map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
-
 -- vim-illuminate
 map('n', '<leader>it', ':IlluminateToggle<CR>', opts)
 map('n', '<leader>ib', ':IlluminateToggleBuf<CR>', opts)
