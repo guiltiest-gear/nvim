@@ -50,6 +50,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 * [colorful-winsep.nvim](https://github.com/nvim-zh/colorful-winsep.nvim)
 * [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
+* [dial.nvim](https://github.com/monaqa/dial.nvim)
 * [dressing.nvim](https://github.com/stevearc/dressing.nvim)
 * [flit.nvim](https://github.com/ggandor/flit.nvim)
 * [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
