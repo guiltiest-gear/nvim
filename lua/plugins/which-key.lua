@@ -38,7 +38,7 @@ return {
                 name = 'Find',
                 f = 'Files',
                 w = 'Text',
-                B = 'Buffers',
+                b = 'Buffers',
                 h = 'Help pages',
                 m = 'Man pages',
                 r = 'Recent files',
