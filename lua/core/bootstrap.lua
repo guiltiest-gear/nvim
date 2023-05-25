@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local opts = {
     git = {
-        log = { '--since=3 days ago' }
+        log = { '--since=3 days ago' },
     },
     ui = {
         custom_keys = { false },
