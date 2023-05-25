@@ -1,6 +1,5 @@
 return {
     'lewis6991/gitsigns.nvim',
-    ft = 'gitcommit',
     init = function()
         -- load gitsigns only when a git file is opened
         vim.api.nvim_create_autocmd({ 'BufRead' }, {
@@ -16,6 +15,19 @@ return {
             end,
         })
     end,
+    ft = 'gitcommit',
+    keys = {
+        { '<leader>gj', ':Gitsigns next_hunk<CR>' },
+        { '<leader>gk', ':Gitsigns prev_hunk<CR>' },
+        { '<leader>gl', ':Gitsigns blame_line<CR>' },
+        { '<leader>gp', ':Gitsigns preview_hunk<CR>' },
+        { '<leader>gr', ':Gitsigns reset_hunk<CR>' },
+        { '<leader>gR', ':Gitsigns reset_buffer<CR>' },
+        { '<leader>gs', ':Gitsigns stage_hunk<CR>' },
+        { '<leader>gS', ':Gitsigns stage_buffer<CR>' },
+        { '<leader>gu', ':Gitsigns undo_stage_hunk<CR>' },
+        { '<leader>gd', ':Gitsigns diffthis HEAD<CR>' },
+    },
     opts = {
         signs = {
             add = {
