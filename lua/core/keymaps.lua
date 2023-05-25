@@ -58,12 +58,6 @@ map('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], opts)
 map('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], opts)
 map('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], opts)
 
--- windows.nvim keymaps
-map('n', '<C-w>z', ':WindowsMaximize<CR>', opts)
-map('n', '<C-w>_', ':WindowsMaximizeVertically<CR>', opts)
-map('n', '<C-w>|', ':WindowsMaximizeHorizontally<CR>', opts)
-map('n', '<C-w>=', ':WindowsEqualize<CR>', opts)
-
 -- trouble.nvim keymaps
 map('n', '<leader>xx', ':TroubleToggle<CR>', opts)
 map('n', '<leader>xw', ':TroubleToggle workspace_diagnostics<CR>', opts)
