@@ -46,14 +46,6 @@ map('n', '<leader>LL', ':Lazy log<CR>', opts)
 map('n', '<leader>Lc', ':Lazy clean<CR>', opts)
 map('n', '<leader>Lp', ':Lazy profile<CR>', opts)
 
--- trouble.nvim keymaps
-map('n', '<leader>xx', ':TroubleToggle<CR>', opts)
-map('n', '<leader>xw', ':TroubleToggle workspace_diagnostics<CR>', opts)
-map('n', '<leader>xd', ':TroubleToggle document_diagnostics<CR>', opts)
-map('n', '<leader>xq', ':TroubleToggle quickfix<CR>', opts)
-map('n', '<leader>xl', ':TroubleToggle loclist<CR>', opts)
-map('n', '<leader>xr', ':TroubleToggle lsp_references<CR>', opts)
-
 -- Move lines
 map('n', '<A-j>', '<cmd>m .+1<cr>==', opts)
 map('n', '<A-k>', '<cmd>m .-2<cr>==', opts)
