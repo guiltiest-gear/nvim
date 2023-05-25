@@ -41,14 +41,13 @@ map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
 -- Telescope keybindings
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fw', ':Telescope live_grep<CR>', opts)
-map('n', '<leader>fB', ':Telescope buffers<CR>', opts)
+map('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 map('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 map('n', '<leader>fm', ':Telescope man_pages<CR>', opts)
 map('n', '<leader>fr', ':Telescope oldfiles<CR>', opts)
 map('n', '<leader>fR', ':Telescope registers<CR>', opts)
 map('n', '<leader>fk', ':Telescope keymaps<CR>', opts)
 map('n', '<leader>fc', ':Telescope commands<CR>', opts)
-map('n', '<leader>fb', ':Telescope file_browser<CR>', opts)
 
 -- Telescope undo tree keymap
 map('n', '<leader>u', ':Telescope undo<CR>', opts)
