@@ -50,18 +50,6 @@ map('n', '<leader>Lp', ':Lazy profile<CR>', opts)
 map('n', '<leader>it', ':IlluminateToggle<CR>', opts)
 map('n', '<leader>ib', ':IlluminateToggleBuf<CR>', opts)
 
--- Git
-map('n', '<leader>gj', ':Gitsigns next_hunk<CR>', opts)
-map('n', '<leader>gk', ':Gitsigns prev_hunk<CR>', opts)
-map('n', '<leader>gl', ':Gitsigns blame_line<CR>', opts)
-map('n', '<leader>gp', ':Gitsigns preview_hunk<CR>', opts)
-map('n', '<leader>gr', ':Gitsigns reset_hunk<CR>', opts)
-map('n', '<leader>gR', ':Gitsigns reset_buffer<CR>', opts)
-map('n', '<leader>gs', ':Gitsigns stage_hunk<CR>', opts)
-map('n', '<leader>gS', ':Gitsigns stage_buffer<CR>', opts)
-map('n', '<leader>gu', ':Gitsigns undo_stage_hunk<CR>', opts)
-map('n', '<leader>gd', ':Gitsigns diffthis HEAD<CR>', opts)
-
 -- nvim-hlslens keymaps
 map('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
 map('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
