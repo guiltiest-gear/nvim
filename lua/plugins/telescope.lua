@@ -17,6 +17,9 @@ return {
             theme = 'tokyonight',
             path_display = { 'smart' },
             file_ignore_patterns = { '.git/' },
+            layout_strategy = 'horizontal',
+            layout_config = { prompt_position = 'top' },
+            sorting_strategy = 'ascending',
         },
         pickers = {
             find_files = {
