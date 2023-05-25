@@ -69,7 +69,6 @@ map('n', '<leader>it', ':IlluminateToggle<CR>', opts)
 map('n', '<leader>ib', ':IlluminateToggleBuf<CR>', opts)
 
 -- Git
-map('n', '<leader>gg', ':Neogit<CR>', opts)
 map('n', '<leader>gj', ':Gitsigns next_hunk<CR>', opts)
 map('n', '<leader>gk', ':Gitsigns prev_hunk<CR>', opts)
 map('n', '<leader>gl', ':Gitsigns blame_line<CR>', opts)
