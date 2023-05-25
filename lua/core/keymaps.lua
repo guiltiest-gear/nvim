@@ -49,9 +49,6 @@ map('n', '<leader>fR', ':Telescope registers<CR>', opts)
 map('n', '<leader>fk', ':Telescope keymaps<CR>', opts)
 map('n', '<leader>fc', ':Telescope commands<CR>', opts)
 
--- Telescope undo tree keymap
-map('n', '<leader>u', ':Telescope undo<CR>', opts)
-
 -- Lazy keymap
 map('n', '<leader>Ll', ':Lazy<CR>', opts)
 map('n', '<leader>Lu', ':Lazy update<CR>', opts)
