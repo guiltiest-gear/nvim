@@ -5,9 +5,6 @@ map('', '<Space>', '<Nop>', opts)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Open dashboard-nvim
-map('n', '<leader>d', '<cmd>Dashboard<CR>', opts)
-
 -- Better split navigation
 map('n', '<C-h>', '<C-w>h', opts)
 map('n', '<C-j>', '<C-w>j', opts)
