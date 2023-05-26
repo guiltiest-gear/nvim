@@ -7,7 +7,7 @@ return {
             function()
                 return require('lsp_lines').toggle()
             end,
-            { desc = 'Toggle lsp_lines' },
+            desc = 'Toggle lsp_lines',
         },
     },
     config = function()
