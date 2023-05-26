@@ -33,6 +33,7 @@ return {
             ['o'] = 'Open symbols-outline.nvim',
             ['s'] = 'Split node under the cursor',
             ['j'] = 'Join node under the cursor',
+            ['u'] = 'Open undo tree',
             ['z'] = 'Toggle zen mode',
             f = {
                 name = 'Find',
