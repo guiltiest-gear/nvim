@@ -9,6 +9,12 @@ return {
                 require('telescope').load_extension('fzf')
             end,
         },
+        {
+            'debugloop/telescope-undo.nvim',
+            config = function()
+                require('telescope').load_extension('undo')
+            end,
+        },
     },
     branch = '0.1.x',
     keys = {
@@ -84,6 +90,12 @@ return {
                 return require('telescope.builtin').git_commits()
             end,
         },
+        {
+            '<leader>u',
+            function()
+                return require('telescope').extensions.undo.undo()
+            end,
+        },
     },
     opts = {
         defaults = {
@@ -97,6 +109,12 @@ return {
         pickers = {
             find_files = {
                 find_command = { 'rg', '--files', '--hidden', '--glob', '!**/.git/*' },
+            },
+        },
+        extensions = {
+            undo = {
+                side_by_side = true,
+                layout_strategy = 'vertical',
             },
         },
     },
