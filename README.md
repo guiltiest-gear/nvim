@@ -65,6 +65,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [mason-null-ls.nvim](https://github.com/jay-babu/mason-null-ls.nvim)
 * [mason.nvim](https://github.com/williamboman/mason.nvim)
 * [middleclass](https://github.com/anuvyklack/middleclass)
+* [modicator.nvim](https://github.com/mawkler/modicator.nvim)
 * [neogit](https://github.com/TimUntersberger/neogit)
 * [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
 * [numb.nvim](https://github.com/nacro90/numb.nvim)
