@@ -52,4 +52,15 @@ return {
         event = 'InsertEnter',
         config = true,
     },
+
+    -- modicator.nvim
+    {
+        'mawkler/modicator.nvim',
+        dependencies = 'folke/tokyonight.nvim',
+        event = {
+            'BufReadPost',
+            'BufNewFile',
+        },
+        config = true,
+    },
 }
