@@ -38,7 +38,7 @@ return {
             f = {
                 name = 'Find',
                 f = 'Files',
-                w = 'Text',
+                w = 'Words',
                 b = 'Buffers',
                 h = 'Help pages',
                 m = 'Man pages',
