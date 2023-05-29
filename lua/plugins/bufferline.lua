@@ -2,7 +2,7 @@ return {
     'akinsho/bufferline.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
     version = '*',
-    event = 'UIEnter',
+    event = 'VimEnter',
     keys = {
         { '<S-h>', '<cmd>BufferLineCyclePrev<CR>' },
         { '<S-l>', '<cmd>BufferLineCycleNext<CR>' },
