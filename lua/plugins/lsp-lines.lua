@@ -10,11 +10,10 @@ return {
             desc = 'Toggle lsp_lines',
         },
     },
-    config = function()
-        local lsp_lines = require('lsp_lines')
-        lsp_lines.setup()
+    init = function()
         vim.diagnostic.config {
             virtual_text = false,
         }
     end,
+    config = true,
 }
