@@ -55,9 +55,6 @@ opt.swapfile = false
 -- Enable persistent undo
 opt.undofile = true
 
--- cmp config
-opt.completeopt = { 'menu', 'menuone', 'noselect' }
-
 -- Always show tabline
 opt.showtabline = 0
 

@@ -15,6 +15,9 @@ return {
             version = 'v1.*',
         },
     },
+    init = function()
+        vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
+    end,
     event = 'InsertEnter',
     config = function()
         local cmp = require('cmp')
