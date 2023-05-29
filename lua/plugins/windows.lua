@@ -4,12 +4,12 @@ return {
         'anuvyklack/animation.nvim',
         'anuvyklack/middleclass',
     },
-    event = 'WinNew',
     init = function()
         vim.o.winwidth = 10
         vim.o.winminwidth = 10
         vim.o.equalalways = false
     end,
+    event = 'WinNew',
     keys = {
         { '<C-w>z', '<cmd>WindowsMaximize<CR>' },
         { '<C-w>_', '<cmd>WindowsMaximizeVertically<CR>' },

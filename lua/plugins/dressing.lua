@@ -1,6 +1,5 @@
 return {
     'stevearc/dressing.nvim',
-    lazy = true,
     init = function()
         vim.ui.select = function(...)
             require('lazy').load { plugins = { 'dressing.nvim' } }
@@ -11,4 +10,5 @@ return {
             return vim.ui.input(...)
         end
     end,
+    lazy = true,
 }

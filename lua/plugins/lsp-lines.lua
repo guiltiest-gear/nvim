@@ -1,6 +1,11 @@
 return {
     'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
     event = 'LspAttach',
+    init = function()
+        vim.diagnostic.config {
+            virtual_text = false,
+        }
+    end,
     keys = {
         {
             '<leader>l',
@@ -10,10 +15,5 @@ return {
             desc = 'Toggle lsp_lines',
         },
     },
-    init = function()
-        vim.diagnostic.config {
-            virtual_text = false,
-        }
-    end,
     config = true,
 }
