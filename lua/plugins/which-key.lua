@@ -5,6 +5,10 @@ return {
         '"',
         "'",
         '`',
+        'c',
+        'v',
+        'y',
+        'd',
     },
     config = function()
         local wk = require('which-key')
