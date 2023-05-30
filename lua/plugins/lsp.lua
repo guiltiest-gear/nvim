@@ -42,13 +42,49 @@ return {
             },
         },
         keys = {
-            { 'gd', '<cmd>Telescope lsp_definitions<cr>', desc = 'Goto Definition' },
-            { 'gr', '<cmd>Telescope lsp_references<cr>', desc = 'References' },
-            { 'gD', vim.lsp.buf.declaration, desc = 'Goto Declaration' },
-            { 'gI', '<cmd>Telescope lsp_implementations<cr>', desc = 'Goto Implementation' },
-            { 'gy', '<cmd>Telescope lsp_type_definitions<cr>', desc = 'Goto T[y]pe Definition' },
-            { 'K', vim.lsp.buf.hover, desc = 'Hover' },
-            { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
+            {
+                'gd',
+                function()
+                    return require('telescope.builtin').lsp_definitions()
+                end,
+                desc = 'Goto Definition',
+            },
+            {
+                'gr',
+                function()
+                    return require('telescope.builtin').lsp_references()
+                end,
+                desc = 'References',
+            },
+            {
+                'gD',
+                vim.lsp.buf.declaration,
+                desc = 'Goto Declaration',
+            },
+            {
+                'gI',
+                function()
+                    return require('telescope.builtin').lsp_implementations()
+                end,
+                desc = 'Goto Implementation',
+            },
+            {
+                'gy',
+                function()
+                    return require('telescope.builtin').lsp_type_definitions()
+                end,
+                desc = 'Goto T[y]pe Definition',
+            },
+            {
+                'K',
+                vim.lsp.buf.hover,
+                desc = 'Hover',
+            },
+            {
+                'gK',
+                vim.lsp.buf.signature_help,
+                desc = 'Signature Help',
+            },
         },
         event = {
             'BufReadPre',
