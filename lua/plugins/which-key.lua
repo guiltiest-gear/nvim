@@ -9,6 +9,7 @@ return {
         'v',
         'y',
         'd',
+        'g',
     },
     config = function()
         local wk = require('which-key')
