@@ -23,6 +23,12 @@ autocmd('VimResized', {
     command = 'wincmd =',
 })
 
+-- Never insert line as a comment when using 'o' to enter insert mode
+autocmd('BufWinEnter', {
+    pattern = '',
+    command = 'setlocal formatoptions-=o',
+})
+
 -- Close man and help with just <q>
 autocmd('FileType', {
     pattern = {
