@@ -86,7 +86,7 @@ return {
                     desc_hl = 'String',
                     key = 'u',
                     key_hl = 'Number',
-                    action = ':Lazy update',
+                    action = ':lua require("lazy").update()',
                 },
                 {
                     icon = ' ',
