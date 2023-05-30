@@ -41,7 +41,7 @@ return {
                     desc_hl = 'String',
                     key = 'f',
                     key_hl = 'Number',
-                    action = ':Telescope find_files',
+                    action = ':lua require("telescope.builtin").find_files()',
                 },
                 {
                     icon = ' ',
@@ -59,7 +59,7 @@ return {
                     desc_hl = 'String',
                     key = 'r',
                     key_hl = 'Number',
-                    action = ':Telescope oldfiles',
+                    action = ':lua require("telescope.builtin").oldfiles()',
                 },
                 {
                     icon = '󰊄 ',
@@ -68,7 +68,7 @@ return {
                     desc_hl = 'String',
                     key = 'w',
                     key_hl = 'Number',
-                    action = ':Telescope live_grep',
+                    action = ':lua require("telescope.builtin").live_grep()',
                 },
                 {
                     icon = ' ',
@@ -104,7 +104,7 @@ return {
                     desc_hl = 'String',
                     key = 'g',
                     key_hl = 'Number',
-                    action = ':Neogit',
+                    action = ':lua require("neogit").open()',
                 },
                 {
                     icon = ' ',
