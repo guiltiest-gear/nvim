@@ -5,6 +5,20 @@ return {
         'BufReadPost',
         'BufNewFile',
     },
+    keys = {
+        {
+            'zR',
+            function()
+                return require('ufo').openAllFolds()
+            end,
+        },
+        {
+            'zM',
+            function()
+                return require('ufo').closeAllFolds()
+            end,
+        },
+    },
     opts = {
         provider_selector = function(_, filetype, buftype)
             local function handleFallbackException(bufnr, err, providerName)
