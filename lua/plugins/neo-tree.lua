@@ -45,7 +45,6 @@ return {
                 StaticMethod = { icon = '󰠄 ', hl = 'Function' },
             },
         },
-        -- Add this section only if you've configured source selector.
         source_selector = {
             winbar = true,
             statusline = true,
@@ -54,7 +53,6 @@ return {
                 { source = 'git_status', display_name = ' 󰊢 Git ' },
             },
         },
-        -- Other options ...
         filesystem = {
             filtered_items = {
                 hide_dotfiles = false,
