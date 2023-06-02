@@ -44,6 +44,8 @@ return {
         },
         -- Add this section only if you've configured source selector.
         source_selector = {
+            winbar = true,
+            statusline = true,
             sources = {
                 { source = 'filesystem', display_name = ' 󰉓 Files ' },
                 { source = 'git_status', display_name = ' 󰊢 Git ' },
