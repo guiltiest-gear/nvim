@@ -96,6 +96,7 @@ return {
                 return require('telescope').extensions.undo.undo()
             end,
         },
+        { '<leader>tt', '<cmd>TodoTelescope<CR>' },
     },
     opts = {
         defaults = {

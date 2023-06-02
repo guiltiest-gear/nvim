@@ -105,6 +105,12 @@ return {
                 c = 'Clean plugins',
                 p = 'Profiler',
             },
+            t = {
+                name = 'todo-comments.nvim',
+                n = 'Jump to next todo comment',
+                p = 'Jump to previous todo comment',
+                t = 'Search through todos with telescope',
+            },
         }
 
         local opts = {
