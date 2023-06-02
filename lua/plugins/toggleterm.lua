@@ -1,8 +1,9 @@
 return {
     'akinsho/toggleterm.nvim',
     version = '*',
-    cmd = 'ToggleTerm',
+    keys = [[<C-\>]],
     opts = {
+        open_mapping = [[<C-\>]],
         size = 20,
         hide_numbers = true,
         shell = vim.o.shell,
