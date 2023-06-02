@@ -133,10 +133,4 @@ return {
             col = 1,
         },
     },
-    config = function(_, opts)
-        local gitsigns = require('gitsigns')
-        gitsigns.setup(opts)
-        -- scrollbar integration
-        require('scrollbar.handlers.gitsigns').setup()
-    end,
 }
