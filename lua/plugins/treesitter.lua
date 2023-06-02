@@ -26,7 +26,6 @@ return {
             'gitcommit',
             'gitignore',
             'gitattributes',
-            'comment',
             'diff',
             'vim',
             'vimdoc',
