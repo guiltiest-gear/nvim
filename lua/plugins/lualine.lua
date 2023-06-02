@@ -49,8 +49,8 @@ return {
         },
         extensions = {
             'man',
-            'nvim-tree',
             'toggleterm',
+            'neo-tree',
         },
     },
 }
