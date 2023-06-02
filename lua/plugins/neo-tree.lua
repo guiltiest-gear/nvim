@@ -59,6 +59,7 @@ return {
                     '.git',
                 },
             },
+            follow_current_file = true,
         },
     },
 }
