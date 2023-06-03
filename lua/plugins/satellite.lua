@@ -4,5 +4,7 @@ return {
         'BufReadPost',
         'BufNewFile',
     },
-    config = true,
+    opts = {
+        winblend = 0,
+    },
 }
