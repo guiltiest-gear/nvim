@@ -103,16 +103,16 @@ return {
             desc = 'Search and checkout git commits',
         },
         {
+            '<leader>ft',
+            '<cmd>TodoTelescope<CR>',
+            desc = 'Search through todo comments',
+        },
+        {
             '<leader>u',
             function()
                 return require('telescope').extensions.undo.undo()
             end,
             desc = 'Search through undo tree',
-        },
-        {
-            '<leader>tt',
-            '<cmd>TodoTelescope<CR>',
-            desc = 'Search through todo comments',
         },
     },
     opts = {

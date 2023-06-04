@@ -7,14 +7,14 @@ return {
     },
     keys = {
         {
-            '<leader>tn',
+            ']t',
             function()
                 return require('todo-comments').jump_next()
             end,
             desc = 'Jump to next todo comment',
         },
         {
-            '<leader>tp',
+            '[t',
             function()
                 return require('todo-comments').jump_prev()
             end,
