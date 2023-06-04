@@ -22,60 +22,70 @@ return {
             function()
                 return require('gitsigns').next_hunk()
             end,
+            desc = 'Next hunk',
         },
         {
             '<leader>gk',
             function()
                 return require('gitsigns').prev_hunk()
             end,
+            desc = 'Previous hunk',
         },
         {
             '<leader>gl',
             function()
                 return require('gitsigns').blame_line()
             end,
+            desc = 'Open git blame',
         },
         {
             '<leader>gp',
             function()
                 return require('gitsigns').preview_hunk()
             end,
+            desc = 'Preview the hunk',
         },
         {
             '<leader>gr',
             function()
                 return require('gitsigns').reset_hunk()
             end,
+            desc = 'Reset the hunk',
         },
         {
             '<leader>gR',
             function()
                 return require('gitsigns').reset_buffer()
             end,
+            desc = 'Reset the buffer',
         },
         {
             '<leader>gs',
             function()
                 return require('gitsigns').stage_hunk()
             end,
+            desc = 'Stage the hunk',
         },
         {
             '<leader>gS',
             function()
                 return require('gitsigns').stage_buffer()
             end,
+            desc = 'Stage the buffer',
         },
         {
             '<leader>gu',
             function()
                 return require('gitsigns').undo_stage_hunk()
             end,
+            desc = 'Unstage the hunk',
         },
         {
             '<leader>gd',
             function()
                 return require('gitsigns').diffthis()
             end,
+            desc = 'Open a diff',
         },
     },
     opts = {

@@ -10,7 +10,11 @@ return {
         vim.g.neo_tree_remove_legacy_commands = 1
     end,
     keys = {
-        { '<leader>e', '<cmd>Neotree toggle<CR>' },
+        {
+            '<leader>e',
+            '<cmd>Neotree toggle<CR>',
+            desc = 'Open neo-tree.nvim',
+        },
     },
     opts = {
         default_component_configs = {
