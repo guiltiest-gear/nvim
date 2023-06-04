@@ -63,7 +63,7 @@ return {
         {
             '<leader>fk',
             function()
-                return require('telescope.builtin').keys()
+                return require('telescope.builtin').keymaps()
             end,
         },
         {
