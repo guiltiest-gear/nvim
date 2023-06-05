@@ -173,7 +173,7 @@ return {
         end,
         keys = {
             {
-                '<leader>l',
+                '<leader>L',
                 function()
                     return require('lsp_lines').toggle()
                 end,
