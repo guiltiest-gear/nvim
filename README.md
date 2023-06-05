@@ -13,7 +13,7 @@ actually usable for people other than me.
 change and break. Again, this is a config for myself, not for the masses. Use at
 your own risk.
 
-3. This config was build around the *latest* version of neovim, as I run an
+3. This config was build around the ***latest*** version of neovim, as I run an
 Arch-linux based distro. Do not expect this to work without the latest neovim package.
 
 ## Installation
