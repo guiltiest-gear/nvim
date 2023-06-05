@@ -37,7 +37,6 @@ return {
                         'stylua',
                         'markdownlint',
                         'luacheck',
-                        'cpplint',
                     },
                 },
             },
