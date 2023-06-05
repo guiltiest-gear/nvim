@@ -38,7 +38,7 @@ return {
             ['$'] = 'Jump to last buffer',
             ['d'] = 'Open dashboard',
             ['e'] = 'Explorer',
-            ['l'] = 'Toggle lsp_lines',
+            ['L'] = 'Toggle lsp_lines.nvim',
             ['q'] = 'Quit the current file',
             ['Q'] = 'Quit neovim',
             ['w'] = 'Save the current file',
