@@ -144,6 +144,7 @@ return {
                     nls.builtins.formatting.markdownlint,
                     nls.builtins.diagnostics.markdownlint,
                     nls.builtins.diagnostics.luacheck,
+                    nls.builtins.diagnostics.cpplint,
                 },
             }
         end,
