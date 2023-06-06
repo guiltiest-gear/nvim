@@ -31,7 +31,7 @@ return {
         ignore_install = { '' },
         auto_install = true,
         matchup = {
-            enabled = true,
+            enable = true,
         },
     },
     config = function(_, opts)
