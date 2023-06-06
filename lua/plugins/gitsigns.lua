@@ -32,6 +32,20 @@ return {
             desc = 'Previous hunk',
         },
         {
+            ']g',
+            function()
+                return require('gitsigns').next_hunk()
+            end,
+            desc = 'Next hunk',
+        },
+        {
+            '[g',
+            function()
+                return require('gitsigns').prev_hunk()
+            end,
+            desc = 'Previous hunk',
+        },
+        {
             '<leader>gl',
             function()
                 return require('gitsigns').blame_line()
