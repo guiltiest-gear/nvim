@@ -30,6 +30,7 @@ return {
         },
         ignore_install = { '' },
         auto_install = true,
+        -- vim-matchup config
         matchup = {
             enable = true,
         },
