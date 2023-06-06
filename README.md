@@ -85,6 +85,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [nvim-surround](https://github.com/kylechui/nvim-surround)
 * [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+* [nvim-ts-rainbow2](https://github.com/HiPhish/nvim-ts-rainbow2)
 * [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 * [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 * [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
