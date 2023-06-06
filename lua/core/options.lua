@@ -72,7 +72,7 @@ opt.wrap = false
 opt.list = true
 
 -- Fill chars
-opt.fillchars = [[vert:|,horiz:-,eob: ]]
+opt.fillchars = { eob = ' ' }
 
 -- Enable lazy redraw for performance
 opt.lazyredraw = true
