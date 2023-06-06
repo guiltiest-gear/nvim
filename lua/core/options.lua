@@ -46,7 +46,6 @@ opt.foldlevelstart = 99
 opt.foldcolumn = '1'
 
 -- Decrease update time
-opt.timeoutlen = 500
 opt.updatetime = 200
 
 -- Disable swapfile
