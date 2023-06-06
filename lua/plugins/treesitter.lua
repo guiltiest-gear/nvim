@@ -5,6 +5,7 @@ return {
             'nvim-treesitter/nvim-treesitter-context',
             config = true,
         },
+        'HiPhish/nvim-ts-rainbow2',
     },
     build = ':TSUpdate',
     event = {
@@ -32,6 +33,10 @@ return {
         auto_install = true,
         -- vim-matchup config
         matchup = {
+            enable = true,
+        },
+        -- nvim-ts-rainbow2 config
+        rainbow = {
             enable = true,
         },
     },
