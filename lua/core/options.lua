@@ -86,6 +86,9 @@ opt.confirm = true
 -- Hide * markup for bold and italic
 opt.conceallevel = 3
 
+-- Hide the command line unless needed
+opt.cmdheight = 0
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
@@ -109,6 +112,3 @@ g.loaded_fzf = 1
 g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
-
--- Hide the command line unless needed
-opt.cmdheight = 0
