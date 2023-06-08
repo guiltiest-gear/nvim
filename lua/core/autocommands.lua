@@ -19,8 +19,9 @@ autocmd('TextYankPost', {
 
 -- Automatically rebalance windows on vim resize
 autocmd('VimResized', {
-    pattern = '',
-    command = 'wincmd =',
+    callback = function()
+        vim.cmd('tabdo wincmd =')
+    end,
 })
 
 -- Never insert line as a comment when using 'o' to enter insert mode
