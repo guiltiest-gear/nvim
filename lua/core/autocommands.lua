@@ -54,10 +54,13 @@ autocmd('BufWritePre', {
     end,
 })
 
--- Check for spelling in text filetypes
+-- Check for spelling in text filetypes and enable wrapping
 autocmd('FileType', {
     pattern = { 'gitcommit', 'markdown' },
     callback = function()
         vim.opt_local.spell = true
+        vim.opt_local.wrap = true
+    end,
+})
     end,
 })
