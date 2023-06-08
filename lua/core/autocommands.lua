@@ -27,8 +27,9 @@ autocmd('VimResized', {
 
 -- Never insert line as a comment when using 'o' to enter insert mode
 autocmd('BufWinEnter', {
-    pattern = '',
-    command = 'setlocal formatoptions-=o',
+    callback = function()
+        vim.cmd('setlocal formatoptions-=o')
+    end,
 })
 
 -- Close man and help with just <q>
