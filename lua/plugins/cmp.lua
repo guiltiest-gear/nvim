@@ -146,7 +146,7 @@ return {
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
             },
-            sorting = {
+            --[[ sorting = {
                 comparators = {
                     cmp.config.compare.offset,
                     cmp.config.compare.exact,
@@ -156,7 +156,7 @@ return {
                     cmp.config.compare.length,
                     cmp.config.compare.order,
                 },
-            },
+            }, ]]
             experimental = {
                 ghost_text = true,
             },
