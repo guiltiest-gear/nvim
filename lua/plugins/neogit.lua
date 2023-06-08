@@ -12,5 +12,6 @@ return {
     },
     opts = {
         kind = 'replace',
+        disable_builtin_notifications = true,
     },
 }
