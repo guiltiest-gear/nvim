@@ -1,7 +1,6 @@
 return {
     'folke/trouble.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
-    event = 'LspAttach',
     keys = {
         { '<leader>xx', '<cmd>TroubleToggle<CR>' },
         { '<leader>xw', '<cmd>TroubleToggle workspace_diagnostics<CR>' },
