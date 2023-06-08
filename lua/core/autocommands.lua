@@ -4,8 +4,9 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- Remove trailing whitespaces
 autocmd('BufWritePre', {
-    pattern = '',
-    command = '%s/\\s\\+$//e',
+    callback = function()
+        vim.cmd('%s/\\s\\+$//e')
+    end,
 })
 
 -- Highlight text on yank
