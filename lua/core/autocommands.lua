@@ -73,3 +73,8 @@ autocmd('BufReadPost', {
         end
     end,
 })
+
+-- Check if the file needs to be reloaded when it's changed
+autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
+    command = 'checktime',
+})
