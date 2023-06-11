@@ -32,13 +32,6 @@ return {
         config = true,
     },
 
-    -- colorful-winsep.nvim
-    {
-        'nvim-zh/colorful-winsep.nvim',
-        event = 'WinNew',
-        config = true,
-    },
-
     -- numb.nvim
     {
         'nacro90/numb.nvim',
