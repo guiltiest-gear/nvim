@@ -38,11 +38,4 @@ return {
         event = 'CmdlineEnter',
         config = true,
     },
-
-    -- relative-toggle.nvim
-    {
-        'cpea2506/relative-toggle.nvim',
-        event = 'InsertEnter',
-        config = true,
-    },
 }
