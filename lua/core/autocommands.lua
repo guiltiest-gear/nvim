@@ -81,3 +81,23 @@ autocmd('BufReadPost', {
 autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
     command = 'checktime',
 })
+
+-- Toggle relative numbers based on certain events
+autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }, {
+    pattern = '*',
+    callback = function()
+        if vim.o.nu and vim.api.nvim_get_mode().mode ~= 'i' then
+            vim.opt.relativenumber = true
+        end
+    end,
+})
+
+autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, {
+    pattern = '*',
+    callback = function()
+        if vim.o.nu then
+            vim.opt.relativenumber = false
+            vim.cmd('redraw')
+        end
+    end,
+})
