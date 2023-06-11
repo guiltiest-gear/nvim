@@ -146,6 +146,7 @@ return {
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
             },
+            -- NOTE: Keep sorting disabled for now, the behavior isn't super desirable
             --[[ sorting = {
                 comparators = {
                     cmp.config.compare.offset,
