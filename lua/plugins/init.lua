@@ -2,9 +2,10 @@ return {
     -- nvim-surround
     {
         'kylechui/nvim-surround',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
+        keys = {
+            { 'cs', mode = 'n', desc = 'Change surroundings' },
+            { 'ys', mode = 'n', desc = 'Add surroundings' },
+            { 'ds', mode = 'n', desc = 'Delete surroundings' },
         },
         config = true,
     },
