@@ -14,9 +14,9 @@ return {
     {
         'numToStr/Comment.nvim',
         keys = {
-            { 'gcc', mode = 'n', desc = 'Toggle comments (normal mode)' },
+            { 'gc', mode = 'n', desc = 'Toggle comments (normal mode)' },
             { 'gc', mode = 'v', desc = 'Toggle comments (visual mode)' },
-            { 'gbc', mode = 'n', desc = 'Toggle block comments (normal mode)' },
+            { 'gb', mode = 'n', desc = 'Toggle block comments (normal mode)' },
             { 'gb', mode = 'v', desc = 'Toggle block comments (visual mode)' },
         },
         config = true,
