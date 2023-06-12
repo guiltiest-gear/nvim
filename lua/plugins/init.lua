@@ -12,9 +12,11 @@ return {
     -- Comment.nvim
     {
         'numToStr/Comment.nvim',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
+        keys = {
+            { 'gcc', mode = 'n' },
+            { 'gc', mode = 'v' },
+            { 'gbc', mode = 'n' },
+            { 'gb', mode = 'v' },
         },
         config = true,
     },
