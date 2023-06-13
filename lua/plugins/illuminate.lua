@@ -20,8 +20,6 @@ return {
     },
     opts = {
         filetypes_denylist = {
-            'alpha',
-            'NvimTree',
             'help',
             'text',
         },
