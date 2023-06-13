@@ -102,15 +102,15 @@ autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, 
     end,
 })
 
--- Send a notification when I start and stop recording a macro
+-- Set cmdheight to 1 when recording, and put it back to normal when it stops
 autocmd('RecordingEnter', {
     callback = function()
-        vim.notify('Now recording macro...')
+        vim.opt_local.cmdheight = 1
     end,
 })
 
 autocmd('RecordingLeave', {
     callback = function()
-        vim.notify('Macro finished recording')
+        vim.opt_local.cmdheight = 0
     end,
 })
