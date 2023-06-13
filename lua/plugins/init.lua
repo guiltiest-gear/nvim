@@ -44,7 +44,7 @@ return {
             'romainl/vim-cool',
             -- HACK: There doesn't seem to be an autocommand event to detect when you start
             -- searching, so this will have to do until I can find an event for that
-            keys = { '/', '?' }
+            keys = { '/', '?' },
         },
         keys = {
             { 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]] },
