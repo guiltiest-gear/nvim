@@ -51,6 +51,9 @@ return {
             'man',
             'toggleterm',
             'neo-tree',
+            'symbols-outline',
+            'trouble',
+            'lazy',
         },
     },
 }
