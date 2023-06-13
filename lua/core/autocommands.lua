@@ -106,11 +106,11 @@ autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, 
 autocmd('RecordingEnter', {
     callback = function()
         vim.notify('Now recording macro...')
-    end
+    end,
 })
 
 autocmd('RecordingLeave', {
     callback = function()
         vim.notify('Macro finished recording')
-    end
+    end,
 })
