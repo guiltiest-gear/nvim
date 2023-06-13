@@ -54,7 +54,7 @@ return {
             statusline = true,
             sources = {
                 { source = 'filesystem', display_name = ' 󰉓 Files ' },
-                { source = 'git_status', display_name = ' 󰊢 Git ' },
+                -- { source = 'git_status', display_name = ' 󰊢 Git ' },
             },
         },
         filesystem = {
