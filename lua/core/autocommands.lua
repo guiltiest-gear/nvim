@@ -101,3 +101,16 @@ autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, 
         end
     end,
 })
+
+-- Send a notification when I start and stop recording a macro
+autocmd('RecordingEnter', {
+    callback = function()
+        vim.notify('Now recording macro...')
+    end
+})
+
+autocmd('RecordingLeave', {
+    callback = function()
+        vim.notify('Macro finished recording')
+    end
+})
