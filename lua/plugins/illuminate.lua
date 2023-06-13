@@ -1,6 +1,9 @@
 return {
     'RRethy/vim-illuminate',
-    event = 'LspAttach',
+    event = {
+        'BufReadPost',
+        'BufNewFile',
+    },
     keys = {
         {
             '<leader>it',
