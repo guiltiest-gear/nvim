@@ -407,7 +407,7 @@ return {
                     j = 'Next hunk',
                     k = 'Prev hunk',
                     l = 'Blame',
-                    h = 'Preview hunk',
+                    p = 'Preview hunk',
                     r = 'Reset hunk',
                     R = 'Reset buffer',
                     s = 'Stage hunk',
