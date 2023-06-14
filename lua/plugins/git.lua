@@ -74,7 +74,7 @@ return {
                 desc = 'Open git blame',
             },
             {
-                '<leader>gp',
+                '<leader>gh',
                 function()
                     return require('gitsigns').preview_hunk()
                 end,
