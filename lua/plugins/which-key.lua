@@ -64,12 +64,6 @@ return {
                 c = 'Commands',
                 t = 'Todos',
             },
-            -- TODO: Consider removing these keymaps
-            i = {
-                name = 'Illuminate',
-                t = 'Toggle vim-illuminate globally',
-                b = 'Toggle vim-illuminate per buffer',
-            },
             b = {
                 name = 'Buffer',
                 k = 'Kill the current buffer',
