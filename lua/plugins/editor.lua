@@ -59,6 +59,19 @@ return {
         end,
     },
 
+    -- hlargs.nvim
+    {
+        'm-demare/hlargs.nvim',
+        dependencies = 'nvim-treesitter/nvim-treesitter',
+        ft = {
+            'c',
+            'cpp',
+            'lua',
+            'vim',
+        },
+        config = true,
+    },
+
     -- nvim-hlslens
     {
         'kevinhwang91/nvim-hlslens',
