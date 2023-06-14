@@ -11,11 +11,4 @@ return {
         },
         config = true,
     },
-
-    -- numb.nvim
-    {
-        'nacro90/numb.nvim',
-        event = 'CmdlineEnter',
-        config = true,
-    },
 }
