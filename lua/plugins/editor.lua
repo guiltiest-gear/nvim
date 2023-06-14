@@ -546,6 +546,9 @@ return {
         },
         opts = {
             options = {
+                numbers = function(opts)
+                    return string.format('%s', opts.ordinal)
+                end,
                 mode = 'buffers',
                 diagnostics = 'nvim_lsp',
                 diagnostics_indicator = function(count, level, diagnostics_dict, context)
