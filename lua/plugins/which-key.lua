@@ -66,6 +66,7 @@ return {
                 c = 'Commands',
                 t = 'Todos',
             },
+            -- TODO: Consider removing these keymaps
             i = {
                 name = 'Illuminate',
                 t = 'Toggle vim-illuminate globally',

@@ -4,6 +4,7 @@ return {
         'BufReadPost',
         'BufNewFile',
     },
+    -- TODO: Consider removing these keymaps
     keys = {
         {
             '<leader>it',
