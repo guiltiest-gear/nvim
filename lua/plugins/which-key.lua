@@ -42,7 +42,8 @@ return {
             ['$'] = 'Jump to last buffer',
             ['d'] = 'Open dashboard',
             ['e'] = 'Explorer',
-            ['L'] = 'Toggle lsp_lines.nvim',
+            -- TODO: Consider removing this keymap
+            -- ['L'] = 'Toggle lsp_lines.nvim',
             ['q'] = 'Quit the current file',
             ['Q'] = 'Quit neovim',
             ['w'] = 'Save the current file',

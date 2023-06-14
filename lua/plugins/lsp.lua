@@ -173,7 +173,8 @@ return {
                 },
             }
         end,
-        keys = {
+        -- TODO: Consider removing this keymap entirely
+        --[[ keys = {
             {
                 '<leader>L',
                 function()
@@ -181,7 +182,7 @@ return {
                 end,
                 desc = 'Toggle lsp_lines',
             },
-        },
+        }, ]]
         config = true,
     },
 
