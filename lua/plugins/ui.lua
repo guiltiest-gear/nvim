@@ -286,7 +286,7 @@ return {
                         desc_hl = 'String',
                         key = 'c',
                         key_hl = 'Number',
-                        action = ':cd ~/.config/nvim | e ~/.config/nvim/lua/plugins/init.lua',
+                        action = ':cd ~/.config/nvim | e ~/.config/nvim/lua/init.lua',
                     },
                     {
                         icon = ' ',
