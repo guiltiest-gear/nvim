@@ -123,26 +123,6 @@ return {
         },
     },
 
-    -- nvim-hlslens
-    {
-        'kevinhwang91/nvim-hlslens',
-        dependencies = {
-            'romainl/vim-cool',
-            -- HACK: There doesn't seem to be an autocommand event to detect when you start
-            -- searching, so this will have to do until I can find an event for that or until neovim creates that event
-            keys = { '/', '?' },
-        },
-        keys = {
-            { 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]] },
-            { 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]] },
-            { '*', [[*<Cmd>lua require('hlslens').start()<CR>]] },
-            { '#', [[#<Cmd>lua require('hlslens').start()<CR>]] },
-            { 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]] },
-            { 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]] },
-        },
-        config = true,
-    },
-
     -- windows.nvim
     {
         'anuvyklack/windows.nvim',
