@@ -1,15 +1,4 @@
 return {
-    -- nvim-surround
-    {
-        'kylechui/nvim-surround',
-        keys = {
-            { 'cs', mode = 'n', desc = 'Change surroundings' },
-            { 'ys', mode = 'n', desc = 'Add surroundings' },
-            { 'ds', mode = 'n', desc = 'Delete surroundings' },
-        },
-        config = true,
-    },
-
     -- Comment.nvim
     {
         'numToStr/Comment.nvim',
