@@ -417,8 +417,6 @@ return {
                     b = 'Checkout branch',
                     c = 'Checkout commit',
                     d = 'Diff',
-                    P = 'Push',
-                    p = 'Pull',
                 },
                 x = {
                     name = 'Trouble',
