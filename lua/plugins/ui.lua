@@ -43,4 +43,83 @@ return {
         end,
         lazy = true,
     },
+
+    -- indent-blankline.nvim
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        dependencies = 'nvim-treesitter/nvim-treesitter',
+        event = {
+            'BufReadPost',
+            'BufNewFile',
+        },
+        opts = {
+            char = '▏',
+            context_char = '▏',
+            use_treesitter = true,
+            show_first_indent_level = true,
+            show_trailing_blankline_indent = false,
+            show_current_context = true,
+            show_current_context_start = true,
+            filetype_exclude = {
+                'help',
+                'dashboard',
+                'Trouble',
+                'neogitstatus',
+            },
+            context_patterns = {
+                'class',
+                'return',
+                'function',
+                'method',
+                '^if',
+                '^while',
+                'jsx_element',
+                '^for',
+                '^object',
+                '^table',
+                'block',
+                'arguments',
+                'if_statement',
+                'else_clause',
+                'jsx_element',
+                'jsx_self_closing_element',
+                'try_statement',
+                'catch_clause',
+                'import_statement',
+                'operation_type',
+            },
+        },
+    },
+
+    -- nvim-ufo
+    {
+        'kevinhwang91/nvim-ufo',
+        dependencies = 'kevinhwang91/promise-async',
+        event = {
+            'BufReadPost',
+            'BufNewFile',
+        },
+        opts = {
+            provider_selector = function(_, filetype, buftype)
+                local function handleFallbackException(bufnr, err, providerName)
+                    if type(err) == 'string' and err:match('UfoFallbackException') then
+                        return require('ufo').getFolds(bufnr, providerName)
+                    else
+                        return require('promise').reject(err)
+                    end
+                end
+                return (filetype == '' or buftype == 'nofile') and 'indent'
+                    or function(bufnr)
+                        return require('ufo')
+                            .getFolds(bufnr, 'lsp')
+                            :catch(function(err)
+                                return handleFallbackException(bufnr, err, 'treesitter')
+                            end)
+                            :catch(function(err)
+                                return handleFallbackException(bufnr, err, 'indent')
+                            end)
+                    end
+            end,
+        },
+    },
 }
