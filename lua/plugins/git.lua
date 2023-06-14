@@ -11,6 +11,27 @@ return {
                 end,
                 desc = 'Neogit',
             },
+            {
+                '<leade>gC',
+                function()
+                    return require('neogit').open { 'commit' }
+                end,
+                desc = 'Open neogit commit popup',
+            },
+            {
+                '<leader>gP',
+                function()
+                    return require('neogit').open { 'push' }
+                end,
+                desc = 'Open neogit push popup',
+            },
+            {
+                '<leader>gp',
+                function()
+                    return require('neogit').open { 'pull' }
+                end,
+                desc = 'Open neogit pull popup',
+            },
         },
         opts = {
             kind = 'replace',
