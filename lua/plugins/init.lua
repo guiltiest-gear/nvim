@@ -32,7 +32,7 @@ return {
         dependencies = {
             'romainl/vim-cool',
             -- HACK: There doesn't seem to be an autocommand event to detect when you start
-            -- searching, so this will have to do until I can find an event for that
+            -- searching, so this will have to do until I can find an event for that or until neovim creates that event
             keys = { '/', '?' },
         },
         keys = {
