@@ -14,7 +14,6 @@ return {
         show_current_context_start = true,
         filetype_exclude = {
             'help',
-            'NvimTree',
             'dashboard',
             'Trouble',
             'neogitstatus',
