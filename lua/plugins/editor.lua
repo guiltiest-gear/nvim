@@ -578,4 +578,17 @@ return {
         event = 'CmdlineEnter',
         config = true,
     },
+
+    -- better-escape.nvim
+    {
+        'max397574/better-escape.nvim',
+        event = 'InsertCharPre',
+        opts = {
+            mapping = {
+                'jj',
+                'jk',
+                'kk',
+            },
+        },
+    },
 }
