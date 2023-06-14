@@ -402,4 +402,11 @@ return {
             },
         },
     },
+
+    -- numb.nvim
+    {
+        'nacro90/numb.nvim',
+        event = 'CmdlineEnter',
+        config = true,
+    },
 }
