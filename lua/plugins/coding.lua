@@ -28,4 +28,17 @@ return {
             require('cmp').event:on('confirm_done', cmp_autopairs.on_confirm_done {})
         end,
     },
+
+    -- nvim-surround
+    {
+        'kylechui/nvim-surround',
+        keys = {
+            { 'cs', mode = 'n', desc = 'Change surroundings' },
+            { 'ys', mode = 'n', desc = 'Add surroundings' },
+            { 'ds', mode = 'n', desc = 'Delete surroundings' },
+        },
+        opts = {
+            check_ts = true,
+        },
+    },
 }
