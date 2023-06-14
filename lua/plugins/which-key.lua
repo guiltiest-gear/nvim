@@ -85,7 +85,6 @@ return {
                 b = 'Checkout branch',
                 c = 'Checkout commit',
                 d = 'Diff',
-                C = 'Commit',
                 P = 'Push',
                 p = 'Pull',
             },
