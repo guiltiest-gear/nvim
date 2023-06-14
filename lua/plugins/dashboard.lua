@@ -3,7 +3,7 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     event = 'VimEnter',
     keys = {
-        { '<leader>d', '<cmd>Dashboard<CR>' },
+        { '<leader>d', '<cmd>Dashboard<CR>', desc = 'Open dashboard-nvim' },
     },
     opts = {
         theme = 'doom',
