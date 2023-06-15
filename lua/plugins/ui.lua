@@ -47,6 +47,7 @@ return {
     -- hlchunk.nvim
     {
         'shellRaining/hlchunk.nvim',
+        dependencies = 'nvim-treesitter/nvim-treesitter',
         event = {
             'BufReadPost',
             'BufNewFile',
