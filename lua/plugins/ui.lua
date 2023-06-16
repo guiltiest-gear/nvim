@@ -99,6 +99,22 @@ return {
             'BufReadPost',
             'BufNewFile',
         },
+        keys = {
+            {
+                'zR',
+                function()
+                    return require('ufo').openAllFolds()
+                end,
+                desc = 'Open all folds',
+            },
+            {
+                'zM',
+                function()
+                    return require('ufo').closeAllFolds()
+                end,
+                desc = 'Close all folds',
+            },
+        },
         opts = {
             provider_selector = function(_, filetype, buftype)
                 local function handleFallbackException(bufnr, err, providerName)
