@@ -174,7 +174,10 @@ return {
                     'diff',
                     {
                         'diagnostics',
-                        sources = { 'nvim_lsp', 'nvim_diagnostic' },
+                        sources = {
+                            'nvim_lsp',
+                            'nvim_diagnostic',
+                        },
                     },
                     function()
                         local ok, m = pcall(require, 'better_escape')
