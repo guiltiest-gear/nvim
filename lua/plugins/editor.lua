@@ -455,6 +455,69 @@ return {
                 end,
                 desc = 'Close the current buffer forcefully',
             },
+            {
+                '<leader>c1',
+                function()
+                    return require('bufdelete').bufdelete(1)
+                end,
+                desc = 'Close the first buffer',
+            },
+            {
+                '<leader>c2',
+                function()
+                    return require('bufdelete').bufdelete(2)
+                end,
+                desc = 'Close the second buffer',
+            },
+            {
+                '<leader>c3',
+                function()
+                    return require('bufdelete').bufdelete(3)
+                end,
+                desc = 'Close the third buffer',
+            },
+            {
+                '<leader>c4',
+                function()
+                    return require('bufdelete').bufdelete(4)
+                end,
+                desc = 'Close the fourth buffer',
+            },
+            {
+                '<leader>c5',
+                function()
+                    return require('bufdelete').bufdelete(5)
+                end,
+                desc = 'Close the fifth buffer',
+            },
+            {
+                '<leader>c6',
+                function()
+                    return require('bufdelete').bufdelete(6)
+                end,
+                desc = 'Close the sixth buffer',
+            },
+            {
+                '<leader>c7',
+                function()
+                    return require('bufdelete').bufdelete(7)
+                end,
+                desc = 'Close the seventh buffer',
+            },
+            {
+                '<leader>c8',
+                function()
+                    return require('bufdelete').bufdelete(8)
+                end,
+                desc = 'Close the eighth buffer',
+            },
+            {
+                '<leader>c9',
+                function()
+                    return require('bufdelete').bufdelete(9)
+                end,
+                desc = 'Close the ninth buffer',
+            },
         },
     },
 
