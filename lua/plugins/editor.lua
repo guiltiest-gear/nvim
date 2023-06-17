@@ -442,18 +442,18 @@ return {
         'famiu/bufdelete.nvim',
         keys = {
             {
-                '<leader>bk',
+                '<leader>cc',
                 function()
                     return require('bufdelete').bufdelete(0, false)
                 end,
-                desc = 'Delete the current buffer',
+                desc = 'Close the current buffer',
             },
             {
-                '<leader>bK',
+                '<leader>cC',
                 function()
                     return require('bufdelete').bufdelete(0, true)
                 end,
-                desc = 'Delete the current buffer forcefully',
+                desc = 'Close the current buffer forcefully',
             },
         },
     },
