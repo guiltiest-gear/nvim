@@ -420,10 +420,10 @@ return {
                     c = 'Commands',
                     t = 'Todos',
                 },
-                c = {
-                    name = 'Close buffers',
-                    c = 'Close the current buffer',
-                    C = 'Close the current buffer forcefully',
+                b = {
+                    name = 'Buffer',
+                    k = 'Kill the current buffer',
+                    K = 'Kill the current buffer forcefully',
                 },
                 g = {
                     name = 'Git',
