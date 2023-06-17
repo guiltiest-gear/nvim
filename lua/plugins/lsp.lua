@@ -152,8 +152,8 @@ return {
     {
         'j-hui/fidget.nvim',
         event = 'LspAttach',
-        -- NOTE: Keep tag option until further notice: https://shorta.link/wkrANvwU
-        tag = 'legacy',
+        -- NOTE: Keep branch option until further notice: https://shorta.link/wkrANvwU
+        branch = 'legacy',
         opts = {
             window = {
                 blend = 0,
