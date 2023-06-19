@@ -57,12 +57,14 @@ autocmd('BufWritePre', {
     end,
 })
 
--- Check for spelling in text filetypes and enable wrapping
+-- Check for spelling in text filetypes and enable wrapping, and set gj and gk keymaps
 autocmd('FileType', {
     pattern = { 'gitcommit', 'markdown', 'text' },
     callback = function()
         vim.opt_local.spell = true
         vim.opt_local.wrap = true
+        vim.keymap.set('n', 'j', 'gj')
+        vim.keymap.set('n', 'k', 'gk')
     end,
 })
 
