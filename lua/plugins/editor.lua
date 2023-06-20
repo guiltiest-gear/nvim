@@ -41,19 +41,6 @@ return {
         config = true,
     },
 
-    -- vim-matchup
-    {
-        'andymass/vim-matchup',
-        dependencies = 'nvim-treesitter/nvim-treesitter',
-        init = function()
-            vim.g.matchup_matchparen_offscreen = { method = 'status_manual' }
-        end,
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
-    },
-
     -- vim-illuminate
     {
         'RRethy/vim-illuminate',
@@ -70,19 +57,6 @@ return {
         config = function(_, opts)
             require('illuminate').configure(opts)
         end,
-    },
-
-    -- hlargs.nvim
-    {
-        'm-demare/hlargs.nvim',
-        dependencies = 'nvim-treesitter/nvim-treesitter',
-        ft = {
-            'c',
-            'cpp',
-            'lua',
-            'vim',
-        },
-        config = true,
     },
 
     -- nvim-hlslens
