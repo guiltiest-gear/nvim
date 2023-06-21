@@ -28,6 +28,7 @@ return {
                 'diff',
                 'vim',
                 'vimdoc',
+                'regex',
             },
             ignore_install = { '' },
             auto_install = true,
