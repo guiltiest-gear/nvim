@@ -1,12 +1,7 @@
 return {
     {
         'nvim-treesitter/nvim-treesitter',
-        dependencies = {
-            {
-                'nvim-treesitter/nvim-treesitter-context',
-                config = true,
-            },
-        },
+        dependencies = { { 'nvim-treesitter/nvim-treesitter-context', config = true } },
         build = ':TSUpdate',
         event = {
             'BufReadPost',
@@ -33,9 +28,7 @@ return {
             ignore_install = { '' },
             auto_install = true,
             -- vim-matchup config
-            matchup = {
-                enable = true,
-            },
+            matchup = { enable = true },
         },
         config = function(_, opts)
             require('nvim-treesitter.configs').setup(opts)
@@ -95,8 +88,6 @@ return {
                 desc = 'Split node under cursor',
             },
         },
-        opts = {
-            max_join_length = 150,
-        },
+        opts = { max_join_length = 150 },
     },
 }
