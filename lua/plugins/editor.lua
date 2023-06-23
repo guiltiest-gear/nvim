@@ -60,12 +60,9 @@ return {
     },
 
     -- vim-cool
-    {
-        'romainl/vim-cool',
-        -- HACK: There doesn't seem to be an autocommand event to detect when you start
-        -- searching, so this will have to do until I can find an event for that or until neovim creates that event
-        keys = { '/', '?' },
-    },
+    -- HACK: There doesn't seem to be an autocommand event to detect when you start
+    -- searching, so this will have to do until I can find an event for that or until neovim creates that event
+    { 'romainl/vim-cool', keys = { '/', '?' } },
 
     -- nvim-hlslens
     {
@@ -144,9 +141,7 @@ return {
             filesystem = {
                 filtered_items = {
                     hide_dotfiles = false,
-                    hide_by_name = {
-                        '.git',
-                    },
+                    hide_by_name = { '.git' },
                 },
                 follow_current_file = true,
             },
@@ -201,10 +196,7 @@ return {
         },
         opts = {
             plugins = {
-                kitty = {
-                    enabled = true,
-                    font = '+4',
-                },
+                kitty = { enabled = true, font = '+4' },
                 twilight = { enabled = false },
             },
         },
@@ -368,10 +360,7 @@ return {
                 },
             },
             signcolumn = true, -- Toggle with `:GitSigns toggle_signs`
-            watch_gitdir = {
-                interval = 1000,
-                follow_files = true,
-            },
+            watch_gitdir = { interval = 1000, follow_files = true },
             attach_to_untracked = true,
             current_line_blame_opts = {
                 virt_text = true,
@@ -407,9 +396,7 @@ return {
             start_in_insert = true,
             direction = 'float',
             close_on_exit = true,
-            float_opts = {
-                border = 'curved',
-            },
+            float_opts = { border = 'curved' },
         },
     },
 
@@ -538,22 +525,14 @@ return {
     },
 
     -- numb.nvim
-    {
-        'nacro90/numb.nvim',
-        event = 'CmdlineEnter',
-        config = true,
-    },
+    { 'nacro90/numb.nvim', event = 'CmdlineEnter', config = true },
 
     -- better-escape.nvim
     {
         'max397574/better-escape.nvim',
         event = 'InsertCharPre',
         opts = {
-            mapping = {
-                'jj',
-                'jk',
-                'kk',
-            },
+            mapping = { 'jj', 'jk', 'kk' },
             keys = function()
                 return vim.api.nvim_win_get_cursor(0)[2] > 1 and '<esc>l' or '<esc>'
             end,

@@ -37,9 +37,7 @@ return {
             { 'ys', mode = 'n', desc = 'Add surroundings' },
             { 'ds', mode = 'n', desc = 'Delete surroundings' },
         },
-        opts = {
-            check_ts = true,
-        },
+        opts = { check_ts = true },
     },
 
     -- dial.nvim
@@ -90,11 +88,7 @@ return {
             'hrsh7th/cmp-nvim-lua',
             'saadparwaiz1/cmp_luasnip',
             'rafamadriz/friendly-snippets',
-            {
-                'L3MON4D3/LuaSnip',
-                build = 'make install_jsregexp',
-                version = 'v1.*',
-            },
+            { 'L3MON4D3/LuaSnip', build = 'make install_jsregexp', version = 'v1.*' },
         },
         init = function()
             vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
@@ -239,9 +233,7 @@ return {
                         cmp.config.compare.order,
                     },
                 }, ]]
-                experimental = {
-                    ghost_text = true,
-                },
+                experimental = { ghost_text = true },
                 enabled = function()
                     -- Disable nvim-cmp in a telescope prompt
                     local buftype = vim.api.nvim_buf_get_option(0, 'buftype')
@@ -262,20 +254,13 @@ return {
             -- cmp-cmdline setup
             cmp.setup.cmdline('/', {
                 mapping = cmp.mapping.preset.cmdline(),
-                sources = {
-                    { name = 'buffer' },
-                },
+                sources = { { name = 'buffer' } },
             })
 
             cmp.setup.cmdline(':', {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = cmp.config.sources({ { name = 'path' } }, {
-                    {
-                        name = 'cmdline',
-                        option = {
-                            ignore_cmds = { 'Man', '!' },
-                        },
-                    },
+                    { name = 'cmdline', option = { ignore_cmds = { 'Man', '!' } } },
                 }),
             })
         end,

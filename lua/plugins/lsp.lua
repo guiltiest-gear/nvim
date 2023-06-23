@@ -154,11 +154,7 @@ return {
         event = 'LspAttach',
         -- NOTE: Keep branch option until further notice: https://shorta.link/wkrANvwU
         branch = 'legacy',
-        opts = {
-            window = {
-                blend = 0,
-            },
-        },
+        opts = { window = { blend = 0 } },
     },
 
     -- lsp_lines.nvim
@@ -179,9 +175,7 @@ return {
     -- symbols-outline.nvim
     {
         'simrat39/symbols-outline.nvim',
-        keys = {
-            { '<leader>o', '<cmd>SymbolsOutline<CR>', desc = 'Open symbols-outline' },
-        },
+        keys = { { '<leader>o', '<cmd>SymbolsOutline<CR>', desc = 'Open symbols-outline' } },
         opts = {
             symbols = {
                 File = { icon = ' ' },
