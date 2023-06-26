@@ -619,6 +619,11 @@ return {
                 desc = 'Search commands',
             },
             {
+                '<leader>ft',
+                '<cmd>TodoTelescope<CR>',
+                desc = 'Search through todo comments',
+            },
+            {
                 '<leader>go',
                 function()
                     return require('telescope.builtin').git_status()
@@ -638,11 +643,6 @@ return {
                     return require('telescope.builtin').git_commits()
                 end,
                 desc = 'Search and checkout git commits',
-            },
-            {
-                '<leader>ft',
-                '<cmd>TodoTelescope<CR>',
-                desc = 'Search through todo comments',
             },
             {
                 '<leader>u',
