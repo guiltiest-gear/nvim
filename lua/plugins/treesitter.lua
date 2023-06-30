@@ -3,10 +3,7 @@ return {
         'nvim-treesitter/nvim-treesitter',
         dependencies = { { 'nvim-treesitter/nvim-treesitter-context', config = true } },
         build = ':TSUpdate',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
         opts = {
             ensure_installed = {
                 'lua',
@@ -42,22 +39,14 @@ return {
         init = function()
             vim.g.matchup_matchparen_offscreen = { method = 'status_manual' }
         end,
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
     },
 
     -- hlargs.nvim
     {
         'm-demare/hlargs.nvim',
         dependencies = 'nvim-treesitter/nvim-treesitter',
-        ft = {
-            'c',
-            'cpp',
-            'lua',
-            'vim',
-        },
+        ft = { 'c', 'cpp', 'lua', 'vim' },
         config = true,
     },
 

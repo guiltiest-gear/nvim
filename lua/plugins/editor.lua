@@ -3,10 +3,7 @@ return {
     {
         'folke/todo-comments.nvim',
         dependencies = 'nvim-lua/plenary.nvim',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
         keys = {
             {
                 ']t',
@@ -44,16 +41,8 @@ return {
     -- vim-illuminate
     {
         'RRethy/vim-illuminate',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
-        opts = {
-            filetypes_denylist = {
-                'help',
-                'text',
-            },
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
+        opts = { filetypes_denylist = { 'help', 'text' } },
         config = function(_, opts)
             require('illuminate').configure(opts)
         end,
@@ -82,11 +71,7 @@ return {
     -- neo-tree.nvim
     {
         'nvim-neo-tree/neo-tree.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            'nvim-tree/nvim-web-devicons',
-            'MunifTanjim/nui.nvim',
-        },
+        dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons', 'MunifTanjim/nui.nvim' },
         branch = 'v2.x',
         init = function()
             vim.g.neo_tree_remove_legacy_commands = 1
@@ -94,16 +79,8 @@ return {
         keys = { { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Open neo-tree.nvim' } },
         opts = {
             default_component_configs = {
-                icon = {
-                    folder_empty = '󰜌',
-                    folder_empty_open = '󰜌',
-                },
-                git_status = {
-                    symbols = {
-                        renamed = '󰁕',
-                        unstaged = '󰄱',
-                    },
-                },
+                icon = { folder_empty = '󰜌', folder_empty_open = '󰜌' },
+                git_status = { symbols = { renamed = '󰁕', unstaged = '󰄱' } },
             },
             document_symbols = {
                 kinds = {
@@ -134,10 +111,7 @@ return {
                 },
             },
             filesystem = {
-                filtered_items = {
-                    hide_dotfiles = false,
-                    hide_by_name = { '.git' },
-                },
+                filtered_items = { hide_dotfiles = false, hide_by_name = { '.git' } },
                 follow_current_file = true,
             },
         },
@@ -210,10 +184,7 @@ return {
                 desc = 'Neogit',
             },
         },
-        opts = {
-            kind = 'replace',
-            disable_builtin_notifications = true,
-        },
+        opts = { kind = 'replace', disable_builtin_notifications = true },
     },
 
     -- gitsigns.nvim
@@ -666,12 +637,7 @@ return {
                     find_command = { 'rg', '--color=never', '--files', '--hidden', '--glob', '!**/.git/*' },
                 },
             },
-            extensions = {
-                undo = {
-                    side_by_side = true,
-                    layout_strategy = 'vertical',
-                },
-            },
+            extensions = { undo = { side_by_side = true, layout_strategy = 'vertical' } },
         },
     },
 }
