@@ -2,25 +2,15 @@ return {
     -- satellite.nvim
     {
         'lewis6991/satellite.nvim',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
-        opts = {
-            winblend = 0,
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
+        opts = { winblend = 0 },
     },
 
     -- nvim-notify
     {
         'rcarriga/nvim-notify',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
-        opts = {
-            background_colour = '#000000',
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
+        opts = { background_colour = '#000000' },
         config = function(_, opts)
             local notify = require('notify')
             notify.setup(opts)
@@ -48,10 +38,7 @@ return {
     {
         'lukas-reineke/indent-blankline.nvim',
         dependencies = 'nvim-treesitter/nvim-treesitter',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
         opts = {
             char = '▏',
             context_char = '▏',
@@ -95,10 +82,7 @@ return {
     {
         'kevinhwang91/nvim-ufo',
         dependencies = 'kevinhwang91/promise-async',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
         keys = {
             {
                 'zR',
@@ -142,10 +126,7 @@ return {
     -- windows.nvim
     {
         'anuvyklack/windows.nvim',
-        dependencies = {
-            'anuvyklack/animation.nvim',
-            'anuvyklack/middleclass',
-        },
+        dependencies = { 'anuvyklack/animation.nvim', 'anuvyklack/middleclass' },
         init = function()
             vim.o.winwidth = 10
             vim.o.winminwidth = 10
@@ -165,10 +146,7 @@ return {
     {
         'nvim-lualine/lualine.nvim',
         dependencies = 'nvim-tree/nvim-web-devicons',
-        event = {
-            'BufReadPost',
-            'BufNewFile',
-        },
+        event = { 'BufReadPost', 'BufNewFile' },
         opts = {
             options = {
                 theme = 'tokyonight',
@@ -190,10 +168,7 @@ return {
                     'diff',
                     {
                         'diagnostics',
-                        sources = {
-                            'nvim_lsp',
-                            'nvim_diagnostic',
-                        },
+                        sources = { 'nvim_lsp', 'nvim_diagnostic' },
                     },
                     function()
                         local ok, m = pcall(require, 'better_escape')
@@ -211,10 +186,7 @@ return {
                         end,
                     },
                 },
-                lualine_x = {
-                    'fileformat',
-                    'filetype',
-                },
+                lualine_x = { 'fileformat', 'filetype' },
                 lualine_y = { 'progress' },
                 lualine_z = { 'location' },
             },
@@ -234,9 +206,7 @@ return {
         'nvimdev/dashboard-nvim',
         dependencies = 'nvim-tree/nvim-web-devicons',
         event = 'VimEnter',
-        keys = {
-            { '<leader>d', '<cmd>Dashboard<CR>', desc = 'Open dashboard-nvim' },
-        },
+        keys = { { '<leader>d', '<cmd>Dashboard<CR>', desc = 'Open dashboard-nvim' } },
         opts = {
             theme = 'doom',
             config = {

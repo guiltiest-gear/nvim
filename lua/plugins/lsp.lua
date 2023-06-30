@@ -4,15 +4,7 @@ return {
         'williamboman/mason.nvim',
         build = ':MasonUpdate',
         cmd = 'Mason',
-        opts = {
-            ui = {
-                icons = {
-                    package_installed = '',
-                    package_pending = '',
-                    package_uninstalled = '',
-                },
-            },
-        },
+        opts = { ui = { icons = { package_installed = '', package_pending = '', package_uninstalled = '' } } },
     },
 
     -- nvim-lspconfig
@@ -20,26 +12,8 @@ return {
         'neovim/nvim-lspconfig',
         dependencies = {
             'williamboman/mason.nvim',
-            {
-                'williamboman/mason-lspconfig.nvim',
-                opts = {
-                    ensure_installed = {
-                        'lua_ls',
-                        'clangd',
-                        'marksman',
-                    },
-                },
-            },
-            {
-                'jay-babu/mason-null-ls.nvim',
-                opts = {
-                    ensure_installed = {
-                        'stylua',
-                        'markdownlint',
-                        'luacheck',
-                    },
-                },
-            },
+            { 'williamboman/mason-lspconfig.nvim', opts = { ensure_installed = { 'lua_ls', 'clangd', 'marksman' } } },
+            { 'jay-babu/mason-null-ls.nvim', opts = { ensure_installed = { 'stylua', 'markdownlint', 'luacheck' } } },
         },
         keys = {
             {
@@ -86,10 +60,7 @@ return {
                 desc = 'Signature Help',
             },
         },
-        event = {
-            'BufReadPre',
-            'BufNewFile',
-        },
+        event = { 'BufReadPre', 'BufNewFile' },
         config = function()
             local navic = require('nvim-navic')
             local lspconfig = require('lspconfig')
@@ -104,18 +75,14 @@ return {
                 end,
                 settings = {
                     Lua = {
-                        diagnostics = {
-                            globals = { 'vim' },
-                        },
+                        diagnostics = { globals = { 'vim' } },
                         workspace = {
                             library = {
                                 [vim.fn.expand('$VIMRUNTIME/lua')] = true,
                                 [vim.fn.stdpath('config') .. '/lua'] = true,
                             },
                         },
-                        telemetry = {
-                            enable = false,
-                        },
+                        telemetry = { enable = false },
                     },
                 },
             }
@@ -131,10 +98,7 @@ return {
     {
         'jose-elias-alvarez/null-ls.nvim',
         dependencies = 'williamboman/mason.nvim',
-        event = {
-            'BufReadPre',
-            'BufNewFile',
-        },
+        event = { 'BufReadPre', 'BufNewFile' },
         opts = function()
             local nls = require('null-ls')
             return {
