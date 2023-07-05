@@ -173,7 +173,7 @@ return {
 
     -- neogit
     {
-        'TimUntersberger/neogit',
+        'NeogitOrg/neogit',
         dependencies = 'nvim-lua/plenary.nvim',
         keys = {
             {
