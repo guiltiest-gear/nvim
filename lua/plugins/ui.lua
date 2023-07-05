@@ -1,11 +1,4 @@
 return {
-    -- satellite.nvim
-    {
-        'lewis6991/satellite.nvim',
-        event = { 'BufReadPost', 'BufNewFile' },
-        opts = { winblend = 0 },
-    },
-
     -- nvim-notify
     {
         'rcarriga/nvim-notify',

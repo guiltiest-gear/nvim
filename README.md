@@ -88,7 +88,6 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 * [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 * [promise-async](https://github.com/kevinhwang91/promise-async)
-* [satellite.nvim](https://github.com/lewis6991/satellite.nvim)
 * [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim)
 * [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
 * [telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim)
