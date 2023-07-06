@@ -19,10 +19,10 @@ map('n', '<leader>q', '<cmd>q<CR>', opts)
 map('n', '<leader>w', '<cmd>w<CR>', opts)
 
 -- Resize splits with arrow keys
-map('n', '<M-l>', '<cmd>vertical resize +1<CR>', opts)
-map('n', '<M-h>', '<cmd>vertical resize -1<CR>', opts)
-map('n', '<M-k>', '<cmd>resize +1<CR>', opts)
-map('n', '<M-j>', '<cmd>resize -1<CR>', opts)
+map('n', '<C-S-l>', '<cmd>vertical resize +1<CR>', opts)
+map('n', '<C-S-h>', '<cmd>vertical resize -1<CR>', opts)
+map('n', '<C-S-k>', '<cmd>resize +1<CR>', opts)
+map('n', '<C-S-j>', '<cmd>resize -1<CR>', opts)
 
 -- Lazy keymap
 vim.keymap.set('n', '<leader>ll', function()
