@@ -13,15 +13,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-    git = {
-        log = { '--since=3 days ago' },
-    },
-    ui = {
-        custom_keys = { false },
-    },
-    install = {
-        colorscheme = { 'tokyonight' },
-    },
+    git = { log = { '--since=3 days ago' } },
+    ui = { custom_keys = { false } },
+    install = { colorscheme = { 'tokyonight' } },
     performance = {
         rtp = {
             disabled_plugins = {
@@ -38,9 +32,7 @@ local opts = {
             },
         },
     },
-    checker = {
-        enabled = true,
-    },
+    checker = { enabled = true },
 }
 
 -- Load the plugins and options
