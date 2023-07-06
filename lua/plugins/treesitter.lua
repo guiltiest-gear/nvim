@@ -79,4 +79,11 @@ return {
         },
         opts = { max_join_length = 150 },
     },
+
+    -- rainbow-delimiters.nvim
+    {
+        'hiphish/rainbow-delimiters.nvim',
+        dependencies = 'nvim-treesitter/nvim-treesitter',
+        event = { 'BufReadPost', 'BufNewFile' },
+    },
 }
