@@ -36,6 +36,7 @@
   "numb.nvim": { "branch": "master", "commit": "2c89245d1185e02fec1494c45bc765a38b6b40b3" },
   "nvim-autopairs": { "branch": "master", "commit": "e8f7dd7a72de3e7b6626c050a802000e69d53ff0" },
   "nvim-cmp": { "branch": "main", "commit": "2743dd989e9b932e1b4813a4927d7b84272a14e2" },
+  "nvim-gomove": { "branch": "main", "commit": "2b44ae7ac0804f4e3959228122f7c85bef1964e3" },
   "nvim-hlslens": { "branch": "main", "commit": "5e3e9088fba7508cee3612ee50b14dfdd3ab19af" },
   "nvim-lspconfig": { "branch": "master", "commit": "5dd8e2f105f08832ddbff1964bdde6d152aca793" },
   "nvim-navic": { "branch": "master", "commit": "e3b9d8a974bec71b88d5640f1c87bf5b4a7e4113" },

@@ -43,11 +43,3 @@ end)
 vim.keymap.set('n', '<leader>lp', function()
     return require('lazy').profile()
 end)
-
--- Move lines
-map('n', '<A-j>', '<cmd>m .+1<cr>==', opts)
-map('n', '<A-k>', '<cmd>m .-2<cr>==', opts)
-map('i', '<A-j>', '<esc><cmd>m .+1<cr>==gi', opts)
-map('i', '<A-k>', '<esc><cmd>m .-2<cr>==gi', opts)
-map('v', '<A-j>', "<cmd>m '>+1<cr>gv=gv", opts)
-map('v', '<A-k>', "<cmd>m '<-2<cr>gv=gv", opts)

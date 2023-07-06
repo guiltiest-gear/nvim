@@ -640,4 +640,7 @@ return {
             extensions = { undo = { side_by_side = true, layout_strategy = 'vertical' } },
         },
     },
+
+    -- nvim-gomove
+    { 'booperlv/nvim-gomove', keys = { '<A-h>', '<A-j>', '<A-k>', '<A-l>' }, config = true },
 }
