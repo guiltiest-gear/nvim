@@ -88,6 +88,9 @@ opt.conceallevel = 3
 -- Hide the command line unless needed
 opt.cmdheight = 0
 
+-- Use ripgrep as the grep program for neovim
+opt.grepprg = 'rg --vimgrep'
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
