@@ -642,5 +642,14 @@ return {
     },
 
     -- nvim-gomove
-    { 'booperlv/nvim-gomove', keys = { '<A-h>', '<A-j>', '<A-k>', '<A-l>' }, config = true },
+    {
+        'booperlv/nvim-gomove',
+        keys = {
+            { '<A-h>', mode = { 'n', 'v' }, desc = 'Block left' },
+            { '<A-j>', mode = { 'n', 'v' }, desc = 'Block down' },
+            { '<A-k>', mode = { 'n', 'v' }, desc = 'Block up' },
+            { '<A-l>', mode = { 'n', 'v' }, desc = 'Block right' },
+        },
+        config = true,
+    },
 }
