@@ -68,6 +68,8 @@ return {
                 on_attach = function(client, bufnr)
                     navic.attach(client, bufnr)
                 end,
+                -- Fix clangd offset encoding
+                capabilities = { offsetEncoding = { 'utf-16' } },
             }
             lspconfig.lua_ls.setup {
                 on_attach = function(client, bufnr)
