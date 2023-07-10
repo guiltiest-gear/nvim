@@ -302,6 +302,15 @@ return {
                         action = ':lua require("neogit").open()',
                     },
                     {
+                        icon = '󰦛 ',
+                        icon_hl = 'Title',
+                        desc = 'Restore last session',
+                        desc_hl = 'String',
+                        key = 'l',
+                        key_hl = 'Number',
+                        action = ':lua require("persistence").load({ last = true })'
+                    },
+                    {
                         icon = ' ',
                         icon_hl = 'Title',
                         desc = 'Quit Neovim',
