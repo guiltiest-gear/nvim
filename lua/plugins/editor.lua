@@ -652,4 +652,34 @@ return {
         },
         config = true,
     },
+
+    -- persistence.nvim
+    {
+        'folke/persistence.nvim',
+        event = { 'BufReadPre', 'BufNewFile' },
+        config = true,
+        keys = {
+            {
+                '<leader>qs',
+                function()
+                    return require('persistence').load()
+                end,
+                desc = 'Restore the session for the current directory',
+            },
+            {
+                '<leader>ql',
+                function()
+                    return require('persistence').load({ last = true })
+                end,
+                desc = 'Restore the last session',
+            },
+            {
+                '<leader>qd',
+                function()
+                    return require('persistence').stop()
+                end,
+                desc = 'Stop persistence',
+            }
+        }
+    }
 }
