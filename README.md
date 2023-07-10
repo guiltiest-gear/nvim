@@ -87,6 +87,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 * [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+* [persistence.nvim](https://github.com/folke/persistence.nvim)
 * [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 * [promise-async](https://github.com/kevinhwang91/promise-async)
 * [rainbow-delimiters.nvim](https://github.com/hiphish/rainbow-delimiters.nvim)
