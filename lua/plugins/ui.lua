@@ -361,8 +361,6 @@ return {
                 ['$'] = 'Jump to last buffer',
                 ['d'] = 'Open dashboard',
                 ['e'] = 'Explorer',
-                ['q'] = 'Quit the current file',
-                ['Q'] = 'Quit neovim',
                 ['w'] = 'Save the current file',
                 ['m'] = 'Toggle the node under cursor',
                 ['o'] = 'Open symbols-outline.nvim',
@@ -370,6 +368,11 @@ return {
                 ['j'] = 'Join node under the cursor',
                 ['u'] = 'Open undo tree',
                 ['z'] = 'Toggle zen mode',
+                q = {
+                    name = 'Session',
+                    q = 'Quit current file',
+                    Q = 'Quit neovim',
+                },
                 f = {
                     name = 'Find',
                     f = 'Files',
