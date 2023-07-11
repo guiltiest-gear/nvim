@@ -15,7 +15,7 @@ return {
             { 'williamboman/mason-lspconfig.nvim', opts = { ensure_installed = { 'lua_ls', 'clangd', 'marksman' } } },
             {
                 'jay-babu/mason-null-ls.nvim',
-                opts = { ensure_installed = { 'stylua', 'markdownlint', 'luacheck', 'cpplint' } },
+                opts = { ensure_installed = { 'stylua', 'markdownlint', 'luacheck', 'cpplint', 'clang_format' } },
             },
         },
         keys = {
@@ -110,6 +110,7 @@ return {
                 sources = {
                     nls.builtins.formatting.stylua,
                     nls.builtins.formatting.markdownlint,
+                    nls.builtins.formatting.clang_format,
                     nls.builtins.diagnostics.markdownlint,
                     nls.builtins.diagnostics.luacheck,
                     nls.builtins.diagnostics.cpplint,
