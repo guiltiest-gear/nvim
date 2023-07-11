@@ -382,7 +382,7 @@ return {
                     q = 'Quit current file',
                     Q = 'Quit neovim',
                     s = 'Restore the session for the current dir',
-                    l = 'Respore the last session',
+                    l = 'Restore the last session',
                     d = 'Stop persistence.nvim'
                 },
                 f = {
