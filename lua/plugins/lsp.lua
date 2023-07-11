@@ -13,7 +13,10 @@ return {
         dependencies = {
             'williamboman/mason.nvim',
             { 'williamboman/mason-lspconfig.nvim', opts = { ensure_installed = { 'lua_ls', 'clangd', 'marksman' } } },
-            { 'jay-babu/mason-null-ls.nvim', opts = { ensure_installed = { 'stylua', 'markdownlint', 'luacheck' } } },
+            {
+                'jay-babu/mason-null-ls.nvim',
+                opts = { ensure_installed = { 'stylua', 'markdownlint', 'luacheck', 'cpplint' } },
+            },
         },
         keys = {
             {
@@ -109,6 +112,7 @@ return {
                     nls.builtins.formatting.markdownlint,
                     nls.builtins.diagnostics.markdownlint,
                     nls.builtins.diagnostics.luacheck,
+                    nls.builtins.diagnostics.cpplint,
                 },
             }
         end,
