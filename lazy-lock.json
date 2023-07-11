@@ -61,7 +61,7 @@
   "trouble.nvim": { "branch": "main", "commit": "d99e2abd10808ef91738ce98a5c767e6a51df449" },
   "vim-cool": { "branch": "master", "commit": "04bb7f5dade175a81b47abf4e87aeb30b05b33d8" },
   "vim-illuminate": { "branch": "master", "commit": "a2907275a6899c570d16e95b9db5fd921c167502" },
-  "vim-matchup": { "branch": "master", "commit": "61cef7921ecbb412f341a6d1a7f9ad1ca55243de" },
+  "vim-matchup": { "branch": "master", "commit": "3c4ccc489002fe72b5d2e2ffc4b3b5a7d3ab65d8" },
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "which-key.nvim": { "branch": "main", "commit": "d871f2b664afd5aed3dc1d1573bef2fb24ce0484" },
   "windows.nvim": { "branch": "main", "commit": "c7492552b23d0ab30325e90b56066ec51242adc8" },
