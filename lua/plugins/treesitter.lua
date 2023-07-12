@@ -25,7 +25,7 @@ return {
             ignore_install = { '' },
             auto_install = true,
             -- vim-matchup config
-            matchup = { enable = true, include_match_words = true },
+            matchup = { enable = true, include_match_words = true, enable_quotes = true },
         },
         config = function(_, opts)
             require('nvim-treesitter.configs').setup(opts)
