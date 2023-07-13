@@ -100,6 +100,9 @@ return {
     },
 
     -- null-ls.nvim
+    -- WARNING: null-ls.nvim will be archived on August 11, 2023
+    -- Find a suitable replacement soon
+    -- Related: https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1621
     {
         'jose-elias-alvarez/null-ls.nvim',
         dependencies = 'williamboman/mason.nvim',
