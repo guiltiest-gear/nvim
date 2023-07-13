@@ -3,10 +3,9 @@ return {
     {
         'rcarriga/nvim-notify',
         event = { 'BufReadPost', 'BufNewFile' },
-        opts = { background_colour = '#000000' },
-        config = function(_, opts)
+        config = function()
             local notify = require('notify')
-            notify.setup(opts)
+            notify.setup()
             vim.notify = notify
         end,
     },
