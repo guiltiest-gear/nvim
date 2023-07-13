@@ -184,7 +184,11 @@ return {
                 desc = 'Neogit',
             },
         },
-        opts = { kind = 'replace', disable_builtin_notifications = true },
+        opts = {
+            kind = 'replace',
+            disable_builtin_notifications = true,
+            use_telescope = true,
+        },
     },
 
     -- gitsigns.nvim
