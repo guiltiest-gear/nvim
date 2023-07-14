@@ -91,6 +91,9 @@ opt.cmdheight = 0
 -- Use ripgrep as the grep program for neovim
 opt.grepprg = 'rg --vimgrep'
 
+-- shortmess options
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
