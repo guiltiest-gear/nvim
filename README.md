@@ -72,6 +72,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [mason.nvim](https://github.com/williamboman/mason.nvim)
 * [middleclass](https://github.com/anuvyklack/middleclass)
 * [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
+* [neodev.nvim](https://github.com/folke/neodev.nvim)
 * [neogit](https://github.com/NeogitOrg/neogit)
 * [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
 * [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
