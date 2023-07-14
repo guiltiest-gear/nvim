@@ -174,7 +174,7 @@ return {
     -- neogit
     {
         'NeogitOrg/neogit',
-        dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
+        dependencies = 'nvim-lua/plenary.nvim',
         keys = {
             {
                 '<leader>gg',
