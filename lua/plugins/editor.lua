@@ -117,10 +117,12 @@ return {
         },
     },
 
+    -- vim-repeat
+    { 'tpope/vim-repeat', event = { 'BufReadPost, BufNewFile' } },
+
     -- leap.nvim
     {
         'ggandor/leap.nvim',
-        dependencies = 'tpope/vim-repeat',
         keys = {
             { 's', mode = { 'n', 'x', 'o' }, desc = 'Leap forward to' },
             { 'S', mode = { 'n', 'x', 'o' }, desc = 'Leap backward to' },
