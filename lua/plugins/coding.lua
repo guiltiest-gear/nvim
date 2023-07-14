@@ -93,6 +93,7 @@ return {
             vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
         end,
         event = 'InsertEnter',
+        -- TODO: Fucking fix atrocious nvim-cmp config
         config = function()
             local cmp = require('cmp')
             local luasnip = require('luasnip')
