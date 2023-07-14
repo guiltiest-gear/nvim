@@ -356,6 +356,15 @@ return {
                 },
             }
 
+            local opts = {
+                mode = 'n',
+                prefix = '<leader>',
+                buffer = nil,
+                silent = true,
+                noremap = true,
+                nowait = true,
+            }
+
             local mappings = {
                 ['d'] = 'Open dashboard',
                 ['e'] = 'Explorer',
@@ -429,15 +438,6 @@ return {
                     l = 'Open up location list',
                     r = 'Open up lsp references',
                 },
-            }
-
-            local opts = {
-                mode = 'n',
-                prefix = '<leader>',
-                buffer = nil,
-                silent = true,
-                noremap = true,
-                nowait = true,
             }
 
             wk.setup(setup)
