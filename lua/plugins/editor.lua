@@ -154,6 +154,13 @@ return {
     -- zen-mode.nvim
     {
         'folke/zen-mode.nvim',
+        dependencies = {
+            'folke/twilight.nvim',
+            keys = {
+                { '<leader>t', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' },
+            },
+            config = true,
+        },
         keys = {
             {
                 '<leader>z',
@@ -166,7 +173,7 @@ return {
         opts = {
             plugins = {
                 kitty = { enabled = true, font = '+4' },
-                twilight = { enabled = false },
+                -- twilight = { enabled = false },
             },
         },
     },

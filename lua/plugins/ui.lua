@@ -375,6 +375,7 @@ return {
                 ['s'] = 'Split node under the cursor',
                 ['j'] = 'Join node under the cursor',
                 ['z'] = 'Toggle zen mode',
+                ['t'] = 'Toggle twilight',
                 q = {
                     name = 'Session',
                     q = 'Quit current file',
