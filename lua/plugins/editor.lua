@@ -517,12 +517,6 @@ return {
                     require('telescope').load_extension('fzf')
                 end,
             },
-            {
-                'debugloop/telescope-undo.nvim',
-                config = function()
-                    require('telescope').load_extension('undo')
-                end,
-            },
         },
         branch = '0.1.x',
         keys = {
@@ -614,13 +608,6 @@ return {
                     return require('telescope.builtin').git_commits()
                 end,
                 desc = 'Search and checkout git commits',
-            },
-            {
-                '<leader>u',
-                function()
-                    return require('telescope').extensions.undo.undo()
-                end,
-                desc = 'Search through undo tree',
             },
         },
         opts = {
