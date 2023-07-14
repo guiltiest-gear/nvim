@@ -436,6 +436,27 @@ return {
           l = 'Open up location list',
           r = 'Open up lsp references',
         },
+        d = {
+          name = 'Debugger',
+          u = 'Open Dap UI',
+          e = 'Eval',
+          B = 'Set breakpoint condition',
+          b = 'Toggle breakpoint',
+          c = 'Continue',
+          C = 'Run to cursor',
+          g = 'Go to line (without executing)',
+          i = 'Step into',
+          j = 'Down',
+          k = 'Up',
+          l = 'Run last',
+          o = 'Step out',
+          O = 'Step over',
+          p = 'Pause',
+          r = 'Toggle REPL',
+          s = 'Session',
+          t = 'Terminate',
+          w = 'Widgets',
+        },
       }
 
       wk.setup(setup)
