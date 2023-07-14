@@ -91,6 +91,9 @@ opt.cmdheight = 0
 -- Use ripgrep as the grep program for neovim
 opt.grepprg = 'rg --vimgrep'
 
+-- Set the grep format
+opt.grepformat = '%f:%l:%c:%m'
+
 -- shortmess options
 opt.shortmess:append({ W = true, I = true, c = true, C = true })
 
