@@ -26,7 +26,7 @@ map('n', '<C-Right>', '<cmd>vertical resize +2<CR>', opts)
 
 -- Lazy keymap
 vim.keymap.set('n', '<leader>l', function()
-    return require('lazy').home()
+  return require('lazy').home()
 end)
 
 -- Better indenting
