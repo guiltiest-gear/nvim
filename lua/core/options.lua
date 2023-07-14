@@ -95,7 +95,7 @@ opt.grepprg = 'rg --vimgrep'
 opt.grepformat = '%f:%l:%c:%m'
 
 -- shortmess options
-opt.shortmess:append({ W = true, I = true, c = true, C = true })
+opt.shortmess:append { W = true, I = true, c = true, C = true }
 
 -- Enable autowrite
 opt.autowrite = true

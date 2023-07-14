@@ -307,7 +307,7 @@ return {
                         desc_hl = 'String',
                         key = 'l',
                         key_hl = 'Number',
-                        action = ':lua require("persistence").load({ last = true })'
+                        action = ':lua require("persistence").load({ last = true })',
                     },
                     {
                         icon = ' ',
@@ -382,7 +382,7 @@ return {
                     Q = 'Quit neovim',
                     s = 'Restore the session for the current dir',
                     l = 'Restore the last session',
-                    d = 'Stop persistence.nvim'
+                    d = 'Stop persistence.nvim',
                 },
                 f = {
                     name = 'Find',
