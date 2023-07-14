@@ -126,7 +126,8 @@ return {
     {
         'j-hui/fidget.nvim',
         event = 'LspAttach',
-        -- NOTE: Keep branch option until further notice: https://shorta.link/wkrANvwU
+        -- NOTE: Keep branch option until further notice
+        -- Related: https://github.com/j-hui/fidget.nvim/commit/a6c51e2
         branch = 'legacy',
         opts = { window = { blend = 0 } },
     },
