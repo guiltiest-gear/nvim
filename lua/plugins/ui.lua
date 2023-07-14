@@ -338,6 +338,7 @@ return {
       'c',
       'y',
       'd',
+      'z',
     },
     config = function()
       local wk = require('which-key')
