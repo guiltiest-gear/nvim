@@ -54,6 +54,11 @@ return {
           },
         },
       },
+      {
+        'folke/neodev.nvim',
+        config = true,
+        lazy = true,
+      },
     },
     keys = {
       {
@@ -104,6 +109,8 @@ return {
     config = function()
       local navic = require('nvim-navic')
       local lspconfig = require('lspconfig')
+      -- Load neodev.nvim before loading everything else
+      require('neodev').setup()
       lspconfig.clangd.setup {
         on_attach = function(client, bufnr)
           navic.attach(client, bufnr)
