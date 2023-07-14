@@ -17,6 +17,18 @@ return {
         'jay-babu/mason-null-ls.nvim',
         opts = { ensure_installed = { 'stylua', 'markdownlint', 'luacheck', 'cpplint', 'clang_format' } },
       },
+      {
+        'jay-babu/mason-nvim-dap.nvim',
+        dependencies = 'mason.nvim',
+        cmd = { 'DapInstall', 'DapUninstall' },
+        opts = {
+          automatic_installation = true,
+          handlers = {},
+          ensure_installed = {
+            'codelldb',
+          },
+        },
+      },
     },
     keys = {
       {
@@ -238,7 +250,6 @@ return {
   {
     'mfussenegger/nvim-dap',
     dependencies = {
-
       -- UI for nvim-dap
       {
         'rcarriga/nvim-dap-ui',
@@ -274,25 +285,10 @@ return {
           end
         end,
       },
-
       -- Virtual text for nvim-dap
       {
         'theHamsta/nvim-dap-virtual-text',
         config = true,
-      },
-
-      -- Auto-install the DAPs
-      {
-        'jay-babu/mason-nvim-dap.nvim',
-        dependencies = 'mason.nvim',
-        cmd = { 'DapInstall', 'DapUninstall' },
-        opts = {
-          automatic_installation = true,
-          handlers = {},
-          ensure_installed = {
-            'codelldb',
-          },
-        },
       },
     },
     keys = {
