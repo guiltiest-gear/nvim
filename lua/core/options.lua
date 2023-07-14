@@ -94,6 +94,9 @@ opt.grepprg = 'rg --vimgrep'
 -- shortmess options
 opt.shortmess:append({ W = true, I = true, c = true, C = true })
 
+-- Enable autowrite
+opt.autowrite = true
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
