@@ -366,6 +366,7 @@ return {
                 ['j'] = 'Join node under the cursor',
                 ['z'] = 'Toggle zen mode',
                 ['t'] = 'Toggle twilight',
+                ['l'] = 'Open lazy.nvim',
                 q = {
                     name = 'Session',
                     q = 'Quit current file',
@@ -427,15 +428,6 @@ return {
                     q = 'Open up quickfix',
                     l = 'Open up location list',
                     r = 'Open up lsp references',
-                },
-                l = {
-                    name = 'Lazy.nvim',
-                    l = 'Open lazy.nvim',
-                    u = 'Update plugins',
-                    s = 'Sync plugins',
-                    L = 'Open the log',
-                    c = 'Clean plugins',
-                    p = 'Profiler',
                 },
             }
 
