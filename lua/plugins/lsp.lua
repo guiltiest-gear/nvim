@@ -4,7 +4,15 @@ return {
     'williamboman/mason.nvim',
     build = ':MasonUpdate',
     cmd = 'Mason',
-    opts = { ui = { icons = { package_installed = '', package_pending = '', package_uninstalled = '' } } },
+    opts = {
+      ui = {
+        icons = {
+          package_installed = '',
+          package_pending = '',
+          package_uninstalled = '',
+        },
+      },
+    },
   },
 
   -- nvim-lspconfig
@@ -12,10 +20,27 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       'williamboman/mason.nvim',
-      { 'williamboman/mason-lspconfig.nvim', opts = { ensure_installed = { 'lua_ls', 'clangd', 'marksman' } } },
+      {
+        'williamboman/mason-lspconfig.nvim',
+        opts = {
+          ensure_installed = {
+            'lua_ls',
+            'clangd',
+            'marksman',
+          },
+        },
+      },
       {
         'jay-babu/mason-null-ls.nvim',
-        opts = { ensure_installed = { 'stylua', 'markdownlint', 'luacheck', 'cpplint', 'clang_format' } },
+        opts = {
+          ensure_installed = {
+            'stylua',
+            'markdownlint',
+            'luacheck',
+            'cpplint',
+            'clang_format',
+          },
+        },
       },
       {
         'jay-babu/mason-nvim-dap.nvim',
