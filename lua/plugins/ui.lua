@@ -198,7 +198,6 @@ return {
     'nvimdev/dashboard-nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
     event = 'VimEnter',
-    keys = { { '<leader>d', '<cmd>Dashboard<CR>', desc = 'Open dashboard-nvim' } },
     opts = {
       theme = 'doom',
       config = {
@@ -366,7 +365,6 @@ return {
       }
 
       local mappings = {
-        ['d'] = 'Open dashboard',
         ['e'] = 'Explorer',
         ['w'] = 'Save the current file',
         ['m'] = 'Toggle the node under cursor',
