@@ -32,3 +32,11 @@ end)
 -- Better indenting
 map('v', '<', '<gv', opts)
 map('v', '>', '>gv', opts)
+
+-- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+map('n', 'n', "'Nn'[v:searchforward]", { expr = true })
+map('x', 'n', "'Nn'[v:searchforward]", { expr = true })
+map('o', 'n', "'Nn'[v:searchforward]", { expr = true })
+map('n', 'N', "'nN'[v:searchforward]", { expr = true })
+map('x', 'N', "'nN'[v:searchforward]", { expr = true })
+map('o', 'N', "'nN'[v:searchforward]", { expr = true })
