@@ -22,6 +22,8 @@ return {
         'vimdoc',
         'regex',
       },
+      highlight = { enable = true },
+      indent = { enable = true },
       ignore_install = { '' },
       auto_install = true,
       -- vim-matchup config
