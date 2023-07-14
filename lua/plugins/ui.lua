@@ -357,16 +357,6 @@ return {
             }
 
             local mappings = {
-                ['1'] = 'Jump to buffer 1',
-                ['2'] = 'Jump to buffer 2',
-                ['3'] = 'Jump to buffer 3',
-                ['4'] = 'Jump to buffer 4',
-                ['5'] = 'Jump to buffer 5',
-                ['6'] = 'Jump to buffer 6',
-                ['7'] = 'Jump to buffer 7',
-                ['8'] = 'Jump to buffer 8',
-                ['9'] = 'Jump to buffer 9',
-                ['$'] = 'Jump to last buffer',
                 ['d'] = 'Open dashboard',
                 ['e'] = 'Explorer',
                 ['w'] = 'Save the current file',
@@ -401,6 +391,16 @@ return {
                     name = 'Buffer',
                     k = 'Kill the current buffer',
                     K = 'Kill the current buffer forcefully',
+                    ['1'] = 'Jump to buffer 1',
+                    ['2'] = 'Jump to buffer 2',
+                    ['3'] = 'Jump to buffer 3',
+                    ['4'] = 'Jump to buffer 4',
+                    ['5'] = 'Jump to buffer 5',
+                    ['6'] = 'Jump to buffer 6',
+                    ['7'] = 'Jump to buffer 7',
+                    ['8'] = 'Jump to buffer 8',
+                    ['9'] = 'Jump to buffer 9',
+                    ['$'] = 'Jump to last buffer',
                 },
                 g = {
                     name = 'Git',
