@@ -15,7 +15,10 @@ return {
     {
         'windwp/nvim-autopairs',
         event = 'InsertEnter',
-        opts = { disable_filetype = { 'TelescopePrompt', 'text' } },
+        opts = {
+            disable_filetype = { 'TelescopePrompt', 'text' },
+            disable_in_macro = false,
+        },
         config = function(_, opts)
             local npairs = require('nvim-autopairs')
             npairs.setup(opts)
