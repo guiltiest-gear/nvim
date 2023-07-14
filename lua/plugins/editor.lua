@@ -1,688 +1,688 @@
 return {
-    -- todo-comments.nvim
-    {
-        'folke/todo-comments.nvim',
-        dependencies = 'nvim-lua/plenary.nvim',
-        event = { 'BufReadPost', 'BufNewFile' },
-        keys = {
-            {
-                ']t',
-                function()
-                    return require('todo-comments').jump_next()
-                end,
-                desc = 'Jump to next todo comment',
-            },
-            {
-                '[t',
-                function()
-                    return require('todo-comments').jump_prev()
-                end,
-                desc = 'Jump to previous todo comment',
-            },
-        },
-        config = true,
-    },
-
-    -- trouble.nvim
-    {
-        'folke/trouble.nvim',
-        dependencies = 'nvim-tree/nvim-web-devicons',
-        keys = {
-            { '<leader>xx', '<cmd>TroubleToggle<CR>', desc = 'Toggle trouble.nvim' },
-            { '<leader>xw', '<cmd>TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace diagnostics' },
-            { '<leader>xd', '<cmd>TroubleToggle document_diagnostics<CR>', desc = 'Open document diagnostics' },
-            { '<leader>xq', '<cmd>TroubleToggle quickfix<CR>', desc = 'Open quickfix' },
-            { '<leader>xl', '<cmd>TroubleToggle loclist<CR>', desc = 'Open location list' },
-            { '<leader>xr', '<cmd>TroubleToggle lsp_references<CR>', desc = 'Open lsp references' },
-        },
-        config = true,
-    },
-
-    -- vim-illuminate
-    {
-        'RRethy/vim-illuminate',
-        event = { 'BufReadPost', 'BufNewFile' },
-        opts = { filetypes_denylist = { 'help', 'text' } },
-        config = function(_, opts)
-            require('illuminate').configure(opts)
+  -- todo-comments.nvim
+  {
+    'folke/todo-comments.nvim',
+    dependencies = 'nvim-lua/plenary.nvim',
+    event = { 'BufReadPost', 'BufNewFile' },
+    keys = {
+      {
+        ']t',
+        function()
+          return require('todo-comments').jump_next()
         end,
-    },
-
-    -- vim-cool
-    { 'romainl/vim-cool', keys = { '/', '?', '*', '#', 'g*', 'g#' } },
-    -- HACK: There doesn't seem to be an autocommand event to detect when you start
-    -- searching, so this will have to do until I can find an event for that or until neovim creates that event
-    -- Related: https://github.com/neovim/neovim/issues/18879
-
-    -- nvim-hlslens
-    {
-        'kevinhwang91/nvim-hlslens',
-        keys = {
-            { 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]] },
-            { 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]] },
-            { '*', [[*<Cmd>lua require('hlslens').start()<CR>]] },
-            { '#', [[#<Cmd>lua require('hlslens').start()<CR>]] },
-            { 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]] },
-            { 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]] },
-        },
-        config = true,
-    },
-
-    -- neo-tree.nvim
-    {
-        'nvim-neo-tree/neo-tree.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons', 'MunifTanjim/nui.nvim' },
-        branch = 'v2.x',
-        init = function()
-            vim.g.neo_tree_remove_legacy_commands = 1
+        desc = 'Jump to next todo comment',
+      },
+      {
+        '[t',
+        function()
+          return require('todo-comments').jump_prev()
         end,
-        keys = { { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Open neo-tree.nvim' } },
-        opts = {
-            default_component_configs = {
-                icon = { folder_empty = '󰜌', folder_empty_open = '󰜌' },
-                git_status = { symbols = { renamed = '󰁕', unstaged = '󰄱' } },
-            },
-            document_symbols = {
-                kinds = {
-                    File = { icon = '󰈙', hl = 'Tag' },
-                    Namespace = { icon = '󰌗', hl = 'Include' },
-                    Package = { icon = '󰏖', hl = 'Label' },
-                    Class = { icon = '󰌗', hl = 'Include' },
-                    Property = { icon = '󰆧', hl = '@property' },
-                    Enum = { icon = '󰒻', hl = '@number' },
-                    Function = { icon = '󰊕', hl = 'Function' },
-                    String = { icon = '󰀬', hl = 'String' },
-                    Number = { icon = '󰎠', hl = 'Number' },
-                    Array = { icon = '󰅪', hl = 'Type' },
-                    Object = { icon = '󰅩', hl = 'Type' },
-                    Key = { icon = '󰌋', hl = '' },
-                    Struct = { icon = '󰌗', hl = 'Type' },
-                    Operator = { icon = '󰆕', hl = 'Operator' },
-                    TypeParameter = { icon = '󰊄', hl = 'Type' },
-                    StaticMethod = { icon = '󰠄 ', hl = 'Function' },
-                },
-            },
-            source_selector = {
-                winbar = true,
-                statusline = true,
-                sources = {
-                    { source = 'filesystem', display_name = ' 󰉓 Files ' },
-                    -- { source = 'git_status', display_name = ' 󰊢 Git ' },
-                },
-            },
-            filesystem = {
-                filtered_items = { hide_dotfiles = false, hide_by_name = { '.git' } },
-                follow_current_file = true,
-            },
-        },
+        desc = 'Jump to previous todo comment',
+      },
     },
+    config = true,
+  },
 
-    -- leap.nvim
-    {
-        'ggandor/leap.nvim',
-        dependencies = {
-            -- NOTE: vim-repeat is useful on its own, so it just makes sense to have it like this
-            -- Sure it technically makes the dependencies table redundant but it's just extra insurance
-            'tpope/vim-repeat',
-            event = { 'BufReadPost, BufNewFile' },
+  -- trouble.nvim
+  {
+    'folke/trouble.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    keys = {
+      { '<leader>xx', '<cmd>TroubleToggle<CR>', desc = 'Toggle trouble.nvim' },
+      { '<leader>xw', '<cmd>TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace diagnostics' },
+      { '<leader>xd', '<cmd>TroubleToggle document_diagnostics<CR>', desc = 'Open document diagnostics' },
+      { '<leader>xq', '<cmd>TroubleToggle quickfix<CR>', desc = 'Open quickfix' },
+      { '<leader>xl', '<cmd>TroubleToggle loclist<CR>', desc = 'Open location list' },
+      { '<leader>xr', '<cmd>TroubleToggle lsp_references<CR>', desc = 'Open lsp references' },
+    },
+    config = true,
+  },
+
+  -- vim-illuminate
+  {
+    'RRethy/vim-illuminate',
+    event = { 'BufReadPost', 'BufNewFile' },
+    opts = { filetypes_denylist = { 'help', 'text' } },
+    config = function(_, opts)
+      require('illuminate').configure(opts)
+    end,
+  },
+
+  -- vim-cool
+  { 'romainl/vim-cool', keys = { '/', '?', '*', '#', 'g*', 'g#' } },
+  -- HACK: There doesn't seem to be an autocommand event to detect when you start
+  -- searching, so this will have to do until I can find an event for that or until neovim creates that event
+  -- Related: https://github.com/neovim/neovim/issues/18879
+
+  -- nvim-hlslens
+  {
+    'kevinhwang91/nvim-hlslens',
+    keys = {
+      { 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]] },
+      { 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]] },
+      { '*', [[*<Cmd>lua require('hlslens').start()<CR>]] },
+      { '#', [[#<Cmd>lua require('hlslens').start()<CR>]] },
+      { 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]] },
+      { 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]] },
+    },
+    config = true,
+  },
+
+  -- neo-tree.nvim
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-tree/nvim-web-devicons', 'MunifTanjim/nui.nvim' },
+    branch = 'v2.x',
+    init = function()
+      vim.g.neo_tree_remove_legacy_commands = 1
+    end,
+    keys = { { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Open neo-tree.nvim' } },
+    opts = {
+      default_component_configs = {
+        icon = { folder_empty = '󰜌', folder_empty_open = '󰜌' },
+        git_status = { symbols = { renamed = '󰁕', unstaged = '󰄱' } },
+      },
+      document_symbols = {
+        kinds = {
+          File = { icon = '󰈙', hl = 'Tag' },
+          Namespace = { icon = '󰌗', hl = 'Include' },
+          Package = { icon = '󰏖', hl = 'Label' },
+          Class = { icon = '󰌗', hl = 'Include' },
+          Property = { icon = '󰆧', hl = '@property' },
+          Enum = { icon = '󰒻', hl = '@number' },
+          Function = { icon = '󰊕', hl = 'Function' },
+          String = { icon = '󰀬', hl = 'String' },
+          Number = { icon = '󰎠', hl = 'Number' },
+          Array = { icon = '󰅪', hl = 'Type' },
+          Object = { icon = '󰅩', hl = 'Type' },
+          Key = { icon = '󰌋', hl = '' },
+          Struct = { icon = '󰌗', hl = 'Type' },
+          Operator = { icon = '󰆕', hl = 'Operator' },
+          TypeParameter = { icon = '󰊄', hl = 'Type' },
+          StaticMethod = { icon = '󰠄 ', hl = 'Function' },
         },
-        keys = {
-            { 's', mode = { 'n', 'x', 'o' }, desc = 'Leap forward to' },
-            { 'S', mode = { 'n', 'x', 'o' }, desc = 'Leap backward to' },
-            { 'gs', mode = { 'n', 'x', 'o' }, desc = 'Leap from windows' },
+      },
+      source_selector = {
+        winbar = true,
+        statusline = true,
+        sources = {
+          { source = 'filesystem', display_name = ' 󰉓 Files ' },
+          -- { source = 'git_status', display_name = ' 󰊢 Git ' },
         },
-        config = function(_, opts)
-            local leap = require('leap')
-            for k, v in pairs(opts) do
-                leap.opts[k] = v
-            end
-            leap.add_default_mappings(true)
-            vim.keymap.del({ 'x', 'o' }, 'x')
-            vim.keymap.del({ 'x', 'o' }, 'X')
+      },
+      filesystem = {
+        filtered_items = { hide_dotfiles = false, hide_by_name = { '.git' } },
+        follow_current_file = true,
+      },
+    },
+  },
+
+  -- leap.nvim
+  {
+    'ggandor/leap.nvim',
+    dependencies = {
+      -- NOTE: vim-repeat is useful on its own, so it just makes sense to have it like this
+      -- Sure it technically makes the dependencies table redundant but it's just extra insurance
+      'tpope/vim-repeat',
+      event = { 'BufReadPost, BufNewFile' },
+    },
+    keys = {
+      { 's', mode = { 'n', 'x', 'o' }, desc = 'Leap forward to' },
+      { 'S', mode = { 'n', 'x', 'o' }, desc = 'Leap backward to' },
+      { 'gs', mode = { 'n', 'x', 'o' }, desc = 'Leap from windows' },
+    },
+    config = function(_, opts)
+      local leap = require('leap')
+      for k, v in pairs(opts) do
+        leap.opts[k] = v
+      end
+      leap.add_default_mappings(true)
+      vim.keymap.del({ 'x', 'o' }, 'x')
+      vim.keymap.del({ 'x', 'o' }, 'X')
+    end,
+  },
+
+  -- flit.nvim
+  {
+    'ggandor/flit.nvim',
+    dependencies = 'ggandor/leap.nvim',
+    keys = function()
+      local ret = {}
+      for _, key in ipairs { 'f', 'F', 't', 'T' } do
+        ret[#ret + 1] = { key, mode = { 'n', 'x', 'o' }, desc = key }
+      end
+      return ret
+    end,
+    opts = { labeled_modes = 'nx' },
+  },
+
+  -- zen-mode.nvim
+  {
+    'folke/zen-mode.nvim',
+    dependencies = {
+      'folke/twilight.nvim',
+      keys = {
+        { '<leader>t', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' },
+      },
+      config = true,
+    },
+    keys = {
+      {
+        '<leader>z',
+        function()
+          return require('zen-mode').toggle()
         end,
+        desc = 'Toggle zen mode',
+      },
     },
+    opts = {
+      plugins = {
+        kitty = { enabled = true, font = '+4' },
+        -- twilight = { enabled = false },
+      },
+    },
+  },
 
-    -- flit.nvim
-    {
-        'ggandor/flit.nvim',
-        dependencies = 'ggandor/leap.nvim',
-        keys = function()
-            local ret = {}
-            for _, key in ipairs { 'f', 'F', 't', 'T' } do
-                ret[#ret + 1] = { key, mode = { 'n', 'x', 'o' }, desc = key }
-            end
-            return ret
+  -- neogit
+  {
+    'NeogitOrg/neogit',
+    dependencies = 'nvim-lua/plenary.nvim',
+    keys = {
+      {
+        '<leader>gg',
+        function()
+          return require('neogit').open()
         end,
-        opts = { labeled_modes = 'nx' },
+        desc = 'Neogit',
+      },
     },
-
-    -- zen-mode.nvim
-    {
-        'folke/zen-mode.nvim',
-        dependencies = {
-            'folke/twilight.nvim',
-            keys = {
-                { '<leader>t', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' },
-            },
-            config = true,
-        },
-        keys = {
-            {
-                '<leader>z',
-                function()
-                    return require('zen-mode').toggle()
-                end,
-                desc = 'Toggle zen mode',
-            },
-        },
-        opts = {
-            plugins = {
-                kitty = { enabled = true, font = '+4' },
-                -- twilight = { enabled = false },
-            },
-        },
+    opts = {
+      kind = 'replace',
+      disable_builtin_notifications = true,
+      disable_insert_on_commit = 'auto',
     },
+  },
 
-    -- neogit
-    {
-        'NeogitOrg/neogit',
-        dependencies = 'nvim-lua/plenary.nvim',
-        keys = {
-            {
-                '<leader>gg',
-                function()
-                    return require('neogit').open()
-                end,
-                desc = 'Neogit',
-            },
-        },
-        opts = {
-            kind = 'replace',
-            disable_builtin_notifications = true,
-            disable_insert_on_commit = 'auto',
-        },
-    },
-
-    -- gitsigns.nvim
-    {
-        'lewis6991/gitsigns.nvim',
-        init = function()
-            -- load gitsigns only when a git file is opened
-            vim.api.nvim_create_autocmd({ 'BufRead' }, {
-                group = vim.api.nvim_create_augroup('GitSignsLazyLoad', { clear = true }),
-                callback = function()
-                    vim.fn.system('git -C ' .. '"' .. vim.fn.expand('%:p:h') .. '"' .. ' rev-parse')
-                    if vim.v.shell_error == 0 then
-                        vim.api.nvim_del_augroup_by_name('GitSignsLazyLoad')
-                        vim.schedule(function()
-                            require('lazy').load { plugins = { 'gitsigns.nvim' } }
-                        end)
-                    end
-                end,
-            })
+  -- gitsigns.nvim
+  {
+    'lewis6991/gitsigns.nvim',
+    init = function()
+      -- load gitsigns only when a git file is opened
+      vim.api.nvim_create_autocmd({ 'BufRead' }, {
+        group = vim.api.nvim_create_augroup('GitSignsLazyLoad', { clear = true }),
+        callback = function()
+          vim.fn.system('git -C ' .. '"' .. vim.fn.expand('%:p:h') .. '"' .. ' rev-parse')
+          if vim.v.shell_error == 0 then
+            vim.api.nvim_del_augroup_by_name('GitSignsLazyLoad')
+            vim.schedule(function()
+              require('lazy').load { plugins = { 'gitsigns.nvim' } }
+            end)
+          end
         end,
-        ft = 'gitcommit',
-        keys = {
-            {
-                '<leader>gj',
-                function()
-                    return require('gitsigns').next_hunk()
-                end,
-                desc = 'Next hunk',
-            },
-            {
-                '<leader>gk',
-                function()
-                    return require('gitsigns').prev_hunk()
-                end,
-                desc = 'Previous hunk',
-            },
-            {
-                ']g',
-                function()
-                    return require('gitsigns').next_hunk()
-                end,
-                desc = 'Next hunk',
-            },
-            {
-                '[g',
-                function()
-                    return require('gitsigns').prev_hunk()
-                end,
-                desc = 'Previous hunk',
-            },
-            {
-                '<leader>gl',
-                function()
-                    return require('gitsigns').blame_line()
-                end,
-                desc = 'Open git blame',
-            },
-            {
-                '<leader>gp',
-                function()
-                    return require('gitsigns').preview_hunk()
-                end,
-                desc = 'Preview the hunk',
-            },
-            {
-                '<leader>gr',
-                function()
-                    return require('gitsigns').reset_hunk()
-                end,
-                desc = 'Reset the hunk',
-            },
-            {
-                '<leader>gR',
-                function()
-                    return require('gitsigns').reset_buffer()
-                end,
-                desc = 'Reset the buffer',
-            },
-            {
-                '<leader>gs',
-                function()
-                    return require('gitsigns').stage_hunk()
-                end,
-                desc = 'Stage the hunk',
-            },
-            {
-                '<leader>gS',
-                function()
-                    return require('gitsigns').stage_buffer()
-                end,
-                desc = 'Stage the buffer',
-            },
-            {
-                '<leader>gu',
-                function()
-                    return require('gitsigns').undo_stage_hunk()
-                end,
-                desc = 'Unstage the hunk',
-            },
-            {
-                '<leader>gd',
-                function()
-                    return require('gitsigns').diffthis()
-                end,
-                desc = 'Open a diff',
-            },
-        },
-        opts = {
-            signs = {
-                add = {
-                    hl = 'GitSignsAdd',
-                    text = '+',
-                    numhl = 'GitSignsAddNr',
-                    linehl = 'GitSignsAddLn',
-                },
-                change = {
-                    hl = 'GitSignsChange',
-                    text = '~',
-                    numhl = 'GitSignsChangeNr',
-                    linehl = 'GitSignsChangeLn',
-                },
-                delete = {
-                    hl = 'GitSignsDelete',
-                    text = '-',
-                    numhl = 'GitSignsDeleteNr',
-                    linehl = 'GitSignsDeleteLn',
-                },
-                topdelete = {
-                    hl = 'GitSignsDelete',
-                    text = '-',
-                    numhl = 'GitSignsDeleteNr',
-                    linehl = 'GitSignsDeleteLn',
-                },
-                changedelete = {
-                    hl = 'GitSignsChange',
-                    text = '~',
-                    numhl = 'GitSignsChangeNr',
-                    linehl = 'GitSignsChangeLn',
-                },
-            },
-            signcolumn = true, -- Toggle with `:GitSigns toggle_signs`
-            watch_gitdir = { interval = 1000, follow_files = true },
-            attach_to_untracked = true,
-            current_line_blame_opts = {
-                virt_text = true,
-                virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
-                delay = 1000,
-            },
-            sign_priority = 6,
-            update_debounce = 100,
-            status_formatter = nil,
-            preview_config = {
-                border = 'single',
-                style = 'minimal',
-                relative = 'cursor',
-                row = 0,
-                col = 1,
-            },
-        },
+      })
+    end,
+    ft = 'gitcommit',
+    keys = {
+      {
+        '<leader>gj',
+        function()
+          return require('gitsigns').next_hunk()
+        end,
+        desc = 'Next hunk',
+      },
+      {
+        '<leader>gk',
+        function()
+          return require('gitsigns').prev_hunk()
+        end,
+        desc = 'Previous hunk',
+      },
+      {
+        ']g',
+        function()
+          return require('gitsigns').next_hunk()
+        end,
+        desc = 'Next hunk',
+      },
+      {
+        '[g',
+        function()
+          return require('gitsigns').prev_hunk()
+        end,
+        desc = 'Previous hunk',
+      },
+      {
+        '<leader>gl',
+        function()
+          return require('gitsigns').blame_line()
+        end,
+        desc = 'Open git blame',
+      },
+      {
+        '<leader>gp',
+        function()
+          return require('gitsigns').preview_hunk()
+        end,
+        desc = 'Preview the hunk',
+      },
+      {
+        '<leader>gr',
+        function()
+          return require('gitsigns').reset_hunk()
+        end,
+        desc = 'Reset the hunk',
+      },
+      {
+        '<leader>gR',
+        function()
+          return require('gitsigns').reset_buffer()
+        end,
+        desc = 'Reset the buffer',
+      },
+      {
+        '<leader>gs',
+        function()
+          return require('gitsigns').stage_hunk()
+        end,
+        desc = 'Stage the hunk',
+      },
+      {
+        '<leader>gS',
+        function()
+          return require('gitsigns').stage_buffer()
+        end,
+        desc = 'Stage the buffer',
+      },
+      {
+        '<leader>gu',
+        function()
+          return require('gitsigns').undo_stage_hunk()
+        end,
+        desc = 'Unstage the hunk',
+      },
+      {
+        '<leader>gd',
+        function()
+          return require('gitsigns').diffthis()
+        end,
+        desc = 'Open a diff',
+      },
     },
-
-    -- toggleterm.nvim
-    {
-        'akinsho/toggleterm.nvim',
-        version = '*',
-        keys = [[<C-\>]],
-        opts = {
-            open_mapping = [[<C-\>]],
-            size = 20,
-            hide_numbers = true,
-            shell = vim.o.shell,
-            shade_terminals = true,
-            shading_factor = 2,
-            persist_size = true,
-            start_in_insert = true,
-            direction = 'float',
-            close_on_exit = true,
-            float_opts = { border = 'curved' },
+    opts = {
+      signs = {
+        add = {
+          hl = 'GitSignsAdd',
+          text = '+',
+          numhl = 'GitSignsAddNr',
+          linehl = 'GitSignsAddLn',
         },
+        change = {
+          hl = 'GitSignsChange',
+          text = '~',
+          numhl = 'GitSignsChangeNr',
+          linehl = 'GitSignsChangeLn',
+        },
+        delete = {
+          hl = 'GitSignsDelete',
+          text = '-',
+          numhl = 'GitSignsDeleteNr',
+          linehl = 'GitSignsDeleteLn',
+        },
+        topdelete = {
+          hl = 'GitSignsDelete',
+          text = '-',
+          numhl = 'GitSignsDeleteNr',
+          linehl = 'GitSignsDeleteLn',
+        },
+        changedelete = {
+          hl = 'GitSignsChange',
+          text = '~',
+          numhl = 'GitSignsChangeNr',
+          linehl = 'GitSignsChangeLn',
+        },
+      },
+      signcolumn = true, -- Toggle with `:GitSigns toggle_signs`
+      watch_gitdir = { interval = 1000, follow_files = true },
+      attach_to_untracked = true,
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+        delay = 1000,
+      },
+      sign_priority = 6,
+      update_debounce = 100,
+      status_formatter = nil,
+      preview_config = {
+        border = 'single',
+        style = 'minimal',
+        relative = 'cursor',
+        row = 0,
+        col = 1,
+      },
     },
+  },
 
-    -- bufdelete.nvim
-    {
-        'famiu/bufdelete.nvim',
-        keys = {
-            {
-                '<leader>bk',
-                function()
-                    return require('bufdelete').bufdelete(0, false)
-                end,
-                desc = 'Delete the current buffer',
-            },
-            {
-                '<leader>bK',
-                function()
-                    return require('bufdelete').bufdelete(0, true)
-                end,
-                desc = 'Delete the current buffer forcefully',
-            },
-        },
+  -- toggleterm.nvim
+  {
+    'akinsho/toggleterm.nvim',
+    version = '*',
+    keys = [[<C-\>]],
+    opts = {
+      open_mapping = [[<C-\>]],
+      size = 20,
+      hide_numbers = true,
+      shell = vim.o.shell,
+      shade_terminals = true,
+      shading_factor = 2,
+      persist_size = true,
+      start_in_insert = true,
+      direction = 'float',
+      close_on_exit = true,
+      float_opts = { border = 'curved' },
     },
+  },
 
-    -- bufferline.nvim
-    {
-        'akinsho/bufferline.nvim',
-        dependencies = 'nvim-tree/nvim-web-devicons',
-        version = '*',
-        event = 'UIEnter',
-        keys = {
-            { '<S-h>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to next buffer' },
-            { '<S-l>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to previous buffer' },
-            { '[b', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to next buffer' },
-            { ']b', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to previous buffer' },
-            { '<Tab>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to next buffer' },
-            { '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to previous buffer' },
-            {
-                '<leader>b1',
-                function()
-                    return require('bufferline').go_to(1, true)
-                end,
-                desc = 'Jump to first buffer',
-            },
-            {
-                '<leader>b2',
-                function()
-                    return require('bufferline').go_to(2, true)
-                end,
-                desc = 'Jump to second buffer',
-            },
-            {
-                '<leader>b3',
-                function()
-                    return require('bufferline').go_to(3, true)
-                end,
-                desc = 'Jump to third buffer',
-            },
-            {
-                '<leader>b4',
-                function()
-                    return require('bufferline').go_to(4, true)
-                end,
-                desc = 'Jump to fourth buffer',
-            },
-            {
-                '<leader>b5',
-                function()
-                    return require('bufferline').go_to(5, true)
-                end,
-                desc = 'Jump to fifth buffer',
-            },
-            {
-                '<leader>b6',
-                function()
-                    return require('bufferline').go_to(6, true)
-                end,
-                desc = 'Jump to sixth buffer',
-            },
-            {
-                '<leader>b7',
-                function()
-                    return require('bufferline').go_to(7, true)
-                end,
-                desc = 'Jump to seventh buffer',
-            },
-            {
-                '<leader>b8',
-                function()
-                    return require('bufferline').go_to(8, true)
-                end,
-                desc = 'Jump to eighth buffer',
-            },
-            {
-                '<leader>b9',
-                function()
-                    return require('bufferline').go_to(9, true)
-                end,
-                desc = 'Jump to ninth buffer',
-            },
-            {
-                '<leader>b$',
-                function()
-                    return require('bufferline').go_to(-1, true)
-                end,
-                desc = 'Jump to last buffer',
-            },
-        },
-        opts = {
-            options = {
-                numbers = function(opts)
-                    return string.format('%s', opts.ordinal)
-                end,
-                mode = 'buffers',
-                diagnostics = 'nvim_lsp',
-                diagnostics_indicator = function(count, level, diagnostics_dict, context)
-                    local s = ' '
-                    for e, n in pairs(diagnostics_dict) do
-                        local sym = e == 'error' and ' ' or (e == 'warning' and ' ' or ' ')
-                        s = s .. n .. sym
-                    end
-                    return s
-                end,
-            },
-        },
+  -- bufdelete.nvim
+  {
+    'famiu/bufdelete.nvim',
+    keys = {
+      {
+        '<leader>bk',
+        function()
+          return require('bufdelete').bufdelete(0, false)
+        end,
+        desc = 'Delete the current buffer',
+      },
+      {
+        '<leader>bK',
+        function()
+          return require('bufdelete').bufdelete(0, true)
+        end,
+        desc = 'Delete the current buffer forcefully',
+      },
     },
+  },
 
-    -- numb.nvim
-    { 'nacro90/numb.nvim', event = 'CmdlineEnter', config = true },
-
-    -- better-escape.nvim
-    {
-        'max397574/better-escape.nvim',
-        event = 'InsertCharPre',
-        opts = {
-            mapping = { 'jj', 'jk', 'kk' },
-            keys = function()
-                return vim.api.nvim_win_get_cursor(0)[2] > 1 and '<esc>l' or '<esc>'
-            end,
-        },
+  -- bufferline.nvim
+  {
+    'akinsho/bufferline.nvim',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    version = '*',
+    event = 'UIEnter',
+    keys = {
+      { '<S-h>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to next buffer' },
+      { '<S-l>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to previous buffer' },
+      { '[b', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to next buffer' },
+      { ']b', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to previous buffer' },
+      { '<Tab>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to next buffer' },
+      { '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to previous buffer' },
+      {
+        '<leader>b1',
+        function()
+          return require('bufferline').go_to(1, true)
+        end,
+        desc = 'Jump to first buffer',
+      },
+      {
+        '<leader>b2',
+        function()
+          return require('bufferline').go_to(2, true)
+        end,
+        desc = 'Jump to second buffer',
+      },
+      {
+        '<leader>b3',
+        function()
+          return require('bufferline').go_to(3, true)
+        end,
+        desc = 'Jump to third buffer',
+      },
+      {
+        '<leader>b4',
+        function()
+          return require('bufferline').go_to(4, true)
+        end,
+        desc = 'Jump to fourth buffer',
+      },
+      {
+        '<leader>b5',
+        function()
+          return require('bufferline').go_to(5, true)
+        end,
+        desc = 'Jump to fifth buffer',
+      },
+      {
+        '<leader>b6',
+        function()
+          return require('bufferline').go_to(6, true)
+        end,
+        desc = 'Jump to sixth buffer',
+      },
+      {
+        '<leader>b7',
+        function()
+          return require('bufferline').go_to(7, true)
+        end,
+        desc = 'Jump to seventh buffer',
+      },
+      {
+        '<leader>b8',
+        function()
+          return require('bufferline').go_to(8, true)
+        end,
+        desc = 'Jump to eighth buffer',
+      },
+      {
+        '<leader>b9',
+        function()
+          return require('bufferline').go_to(9, true)
+        end,
+        desc = 'Jump to ninth buffer',
+      },
+      {
+        '<leader>b$',
+        function()
+          return require('bufferline').go_to(-1, true)
+        end,
+        desc = 'Jump to last buffer',
+      },
     },
-
-    -- telescope.nvim
-    {
-        'nvim-telescope/telescope.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            {
-                'nvim-telescope/telescope-fzf-native.nvim',
-                build = 'make',
-                config = function()
-                    require('telescope').load_extension('fzf')
-                end,
-            },
-        },
-        branch = '0.1.x',
-        keys = {
-            {
-                '<leader>ff',
-                function()
-                    return require('telescope.builtin').find_files()
-                end,
-                desc = 'Find files',
-            },
-            {
-                '<leader>fw',
-                function()
-                    return require('telescope.builtin').live_grep()
-                end,
-                desc = 'Find words',
-            },
-            {
-                '<leader>fb',
-                function()
-                    return require('telescope.builtin').buffers()
-                end,
-                desc = 'Search buffers',
-            },
-            {
-                '<leader>fh',
-                function()
-                    return require('telescope.builtin').help_tags()
-                end,
-                desc = 'Search help',
-            },
-            {
-                '<leader>fm',
-                function()
-                    return require('telescope.builtin').man_pages()
-                end,
-                desc = 'Search man pages',
-            },
-            {
-                '<leader>fr',
-                function()
-                    return require('telescope.builtin').oldfiles()
-                end,
-                desc = 'Search recently opened files',
-            },
-            {
-                '<leader>fR',
-                function()
-                    return require('telescope.builtin').registers()
-                end,
-                desc = 'Search registers',
-            },
-            {
-                '<leader>fk',
-                function()
-                    return require('telescope.builtin').keymaps()
-                end,
-                desc = 'Search keymaps',
-            },
-            {
-                '<leader>fc',
-                function()
-                    return require('telescope.builtin').commands()
-                end,
-                desc = 'Search commands',
-            },
-            {
-                '<leader>ft',
-                '<cmd>TodoTelescope<CR>',
-                desc = 'Search through todo comments',
-            },
-            {
-                '<leader>go',
-                function()
-                    return require('telescope.builtin').git_status()
-                end,
-                desc = 'Seach through changed files',
-            },
-            {
-                '<leader>gb',
-                function()
-                    return require('telescope.builtin').git_branches()
-                end,
-                desc = 'Search through git branches',
-            },
-            {
-                '<leader>gc',
-                function()
-                    return require('telescope.builtin').git_commits()
-                end,
-                desc = 'Search and checkout git commits',
-            },
-        },
-        opts = {
-            defaults = {
-                theme = 'tokyonight',
-                path_display = { 'smart' },
-                file_ignore_patterns = { '.git/' },
-                layout_strategy = 'horizontal',
-                layout_config = { prompt_position = 'top' },
-                sorting_strategy = 'ascending',
-            },
-            pickers = {
-                find_files = {
-                    find_command = { 'rg', '--color=never', '--files', '--hidden', '--glob', '!**/.git/*' },
-                },
-            },
-            extensions = { undo = { side_by_side = true, layout_strategy = 'vertical' } },
-        },
+    opts = {
+      options = {
+        numbers = function(opts)
+          return string.format('%s', opts.ordinal)
+        end,
+        mode = 'buffers',
+        diagnostics = 'nvim_lsp',
+        diagnostics_indicator = function(count, level, diagnostics_dict, context)
+          local s = ' '
+          for e, n in pairs(diagnostics_dict) do
+            local sym = e == 'error' and ' ' or (e == 'warning' and ' ' or ' ')
+            s = s .. n .. sym
+          end
+          return s
+        end,
+      },
     },
+  },
 
-    -- nvim-gomove
-    {
-        'booperlv/nvim-gomove',
-        keys = {
-            { '<A-h>', mode = { 'n', 'v' }, desc = 'Block left' },
-            { '<A-j>', mode = { 'n', 'v' }, desc = 'Block down' },
-            { '<A-k>', mode = { 'n', 'v' }, desc = 'Block up' },
-            { '<A-l>', mode = { 'n', 'v' }, desc = 'Block right' },
-        },
-        config = true,
-    },
+  -- numb.nvim
+  { 'nacro90/numb.nvim', event = 'CmdlineEnter', config = true },
 
-    -- persistence.nvim
-    {
-        'folke/persistence.nvim',
-        event = { 'BufReadPre', 'BufNewFile' },
-        config = true,
-        keys = {
-            {
-                '<leader>qs',
-                function()
-                    return require('persistence').load()
-                end,
-                desc = 'Restore the session for the current directory',
-            },
-            {
-                '<leader>ql',
-                function()
-                    return require('persistence').load { last = true }
-                end,
-                desc = 'Restore the last session',
-            },
-            {
-                '<leader>qd',
-                function()
-                    return require('persistence').stop()
-                end,
-                desc = 'Stop persistence',
-            },
-        },
+  -- better-escape.nvim
+  {
+    'max397574/better-escape.nvim',
+    event = 'InsertCharPre',
+    opts = {
+      mapping = { 'jj', 'jk', 'kk' },
+      keys = function()
+        return vim.api.nvim_win_get_cursor(0)[2] > 1 and '<esc>l' or '<esc>'
+      end,
     },
+  },
+
+  -- telescope.nvim
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make',
+        config = function()
+          require('telescope').load_extension('fzf')
+        end,
+      },
+    },
+    branch = '0.1.x',
+    keys = {
+      {
+        '<leader>ff',
+        function()
+          return require('telescope.builtin').find_files()
+        end,
+        desc = 'Find files',
+      },
+      {
+        '<leader>fw',
+        function()
+          return require('telescope.builtin').live_grep()
+        end,
+        desc = 'Find words',
+      },
+      {
+        '<leader>fb',
+        function()
+          return require('telescope.builtin').buffers()
+        end,
+        desc = 'Search buffers',
+      },
+      {
+        '<leader>fh',
+        function()
+          return require('telescope.builtin').help_tags()
+        end,
+        desc = 'Search help',
+      },
+      {
+        '<leader>fm',
+        function()
+          return require('telescope.builtin').man_pages()
+        end,
+        desc = 'Search man pages',
+      },
+      {
+        '<leader>fr',
+        function()
+          return require('telescope.builtin').oldfiles()
+        end,
+        desc = 'Search recently opened files',
+      },
+      {
+        '<leader>fR',
+        function()
+          return require('telescope.builtin').registers()
+        end,
+        desc = 'Search registers',
+      },
+      {
+        '<leader>fk',
+        function()
+          return require('telescope.builtin').keymaps()
+        end,
+        desc = 'Search keymaps',
+      },
+      {
+        '<leader>fc',
+        function()
+          return require('telescope.builtin').commands()
+        end,
+        desc = 'Search commands',
+      },
+      {
+        '<leader>ft',
+        '<cmd>TodoTelescope<CR>',
+        desc = 'Search through todo comments',
+      },
+      {
+        '<leader>go',
+        function()
+          return require('telescope.builtin').git_status()
+        end,
+        desc = 'Seach through changed files',
+      },
+      {
+        '<leader>gb',
+        function()
+          return require('telescope.builtin').git_branches()
+        end,
+        desc = 'Search through git branches',
+      },
+      {
+        '<leader>gc',
+        function()
+          return require('telescope.builtin').git_commits()
+        end,
+        desc = 'Search and checkout git commits',
+      },
+    },
+    opts = {
+      defaults = {
+        theme = 'tokyonight',
+        path_display = { 'smart' },
+        file_ignore_patterns = { '.git/' },
+        layout_strategy = 'horizontal',
+        layout_config = { prompt_position = 'top' },
+        sorting_strategy = 'ascending',
+      },
+      pickers = {
+        find_files = {
+          find_command = { 'rg', '--color=never', '--files', '--hidden', '--glob', '!**/.git/*' },
+        },
+      },
+      extensions = { undo = { side_by_side = true, layout_strategy = 'vertical' } },
+    },
+  },
+
+  -- nvim-gomove
+  {
+    'booperlv/nvim-gomove',
+    keys = {
+      { '<A-h>', mode = { 'n', 'v' }, desc = 'Block left' },
+      { '<A-j>', mode = { 'n', 'v' }, desc = 'Block down' },
+      { '<A-k>', mode = { 'n', 'v' }, desc = 'Block up' },
+      { '<A-l>', mode = { 'n', 'v' }, desc = 'Block right' },
+    },
+    config = true,
+  },
+
+  -- persistence.nvim
+  {
+    'folke/persistence.nvim',
+    event = { 'BufReadPre', 'BufNewFile' },
+    config = true,
+    keys = {
+      {
+        '<leader>qs',
+        function()
+          return require('persistence').load()
+        end,
+        desc = 'Restore the session for the current directory',
+      },
+      {
+        '<leader>ql',
+        function()
+          return require('persistence').load { last = true }
+        end,
+        desc = 'Restore the last session',
+      },
+      {
+        '<leader>qd',
+        function()
+          return require('persistence').stop()
+        end,
+        desc = 'Stop persistence',
+      },
+    },
+  },
 }
