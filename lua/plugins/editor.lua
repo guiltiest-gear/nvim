@@ -672,7 +672,7 @@ return {
             {
                 '<leader>ql',
                 function()
-                    return require('persistence').load({ last = true })
+                    return require('persistence').load { last = true }
                 end,
                 desc = 'Restore the last session',
             },
@@ -682,7 +682,7 @@ return {
                     return require('persistence').stop()
                 end,
                 desc = 'Stop persistence',
-            }
-        }
-    }
+            },
+        },
+    },
 }
