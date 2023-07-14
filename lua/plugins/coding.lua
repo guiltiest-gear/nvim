@@ -20,12 +20,6 @@ return {
             disable_in_macro = false,
             check_ts = true,
         },
-        config = function(_, opts)
-            local npairs = require('nvim-autopairs')
-            npairs.setup(opts)
-            local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-            require('cmp').event:on('confirm_done', cmp_autopairs.on_confirm_done {})
-        end,
     },
 
     -- nvim-surround
@@ -86,6 +80,7 @@ return {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-nvim-lua',
             'saadparwaiz1/cmp_luasnip',
+            'windwp/nvim-autopairs',
             {
                 'L3MON4D3/LuaSnip',
                 build = 'make install_jsregexp',
@@ -218,6 +213,7 @@ return {
         end,
         config = function(_, opts)
             local cmp = require('cmp')
+            local cmp_autopairs = require('nvim-autopairs.completion.cmp')
             cmp.setup(opts)
             cmp.setup.cmdline('/', {
                 mapping = cmp.mapping.preset.cmdline(),
@@ -232,6 +228,8 @@ return {
                     { name = 'cmdline' },
                 },
             })
+            -- nvim-autopairs integration
+            cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
         end,
     },
 }
