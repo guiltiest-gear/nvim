@@ -58,7 +58,7 @@ opt.undofile = true
 opt.showtabline = 0
 
 -- Disable mouse support
-opt.mouse = {}
+opt.mouse = ''
 
 -- Scrolloff
 opt.scrolloff = 5
