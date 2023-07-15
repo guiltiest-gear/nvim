@@ -73,14 +73,15 @@ return {
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
+      'windwp/nvim-autopairs',
       'FelipeLema/cmp-async-path',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-calc',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-nvim-lua',
+      'hrsh7th/cmp-nvim-lsp-signature-help',
       'saadparwaiz1/cmp_luasnip',
-      'windwp/nvim-autopairs',
       {
         'L3MON4D3/LuaSnip',
         build = 'make install_jsregexp',
@@ -153,6 +154,7 @@ return {
           { name = 'buffer' },
           { name = 'async_path' },
           { name = 'calc' },
+          { name = 'nvim_lsp_signature_help' },
         },
         formatting = {
           format = function(_, item)

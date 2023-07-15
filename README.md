@@ -50,6 +50,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 * [cmp-calc](https://github.com/hrsh7th/cmp-calc)
 * [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
+* [cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)
 * [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 * [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)
 * [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
