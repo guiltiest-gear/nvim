@@ -101,6 +101,9 @@ opt.shortmess:append { W = true, I = true, c = true, C = true }
 -- Enable autowrite
 opt.autowrite = true
 
+-- Keep cursor to the same screen line when opening a split
+opt.splitkeep = 'screen'
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
