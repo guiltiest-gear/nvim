@@ -22,6 +22,7 @@ return {
       'williamboman/mason.nvim',
       {
         'williamboman/mason-lspconfig.nvim',
+        cmd = { 'LspInstall', 'LspUninstall' },
         opts = {
           ensure_installed = {
             'lua_ls',
