@@ -105,14 +105,14 @@ return {
           {
             '<tab>',
             function()
-              require('luasnip').jump(1)
+              return require('luasnip').jump(1)
             end,
             mode = 's',
           },
           {
             '<S-tab>',
             function()
-              require('luasnip').jump(-1)
+              return require('luasnip').jump(-1)
             end,
             mode = { 'i', 's' },
           },
