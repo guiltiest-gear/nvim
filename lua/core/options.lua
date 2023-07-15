@@ -104,6 +104,9 @@ opt.autowrite = true
 -- Keep cursor to the same screen line when opening a split
 opt.splitkeep = 'screen'
 
+-- Set completion options
+opt.completeopt = 'menu,menuone,noselect,noinsert'
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
