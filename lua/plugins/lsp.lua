@@ -188,10 +188,10 @@ return {
   {
     'j-hui/fidget.nvim',
     event = 'LspAttach',
-    -- NOTE: Keep branch option until further notice
+    -- NOTE: Keep tag option until further notice
     -- Related: https://github.com/j-hui/fidget.nvim/commit/a6c51e2
     -- Also related: https://github.com/j-hui/fidget.nvim/issues/131
-    branch = 'legacy',
+    tag = 'legacy',
     opts = { window = { blend = 0 } },
   },
 
