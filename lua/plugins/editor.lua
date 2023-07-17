@@ -342,7 +342,7 @@ return {
       shading_factor = 2,
       persist_size = true,
       start_in_insert = true,
-      direction = 'horizontal',
+      direction = 'float',
       close_on_exit = true,
       float_opts = { border = 'curved' },
     },
