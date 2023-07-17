@@ -351,12 +351,15 @@ return {
         ['e'] = 'Explorer',
         ['w'] = 'Save the current file',
         ['m'] = 'Toggle the node under cursor',
-        ['o'] = 'Open symbols-outline.nvim',
         ['s'] = 'Split node under the cursor',
         ['j'] = 'Join node under the cursor',
-        ['z'] = 'Toggle zen mode',
-        ['t'] = 'Toggle twilight',
         ['l'] = 'Open lazy.nvim',
+        t = {
+          name = 'Toggle',
+          t = 'twilight.nvim',
+          z = 'zen-mode.nvim',
+          o = 'symbols-outline.nvim',
+        },
         q = {
           name = 'Session',
           q = 'Quit current file',
