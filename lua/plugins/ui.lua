@@ -417,7 +417,7 @@ return {
           name = 'Trouble',
           x = 'Toggle trouble',
           w = 'Toggle workspace diagnostics',
-          d = 'Toggle document_diagnostics',
+          d = 'Toggle document diagnostics',
           q = 'Open up quickfix',
           l = 'Open up location list',
           r = 'Open up lsp references',
