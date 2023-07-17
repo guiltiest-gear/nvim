@@ -107,6 +107,10 @@ opt.splitkeep = 'screen'
 -- Set completion options
 opt.completeopt = 'menu,menuone,noselect,noinsert'
 
+-- Set key timeout to 500ms
+opt.timeout = true
+opt.timeoutlen = 500
+
 -- Set diagnostic config for lsp_lines.nvim
 vim.diagnostic.config {
   virtual_text = false,
