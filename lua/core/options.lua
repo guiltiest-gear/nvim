@@ -107,6 +107,12 @@ opt.splitkeep = 'screen'
 -- Set completion options
 opt.completeopt = 'menu,menuone,noselect,noinsert'
 
+-- Set diagnostic config for lsp_lines.nvim
+vim.diagnostic.config {
+  virtual_text = false,
+  virtual_lines = { highlight_whole_line = false },
+}
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
