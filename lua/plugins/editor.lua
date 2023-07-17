@@ -134,9 +134,7 @@ return {
     'folke/zen-mode.nvim',
     dependencies = {
       'folke/twilight.nvim',
-      keys = {
-        { '<leader>tt', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' },
-      },
+      keys = { { '<leader>tt', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' } },
       config = true,
     },
     keys = {
@@ -148,12 +146,7 @@ return {
         desc = 'Toggle zen mode',
       },
     },
-    opts = {
-      plugins = {
-        kitty = { enabled = true, font = '+4' },
-        -- twilight = { enabled = false },
-      },
-    },
+    opts = { plugins = { kitty = { enabled = true, font = '+4' } } },
   },
 
   -- neogit
