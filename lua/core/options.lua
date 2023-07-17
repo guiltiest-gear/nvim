@@ -111,6 +111,11 @@ opt.completeopt = 'menu,menuone,noselect,noinsert'
 opt.timeout = true
 opt.timeoutlen = 500
 
+-- Window config
+opt.winwidth = 10
+opt.winminwidth = 10
+opt.equalalways = false
+
 -- Set diagnostic config for lsp_lines.nvim
 vim.diagnostic.config {
   virtual_text = false,
