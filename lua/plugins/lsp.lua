@@ -163,7 +163,13 @@ return {
               group = augroup,
               buffer = bufnr,
               callback = function()
-                vim.lsp.buf.format { bufnr = bufnr }
+                vim.lsp.buf.format {
+                  bufnr = bufnr,
+                  -- I don't really like the style of lua_ls's formatting, so I exclude it and instead use stylua
+                  filter = function(client)
+                    return client.name ~= 'lua_ls'
+                  end,
+                }
               end,
             })
           end
