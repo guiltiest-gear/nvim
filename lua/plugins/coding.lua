@@ -117,7 +117,7 @@ return {
             mode = { 'i', 's' },
           },
         },
-        opts = { history = true },
+        config = true,
       },
     },
     event = 'InsertEnter',
