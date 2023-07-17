@@ -123,18 +123,6 @@ return {
         on_attach = function(client, bufnr)
           navic.attach(client, bufnr)
         end,
-        settings = {
-          Lua = {
-            diagnostics = { globals = { 'vim' } },
-            workspace = {
-              library = {
-                [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                [vim.fn.stdpath('config') .. '/lua'] = true,
-              },
-            },
-            telemetry = { enable = false },
-          },
-        },
       }
       lspconfig.marksman.setup {
         on_attach = function(client, bufnr)
