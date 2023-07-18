@@ -91,7 +91,7 @@ return {
       {
         'L3MON4D3/LuaSnip',
         build = 'make install_jsregexp',
-        version = 'v1.*',
+        version = 'v2.*',
         keys = {
           {
             '<tab>',
