@@ -75,17 +75,10 @@ return {
     branch = 'v3.x',
     keys = { { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Open neo-tree.nvim' } },
     opts = {
-      source_selector = {
-        winbar = true,
-        statusline = true,
-        sources = {
-          -- { source = 'filesystem', display_name = ' 󰉓 Files ' },
-          -- { source = 'git_status', display_name = ' 󰊢 Git ' },
-        },
-      },
       filesystem = {
         filtered_items = { hide_dotfiles = false, hide_by_name = { '.git' } },
-        follow_current_file = true,
+        follow_current_file = { enabled = true },
+        use_libuv_file_watcher = true,
       },
     },
   },
