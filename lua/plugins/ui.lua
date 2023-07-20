@@ -341,6 +341,10 @@ return {
           '^:',
           '^ ',
         },
+        operators = {
+          gc = 'Comments',
+          ys = 'Add surroundings',
+        },
       }
 
       local opts = {
