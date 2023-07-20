@@ -16,6 +16,7 @@ local opts = {
   git = { log = { '--since=3 days ago' } },
   ui = { custom_keys = { false } },
   install = { colorscheme = { 'tokyonight' } },
+  checker = { enabled = true },
   performance = {
     rtp = {
       disabled_plugins = {
@@ -32,7 +33,6 @@ local opts = {
       },
     },
   },
-  checker = { enabled = true },
 }
 
 -- Load the plugins and options
