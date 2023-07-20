@@ -330,7 +330,6 @@ return {
     config = function()
       local wk = require('which-key')
       local setup = {
-        ignore_missing = true,
         hidden = {
           '<silent>',
           '<cmd>',
