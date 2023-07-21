@@ -108,27 +108,15 @@ return {
     },
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
-      local navic = require('nvim-navic')
       local lspconfig = require('lspconfig')
       -- Load neodev.nvim before loading everything else
       require('neodev').setup()
       lspconfig.clangd.setup {
-        on_attach = function(client, bufnr)
-          navic.attach(client, bufnr)
-        end,
         -- Fix clangd offset encoding
         capabilities = { offsetEncoding = { 'utf-16' } },
       }
-      lspconfig.lua_ls.setup {
-        on_attach = function(client, bufnr)
-          navic.attach(client, bufnr)
-        end,
-      }
-      lspconfig.marksman.setup {
-        on_attach = function(client, bufnr)
-          navic.attach(client, bufnr)
-        end,
-      }
+      lspconfig.lua_ls.setup {}
+      lspconfig.marksman.setup {}
     end,
   },
 
@@ -224,42 +212,6 @@ return {
         Event = { icon = ' ' },
         Operator = { icon = ' ' },
         TypeParameter = { icon = ' ' },
-      },
-    },
-  },
-
-  -- nvim-navic
-  {
-    'SmiteshP/nvim-navic',
-    event = 'LspAttach',
-    opts = {
-      icons = {
-        File = ' ',
-        Module = ' ',
-        Namespace = ' ',
-        Package = ' ',
-        Class = ' ',
-        Method = ' ',
-        Property = ' ',
-        Field = ' ',
-        Constructor = ' ',
-        Enum = ' ',
-        Interface = ' ',
-        Function = ' ',
-        Variable = ' ',
-        Constant = ' ',
-        String = ' ',
-        Number = ' ',
-        Boolean = ' ',
-        Array = ' ',
-        Object = ' ',
-        Key = ' ',
-        Null = ' ',
-        EnumMember = ' ',
-        Struct = ' ',
-        Event = ' ',
-        Operator = ' ',
-        TypeParameter = ' ',
       },
     },
   },

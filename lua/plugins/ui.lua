@@ -158,17 +158,7 @@ return {
             return ok and m.waiting and '✺' or ''
           end,
         },
-        lualine_c = {
-          'filename',
-          {
-            function()
-              return require('nvim-navic').get_location()
-            end,
-            cond = function()
-              return require('nvim-navic').is_available()
-            end,
-          },
-        },
+        lualine_c = { 'filename' },
         lualine_x = { 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
