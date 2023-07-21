@@ -1,25 +1,23 @@
 return {
-  -- mason.nvim
-  {
-    'williamboman/mason.nvim',
-    build = ':MasonUpdate',
-    cmd = 'Mason',
-    opts = {
-      ui = {
-        icons = {
-          package_installed = '',
-          package_pending = '',
-          package_uninstalled = '',
-        },
-      },
-    },
-  },
-
   -- nvim-lspconfig
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      'williamboman/mason.nvim',
+      'folke/neodev.nvim',
+      {
+        'williamboman/mason.nvim',
+        build = ':MasonUpdate',
+        cmd = 'Mason',
+        opts = {
+          ui = {
+            icons = {
+              package_installed = '',
+              package_pending = '',
+              package_uninstalled = '',
+            },
+          },
+        },
+      },
       {
         'williamboman/mason-lspconfig.nvim',
         cmd = { 'LspInstall', 'LspUninstall' },
@@ -54,11 +52,6 @@ return {
             'codelldb',
           },
         },
-      },
-      {
-        'folke/neodev.nvim',
-        config = true,
-        lazy = true,
       },
     },
     keys = {
