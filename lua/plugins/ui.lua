@@ -356,7 +356,6 @@ return {
           name = 'Toggle',
           t = 'twilight.nvim',
           z = 'zen-mode.nvim',
-          o = 'symbols-outline.nvim',
         },
         q = {
           name = 'Session',
