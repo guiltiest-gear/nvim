@@ -96,7 +96,6 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 * [promise-async](https://github.com/kevinhwang91/promise-async)
 * [rainbow-delimiters.nvim](https://github.com/hiphish/rainbow-delimiters.nvim)
-* [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim)
 * [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
 * [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 * [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
