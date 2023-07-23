@@ -352,11 +352,8 @@ return {
         ['s'] = 'Split node under the cursor',
         ['j'] = 'Join node under the cursor',
         ['l'] = 'Open lazy.nvim',
-        t = {
-          name = 'Toggle',
-          t = 'twilight.nvim',
-          z = 'zen-mode.nvim',
-        },
+        ['t'] = 'Toggle twilight.nvim',
+        ['z'] = 'Toggle zen-mode.nvim',
         q = {
           name = 'Session',
           q = 'Quit current file',

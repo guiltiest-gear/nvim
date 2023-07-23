@@ -158,12 +158,12 @@ return {
     'folke/zen-mode.nvim',
     dependencies = {
       'folke/twilight.nvim',
-      keys = { { '<leader>tt', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' } },
+      keys = { { '<leader>t', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' } },
       config = true,
     },
     keys = {
       {
-        '<leader>tz',
+        '<leader>z',
         function()
           return require('zen-mode').toggle()
         end,
