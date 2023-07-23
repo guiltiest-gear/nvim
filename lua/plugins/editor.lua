@@ -657,7 +657,7 @@ return {
         function()
           return require('persistence').load()
         end,
-        desc = 'Restore the session for the current directory',
+        desc = 'Restore the session for the current dir',
       },
       {
         '<leader>ql',
