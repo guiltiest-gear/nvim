@@ -1,42 +1,39 @@
-local opts = { noremap = true, silent = true }
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 -- Set space as my leader key
-map('', '<Space>', '<Nop>', opts)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Better split navigation
-map('n', '<C-h>', '<C-w>h', opts)
-map('n', '<C-j>', '<C-w>j', opts)
-map('n', '<C-k>', '<C-w>k', opts)
-map('n', '<C-l>', '<C-w>l', opts)
+map('n', '<C-h>', '<C-w>h', { desc = 'Go to left window', remap = true })
+map('n', '<C-j>', '<C-w>j', { desc = 'Go to lower window', remap = true })
+map('n', '<C-k>', '<C-w>k', { desc = 'Go to upper window', remap = true })
+map('n', '<C-l>', '<C-w>l', { desc = 'Go to right window', remap = true })
 
 -- Quit neovim
-map('n', '<leader>qQ', '<cmd>qa<CR>', opts)
-map('n', '<leader>qq', '<cmd>q<CR>', opts)
+map('n', '<leader>qq', '<cmd>q<CR>', { desc = 'Quit the current file' })
 
 -- Quick write
-map('n', '<leader>w', '<cmd>w<CR>', opts)
+map('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save the current file' })
 
 -- Resize splits with arrow keys
-map('n', '<C-Up>', '<cmd>resize +2<CR>', opts)
-map('n', '<C-Down>', '<cmd>resize -2<CR>', opts)
-map('n', '<C-Left>', '<cmd>vertical resize -2<CR>', opts)
-map('n', '<C-Right>', '<cmd>vertical resize +2<CR>', opts)
+map('n', '<C-Up>', '<cmd>resize +2<CR>', { desc = 'Increase window height' })
+map('n', '<C-Down>', '<cmd>resize -2<CR>', { desc = 'Decrease window height' })
+map('n', '<C-Left>', '<cmd>vertical resize -2<CR>', { desc = 'Decrease window width' })
+map('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { desc = 'Increase window width' })
 
 -- Lazy keymap
 vim.keymap.set('n', '<leader>l', function()
   return require('lazy').home()
-end)
+end, { desc = 'Open lazy.nvim' })
 
 -- Better indenting
-map('v', '<', '<gv', opts)
-map('v', '>', '>gv', opts)
+map('v', '<', '<gv')
+map('v', '>', '>gv')
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-map('n', 'n', "'Nn'[v:searchforward]", { expr = true })
-map('x', 'n', "'Nn'[v:searchforward]", { expr = true })
-map('o', 'n', "'Nn'[v:searchforward]", { expr = true })
-map('n', 'N', "'nN'[v:searchforward]", { expr = true })
-map('x', 'N', "'nN'[v:searchforward]", { expr = true })
-map('o', 'N', "'nN'[v:searchforward]", { expr = true })
+map('n', 'n', "'Nn'[v:searchforward]", { expr = true, desc = 'Next search result' })
+map('x', 'n', "'Nn'[v:searchforward]", { expr = true, desc = 'Next search result' })
+map('o', 'n', "'Nn'[v:searchforward]", { expr = true, desc = 'Next search result' })
+map('n', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Next search result' })
+map('x', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Next search result' })
+map('o', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Next search result' })
