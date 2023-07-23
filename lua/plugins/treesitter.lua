@@ -39,14 +39,6 @@ return {
   -- vim-matchup
   { 'andymass/vim-matchup', dependencies = 'nvim-treesitter/nvim-treesitter', event = { 'BufReadPost', 'BufNewFile' } },
 
-  -- hlargs.nvim
-  {
-    'm-demare/hlargs.nvim',
-    dependencies = 'nvim-treesitter/nvim-treesitter',
-    ft = { 'c', 'cpp', 'lua', 'vim' },
-    config = true,
-  },
-
   -- treesj
   {
     'Wansmer/treesj',
