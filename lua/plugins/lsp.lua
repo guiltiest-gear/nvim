@@ -36,7 +36,7 @@ return {
           ensure_installed = {
             'stylua',
             'markdownlint',
-            'luacheck',
+            'selene',
             'cpplint',
             'clang_format',
           },
@@ -122,10 +122,10 @@ return {
       return {
         sources = {
           nls.builtins.formatting.stylua,
+          nls.builtins.diagnostics.selene,
           nls.builtins.formatting.markdownlint,
           nls.builtins.formatting.clang_format,
           nls.builtins.diagnostics.markdownlint,
-          nls.builtins.diagnostics.luacheck,
           nls.builtins.diagnostics.cpplint,
         },
         on_attach = function(client, bufnr)
