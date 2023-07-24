@@ -662,7 +662,6 @@ return {
           find_command = { 'rg', '--color=never', '--files', '--hidden', '--glob', '!**/.git/*' },
         },
       },
-      extensions = { undo = { side_by_side = true, layout_strategy = 'vertical' } },
     },
   },
 
