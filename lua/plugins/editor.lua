@@ -419,6 +419,12 @@ return {
     },
   },
 
+  -- BufOnly.nvim
+  {
+    'numToStr/BufOnly.nvim',
+    keys = { { '<leader>bo', '<cmd>BufOnly<CR>', desc = 'Delete all other buffers except current' } },
+  },
+
   -- bufferline.nvim
   {
     'akinsho/bufferline.nvim',
