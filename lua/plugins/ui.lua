@@ -316,6 +316,7 @@ return {
       'y',
       'd',
       'z',
+      'g',
     },
     opts = {
       operators = {
