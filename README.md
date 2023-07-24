@@ -40,6 +40,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 
 ## Plugins
 
+* [BufOnly.nvim](https://github.com/numToStr/BufOnly.nvim)
 * [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 * [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 * [animation.nvim](https://github.com/anuvyklack/animation.nvim)

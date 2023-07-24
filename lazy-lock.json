@@ -1,4 +1,5 @@
 {
+  "BufOnly.nvim": { "branch": "master", "commit": "30579c2851743b00c4547c324a16f2c1cfa5a41c" },
   "Comment.nvim": { "branch": "master", "commit": "176e85eeb63f1a5970d6b88f1725039d85ca0055" },
   "LuaSnip": { "branch": "master", "commit": "0b4950a237ce441a6a3a947d501622453f6860ea" },
   "animation.nvim": { "branch": "main", "commit": "fb77091ab72ec9971aee0562e7081182527aaa6a" },
