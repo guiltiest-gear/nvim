@@ -2,11 +2,11 @@ return {
   -- Comment.nvim
   {
     'numToStr/Comment.nvim',
+    config = true,
     keys = {
       { 'gc', mode = { 'n', 'v' }, desc = 'Toggle comments' },
       { 'gb', mode = { 'n', 'v' }, desc = 'Toggle block comments' },
     },
-    config = true,
   },
 
   -- nvim-autopairs
@@ -23,12 +23,12 @@ return {
   -- nvim-surround
   {
     'kylechui/nvim-surround',
+    opts = { check_ts = true },
     keys = {
       { 'cs', mode = 'n', desc = 'Change surroundings' },
       { 'ys', mode = 'n', desc = 'Add surroundings' },
       { 'ds', mode = 'n', desc = 'Delete surroundings' },
     },
-    opts = { check_ts = true },
   },
 
   -- dial.nvim
@@ -90,6 +90,7 @@ return {
         'L3MON4D3/LuaSnip',
         build = 'make install_jsregexp',
         version = 'v2.*',
+        config = true,
         keys = {
           {
             '<tab>',
@@ -115,7 +116,6 @@ return {
             mode = { 'i', 's' },
           },
         },
-        config = true,
       },
     },
     event = 'InsertEnter',
@@ -196,11 +196,7 @@ return {
             return item
           end,
         },
-        experimental = {
-          ghost_text = {
-            hl_group = 'CmpGhostText',
-          },
-        },
+        experimental = { ghost_text = { hl_group = 'CmpGhostText' } },
         sorting = defaults.sorting,
         window = {
           completion = cmp.config.window.bordered(),

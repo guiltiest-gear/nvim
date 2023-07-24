@@ -4,6 +4,7 @@ return {
     'folke/todo-comments.nvim',
     dependencies = 'nvim-lua/plenary.nvim',
     event = { 'BufReadPost', 'BufNewFile' },
+    config = true,
     keys = {
       {
         ']t',
@@ -20,13 +21,13 @@ return {
         desc = 'Jump to previous todo comment',
       },
     },
-    config = true,
   },
 
   -- trouble.nvim
   {
     'folke/trouble.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
+    config = true,
     keys = {
       { '<leader>xx', '<cmd>TroubleToggle<CR>', desc = 'Toggle trouble.nvim' },
       { '<leader>xw', '<cmd>TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace diagnostics' },
@@ -35,7 +36,6 @@ return {
       { '<leader>xl', '<cmd>TroubleToggle loclist<CR>', desc = 'Open location list' },
       { '<leader>xr', '<cmd>TroubleToggle lsp_references<CR>', desc = 'Open lsp references' },
     },
-    config = true,
   },
 
   -- vim-illuminate
@@ -43,15 +43,9 @@ return {
     'RRethy/vim-illuminate',
     event = { 'BufReadPost', 'BufNewFile' },
     opts = {
-      providers = {
-        'lsp',
-        'treesitter',
-        -- 'regex',
-      },
+      providers = { 'lsp', 'treesitter', 'regex' },
       large_file_cuttoff = 2000,
-      large_file_overrides = {
-        providers = { 'lsp' },
-      },
+      large_file_overrides = { providers = { 'lsp' } },
     },
     config = function(_, opts)
       require('illuminate').configure(opts)
@@ -89,6 +83,7 @@ return {
   -- nvim-hlslens
   {
     'kevinhwang91/nvim-hlslens',
+    config = true,
     keys = {
       { 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]] },
       { 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]] },
@@ -97,7 +92,6 @@ return {
       { 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]] },
       { 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]] },
     },
-    config = true,
   },
 
   -- neo-tree.nvim
@@ -175,6 +169,7 @@ return {
   {
     'ggandor/flit.nvim',
     dependencies = 'ggandor/leap.nvim',
+    opts = { labeled_modes = 'nx' },
     keys = function()
       local ret = {}
       for _, key in ipairs { 'f', 'F', 't', 'T' } do
@@ -182,7 +177,6 @@ return {
       end
       return ret
     end,
-    opts = { labeled_modes = 'nx' },
   },
 
   -- zen-mode.nvim
@@ -193,6 +187,7 @@ return {
       keys = { { '<leader>t', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' } },
       config = true,
     },
+    opts = { plugins = { kitty = { enabled = true, font = '+4' } } },
     keys = {
       {
         '<leader>z',
@@ -202,7 +197,6 @@ return {
         desc = 'Toggle zen mode',
       },
     },
-    opts = { plugins = { kitty = { enabled = true, font = '+4' } } },
   },
 
   -- neogit
@@ -658,9 +652,7 @@ return {
         sorting_strategy = 'ascending',
       },
       pickers = {
-        find_files = {
-          find_command = { 'rg', '--color=never', '--files', '--hidden', '--glob', '!**/.git/*' },
-        },
+        find_files = { find_command = { 'rg', '--color=never', '--files', '--hidden', '--glob', '!**/.git/*' } },
       },
     },
   },
@@ -668,13 +660,13 @@ return {
   -- nvim-gomove
   {
     'booperlv/nvim-gomove',
+    config = true,
     keys = {
       { '<A-h>', mode = { 'n', 'v' }, desc = 'Block left' },
       { '<A-j>', mode = { 'n', 'v' }, desc = 'Block down' },
       { '<A-k>', mode = { 'n', 'v' }, desc = 'Block up' },
       { '<A-l>', mode = { 'n', 'v' }, desc = 'Block right' },
     },
-    config = true,
   },
 
   -- persistence.nvim
