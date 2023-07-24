@@ -320,11 +320,14 @@ return {
     opts = {
       operators = {
         gc = 'Comments',
+        gb = 'Block comments',
         ys = 'Add surroundings',
       },
       defaults = {
         mode = { 'n', 'v' },
         ['g'] = { name = '+goto' },
+        ['gc'] = { name = '+comments' },
+        ['gb'] = { name = '+block comments' },
         [']'] = { name = '+next' },
         ['['] = { name = '+prev' },
         ['<leader>q'] = { name = '+quit/session' },
