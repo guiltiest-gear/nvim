@@ -48,9 +48,7 @@ return {
         opts = {
           automatic_installation = true,
           handlers = {},
-          ensure_installed = {
-            'codelldb',
-          },
+          ensure_installed = { 'codelldb' },
         },
       },
     },
@@ -104,10 +102,7 @@ return {
       local lspconfig = require('lspconfig')
       -- Load neodev.nvim before loading everything else
       require('neodev').setup()
-      lspconfig.clangd.setup {
-        -- Fix clangd offset encoding
-        capabilities = { offsetEncoding = { 'utf-16' } },
-      }
+      lspconfig.clangd.setup { capabilities = { offsetEncoding = { 'utf-16' } } } -- Fix clangd offset encoding
       lspconfig.lua_ls.setup {}
       lspconfig.marksman.setup {}
     end,

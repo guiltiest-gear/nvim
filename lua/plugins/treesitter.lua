@@ -1,7 +1,6 @@
 return {
   {
     'nvim-treesitter/nvim-treesitter',
-    dependencies = { { 'nvim-treesitter/nvim-treesitter-context', config = true } },
     build = ':TSUpdate',
     event = { 'BufReadPost', 'BufNewFile' },
     opts = {
@@ -36,6 +35,14 @@ return {
     end,
   },
 
+  -- nvim-treesitter-context
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    dependencies = 'nvim-treesitter/nvim-treesitter',
+    event = { 'BufReadPost', 'BufNewFile' },
+    config = true,
+  },
+
   -- vim-matchup
   { 'andymass/vim-matchup', dependencies = 'nvim-treesitter/nvim-treesitter', event = { 'BufReadPost', 'BufNewFile' } },
 
@@ -43,6 +50,7 @@ return {
   {
     'Wansmer/treesj',
     dependencies = 'nvim-treesitter/nvim-treesitter',
+    opts = { max_join_length = 150 },
     keys = {
       {
         '<leader>m',
@@ -66,7 +74,6 @@ return {
         desc = 'Split node under cursor',
       },
     },
-    opts = { max_join_length = 150 },
   },
 
   -- indent-blankline.nvim
