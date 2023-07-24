@@ -172,7 +172,7 @@ return {
     opts = { labeled_modes = 'nx' },
     keys = function()
       local ret = {}
-      for _, key in ipairs { 'f', 'F', 't', 'T' } do
+      for _, key in ipairs({ 'f', 'F', 't', 'T' }) do
         ret[#ret + 1] = { key, mode = { 'n', 'x', 'o' }, desc = key }
       end
       return ret
@@ -231,7 +231,7 @@ return {
           if vim.v.shell_error == 0 then
             vim.api.nvim_del_augroup_by_name('GitSignsLazyLoad')
             vim.schedule(function()
-              require('lazy').load { plugins = { 'gitsigns.nvim' } }
+              require('lazy').load({ plugins = { 'gitsigns.nvim' } })
             end)
           end
         end,
@@ -685,7 +685,7 @@ return {
       {
         '<leader>ql',
         function()
-          return require('persistence').load { last = true }
+          return require('persistence').load({ last = true })
         end,
         desc = 'Restore the last session',
       },

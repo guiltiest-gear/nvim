@@ -54,7 +54,7 @@ return {
     },
     config = function()
       local augend = require('dial.augend')
-      require('dial.config').augends:register_group {
+      require('dial.config').augends:register_group({
         default = {
           augend.integer.alias.decimal,
           augend.integer.alias.decimal_int,
@@ -63,7 +63,7 @@ return {
           augend.constant.alias.alpha,
           augend.constant.alias.Alpha,
         },
-      }
+      })
     end,
   },
 
@@ -129,20 +129,20 @@ return {
             require('luasnip').lsp_expand(args.body)
           end,
         },
-        mapping = cmp.mapping.preset.insert {
-          ['<Tab>'] = cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert },
-          ['<S-Tab>'] = cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert },
+        mapping = cmp.mapping.preset.insert({
+          ['<Tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+          ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-e>'] = cmp.mapping.abort(),
-          ['<CR>'] = cmp.mapping.confirm { select = true },
-          ['<S-CR>'] = cmp.mapping.confirm {
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          ['<S-CR>'] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
-          },
-        },
-        sources = cmp.config.sources {
+          }),
+        }),
+        sources = cmp.config.sources({
           { name = 'nvim_lsp' },
           { name = 'nvim_lua' },
           { name = 'luasnip' },
@@ -150,7 +150,7 @@ return {
           { name = 'async_path' },
           { name = 'calc' },
           { name = 'nvim_lsp_signature_help' },
-        },
+        }),
         formatting = {
           format = function(_, item)
             local icons = {
@@ -216,10 +216,10 @@ return {
       })
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources {
+        sources = cmp.config.sources({
           { name = 'path' },
           { name = 'cmdline' },
-        },
+        }),
       })
       -- nvim-autopairs integration
       cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())

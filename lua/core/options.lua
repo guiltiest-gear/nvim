@@ -96,7 +96,7 @@ opt.grepprg = 'rg --vimgrep'
 opt.grepformat = '%f:%l:%c:%m'
 
 -- shortmess options
-opt.shortmess:append { W = true, I = true, c = true, C = true }
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
 
 -- Enable autowrite
 opt.autowrite = true
@@ -117,10 +117,10 @@ opt.winminwidth = 10
 opt.equalalways = false
 
 -- Set diagnostic config for lsp_lines.nvim
-vim.diagnostic.config {
+vim.diagnostic.config({
   virtual_text = false,
   virtual_lines = { highlight_whole_line = false },
-}
+})
 
 -- Disable certain builtins
 g.loaded_netrw = 1

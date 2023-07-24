@@ -102,9 +102,9 @@ return {
       local lspconfig = require('lspconfig')
       -- Load neodev.nvim before loading everything else
       require('neodev').setup()
-      lspconfig.clangd.setup { capabilities = { offsetEncoding = { 'utf-16' } } } -- Fix clangd offset encoding
-      lspconfig.lua_ls.setup {}
-      lspconfig.marksman.setup {}
+      lspconfig.clangd.setup({ capabilities = { offsetEncoding = { 'utf-16' } } }) -- Fix clangd offset encoding
+      lspconfig.lua_ls.setup({})
+      lspconfig.marksman.setup({})
     end,
   },
 
@@ -131,21 +131,21 @@ return {
         on_attach = function(client, bufnr)
           -- Autoformat on save if supported
           if client.supports_method('textDocument/formatting') then
-            vim.api.nvim_clear_autocmds {
+            vim.api.nvim_clear_autocmds({
               group = augroup,
               buffer = bufnr,
-            }
+            })
             vim.api.nvim_create_autocmd('BufWritePre', {
               group = augroup,
               buffer = bufnr,
               callback = function()
-                vim.lsp.buf.format {
+                vim.lsp.buf.format({
                   bufnr = bufnr,
                   -- I don't really like the style of lua_ls's formatting, so I exclude it and instead use stylua
                   filter = function(client)
                     return client.name ~= 'lua_ls'
                   end,
-                }
+                })
               end,
             })
           end
