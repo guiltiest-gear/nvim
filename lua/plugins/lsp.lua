@@ -36,7 +36,7 @@ return {
           ensure_installed = {
             'stylua',
             'markdownlint',
-            'selene',
+            -- 'selene',
             'cpplint',
             'clang_format',
           },
@@ -122,7 +122,7 @@ return {
       return {
         sources = {
           nls.builtins.formatting.stylua,
-          nls.builtins.diagnostics.selene,
+          -- nls.builtins.diagnostics.selene,
           nls.builtins.formatting.markdownlint,
           nls.builtins.formatting.clang_format,
           nls.builtins.diagnostics.markdownlint,
