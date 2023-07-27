@@ -207,10 +207,7 @@ return {
         end,
       },
       -- Virtual text for nvim-dap
-      {
-        'theHamsta/nvim-dap-virtual-text',
-        config = true,
-      },
+      { 'theHamsta/nvim-dap-virtual-text', config = true },
     },
     keys = {
       {
