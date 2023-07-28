@@ -299,9 +299,7 @@ return {
             action = ':qa',
           },
         },
-        footer = {
-          os.date('%B %d, %Y, %X'),
-        },
+        footer = {},
       },
     },
   },
