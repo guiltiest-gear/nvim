@@ -148,3 +148,6 @@ g.loaded_python3_provider = 0
 
 -- Set matchparen options for vim-matchup
 g.matchup_matchparen_offscreen = { method = 'status_manual ' }
+
+-- Work async for vim-matchup
+g.matchup_matchparen_deferred = 1
