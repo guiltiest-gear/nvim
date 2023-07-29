@@ -87,6 +87,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens)
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 * [nvim-notify](https://github.com/rcarriga/nvim-notify)
+* [nvim-origami](https://github.com/chrisgrieser/nvim-origami)
 * [nvim-surround](https://github.com/kylechui/nvim-surround)
 * [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)

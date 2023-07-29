@@ -111,6 +111,9 @@ return {
     },
   },
 
+  -- nvim-origami
+  { 'chrisgrieser/nvim-origami', event = { 'BufReadPost', 'BufNewFile' }, config = true },
+
   -- windows.nvim
   {
     'anuvyklack/windows.nvim',
