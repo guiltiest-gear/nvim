@@ -65,6 +65,7 @@
   "treesj": { "branch": "main", "commit": "3203aa553217921fd4dcb79245f9df07278910b2" },
   "trouble.nvim": { "branch": "main", "commit": "40aad004f53ae1d1ba91bcc5c29d59f07c5f01d3" },
   "twilight.nvim": { "branch": "main", "commit": "a4843e6e67092a1e6fa9666f02bf0ab59174c1df" },
+  "undotree": { "branch": "master", "commit": "0e11ba7325efbbb3f3bebe06213afa3e7ec75131" },
   "vim-cool": { "branch": "master", "commit": "04bb7f5dade175a81b47abf4e87aeb30b05b33d8" },
   "vim-illuminate": { "branch": "master", "commit": "a2907275a6899c570d16e95b9db5fd921c167502" },
   "vim-matchup": { "branch": "master", "commit": "207418404291d81df13612b966b7eb9841c9e704" },
