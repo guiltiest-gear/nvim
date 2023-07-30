@@ -106,6 +106,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [treesj](https://github.com/Wansmer/treesj)
 * [trouble.nvim](https://github.com/folke/trouble.nvim)
 * [twilight.nvim](https://github.com/folke/twilight.nvim)
+* [undotree](https://github.com/mbbill/undotree)
 * [vim-cool](https://github.com/romainl/vim-cool)
 * [vim-illuminate](https://github.com/RRethy/vim-illuminate)
 * [vim-matchup](https://github.com/andymass/vim-matchup)
