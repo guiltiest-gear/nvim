@@ -425,6 +425,9 @@ return {
     keys = { { '<leader>bo', '<cmd>BufOnly<CR>', desc = 'Delete all other buffers except current' } },
   },
 
+  -- highlight-undo.nvim
+  { 'tzachar/highlight-undo.nvim', keys = { 'u', '<C-r>' }, config = true },
+
   -- bufferline.nvim
   {
     'akinsho/bufferline.nvim',
