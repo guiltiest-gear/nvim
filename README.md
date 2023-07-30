@@ -62,6 +62,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [flit.nvim](https://github.com/ggandor/flit.nvim)
 * [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 * [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+* [highlight-undo.nvim](https://github.com/tzachar/highlight-undo.nvim)
 * [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 * [lazy.nvim](https://github.com/folke/lazy.nvim)
 * [leap.nvim](https://github.com/ggandor/leap.nvim)
