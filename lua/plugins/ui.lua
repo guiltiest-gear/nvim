@@ -112,7 +112,7 @@ return {
   },
 
   -- nvim-origami
-  { 'chrisgrieser/nvim-origami', event = { 'BufReadPost', 'BufNewFile' }, config = true },
+  { 'chrisgrieser/nvim-origami', event = { 'BufReadPost', 'BufNewFile' }, opts = { setupFoldKeymaps = false } },
 
   -- windows.nvim
   {
