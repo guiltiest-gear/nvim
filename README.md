@@ -78,7 +78,6 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [neogit](https://github.com/NeogitOrg/neogit)
 * [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
 * [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
-* [numb.nvim](https://github.com/nacro90/numb.nvim)
 * [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 * [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 * [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)

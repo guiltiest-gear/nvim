@@ -534,9 +534,6 @@ return {
     },
   },
 
-  -- numb.nvim
-  { 'nacro90/numb.nvim', event = 'CmdlineEnter', config = true },
-
   -- better-escape.nvim
   {
     'max397574/better-escape.nvim',
