@@ -22,7 +22,7 @@ map('n', '<C-Left>', '<cmd>vertical resize -2<CR>', { desc = 'Decrease window wi
 map('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { desc = 'Increase window width' })
 
 -- Lazy keymap
-vim.keymap.set('n', '<leader>l', function()
+map('n', '<leader>l', function()
   return require('lazy').home()
 end, { desc = 'Open lazy.nvim' })
 
