@@ -82,7 +82,9 @@ autocmd('BufReadPost', {
 
 -- Check if the file needs to be reloaded when it's changed
 autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
-  command = 'checktime',
+  callback = function()
+    vim.cmd.checktime()
+  end,
 })
 
 -- Toggle relative numbers based on certain events
@@ -100,7 +102,7 @@ autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, 
   callback = function()
     if vim.o.nu then
       vim.opt.relativenumber = false
-      vim.cmd('redraw')
+      vim.cmd.redraw()
     end
   end,
 })
