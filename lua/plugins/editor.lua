@@ -207,16 +207,12 @@ return {
       {
         '<leader>gg',
         function()
-          return require('neogit').open()
+          return require('neogit').open({ kind = 'replace' })
         end,
         desc = 'Open neogit',
       },
     },
-    opts = {
-      kind = 'replace',
-      disable_builtin_notifications = true,
-      disable_insert_on_commit = 'auto',
-    },
+    opts = { disable_builtin_notifications = true, disable_insert_on_commit = 'auto' },
   },
 
   -- gitsigns.nvim
