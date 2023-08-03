@@ -34,12 +34,7 @@ autocmd('BufWinEnter', {
 
 -- Close man and help with just <q>
 autocmd('FileType', {
-  pattern = {
-    'help',
-    'man',
-    'lspinfo',
-    'checkhealth',
-  },
+  pattern = { 'help', 'man', 'lspinfo', 'checkhealth' },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
     vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = event.buf, silent = true })
@@ -59,11 +54,7 @@ autocmd('BufWritePre', {
 
 -- Check for spelling in text filetypes and enable wrapping, and set gj and gk keymaps
 autocmd('FileType', {
-  pattern = {
-    'gitcommit',
-    'markdown',
-    'text',
-  },
+  pattern = { 'gitcommit', 'markdown', 'text' },
   callback = function()
     local opts = { noremap = true, silent = true }
     vim.opt_local.spell = true
