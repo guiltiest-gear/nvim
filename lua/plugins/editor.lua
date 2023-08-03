@@ -209,7 +209,7 @@ return {
         function()
           return require('neogit').open()
         end,
-        desc = 'Neogit',
+        desc = 'Open neogit',
       },
     },
     opts = {
