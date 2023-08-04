@@ -703,4 +703,7 @@ return {
       },
     },
   },
+
+  -- vim-kitty
+  { 'fladson/vim-kitty', ft = 'kitty' },
 }
