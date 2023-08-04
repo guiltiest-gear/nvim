@@ -147,7 +147,7 @@ return {
       -- NOTE: vim-repeat is useful on its own, so it just makes sense to have it like this
       -- Sure it technically makes the dependencies table redundant but it's just extra insurance
       'tpope/vim-repeat',
-      event = { 'BufReadPost, BufNewFile' },
+      keys = { '.' },
     },
     keys = {
       { 's', mode = { 'n', 'x', 'o' }, desc = 'Leap forward to' },
