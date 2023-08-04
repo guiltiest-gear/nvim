@@ -562,68 +562,68 @@ return {
         function()
           return require('telescope.builtin').find_files()
         end,
-        desc = 'Find files',
+        desc = 'Files',
       },
       {
         '<leader>fw',
         function()
           return require('telescope.builtin').live_grep()
         end,
-        desc = 'Find words',
+        desc = 'Words',
       },
       {
         '<leader>fb',
         function()
           return require('telescope.builtin').buffers()
         end,
-        desc = 'Search buffers',
+        desc = 'Buffers',
       },
       {
         '<leader>fh',
         function()
           return require('telescope.builtin').help_tags()
         end,
-        desc = 'Search help',
+        desc = 'Help',
       },
       {
         '<leader>fm',
         function()
           return require('telescope.builtin').man_pages()
         end,
-        desc = 'Search man pages',
+        desc = 'Man pages',
       },
       {
         '<leader>fr',
         function()
           return require('telescope.builtin').oldfiles()
         end,
-        desc = 'Search recently opened files',
+        desc = 'Recently opened',
       },
       {
         '<leader>fR',
         function()
           return require('telescope.builtin').registers()
         end,
-        desc = 'Search registers',
+        desc = 'Registers',
       },
       {
         '<leader>fk',
         function()
           return require('telescope.builtin').keymaps()
         end,
-        desc = 'Search keymaps',
+        desc = 'Keymaps',
       },
       {
         '<leader>fc',
         function()
           return require('telescope.builtin').commands()
         end,
-        desc = 'Search commands',
+        desc = 'Commands',
       },
       {
         '<leader>ft',
         '<cmd>TodoTelescope<CR>',
-        desc = 'Search through todo comments',
+        desc = 'Todo comments',
       },
       {
         '<leader>go',
