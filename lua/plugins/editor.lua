@@ -626,6 +626,27 @@ return {
         desc = 'Todo comments',
       },
       {
+        '<leader>fl',
+        function()
+          return require('telescope.builtin').resume()
+        end,
+        desc = 'Resume',
+      },
+      {
+        '<leader>fd',
+        function()
+          return require('telescope.builtin').diagnostics({ bufnr = 0 })
+        end,
+        desc = 'Document diagnostics',
+      },
+      {
+        '<leader>fD',
+        function()
+          return require('telescope.builtin').diagnostics()
+        end,
+        desc = 'Workspace diagnostics',
+      },
+      {
         '<leader>go',
         function()
           return require('telescope.builtin').git_status()
