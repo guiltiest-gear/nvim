@@ -622,11 +622,7 @@ return {
         end,
         desc = 'Commands',
       },
-      {
-        '<leader>ft',
-        '<cmd>TodoTelescope<CR>',
-        desc = 'Todo comments',
-      },
+      { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo comments' },
       {
         '<leader>fl',
         function()
