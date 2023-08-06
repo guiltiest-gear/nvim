@@ -202,10 +202,12 @@ return {
       local cmp = require('cmp')
       local cmp_autopairs = require('nvim-autopairs.completion.cmp')
       cmp.setup(opts)
+      ---@diagnostic disable-next-line: missing-fields
       cmp.setup.cmdline('/', {
         mapping = cmp.mapping.preset.cmdline(),
         sources = { { name = 'buffer' } },
       })
+      ---@diagnostic disable-next-line: missing-fields
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({ { name = 'path' }, { name = 'cmdline' } }),
