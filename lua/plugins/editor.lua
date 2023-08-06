@@ -519,6 +519,7 @@ return {
         end,
         mode = 'buffers',
         diagnostics = 'nvim_lsp',
+        ---@diagnostic disable-next-line: unused-local
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
           local s = ' '
           for e, n in pairs(diagnostics_dict) do
