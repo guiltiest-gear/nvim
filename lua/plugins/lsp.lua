@@ -140,6 +140,7 @@ return {
                 vim.lsp.buf.format({
                   bufnr = bufnr,
                   -- I don't really like the style of lua_ls's formatting, so I exclude it and instead use stylua
+                  ---@diagnostic disable-next-line: redefined-local
                   filter = function(client)
                     return client.name ~= 'lua_ls'
                   end,
