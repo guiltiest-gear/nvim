@@ -86,6 +86,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 * [nvim-gomove](https://github.com/booperlv/nvim-gomove)
 * [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens)
+* [nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb)
 * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 * [nvim-notify](https://github.com/rcarriga/nvim-notify)
 * [nvim-origami](https://github.com/chrisgrieser/nvim-origami)
