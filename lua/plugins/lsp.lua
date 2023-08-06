@@ -193,6 +193,9 @@ return {
   {
     'mfussenegger/nvim-dap',
     dependencies = {
+      -- Virtual text for nvim-dap
+      { 'theHamsta/nvim-dap-virtual-text', config = true },
+
       -- UI for nvim-dap
       {
         'rcarriga/nvim-dap-ui',
@@ -228,8 +231,6 @@ return {
           end
         end,
       },
-      -- Virtual text for nvim-dap
-      { 'theHamsta/nvim-dap-virtual-text', config = true },
     },
     keys = {
       {
