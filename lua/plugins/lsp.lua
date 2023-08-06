@@ -166,6 +166,22 @@ return {
   -- lsp_lines.nvim
   { 'https://git.sr.ht/~whynothugo/lsp_lines.nvim', event = 'LspAttach', config = true },
 
+  -- actions-preview.nvim
+  {
+    'aznhe21/actions-preview.nvim',
+    dependencies = 'nvim-telescope/telescope.nvim',
+    config = true,
+    keys = {
+      {
+        'gf',
+        function()
+          return require('actions-preview').code_actions()
+        end,
+        desc = 'Open actions-preview.nvim',
+      },
+    },
+  },
+
   -- nvim-dap
   {
     'mfussenegger/nvim-dap',

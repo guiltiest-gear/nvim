@@ -43,6 +43,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [BufOnly.nvim](https://github.com/numToStr/BufOnly.nvim)
 * [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 * [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+* [actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim)
 * [animation.nvim](https://github.com/anuvyklack/animation.nvim)
 * [better-escape.nvim](https://github.com/max397574/better-escape.nvim)
 * [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim)
