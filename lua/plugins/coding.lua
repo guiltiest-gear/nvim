@@ -137,10 +137,7 @@ return {
           ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-e>'] = cmp.mapping.abort(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
-          ['<S-CR>'] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-          }),
+          ['<S-CR>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
@@ -198,10 +195,7 @@ return {
         },
         experimental = { ghost_text = { hl_group = 'CmpGhostText' } },
         sorting = defaults.sorting,
-        window = {
-          completion = cmp.config.window.bordered(),
-          documentation = cmp.config.window.bordered(),
-        },
+        window = { completion = cmp.config.window.bordered(), documentation = cmp.config.window.bordered() },
       }
     end,
     config = function(_, opts)
@@ -210,16 +204,11 @@ return {
       cmp.setup(opts)
       cmp.setup.cmdline('/', {
         mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-          { name = 'buffer' },
-        },
+        sources = { { name = 'buffer' } },
       })
       cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-          { name = 'path' },
-          { name = 'cmdline' },
-        }),
+        sources = cmp.config.sources({ { name = 'path' }, { name = 'cmdline' } }),
       })
       -- nvim-autopairs integration
       cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
