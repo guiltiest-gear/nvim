@@ -186,6 +186,9 @@ return {
   -- nvim-lightbulb
   { 'kosayoda/nvim-lightbulb', event = 'LspAttach', opts = { autocmd = { enabled = true } } },
 
+  -- lsp_signature.nvim
+  { 'ray-x/lsp_signature.nvim', event = 'LspAttach', config = true },
+
   -- nvim-dap
   {
     'mfussenegger/nvim-dap',

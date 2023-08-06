@@ -68,6 +68,7 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 * [lazy.nvim](https://github.com/folke/lazy.nvim)
 * [leap.nvim](https://github.com/ggandor/leap.nvim)
 * [lsp_lines.nvim](https://git.sr.ht/~whynothugo/lsp_lines.nvim)
+* [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim)
 * [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 * [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 * [mason-null-ls.nvim](https://github.com/jay-babu/mason-null-ls.nvim)
