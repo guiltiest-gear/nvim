@@ -3,7 +3,7 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      'folke/neodev.nvim',
+      { 'folke/neodev.nvim', lazy = true },
       {
         'williamboman/mason.nvim',
         cmd = 'Mason',
