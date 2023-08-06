@@ -101,6 +101,7 @@ return {
     -- Load neo-tree.nvim if we provide a directory as an argument
     init = function()
       if vim.fn.argc() == 1 then
+        ---@diagnostic disable-next-line: param-type-mismatch
         local stat = vim.loop.fs_stat(vim.fn.argv(0))
         if stat and stat.type == 'directory' then
           require('neo-tree')
