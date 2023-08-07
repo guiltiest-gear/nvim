@@ -111,6 +111,8 @@ return {
   -- WARNING: null-ls.nvim will be archived on August 11, 2023
   -- Find a suitable replacement soon
   -- Related: https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1621
+  -- NOTE: Look into alternatives
+  -- Related: https://github.com/mhartington/formatter.nvim and https://github.com/mfussenegger/nvim-lint
   {
     'jose-elias-alvarez/null-ls.nvim',
     dependencies = 'williamboman/mason.nvim',
