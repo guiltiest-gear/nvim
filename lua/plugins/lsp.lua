@@ -23,7 +23,7 @@ return {
         opts = {
           ensure_installed = {
             'lua_ls',
-            'clangd',
+            -- 'clangd',
             'marksman',
           },
         },
@@ -36,8 +36,8 @@ return {
             'stylua',
             'markdownlint',
             -- 'selene',
-            'cpplint',
-            'clang_format',
+            -- 'cpplint',
+            -- 'clang_format',
           },
         },
       },
@@ -102,7 +102,7 @@ return {
       local lspconfig = require('lspconfig')
       -- Load neodev.nvim before loading everything else
       require('neodev').setup()
-      lspconfig.clangd.setup({ capabilities = { offsetEncoding = { 'utf-16' } } }) -- Fix clangd offset encoding
+      -- lspconfig.clangd.setup({ capabilities = { offsetEncoding = { 'utf-16' } } }) -- Fix clangd offset encoding
       lspconfig.lua_ls.setup({})
       lspconfig.marksman.setup({})
     end,
@@ -125,9 +125,9 @@ return {
         sources = {
           nls.builtins.formatting.stylua,
           nls.builtins.formatting.markdownlint,
-          nls.builtins.formatting.clang_format,
+          -- nls.builtins.formatting.clang_format,
           nls.builtins.diagnostics.markdownlint,
-          nls.builtins.diagnostics.cpplint,
+          -- nls.builtins.diagnostics.cpplint,
         },
         on_attach = function(client, bufnr)
           -- Autoformat on save if supported
