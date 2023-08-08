@@ -138,12 +138,9 @@ return {
   -- leap.nvim
   {
     'ggandor/leap.nvim',
-    dependencies = {
-      -- NOTE: vim-repeat is useful on its own, so it just makes sense to have it like this
-      -- Sure it technically makes the dependencies table redundant but it's just extra insurance
-      'tpope/vim-repeat',
-      keys = { '.' },
-    },
+    dependencies = { 'tpope/vim-repeat', keys = { '.' } },
+    -- NOTE: vim-repeat is useful on its own, so it just makes sense to have it like this
+    -- Sure it technically makes the dependencies table redundant but it's just extra insurance
     keys = {
       { 's', mode = { 'n', 'x', 'o' }, desc = 'Leap forward to' },
       { 'S', mode = { 'n', 'x', 'o' }, desc = 'Leap backward to' },
