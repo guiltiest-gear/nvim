@@ -117,7 +117,7 @@ return {
   -- Related: https://github.com/mhartington/formatter.nvim and https://github.com/mfussenegger/nvim-lint
   {
     'jose-elias-alvarez/null-ls.nvim',
-    dependencies = 'williamboman/mason.nvim',
+    dependencies = { 'williamboman/mason.nvim', 'nvim-lua/plenary.nvim' },
     event = { 'BufReadPre', 'BufNewFile' },
     opts = function()
       local nls = require('null-ls')
