@@ -124,7 +124,8 @@ return {
       return {
         sources = {
           nls.builtins.formatting.stylua,
-          nls.builtins.formatting.markdownlint,
+          -- nls.builtins.formatting.markdownlint,
+          nls.builtins.formatting.mdformat,
           -- nls.builtins.formatting.clang_format,
           nls.builtins.diagnostics.markdownlint,
           -- nls.builtins.diagnostics.cpplint,
