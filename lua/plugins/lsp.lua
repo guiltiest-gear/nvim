@@ -35,6 +35,7 @@ return {
           ensure_installed = {
             'stylua',
             'markdownlint',
+            'mdformat',
             -- 'selene',
             -- 'cpplint',
             -- 'clang_format',
