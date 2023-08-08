@@ -36,7 +36,6 @@ return {
             'stylua',
             'markdownlint',
             'mdformat',
-            'beautysh',
             -- 'selene',
             -- 'cpplint',
             -- 'clang_format',
@@ -134,7 +133,6 @@ return {
           -- nls.builtins.formatting.clang_format,
           nls.builtins.diagnostics.markdownlint,
           -- nls.builtins.diagnostics.cpplint,
-          nls.builtins.formatting.beautysh,
         },
         on_attach = function(client, bufnr)
           -- Autoformat on save if supported
