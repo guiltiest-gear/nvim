@@ -65,10 +65,7 @@ return {
         end,
       })
     end,
-    keys = {
-      { ']]', desc = 'Next Reference' },
-      { '[[', desc = 'Prev Reference' },
-    },
+    keys = { { ']]', desc = 'Next Reference' }, { '[[', desc = 'Prev Reference' } },
   },
 
   -- vim-cool
