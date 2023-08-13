@@ -44,7 +44,6 @@ return {
       },
       {
         'jay-babu/mason-nvim-dap.nvim',
-        enabled = false,
         cmd = { 'DapInstall', 'DapUninstall' },
         opts = {
           automatic_installation = true,
@@ -197,7 +196,6 @@ return {
   -- nvim-dap
   {
     'mfussenegger/nvim-dap',
-    enabled = false,
     dependencies = {
       -- Virtual text for nvim-dap
       { 'theHamsta/nvim-dap-virtual-text', config = true },
