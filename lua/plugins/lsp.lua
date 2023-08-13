@@ -23,7 +23,7 @@ return {
         opts = {
           ensure_installed = {
             'lua_ls',
-            -- 'clangd',
+            'clangd',
             'marksman',
           },
         },
@@ -37,8 +37,8 @@ return {
             'markdownlint',
             'mdformat',
             -- 'selene',
-            -- 'cpplint',
-            -- 'clang_format',
+            'cpplint',
+            'clang_format',
           },
         },
       },
@@ -102,7 +102,7 @@ return {
       local lspconfig = require('lspconfig')
       -- Load neodev.nvim before loading everything else
       require('neodev').setup()
-      -- lspconfig.clangd.setup({ capabilities = { offsetEncoding = { 'utf-16' } } }) -- Fix clangd offset encoding
+      lspconfig.clangd.setup({ capabilities = { offsetEncoding = { 'utf-16' } } }) -- Fix clangd offset encoding
       lspconfig.lua_ls.setup({})
       lspconfig.marksman.setup({})
     end,
