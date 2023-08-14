@@ -8,7 +8,7 @@ return {
         'lua',
         'luadoc',
         'luap',
-        -- 'cpp',
+        'cpp',
         'markdown',
         'markdown_inline',
         'git_config',
