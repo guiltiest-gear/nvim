@@ -105,6 +105,15 @@ return {
     branch = 'v3.x',
     keys = { { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Open neo-tree.nvim' } },
     opts = {
+      event_handlers = {
+        {
+          event = 'file_opened',
+          handler = function()
+            -- auto close
+            require('neo-tree.command').execute({ action = 'close' })
+          end,
+        },
+      },
       filesystem = {
         filtered_items = { hide_dotfiles = false, hide_by_name = { '.git' } },
         follow_current_file = { enabled = true },
