@@ -116,6 +116,9 @@ opt.winwidth = 10
 opt.winminwidth = 10
 opt.equalalways = false
 
+-- Always show the signcolumn
+opt.signcolumn = 'yes'
+
 -- Set diagnostic config for lsp_lines.nvim
 vim.diagnostic.config({
   virtual_text = false,
