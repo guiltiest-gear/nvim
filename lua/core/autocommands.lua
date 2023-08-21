@@ -41,6 +41,14 @@ autocmd('FileType', {
   end,
 })
 
+-- Disable the signcolumn while in a git commit
+autocmd('FileType', {
+  pattern = { 'gitcommit' },
+  callback = function()
+    vim.opt_local.signcolumn = 'auto'
+  end,
+})
+
 -- Auto create dir when saving a file where some intermediate directory does not exist
 autocmd('BufWritePre', {
   callback = function(event)
