@@ -119,6 +119,9 @@ opt.equalalways = false
 -- Always show the signcolumn
 opt.signcolumn = 'yes'
 
+-- Formatting options
+opt.formatoptions = 'jcroqlnt'
+
 -- Set diagnostic config for lsp_lines.nvim
 vim.diagnostic.config({
   virtual_text = false,
