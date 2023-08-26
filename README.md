@@ -49,7 +49,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 ![A screenshot of my neovim config first opening, with dashboard-nvim
 being the startpage](https://codeberg.org/j4de/nvim/raw/commit/4182dd63f3ba604e92daf768e894dd3fc4615d09/assets/Start%20screen.png)
 ![A screenshot of various files open, including init.lua, plugins.lua,
-which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd63f3ba604e92daf768e894dd3fc4615d09/assets/Editing.png)
+which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938d309ad8d1a5bcb7/assets/Screenshot_2023-08-25_18-37-02.png)
 
 ## Plugins
 
