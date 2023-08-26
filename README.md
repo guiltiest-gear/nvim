@@ -132,4 +132,4 @@ which-key.lua, and options.lua](https://codeberg.org/j4de/nvim/raw/commit/4182dd
 
 ## License
 
-MIT
+MIT-0
