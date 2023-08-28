@@ -666,7 +666,7 @@ return {
     },
     opts = function()
       -- Don't preview binaries
-      local previewers = require('telescope.previewers')
+      --[[ local previewers = require('telescope.previewers')
       local Job = require('plenary.job')
       local new_maker = function(filepath, bufnr, opts)
         filepath = vim.fn.expand(filepath)
@@ -686,7 +686,7 @@ return {
             end
           end,
         }):sync()
-      end
+      end ]]
 
       -- File and text search in hidden files and directories
       local telescopeConfig = require('telescope.config')
@@ -703,7 +703,7 @@ return {
       return {
         defaults = {
           vimgrep_arguments = vimgrep_arguments,
-          buffer_previewer_maker = new_maker,
+          -- buffer_previewer_maker = new_maker,
           theme = 'tokyonight',
           path_display = { 'smart' },
           file_ignore_patterns = { '.git/' },
