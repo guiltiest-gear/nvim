@@ -1,5 +1,7 @@
 # My neovim config
 
+This isn't anything all too special, just your standard config.
+
 <!--toc:start-->
 
 - [My neovim config](#my-neovim-config)
@@ -11,8 +13,6 @@
   - [License](#license)
 
 <!--toc:end-->
-
-This isn't anything all too special, just your standard config.
 
 ## IMPORTANT NOTICES
 
