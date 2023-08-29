@@ -20,6 +20,8 @@ return {
         -- 'vim',
         'vimdoc',
         'regex',
+        'bash',
+        'toml',
       },
       highlight = { enable = true },
       indent = { enable = true },
