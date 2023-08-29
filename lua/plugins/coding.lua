@@ -111,6 +111,8 @@ return {
           augend.integer.alias.decimal,
           augend.integer.alias.decimal_int,
           augend.integer.alias.hex,
+          augend.integer.alias.octal,
+          augend.integer.alias.binary,
           augend.constant.alias.bool,
           augend.constant.alias.alpha,
           augend.constant.alias.Alpha,
