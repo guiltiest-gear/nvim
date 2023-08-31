@@ -193,7 +193,7 @@ return {
         function()
           return require('zen-mode').toggle()
         end,
-        desc = 'Toggle zen mode',
+        desc = 'Toggle zen-mode.nvim',
       },
     },
   },
