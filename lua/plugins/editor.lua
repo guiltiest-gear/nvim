@@ -211,11 +211,7 @@ return {
         desc = 'Open neogit',
       },
     },
-    opts = {
-      disable_builtin_notifications = true,
-      disable_insert_on_commit = 'auto',
-      kind = 'replace',
-    },
+    opts = { disable_builtin_notifications = true, disable_insert_on_commit = 'auto', kind = 'replace' },
   },
 
   -- gitsigns.nvim
