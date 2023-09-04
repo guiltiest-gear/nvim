@@ -731,7 +731,7 @@ return {
   -- persistence.nvim
   {
     'folke/persistence.nvim',
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = 'BufReadPre',
     config = true,
     keys = {
       {
