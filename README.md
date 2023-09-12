@@ -101,6 +101,7 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 - [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens)
 - [nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [nvim-navic](https://github.com/SmiteshP/nvim-navic)
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [nvim-origami](https://github.com/chrisgrieser/nvim-origami)
 - [nvim-surround](https://github.com/kylechui/nvim-surround)
