@@ -201,7 +201,7 @@ return {
   -- neogit
   {
     'NeogitOrg/neogit',
-    dependencies = 'nvim-lua/plenary.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
     keys = {
       {
         '<leader>gg',
@@ -216,6 +216,10 @@ return {
       disable_insert_on_commit = 'auto',
       kind = 'replace',
       status = { recent_commit_count = 25 },
+      integrations = { telescope = true },
+      telescope_sorter = function()
+        return require('telescope').extensions.fzf.native_fzf_sorter()
+      end,
     },
   },
 
