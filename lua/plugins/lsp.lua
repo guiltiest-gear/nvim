@@ -7,6 +7,8 @@ return {
       {
         'williamboman/mason.nvim',
         cmd = 'Mason',
+        -- NOTE: Not too sure about this keybind, consider if it's really necessary
+        keys = { { '<leader>M', '<cmd>Mason<CR>', desc = 'Open mason.nvim' } },
         opts = {
           ui = {
             icons = {
