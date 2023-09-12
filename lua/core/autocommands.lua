@@ -67,7 +67,7 @@ autocmd('FileType', {
 -- Go to the last loc when opening a buffer
 autocmd('BufReadPost', {
   callback = function()
-    local exclude = { 'gitcommit' }
+    local exclude = { 'gitcommit', 'NeogitCommitMessage' }
     local buf = vim.api.nvim_get_current_buf()
     if vim.tbl_contains(exclude, vim.bo[buf].filetype) then
       return
