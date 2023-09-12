@@ -35,7 +35,7 @@
   "middleclass": { "branch": "master", "commit": "9fab4d5bca67262614960960ca35c4740eb2be2c" },
   "neo-tree.nvim": { "branch": "v3.x", "commit": "2d89ca96e08eb6e9c8e50e1bb4738bc5125c9f12" },
   "neodev.nvim": { "branch": "main", "commit": "1c796d3240c1fe6f0e1228fc7ef2ae4cef31dfea" },
-  "neogit": { "branch": "master", "commit": "1b2f888e504dc7911fa43e30c5aa7affcec6f6c7" },
+  "neogit": { "branch": "master", "commit": "50b3e1d9c600deb4027af117cca660bee88223a4" },
   "nui.nvim": { "branch": "main", "commit": "c8de23342caf8d50b15d6b28368d36a56a69d76f" },
   "null-ls.nvim": { "branch": "main", "commit": "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7" },
   "nvim-autopairs": { "branch": "master", "commit": "defad64afbf19381fe31488a7582bbac421d6e38" },
