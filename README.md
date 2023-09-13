@@ -113,6 +113,7 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [promise-async](https://github.com/kevinhwang91/promise-async)
 - [rainbow-delimiters.nvim](https://github.com/hiphish/rainbow-delimiters.nvim)
+- [scrollEOF.nvim](https://github.com/Aasim-A/scrollEOF.nvim)
 - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
