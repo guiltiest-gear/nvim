@@ -424,7 +424,7 @@ return {
   },
 
   -- BufOnly.nvim
-  { 'numToStr/BufOnly.nvim', keys = { { '<leader>bo', '<cmd>BufOnly<CR>', desc = 'Delete every other buffer' } } },
+  { 'numToStr/BufOnly.nvim', keys = { { '<leader>bo', '<cmd>BufOnly<CR>', desc = 'Delete all other buffers' } } },
 
   -- highlight-undo.nvim
   { 'tzachar/highlight-undo.nvim', keys = { 'u', '<C-r>' }, config = true },
