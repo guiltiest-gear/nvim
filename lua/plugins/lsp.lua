@@ -89,16 +89,8 @@ return {
         end,
         desc = 'Goto T[y]pe Definition',
       },
-      {
-        'K',
-        vim.lsp.buf.hover,
-        desc = 'Hover',
-      },
-      {
-        'gK',
-        vim.lsp.buf.signature_help,
-        desc = 'Signature Help',
-      },
+      { 'K', vim.lsp.buf.hover, desc = 'Hover' },
+      { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
     },
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()

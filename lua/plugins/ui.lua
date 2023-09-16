@@ -134,10 +134,7 @@ return {
         lualine_b = {
           'branch',
           'diff',
-          {
-            'diagnostics',
-            sources = { 'nvim_lsp', 'nvim_diagnostic' },
-          },
+          { 'diagnostics', sources = { 'nvim_lsp', 'nvim_diagnostic' } },
           function()
             local ok, m = pcall(require, 'better_escape')
             return ok and m.waiting and '✺' or ''
