@@ -220,7 +220,7 @@ return {
     -- Related: https://github.com/j-hui/fidget.nvim/commit/a6c51e2
     -- Also related: https://github.com/j-hui/fidget.nvim/issues/131
     tag = 'legacy',
-    opts = { window = { blend = 0 } },
+    opts = { window = { blend = 0, relative = 'editor' }, text = { spinner = 'dots' } },
   },
 
   -- lsp_lines.nvim
