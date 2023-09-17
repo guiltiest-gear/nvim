@@ -23,7 +23,7 @@ return {
   -- nvim-surround
   {
     'kylechui/nvim-surround',
-    opts = { check_ts = true },
+    config = true,
     keys = {
       { 'cs', mode = 'n', desc = 'Change surroundings' },
       { 'ys', mode = 'n', desc = 'Add surroundings' },
