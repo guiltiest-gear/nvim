@@ -40,7 +40,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 | Dependency | Reason                                 |
 |------------|----------------------------------------|
 | git        | To install the config and plugins      |
-| luarocks   | Used to install certain mason packages |
 | npm        | Used to install certain mason packages |
 | ripgrep    | Used to give telescope results         |
 
