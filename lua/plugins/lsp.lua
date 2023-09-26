@@ -71,11 +71,6 @@ return {
         desc = 'References',
       },
       {
-        'gD',
-        vim.lsp.buf.declaration,
-        desc = 'Goto Declaration',
-      },
-      {
         'gI',
         function()
           return require('telescope.builtin').lsp_implementations()
@@ -89,6 +84,7 @@ return {
         end,
         desc = 'Goto T[y]pe Definition',
       },
+      { 'gD', vim.lsp.buf.declaration, desc = 'Goto Declaration' },
       { 'K', vim.lsp.buf.hover, desc = 'Hover' },
       { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
     },
