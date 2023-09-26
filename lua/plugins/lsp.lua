@@ -71,7 +71,7 @@ return {
         desc = 'References',
       },
       {
-        'gI',
+        'gi',
         function()
           return require('telescope.builtin').lsp_implementations()
         end,
