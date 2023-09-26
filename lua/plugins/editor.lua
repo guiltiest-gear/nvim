@@ -657,6 +657,13 @@ return {
         desc = 'Workspace diagnostics',
       },
       {
+        '<leader>fs',
+        function()
+          return require('telescope.builtin').lsp_document_symbols()
+        end,
+        desc = 'Document symbols',
+      },
+      {
         '<leader>go',
         function()
           return require('telescope.builtin').git_status()
