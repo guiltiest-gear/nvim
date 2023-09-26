@@ -635,7 +635,6 @@ return {
         end,
         desc = 'Commands',
       },
-      { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo comments' },
       {
         '<leader>fl',
         function()
@@ -678,6 +677,7 @@ return {
         end,
         desc = 'Search and checkout git commits',
       },
+      { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo comments' },
     },
     opts = function()
       -- Don't preview binaries
