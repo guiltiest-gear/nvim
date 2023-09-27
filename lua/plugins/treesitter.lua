@@ -19,7 +19,7 @@ return {
         'diff',
         -- 'vim',
         'vimdoc',
-        'regex',
+        -- 'regex',
         'bash',
         'toml',
       },
