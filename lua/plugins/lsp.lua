@@ -113,6 +113,7 @@ return {
     'SmiteshP/nvim-navic',
     event = 'LspAttach',
     opts = {
+      highlight = true,
       icons = {
         Array = ' ',
         Boolean = ' ',
@@ -150,7 +151,6 @@ return {
         Value = ' ',
         Variable = ' ',
       },
-      highlight = true,
     },
   },
 
