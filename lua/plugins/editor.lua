@@ -694,29 +694,6 @@ return {
       { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo comments' },
     },
     opts = function()
-      -- Don't preview binaries
-      --[[ local previewers = require('telescope.previewers')
-      local Job = require('plenary.job')
-      local new_maker = function(filepath, bufnr, opts)
-        filepath = vim.fn.expand(filepath)
-        ---@diagnostic disable-next-line: missing-fields
-        Job:new({
-          command = 'file',
-          args = { '--mime-type', '-b', filepath },
-          on_exit = function(j)
-            local mime_type = vim.split(j:result()[1], '/')[1]
-            if mime_type == 'text' then
-              previewers.buffer_previewer_maker(filepath, bufnr, opts)
-            else
-              -- maybe we want to write something to the buffer here
-              vim.schedule(function()
-                vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, { 'BINARY' })
-              end)
-            end
-          end,
-        }):sync()
-      end ]]
-
       -- File and text search in hidden files and directories
       local telescopeConfig = require('telescope.config')
 
@@ -732,7 +709,6 @@ return {
       return {
         defaults = {
           vimgrep_arguments = vimgrep_arguments,
-          -- buffer_previewer_maker = new_maker,
           theme = 'tokyonight',
           path_display = { 'smart' },
           file_ignore_patterns = { '.git/' },
