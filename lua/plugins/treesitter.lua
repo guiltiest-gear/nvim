@@ -88,6 +88,7 @@ return {
   -- indent-blankline.nvim
   {
     'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
     dependencies = 'nvim-treesitter/nvim-treesitter',
     event = { 'BufReadPost', 'BufNewFile' },
     opts = function()
@@ -115,9 +116,6 @@ return {
         scope = { char = '▏' },
         exclude = { filetypes = { 'lazy', 'dashboard', 'mason' } },
       }
-    end,
-    config = function(_, opts)
-      require('ibl').setup(opts)
     end,
   },
 }
