@@ -111,13 +111,9 @@ return {
         vim.api.nvim_set_hl(0, 'RainbowCyan', { fg = '#56B6C2' })
       end)
       return {
-        indent = {
-          char = '▏',
-          highlight = highlight,
-        },
-        scope = {
-          char = '▏',
-        },
+        indent = { char = '▏', highlight = highlight },
+        scope = { char = '▏' },
+        exclude = { filetypes = { 'lazy', 'dashboard', 'mason' } },
       }
     end,
     config = function(_, opts)
