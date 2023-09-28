@@ -313,7 +313,4 @@ return {
       wk.register(opts.defaults)
     end,
   },
-
-  -- mini.indentscope
-  { 'echasnovski/mini.indentscope', event = { 'BufReadPost', 'BufNewFile' }, config = true },
 }
