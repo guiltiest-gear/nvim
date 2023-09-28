@@ -225,6 +225,7 @@ return {
       kind = 'replace',
       status = { recent_commit_count = 25 },
       integrations = { telescope = true },
+      auto_show_console = false,
       telescope_sorter = function()
         return require('telescope').extensions.fzf.native_fzf_sorter()
       end,
