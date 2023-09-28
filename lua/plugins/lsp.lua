@@ -103,7 +103,7 @@ return {
         capabilities = { offsetEncoding = { 'utf-16' } },
         on_attach = on_attach,
       })
-      lspconfig.lua_ls.setup({ on_attach = on_attach })
+      lspconfig.lua_ls.setup({ on_attach = on_attach, log_level = 0 })
       lspconfig.marksman.setup({ on_attach = on_attach })
     end,
   },
