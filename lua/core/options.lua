@@ -122,6 +122,9 @@ opt.signcolumn = 'yes'
 -- Formatting options
 opt.formatoptions = 'jcroqlnt'
 
+-- Put the cursor at the start of the line for large jumps
+opt.startofline = true
+
 -- Set diagnostic config for lsp_lines.nvim
 vim.diagnostic.config({
   virtual_text = false,
