@@ -346,6 +346,8 @@ return {
         changedelete = { text = '~' },
       },
       attach_to_untracked = true,
+      numhl = true,
+      word_diff = true,
     },
   },
 
