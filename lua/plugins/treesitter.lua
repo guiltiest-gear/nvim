@@ -22,6 +22,7 @@ return {
         -- 'regex',
         'bash',
         'toml',
+        'ssh_config',
       },
       highlight = { enable = true },
       indent = { enable = true },
