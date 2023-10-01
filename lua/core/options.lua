@@ -131,6 +131,9 @@ vim.diagnostic.config({
   virtual_lines = { highlight_whole_line = false },
 })
 
+-- Disable lsp logging
+vim.lsp.set_log_level('off')
+
 -- Disable certain builtins
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
