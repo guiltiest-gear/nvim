@@ -2,6 +2,7 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
+    main = 'nvim-treesitter.configs',
     event = { 'BufReadPost', 'BufNewFile' },
     opts = {
       ensure_installed = {
@@ -33,9 +34,6 @@ return {
       -- May remove this in the future
       matchup = { enable = true, include_match_words = true, enable_quotes = true },
     },
-    config = function(_, opts)
-      require('nvim-treesitter.configs').setup(opts)
-    end,
   },
 
   -- nvim-treesitter-context
