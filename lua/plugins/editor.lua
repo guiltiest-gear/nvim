@@ -661,6 +661,8 @@ return {
       -- Clone the default Telescope configuration
       local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
 
+      local actions = require('telescope.actions')
+
       -- I want to search in hidden/dot files.
       table.insert(vimgrep_arguments, '--hidden')
       -- I don't want to search in the `.git` directory.
@@ -669,6 +671,7 @@ return {
 
       return {
         defaults = {
+          mappings = { n = { ['q'] = actions.close } },
           vimgrep_arguments = vimgrep_arguments,
           theme = 'tokyonight',
           path_display = { 'smart' },
