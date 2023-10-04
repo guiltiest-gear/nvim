@@ -162,7 +162,7 @@ return {
             function()
               return require('luasnip').jump(1)
             end,
-            mode = 's',
+            mode = { 'i', 's' },
           },
           {
             '<S-tab>',
