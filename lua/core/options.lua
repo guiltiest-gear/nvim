@@ -112,7 +112,7 @@ opt.timeout = true
 opt.timeoutlen = 500
 
 -- Window config
-opt.winwidth = 10
+opt.winwidth = 5
 opt.winminwidth = 10
 opt.equalalways = false
 
