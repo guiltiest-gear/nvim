@@ -113,7 +113,7 @@ opt.timeoutlen = 500
 
 -- Window config
 opt.winwidth = 5
-opt.winminwidth = 10
+-- opt.winminwidth = 10
 opt.equalalways = false
 
 -- Always show the signcolumn
