@@ -154,17 +154,10 @@ return {
     },
   },
 
-  -- null-ls.nvim
-  -- WARNING: null-ls.nvim will be archived on August 11, 2023
-  -- Find a suitable replacement soon
-  -- Related: https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1621
-  -- NOTE: Look into alternatives
-  -- Related: https://github.com/mhartington/formatter.nvim and https://github.com/mfussenegger/nvim-lint
-  -- NOTE: mason-tools-installer.nvim seems to work for installing the tools I need, but doesn't seem to work properly.
-  -- Keep looking into this, maybe it's a config error on my end?
-  -- Related: https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
+  -- none-ls.nvim
   {
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
+    main = 'null-ls',
     dependencies = { 'williamboman/mason.nvim', 'nvim-lua/plenary.nvim' },
     event = { 'BufReadPre', 'BufNewFile' },
     opts = function()
