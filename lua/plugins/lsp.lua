@@ -172,6 +172,7 @@ return {
           nls.builtins.diagnostics.markdownlint,
           nls.builtins.diagnostics.cpplint,
           nls.builtins.formatting.beautysh,
+          nls.builtins.code_actions.gitrebase,
         },
         on_attach = function(client, bufnr)
           -- Autoformat on save if supported
