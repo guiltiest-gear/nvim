@@ -34,7 +34,7 @@ return {
       { '<leader>xd', '<cmd>TroubleToggle document_diagnostics<CR>', desc = 'Open document diagnostics' },
       { '<leader>xq', '<cmd>TroubleToggle quickfix<CR>', desc = 'Open quickfix' },
       { '<leader>xl', '<cmd>TroubleToggle loclist<CR>', desc = 'Open location list' },
-      { 'gr', '<cmd>TroubleToggle lsp_references<CR>', desc = 'References' },
+      { 'gR', '<cmd>TroubleToggle lsp_references<CR>', desc = 'References' },
     },
   },
 
