@@ -78,7 +78,6 @@ return {
       { 'gD', vim.lsp.buf.declaration, desc = 'Goto Declaration' },
       { 'K', vim.lsp.buf.hover, desc = 'Hover' },
       { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
-      { 'gr', vim.lsp.buf.rename, desc = 'Rename' },
     },
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
@@ -99,6 +98,29 @@ return {
       lspconfig.lua_ls.setup({ on_attach = on_attach, log_level = 0 })
       lspconfig.marksman.setup({ on_attach = on_attach })
     end,
+  },
+
+  -- inc-rename.nvim
+  {
+    'smjonas/inc-rename.nvim',
+    keys = {
+      {
+        'gr',
+        function()
+          return ':IncRename ' .. vim.fn.expand('<cword>')
+        end,
+        expr = true,
+        desc = 'Rename',
+      },
+    },
+    opts = {
+      input_buffer_type = 'dressing',
+      input = function(conf)
+        conf.col = -1
+        conf.row = 0
+        return conf
+      end,
+    },
   },
 
   -- nvim-navic
