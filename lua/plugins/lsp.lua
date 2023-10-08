@@ -164,6 +164,7 @@ return {
       local nls = require('null-ls')
       local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
       return {
+        log_level = 'off',
         sources = {
           nls.builtins.formatting.stylua,
           -- nls.builtins.formatting.markdownlint,
