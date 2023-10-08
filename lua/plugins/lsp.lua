@@ -78,7 +78,7 @@ return {
       { 'gD', vim.lsp.buf.declaration, desc = 'Goto Declaration' },
       { 'K', vim.lsp.buf.hover, desc = 'Hover' },
       { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
-      { 'gR', vim.lsp.buf.rename, desc = 'Rename' },
+      { 'gr', vim.lsp.buf.rename, desc = 'Rename' },
     },
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
