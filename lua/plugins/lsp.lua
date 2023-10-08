@@ -82,21 +82,14 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lspconfig = require('lspconfig')
-      local navic = require('nvim-navic')
-      local on_attach = function(client, bufnr)
-        if client.server_capabilities.documentSymbolProvider then
-          navic.attach(client, bufnr)
-        end
-      end
       -- Load neodev.nvim before loading everything else
       require('neodev').setup()
       lspconfig.clangd.setup({
         -- Fix clangd offset encoding
         capabilities = { offsetEncoding = { 'utf-16' } },
-        on_attach = on_attach,
       })
-      lspconfig.lua_ls.setup({ on_attach = on_attach, log_level = 0 })
-      lspconfig.marksman.setup({ on_attach = on_attach })
+      lspconfig.lua_ls.setup({ log_level = 0 })
+      lspconfig.marksman.setup({})
     end,
   },
 
@@ -126,9 +119,10 @@ return {
   -- nvim-navic
   {
     'SmiteshP/nvim-navic',
-    event = 'LspAttach',
+    lazy = true,
     opts = {
       highlight = true,
+      lsp = { auto_attach = true },
       icons = {
         Array = ' ',
         Boolean = ' ',
