@@ -76,6 +76,7 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [highlight-undo.nvim](https://github.com/tzachar/highlight-undo.nvim)
+- [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [leap.nvim](https://github.com/ggandor/leap.nvim)
