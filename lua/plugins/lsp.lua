@@ -62,13 +62,6 @@ return {
         desc = 'Goto Definition',
       },
       {
-        'gr',
-        function()
-          return require('telescope.builtin').lsp_references()
-        end,
-        desc = 'References',
-      },
-      {
         'gi',
         function()
           return require('telescope.builtin').lsp_implementations()
