@@ -11,12 +11,7 @@ opt.splitbelow = true
 
 -- Searching
 opt.smartcase = true
-opt.hlsearch = true
 opt.ignorecase = true
-opt.incsearch = true
-
--- Auto indent
-opt.autoindent = true
 
 -- Make terminal support truecolor
 opt.termguicolors = true
@@ -34,14 +29,12 @@ opt.numberwidth = 2
 
 -- Tab config
 opt.expandtab = true
-opt.smarttab = true
 opt.smartindent = true
 opt.shiftwidth = 2
 opt.tabstop = 2
 opt.shiftround = true
 
 -- Code folding
-opt.foldenable = true
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldcolumn = '1'
@@ -108,7 +101,6 @@ opt.splitkeep = 'screen'
 opt.completeopt = 'menu,menuone,noselect,noinsert'
 
 -- Set key timeout to 500ms
-opt.timeout = true
 opt.timeoutlen = 500
 
 -- Window config
