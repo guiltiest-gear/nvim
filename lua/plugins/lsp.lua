@@ -106,14 +106,7 @@ return {
         desc = 'Rename',
       },
     },
-    opts = {
-      input_buffer_type = 'dressing',
-      input = function(conf)
-        conf.col = -1
-        conf.row = 0
-        return conf
-      end,
-    },
+    opts = { input_buffer_type = 'dressing' },
   },
 
   -- nvim-navic

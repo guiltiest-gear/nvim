@@ -51,7 +51,6 @@ return {
   {
     'stevearc/dressing.nvim',
     lazy = true,
-    config = true,
     init = function()
       ---@diagnostic disable-next-line: duplicate-set-field
       vim.ui.select = function(...)
@@ -64,6 +63,15 @@ return {
         return vim.ui.input(...)
       end
     end,
+    opts = {
+      input = {
+        override = function(conf)
+          conf.col = -1
+          conf.row = 0.75
+          return conf
+        end,
+      },
+    },
   },
 
   -- nvim-ufo
