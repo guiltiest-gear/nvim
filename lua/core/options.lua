@@ -65,7 +65,7 @@ opt.wrap = false
 opt.list = true
 
 -- Fill chars
-opt.fillchars = { eob = ' ' }
+opt.fillchars = { eob = ' ', diff = '╱' }
 
 -- Enable lazy redraw for performance
 opt.lazyredraw = true
