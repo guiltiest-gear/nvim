@@ -212,7 +212,7 @@ return {
     -- Related: https://github.com/j-hui/fidget.nvim/commit/a6c51e2
     -- Also related: https://github.com/j-hui/fidget.nvim/issues/131
     branch = 'legacy',
-    opts = { window = { blend = 0, relative = 'editor' }, text = { spinner = 'dots' } },
+    opts = { window = { blend = 0, relative = 'editor' }, text = { spinner = 'dots' }, fmt = { max_messages = 3 } },
   },
 
   -- lsp_lines.nvim
