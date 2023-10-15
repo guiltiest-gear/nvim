@@ -27,7 +27,7 @@ return {
   {
     'folke/trouble.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
-    config = true,
+    opts = { use_diagnostic_signs = true },
     keys = {
       { '<leader>xx', '<cmd>TroubleToggle<CR>', desc = 'Toggle trouble.nvim' },
       { '<leader>xw', '<cmd>TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace diagnostics' },
