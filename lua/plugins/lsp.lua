@@ -93,6 +93,54 @@ return {
     end,
   },
 
+  -- none-ls.nvim
+  {
+    'nvimtools/none-ls.nvim',
+    main = 'null-ls',
+    dependencies = { 'williamboman/mason.nvim', 'nvim-lua/plenary.nvim' },
+    event = { 'BufReadPre', 'BufNewFile' },
+    opts = function()
+      local nls = require('null-ls')
+      local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+      return {
+        log_level = 'off',
+        sources = {
+          nls.builtins.formatting.stylua,
+          -- nls.builtins.formatting.markdownlint,
+          nls.builtins.formatting.mdformat,
+          nls.builtins.formatting.clang_format,
+          nls.builtins.diagnostics.markdownlint,
+          nls.builtins.diagnostics.cpplint,
+          nls.builtins.formatting.beautysh,
+          nls.builtins.code_actions.gitrebase,
+        },
+        on_attach = function(client, bufnr)
+          -- Autoformat on save if supported
+          if client.supports_method('textDocument/formatting') then
+            vim.api.nvim_clear_autocmds({
+              group = augroup,
+              buffer = bufnr,
+            })
+            vim.api.nvim_create_autocmd('BufWritePre', {
+              group = augroup,
+              buffer = bufnr,
+              callback = function()
+                vim.lsp.buf.format({
+                  bufnr = bufnr,
+                  -- I don't really like the style of lua_ls's formatting, so I exclude it and instead use stylua
+                  ---@diagnostic disable-next-line: redefined-local
+                  filter = function(client)
+                    return client.name ~= 'lua_ls'
+                  end,
+                })
+              end,
+            })
+          end
+        end,
+      }
+    end,
+  },
+
   -- inc-rename.nvim
   {
     'smjonas/inc-rename.nvim',
@@ -154,54 +202,6 @@ return {
         Variable = ' ',
       },
     },
-  },
-
-  -- none-ls.nvim
-  {
-    'nvimtools/none-ls.nvim',
-    main = 'null-ls',
-    dependencies = { 'williamboman/mason.nvim', 'nvim-lua/plenary.nvim' },
-    event = { 'BufReadPre', 'BufNewFile' },
-    opts = function()
-      local nls = require('null-ls')
-      local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
-      return {
-        log_level = 'off',
-        sources = {
-          nls.builtins.formatting.stylua,
-          -- nls.builtins.formatting.markdownlint,
-          nls.builtins.formatting.mdformat,
-          nls.builtins.formatting.clang_format,
-          nls.builtins.diagnostics.markdownlint,
-          nls.builtins.diagnostics.cpplint,
-          nls.builtins.formatting.beautysh,
-          nls.builtins.code_actions.gitrebase,
-        },
-        on_attach = function(client, bufnr)
-          -- Autoformat on save if supported
-          if client.supports_method('textDocument/formatting') then
-            vim.api.nvim_clear_autocmds({
-              group = augroup,
-              buffer = bufnr,
-            })
-            vim.api.nvim_create_autocmd('BufWritePre', {
-              group = augroup,
-              buffer = bufnr,
-              callback = function()
-                vim.lsp.buf.format({
-                  bufnr = bufnr,
-                  -- I don't really like the style of lua_ls's formatting, so I exclude it and instead use stylua
-                  ---@diagnostic disable-next-line: redefined-local
-                  filter = function(client)
-                    return client.name ~= 'lua_ls'
-                  end,
-                })
-              end,
-            })
-          end
-        end,
-      }
-    end,
   },
 
   -- fidget.nvim
