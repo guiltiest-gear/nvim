@@ -29,12 +29,48 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     opts = { use_diagnostic_signs = true },
     keys = {
-      { '<leader>xx', '<cmd>TroubleToggle<CR>', desc = 'Toggle trouble.nvim' },
-      { '<leader>xw', '<cmd>TroubleToggle workspace_diagnostics<CR>', desc = 'Open workspace diagnostics' },
-      { '<leader>xd', '<cmd>TroubleToggle document_diagnostics<CR>', desc = 'Open document diagnostics' },
-      { '<leader>xq', '<cmd>TroubleToggle quickfix<CR>', desc = 'Open quickfix' },
-      { '<leader>xl', '<cmd>TroubleToggle loclist<CR>', desc = 'Open location list' },
-      { 'gR', '<cmd>TroubleToggle lsp_references<CR>', desc = 'References' },
+      {
+        '<leader>xx',
+        function()
+          return require('trouble').toggle()
+        end,
+        desc = 'Toggle trouble.nvim',
+      },
+      {
+        '<leader>xw',
+        function()
+          return require('trouble').toggle('workspace_diagnostics')
+        end,
+        desc = 'Open workspace diagnostics',
+      },
+      {
+        '<leader>xd',
+        function()
+          return require('trouble').toggle('document_diagnostics')
+        end,
+        desc = 'Open document diagnostics',
+      },
+      {
+        '<leader>xq',
+        function()
+          return require('trouble').toggle('quickfix')
+        end,
+        desc = 'Open quickfix',
+      },
+      {
+        '<leader>xl',
+        function()
+          return require('trouble').toggle('loclist')
+        end,
+        desc = 'Open location list',
+      },
+      {
+        'gR',
+        function()
+          return require('trouble').toggle('lsp_references')
+        end,
+        desc = 'References',
+      },
     },
   },
 
