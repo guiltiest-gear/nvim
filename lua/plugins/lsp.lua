@@ -107,13 +107,18 @@ return {
       return {
         log_level = 'off',
         sources = {
+          -- lua
           nls.builtins.formatting.stylua,
-          -- nls.builtins.formatting.markdownlint,
+          -- markdown
           nls.builtins.formatting.mdformat,
-          nls.builtins.formatting.clang_format,
+          -- nls.builtins.formatting.markdownlint,
           nls.builtins.diagnostics.markdownlint,
+          -- cpp
+          nls.builtins.formatting.clang_format,
           nls.builtins.diagnostics.cpplint,
+          -- shell
           nls.builtins.formatting.beautysh,
+          -- code actions
           nls.builtins.code_actions.gitrebase,
         },
         on_attach = function(client, bufnr)
