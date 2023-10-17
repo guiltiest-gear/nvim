@@ -25,6 +25,7 @@ return {
             'lua_ls',
             'clangd',
             'marksman',
+            'bashls',
           },
         },
       },
@@ -90,6 +91,7 @@ return {
       })
       lspconfig.lua_ls.setup({ log_level = 0 })
       lspconfig.marksman.setup({})
+      lspconfig.bashls.setup({ filetypes = { 'sh', 'zsh', 'bash' } })
     end,
   },
 
