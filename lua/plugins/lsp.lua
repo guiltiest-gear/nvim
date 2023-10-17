@@ -166,6 +166,7 @@ return {
     opts = {
       highlight = true,
       lsp = { auto_attach = true },
+      lazy_update_context = true,
       icons = {
         Array = ' ',
         Boolean = ' ',
