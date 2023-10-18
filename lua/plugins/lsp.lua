@@ -134,10 +134,10 @@ return {
               callback = function()
                 vim.lsp.buf.format({
                   bufnr = bufnr,
-                  -- I don't really like the style of lua_ls's formatting, so I exclude it and instead use stylua
+                  -- Only use none-ls.nvim for formatting
                   ---@diagnostic disable-next-line: redefined-local
                   filter = function(client)
-                    return client.name ~= 'lua_ls'
+                    return client.name == 'null-ls'
                   end,
                 })
               end,
