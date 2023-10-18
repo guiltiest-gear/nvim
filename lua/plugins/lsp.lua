@@ -133,6 +133,7 @@ return {
               buffer = bufnr,
               callback = function()
                 vim.lsp.buf.format({
+                  async = false,
                   bufnr = bufnr,
                   -- Only use none-ls.nvim for formatting
                   ---@diagnostic disable-next-line: redefined-local
