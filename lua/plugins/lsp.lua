@@ -44,15 +44,6 @@ return {
           },
         },
       },
-      {
-        'jay-babu/mason-nvim-dap.nvim',
-        cmd = { 'DapInstall', 'DapUninstall' },
-        opts = {
-          automatic_installation = true,
-          handlers = {},
-          ensure_installed = { 'codelldb' },
-        },
-      },
     },
     keys = {
       {
@@ -264,10 +255,22 @@ return {
   {
     'mfussenegger/nvim-dap',
     dependencies = {
-      -- Virtual text for nvim-dap
+      -- nvim-dap-virtual-text
       { 'theHamsta/nvim-dap-virtual-text', config = true },
 
-      -- UI for nvim-dap
+      -- mason-nvim-dap.nvim
+      {
+        'jay-babu/mason-nvim-dap.nvim',
+        cmd = { 'DapInstall', 'DapUninstall' },
+        dependencies = 'williamboman/mason.nvim',
+        opts = {
+          automatic_installation = true,
+          handlers = {},
+          ensure_installed = { 'codelldb' },
+        },
+      },
+
+      -- nvim-dap-ui
       {
         'rcarriga/nvim-dap-ui',
         keys = {
