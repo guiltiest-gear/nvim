@@ -159,7 +159,7 @@ return {
   -- nvim-navic
   {
     'SmiteshP/nvim-navic',
-    lazy = true,
+    event = 'LspAttach',
     opts = {
       highlight = true,
       lsp = { auto_attach = true },
