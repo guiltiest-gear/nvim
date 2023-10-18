@@ -368,14 +368,14 @@ return {
         desc = 'Run Last',
       },
       {
-        '<leader>do',
+        '<leader>dO',
         function()
           return require('dap').step_out()
         end,
         desc = 'Step Out',
       },
       {
-        '<leader>dO',
+        '<leader>do',
         function()
           return require('dap').step_over()
         end,
