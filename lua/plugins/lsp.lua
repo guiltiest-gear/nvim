@@ -109,6 +109,7 @@ return {
           nls.builtins.diagnostics.cpplint,
           -- shell
           nls.builtins.formatting.beautysh,
+          nls.builtins.diagnostics.zsh,
           -- code actions
           nls.builtins.code_actions.gitrebase,
         },
