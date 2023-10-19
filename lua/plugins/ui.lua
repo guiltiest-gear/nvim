@@ -168,6 +168,7 @@ return {
       },
       extensions = {
         'man',
+        'quickfix',
         'mason',
         'toggleterm',
         'neo-tree',
