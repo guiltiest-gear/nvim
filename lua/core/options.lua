@@ -149,9 +149,3 @@ g.loaded_fzf = 1
 g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
-
--- Set matchparen options for vim-matchup
-g.matchup_matchparen_offscreen = {}
-
--- Work async for vim-matchup
-g.matchup_matchparen_deferred = 1
