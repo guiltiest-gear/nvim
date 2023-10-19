@@ -10,10 +10,14 @@ map('n', '<C-k>', '<C-w>k', { desc = 'Go to upper window', remap = true })
 map('n', '<C-l>', '<C-w>l', { desc = 'Go to right window', remap = true })
 
 -- Quit neovim
-map('n', '<leader>qq', '<cmd>q<CR>', { desc = 'Quit the current file' })
+map('n', '<leader>qq', function()
+  vim.cmd.q()
+end, { desc = 'Quit the current file' })
 
 -- Quick write
-map('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save the current file' })
+map('n', '<leader>w', function()
+  vim.cmd.w()
+end, { desc = 'Save the current file' })
 
 -- Resize splits with arrow keys
 map('n', '<C-Up>', '<cmd>resize +2<CR>', { desc = 'Increase window height' })
