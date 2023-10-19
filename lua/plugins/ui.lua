@@ -130,7 +130,6 @@ return {
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = {
-          'mason',
           'dashboard',
           'NeogitStatus',
           'NeogitCommitView',
@@ -169,6 +168,7 @@ return {
       },
       extensions = {
         'man',
+        'mason',
         'toggleterm',
         'neo-tree',
         'trouble',
