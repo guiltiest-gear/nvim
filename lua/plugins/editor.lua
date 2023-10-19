@@ -134,10 +134,10 @@ return {
     keys = { { ']]', desc = 'Next Reference' }, { '[[', desc = 'Prev Reference' } },
   },
 
-  -- hlsearch.nvim
-  { 'nvimdev/hlsearch.nvim', config = true, event = { 'BufReadPost', 'BufNewFile' } },
-  -- HACK: There doesn't seem to be an autocommand event to detect when you start searching, so this will have to do
-  -- until I can find an event for that or until neovim creates that event
+  -- vim-cool
+  { 'romainl/vim-cool', keys = { '/', '?', '*', '#', 'g*', 'g#', 'n', 'N' } },
+  -- HACK: There doesn't seem to be an autocommand event to detect when you start
+  -- searching, so this will have to do until I can find an event for that or until neovim creates that event
   -- Related: https://github.com/neovim/neovim/issues/18879
 
   -- nvim-hlslens
