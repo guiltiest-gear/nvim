@@ -37,7 +37,7 @@ return {
             'stylua',
             'markdownlint',
             'mdformat',
-            -- 'selene',
+            'selene',
             'cpplint',
             'clang_format',
             'beautysh',
@@ -100,6 +100,7 @@ return {
         sources = {
           -- lua
           nls.builtins.formatting.stylua,
+          nls.builtins.diagnostics.selene,
           -- markdown
           nls.builtins.formatting.mdformat,
           -- nls.builtins.formatting.markdownlint,
