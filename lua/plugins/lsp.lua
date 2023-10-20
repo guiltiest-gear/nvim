@@ -109,7 +109,7 @@ return {
           nls.builtins.formatting.clang_format,
           nls.builtins.diagnostics.cpplint,
           -- shell
-          nls.builtins.formatting.beautysh,
+          nls.builtins.formatting.beautysh.with({ extra_args = { '-i', '2' } }),
           nls.builtins.diagnostics.zsh,
           -- code actions
           nls.builtins.code_actions.gitrebase,
