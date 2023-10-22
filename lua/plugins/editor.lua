@@ -196,6 +196,7 @@ return {
                 require('neo-tree.ui.renderer').focus_node(state, node:get_parent_id())
               end
             end,
+            desc = 'Open directory',
           },
           ['l'] = {
             function(state)
@@ -208,6 +209,7 @@ return {
                 end
               end
             end,
+            desc = 'Close directory',
           },
         },
       },
