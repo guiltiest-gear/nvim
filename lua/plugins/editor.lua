@@ -109,7 +109,7 @@ return {
     'RRethy/vim-illuminate',
     event = { 'BufReadPost', 'BufNewFile' },
     opts = {
-      providers = { 'lsp', 'treesitter', 'regex' },
+      -- providers = { 'lsp', 'treesitter', 'regex' },
       large_file_cuttoff = 2000,
       large_file_overrides = { providers = { 'lsp' } },
     },
