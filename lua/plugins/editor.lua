@@ -471,7 +471,15 @@ return {
   { 'tzachar/highlight-undo.nvim', keys = { 'u', '<C-r>' }, config = true },
 
   -- undotree
-  { 'mbbill/undotree', keys = { { '<leader>u', '<cmd>UndotreeToggle<CR>', desc = 'Open undo tree' } } },
+  {
+    'mbbill/undotree',
+    keys = { { '<leader>u', '<cmd>UndotreeToggle<CR>', desc = 'Open undo tree' } },
+    config = function()
+      local g = vim.g
+      g.undotree_WindowLayout = 2
+      g.undotree_ShortIndicators = 1
+    end,
+  },
 
   -- bufferline.nvim
   {
