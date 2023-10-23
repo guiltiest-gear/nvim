@@ -80,6 +80,13 @@ return {
       lspconfig.clangd.setup({
         -- Fix clangd offset encoding
         capabilities = { offsetEncoding = { 'utf-16' } },
+        cmd = {
+          'clangd',
+          '--fallback-style=google',
+          '--completion-style=detailed',
+          '--function-arg-placeholders',
+        },
+        init_options = { usePlaceholders = true },
       })
       lspconfig.lua_ls.setup({ log_level = 0 })
       lspconfig.marksman.setup({})
