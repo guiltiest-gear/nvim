@@ -50,8 +50,9 @@ return {
     dependencies = 'nvim-treesitter/nvim-treesitter',
     event = { 'BufReadPost', 'BufNewFile' },
     config = function()
-      vim.g.matchup_matchparen_offscreen = {}
-      vim.g.matchup_matchparen_deferred = 1
+      local g = vim.g
+      g.matchup_matchparen_offscreen = {}
+      g.matchup_matchparen_deferred = 1
     end,
   },
 
