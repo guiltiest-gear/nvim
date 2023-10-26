@@ -82,7 +82,7 @@ return {
         capabilities = { offsetEncoding = { 'utf-16' } },
         cmd = {
           'clangd',
-          '--fallback-style=google',
+          '--fallback-style=Google',
           '--completion-style=detailed',
           '--function-arg-placeholders',
         },
