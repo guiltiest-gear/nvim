@@ -57,6 +57,7 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim)
 - [animation.nvim](https://github.com/anuvyklack/animation.nvim)
+- [auto-indent.nvim](https://github.com/VidocqH/auto-indent.nvim)
 - [better-escape.nvim](https://github.com/max397574/better-escape.nvim)
 - [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
