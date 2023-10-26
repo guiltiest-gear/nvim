@@ -66,12 +66,14 @@ autocmd('FileType', {
 
 -- Go to the last loc when opening a buffer
 autocmd('BufReadPost', {
-  callback = function()
+  group = augroup('last_loc'),
+  callback = function(event)
     local exclude = { 'gitcommit', 'NeogitCommitMessage' }
-    local buf = vim.api.nvim_get_current_buf()
-    if vim.tbl_contains(exclude, vim.bo[buf].filetype) then
+    local buf = event.buf
+    if vim.tbl_contains(exclude, vim.bo[buf].filetype) or vim.b[buf].last_loc then
       return
     end
+    vim.b[buf].last_loc = true
     local mark = vim.api.nvim_buf_get_mark(buf, '"')
     local lcount = vim.api.nvim_buf_line_count(buf)
     if mark[1] > 0 and mark[1] <= lcount then
