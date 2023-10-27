@@ -98,7 +98,7 @@ opt.autowrite = true
 opt.splitkeep = 'screen'
 
 -- Set completion options
-opt.completeopt = 'menu,menuone,noselect,noinsert'
+opt.completeopt = 'menu,menuone,noselect'
 
 -- Set key timeout to 500ms
 opt.timeoutlen = 500
