@@ -136,6 +136,7 @@ return {
       'hrsh7th/cmp-nvim-lua',
       'hrsh7th/cmp-nvim-lsp-signature-help',
       'saadparwaiz1/cmp_luasnip',
+      'rcarriga/cmp-dap',
       {
         'rafamadriz/friendly-snippets',
         config = function()
@@ -267,6 +268,8 @@ return {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({ { name = 'path' }, { name = 'cmdline' } }),
       })
+      ---@diagnostic disable-next-line: missing-fields
+      cmp.setup.filetype({ 'dap-repl', 'dapui_watches', 'dapui_hover' }, { sources = { { name = 'dap' } } })
       -- nvim-autopairs integration
       cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
     end,
