@@ -26,7 +26,7 @@ return {
             'clangd',
             'marksman',
             'bashls',
-            -- 'taplo',
+            'taplo',
           },
         },
       },
@@ -92,7 +92,7 @@ return {
       lspconfig.lua_ls.setup({ log_level = 0 })
       lspconfig.marksman.setup({})
       lspconfig.bashls.setup({ filetypes = { 'sh', 'zsh', 'bash' } })
-      -- lspconfig.taplo.setup({})
+      lspconfig.taplo.setup({})
     end,
   },
 
@@ -122,7 +122,7 @@ return {
           nls.builtins.formatting.beautysh.with({ extra_args = { '-i', '2' } }),
           nls.builtins.diagnostics.zsh,
           -- toml
-          -- nls.builtins.formatting.taplo,
+          nls.builtins.formatting.taplo,
           -- code actions
           nls.builtins.code_actions.gitrebase,
         },
