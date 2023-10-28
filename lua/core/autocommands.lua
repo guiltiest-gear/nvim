@@ -119,11 +119,3 @@ autocmd('RecordingLeave', {
     vim.opt.cmdheight = 0
   end,
 })
-
--- Use bash treesitter parser for zsh
-augroup('zshAsBash', {})
-autocmd('FileType', {
-  group = 'zshAsBash',
-  pattern = { 'sh', 'zsh' },
-  command = 'silent! set filetype=sh',
-})
