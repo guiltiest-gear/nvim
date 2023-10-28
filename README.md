@@ -90,6 +90,7 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 - [middleclass](https://github.com/anuvyklack/middleclass)
 - [mini.animate](https://github.com/echasnovski/mini.animate)
 - [mini.bufremove](https://github.com/echasnovski/mini.bufremove)
+- [mini.trailspace](https://github.com/echasnovski/mini.trailspace)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [neodev.nvim](https://github.com/folke/neodev.nvim)
 - [neogit](https://github.com/NeogitOrg/neogit)
