@@ -120,6 +120,9 @@ opt.startofline = true
 -- Allow cursor to move where this is no text is visual block mode
 opt.virtualedit = 'block'
 
+-- Command-line completion mode
+opt.wildmode = 'longest:full,full'
+
 -- Set diagnostic config for lsp_lines.nvim
 vim.diagnostic.config({
   virtual_text = false,
