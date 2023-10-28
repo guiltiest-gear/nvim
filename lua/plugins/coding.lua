@@ -194,6 +194,10 @@ return {
           ['<C-e>'] = cmp.mapping.abort(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
           ['<S-CR>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+          ['<C-CR>'] = function(fallback)
+            cmp.abort()
+            fallback()
+          end,
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
