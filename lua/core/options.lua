@@ -117,6 +117,9 @@ opt.formatoptions = 'jcroqlnt'
 -- Put the cursor at the start of the line for large jumps
 opt.startofline = true
 
+-- Allow cursor to move where this is no text is visual block mode
+opt.virtualedit = 'block'
+
 -- Set diagnostic config for lsp_lines.nvim
 vim.diagnostic.config({
   virtual_text = false,
