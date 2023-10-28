@@ -455,7 +455,7 @@ return {
   -- mini.animate
   {
     'echasnovski/mini.animate',
-    event = 'CursorMoved',
+    event = { 'BufReadPost', 'BufNewFile' },
     opts = function()
       local animate = require('mini.animate')
       return {
