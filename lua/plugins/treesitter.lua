@@ -2,7 +2,6 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs',
     event = { 'BufReadPost', 'BufNewFile' },
     opts = {
       ensure_installed = {
@@ -34,6 +33,11 @@ return {
       -- May remove this in the future
       matchup = { enable = true, include_match_words = true, enable_quotes = true },
     },
+    config = function(_, opts)
+      require('nvim-treesitter.configs').setup(opts)
+      -- Use the bash ts parser for zsh
+      vim.treesitter.language.register('bash', 'zsh')
+    end,
   },
 
   -- nvim-treesitter-context
