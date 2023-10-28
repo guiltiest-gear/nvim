@@ -475,6 +475,9 @@ return {
     },
   },
 
+  -- mini.trailspace
+  { 'echasnovski/mini.trailspace', event = 'InsertEnter', config = true },
+
   -- BufOnly.nvim
   { 'numToStr/BufOnly.nvim', keys = { { '<leader>bo', '<cmd>BufOnly<CR>', desc = 'Delete all other buffers' } } },
 
