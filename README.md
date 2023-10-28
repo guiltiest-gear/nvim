@@ -89,6 +89,7 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 - [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [middleclass](https://github.com/anuvyklack/middleclass)
+- [mini.animate](https://github.com/echasnovski/mini.animate)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [neodev.nvim](https://github.com/folke/neodev.nvim)
 - [neogit](https://github.com/NeogitOrg/neogit)
