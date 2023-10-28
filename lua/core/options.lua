@@ -65,7 +65,7 @@ opt.wrap = false
 opt.list = true
 
 -- Fill chars
-opt.fillchars = { eob = ' ', diff = '╱' }
+opt.fillchars = { eob = ' ', diff = '╱', fold = ' ', foldsep = ' ', foldopen = '', foldclose = '' }
 
 -- Enable lazy redraw for performance
 opt.lazyredraw = true
