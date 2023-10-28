@@ -34,7 +34,7 @@ autocmd('BufWinEnter', {
 
 -- Close man and help with just <q>
 autocmd('FileType', {
-  pattern = { 'help', 'man', 'lspinfo', 'checkhealth' },
+  pattern = { 'help', 'man', 'lspinfo', 'checkhealth', 'qf', 'query', 'notify', '' },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
     vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = event.buf, silent = true })
