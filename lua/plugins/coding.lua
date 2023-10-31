@@ -9,17 +9,6 @@ return {
     },
   },
 
-  -- nvim-autopairs
-  {
-    'windwp/nvim-autopairs',
-    event = 'InsertEnter',
-    opts = {
-      disable_filetype = { 'TelescopePrompt', 'text' },
-      disable_in_macro = false,
-      check_ts = true,
-    },
-  },
-
   -- nvim-surround
   {
     'kylechui/nvim-surround',
@@ -148,7 +137,6 @@ return {
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
-      'windwp/nvim-autopairs',
       'FelipeLema/cmp-async-path',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-calc',
@@ -282,7 +270,6 @@ return {
     end,
     config = function(_, opts)
       local cmp = require('cmp')
-      local cmp_autopairs = require('nvim-autopairs.completion.cmp')
       cmp.setup(opts)
       ---@diagnostic disable-next-line: missing-fields
       cmp.setup.cmdline('/', {
@@ -296,8 +283,6 @@ return {
       })
       ---@diagnostic disable-next-line: missing-fields
       cmp.setup.filetype({ 'dap-repl', 'dapui_watches', 'dapui_hover' }, { sources = { { name = 'dap' } } })
-      -- nvim-autopairs integration
-      cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
     end,
   },
 }

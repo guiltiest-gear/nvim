@@ -23,6 +23,9 @@ return {
     },
   },
 
+  -- mini.pairs
+  { 'echasnovski/mini.pairs', event = 'InsertEnter', config = true },
+
   -- trouble.nvim
   {
     'folke/trouble.nvim',
