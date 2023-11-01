@@ -9,17 +9,6 @@ return {
     },
   },
 
-  -- nvim-surround
-  {
-    'kylechui/nvim-surround',
-    config = true,
-    keys = {
-      { 'cs', desc = 'Change surroundings' },
-      { 'ys', desc = 'Add surroundings' },
-      { 'ds', desc = 'Delete surroundings' },
-    },
-  },
-
   -- dial.nvim
   {
     'monaqa/dial.nvim',
