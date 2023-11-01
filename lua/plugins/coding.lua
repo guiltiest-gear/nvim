@@ -14,9 +14,9 @@ return {
     'kylechui/nvim-surround',
     config = true,
     keys = {
-      { 'cs', mode = 'n', desc = 'Change surroundings' },
-      { 'ys', mode = 'n', desc = 'Add surroundings' },
-      { 'ds', mode = 'n', desc = 'Delete surroundings' },
+      { 'cs', desc = 'Change surroundings' },
+      { 'ys', desc = 'Add surroundings' },
+      { 'ds', desc = 'Delete surroundings' },
     },
   },
 
