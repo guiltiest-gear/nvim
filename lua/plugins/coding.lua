@@ -1,5 +1,5 @@
 return {
-  -- Comment.nvim
+  -- mini.comment
   {
     'echasnovski/mini.comment',
     config = true,
