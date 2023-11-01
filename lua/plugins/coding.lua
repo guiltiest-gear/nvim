@@ -1,7 +1,7 @@
 return {
   -- Comment.nvim
   {
-    'numToStr/Comment.nvim',
+    'echasnovski/mini.comment',
     config = true,
     keys = {
       { 'gc', mode = { 'n', 'v' }, desc = 'Toggle comments' },
