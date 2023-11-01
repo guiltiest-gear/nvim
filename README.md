@@ -91,6 +91,7 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 - [mini.animate](https://github.com/echasnovski/mini.animate)
 - [mini.bufremove](https://github.com/echasnovski/mini.bufremove)
 - [mini.comment](https://github.com/echasnovski/mini.comment)
+- [mini.indentscope](https://github.com/echasnovski/mini.indentscope)
 - [mini.move](https://github.com/echasnovski/mini.move)
 - [mini.pairs](https://github.com/echasnovski/mini.pairs)
 - [mini.surround](https://github.com/echasnovski/mini.surround)
