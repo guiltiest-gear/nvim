@@ -53,7 +53,6 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 ## Plugins
 
 - [BufOnly.nvim](https://github.com/numToStr/BufOnly.nvim)
-- [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim)
 - [animation.nvim](https://github.com/anuvyklack/animation.nvim)
@@ -91,6 +90,7 @@ options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938
 - [mini.ai](https://github.com/echasnovski/mini.ai)
 - [mini.animate](https://github.com/echasnovski/mini.animate)
 - [mini.bufremove](https://github.com/echasnovski/mini.bufremove)
+- [mini.comment](https://github.com/echasnovski/mini.comment)
 - [mini.move](https://github.com/echasnovski/mini.move)
 - [mini.pairs](https://github.com/echasnovski/mini.pairs)
 - [mini.trailspace](https://github.com/echasnovski/mini.trailspace)
