@@ -104,8 +104,8 @@ return {
     dependencies = 'nvim-treesitter/nvim-treesitter',
     event = { 'BufReadPost', 'BufNewFile' },
     opts = {
-      indent = { char = '▏' },
-      scope = { char = '▏' },
+      indent = { char = '│', tab_char = '│' },
+      scope = { enabled = false },
       exclude = { filetypes = { 'lazy', 'dashboard', 'mason' } },
     },
   },
