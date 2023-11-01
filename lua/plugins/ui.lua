@@ -317,12 +317,13 @@ return {
     'folke/which-key.nvim',
     keys = { '<leader>', '"', "'", '`', 'c', 'y', 'd', 'z', 'g' },
     opts = {
-      operators = { gc = 'Comments', gb = 'Block comments', ys = 'Add surroundings' },
+      operators = { gc = 'Comments', gb = 'Block comments' },
       defaults = {
         mode = { 'n', 'v' },
         ['g'] = { name = '+goto' },
         ['gc'] = { name = '+comments' },
         ['gb'] = { name = '+block comments' },
+        ['gz'] = { name = '+surrounds' },
         [']'] = { name = '+next' },
         ['['] = { name = '+prev' },
         ['<leader>q'] = { name = '+quit/session' },
