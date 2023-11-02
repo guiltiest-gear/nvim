@@ -309,76 +309,18 @@ return {
       { ']b', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to previous buffer' },
       { '<Tab>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to next buffer' },
       { '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to previous buffer' },
-      {
-        '<leader>b1',
-        function()
-          return require('bufferline').go_to(1, true)
-        end,
-        desc = 'Jump to first buffer',
-      },
-      {
-        '<leader>b2',
-        function()
-          return require('bufferline').go_to(2, true)
-        end,
-        desc = 'Jump to second buffer',
-      },
-      {
-        '<leader>b3',
-        function()
-          return require('bufferline').go_to(3, true)
-        end,
-        desc = 'Jump to third buffer',
-      },
-      {
-        '<leader>b4',
-        function()
-          return require('bufferline').go_to(4, true)
-        end,
-        desc = 'Jump to fourth buffer',
-      },
-      {
-        '<leader>b5',
-        function()
-          return require('bufferline').go_to(5, true)
-        end,
-        desc = 'Jump to fifth buffer',
-      },
-      {
-        '<leader>b6',
-        function()
-          return require('bufferline').go_to(6, true)
-        end,
-        desc = 'Jump to sixth buffer',
-      },
-      {
-        '<leader>b7',
-        function()
-          return require('bufferline').go_to(7, true)
-        end,
-        desc = 'Jump to seventh buffer',
-      },
-      {
-        '<leader>b8',
-        function()
-          return require('bufferline').go_to(8, true)
-        end,
-        desc = 'Jump to eighth buffer',
-      },
-      {
-        '<leader>b9',
-        function()
-          return require('bufferline').go_to(9, true)
-        end,
-        desc = 'Jump to ninth buffer',
-      },
-      {
-        '<leader>b$',
-        function()
-          return require('bufferline').go_to(-1, true)
-        end,
-        desc = 'Jump to last buffer',
-      },
+      -- stylua: ignore start
+      { '<leader>b1', function() return require('bufferline').go_to(1, true) end, desc = 'Jump to first buffer' },
+      { '<leader>b2', function() return require('bufferline').go_to(2, true) end, desc = 'Jump to second buffer' },
+      { '<leader>b3', function() return require('bufferline').go_to(3, true) end, desc = 'Jump to third buffer' },
+      { '<leader>b4', function() return require('bufferline').go_to(4, true) end, desc = 'Jump to fourth buffer' },
+      { '<leader>b5', function() return require('bufferline').go_to(5, true) end, desc = 'Jump to fifth buffer' },
+      { '<leader>b6', function() return require('bufferline').go_to(6, true) end, desc = 'Jump to sixth buffer' },
+      { '<leader>b7', function() return require('bufferline').go_to(7, true) end, desc = 'Jump to seventh buffer' },
+      { '<leader>b8', function() return require('bufferline').go_to(8, true) end, desc = 'Jump to eighth buffer' },
+      { '<leader>b9', function() return require('bufferline').go_to(9, true) end, desc = 'Jump to ninth buffer' },
+      { '<leader>b$', function() return require('bufferline').go_to(-1, true) end, desc = 'Jump to last buffer' },
+      -- stylua: ignore end
     },
     opts = {
       options = {
