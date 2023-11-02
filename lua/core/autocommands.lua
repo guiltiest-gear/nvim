@@ -1,5 +1,5 @@
 -- Define local variables
-local augroup = vim.api.nvim_create_augroup
+-- local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Remove trailing whitespaces
@@ -10,9 +10,7 @@ autocmd('BufWritePre', {
 })
 
 -- Highlight text on yank
-augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
-  group = 'YankHighlight',
   callback = function()
     vim.highlight.on_yank({ higroup = 'IncSearch', timeout = '700' })
   end,
