@@ -46,9 +46,9 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 ## Screenshots
 
 ![A screenshot of my neovim config first opening, with dashboard-nvim
-being the startpage](https://codeberg.org/j4de/nvim/raw/commit/4182dd63f3ba604e92daf768e894dd3fc4615d09/assets/Start%20screen.png)
-![A screenshot of various files open, including ui.lua, lsp.lua, editor.lua, and
-options.lua](https://codeberg.org/j4de/nvim/raw/commit/ef192e2ff635a5e321d7dd938d309ad8d1a5bcb7/assets/Screenshot_2023-08-25_18-37-02.png)
+being the start screen](https://codeberg.org/j4de/nvim/raw/branch/master/assets/Screenshot_2023-11-02_15-49-52.png)
+![A screenshot of various files open, including ui.lua, lsp.lua, and editor.lua](https://codeberg.org/j4de/nvim/raw/branch/master/assets/Screenshot_2023-11-02_16-03-21.png)
+![A screenshot of telescope.nvim open, hovering over LICENSE.md](https://codeberg.org/j4de/nvim/raw/branch/master/assets/Screenshot_2023-11-02_16-04-00.png)
 
 ## Plugins
 
