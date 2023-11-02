@@ -187,129 +187,73 @@ return {
     'nvimdev/dashboard-nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
     event = 'VimEnter',
-    opts = {
-      theme = 'doom',
-      config = {
-        header = {
-          '                                   ',
-          '                                   ',
-          '                                   ',
-          '                                   ',
-          '                                   ',
-          '                                   ',
-          '   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ',
-          '    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ',
-          '          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ',
-          '           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ',
-          '          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ',
-          '   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ',
-          '  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ',
-          ' ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ',
-          ' ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ',
-          '      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ',
-          '       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
-          '                                   ',
-          '                                   ',
-          '                                   ',
-          '                                   ',
-          '                                   ',
-          '                                   ',
+    opts = function()
+      local opts = {
+        theme = 'doom',
+        config = {
+          header = {
+            '                                   ',
+            '                                   ',
+            '                                   ',
+            '                                   ',
+            '                                   ',
+            '                                   ',
+            '                                   ',
+            '                                   ',
+            '   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ',
+            '    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ',
+            '          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ',
+            '           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ',
+            '          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ',
+            '   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ',
+            '  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ',
+            ' ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ',
+            ' ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ',
+            '      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ',
+            '       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
+            '                                   ',
+            '                                   ',
+          },
+          center = {
+            -- stylua: ignore start
+            { action = 'Telescope find_files', desc = ' Find file', icon = '󰈞 ', key = 'f' },
+            { action = 'ene | startinsert', desc = ' New file', icon = ' ', key = 'e' },
+            { action = 'Telescope oldfiles', desc = ' Recent files', icon = '󰄉 ', key = 'r' },
+            { action = 'Telescope live_grep', desc = ' Find text', icon = '󰊄 ', key = 'w' },
+            { action = 'cd ~/.config/nvim | e ~/.config/nvim/init.lua', desc = ' Configuration', icon = '󰊄 ', key = 'c' },
+            { action = 'Lazy update', desc = ' Update plugins', icon = ' ', key = 'u' },
+            { action = 'Mason', desc = ' Mason', icon = ' ', key = 'm' },
+            { action = 'Neogit', desc = ' NeoGit', icon = ' ', key = 'g' },
+            { action = 'lua require("persistence").load({ last = true })', desc = ' Restore last session', icon = '󰦛 ', key = 'l' },
+            { action = 'qa', desc = ' Quit Neovim', icon = ' ', key = 'q' },
+            -- stylua: ignore end
+          },
+          footer = function()
+            local stats = require('lazy').stats()
+            local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+            return { 'Neovim loaded ' .. stats.loaded .. '/' .. stats.count .. ' plugins in ' .. ms .. 'ms' }
+          end,
         },
-        center = {
-          {
-            icon = '󰈞 ',
-            icon_hl = 'Title',
-            desc = 'Find file',
-            desc_hl = 'String',
-            key = 'f',
-            key_hl = 'Number',
-            action = ':lua require("telescope.builtin").find_files()',
-          },
-          {
-            icon = ' ',
-            icon_hl = 'Title',
-            desc = 'New file',
-            desc_hl = 'String',
-            key = 'e',
-            key_hl = 'Number',
-            action = ':ene | startinsert',
-          },
-          {
-            icon = '󰄉 ',
-            icon_hl = 'Title',
-            desc = 'Recently used files                        ',
-            desc_hl = 'String',
-            key = 'r',
-            key_hl = 'Number',
-            action = ':lua require("telescope.builtin").oldfiles()',
-          },
-          {
-            icon = '󰊄 ',
-            icon_hl = 'Title',
-            desc = 'Find text',
-            desc_hl = 'String',
-            key = 'w',
-            key_hl = 'Number',
-            action = ':lua require("telescope.builtin").live_grep()',
-          },
-          {
-            icon = ' ',
-            icon_hl = 'Title',
-            desc = 'Configuration',
-            desc_hl = 'String',
-            key = 'c',
-            key_hl = 'Number',
-            action = ':cd ~/.config/nvim | e ~/.config/nvim/init.lua',
-          },
-          {
-            icon = ' ',
-            icon_hl = 'Title',
-            desc = 'Update plugins',
-            desc_hl = 'String',
-            key = 'u',
-            key_hl = 'Number',
-            action = ':lua require("lazy").update()',
-          },
-          {
-            icon = ' ',
-            icon_hl = 'Title',
-            desc = 'Mason',
-            desc_hl = 'String',
-            key = 'm',
-            key_hl = 'Number',
-            action = ':Mason',
-          },
-          {
-            icon = ' ',
-            icon_hl = 'Title',
-            desc = 'NeoGit',
-            desc_hl = 'String',
-            key = 'g',
-            key_hl = 'Number',
-            action = ':lua require("neogit").open()',
-          },
-          {
-            icon = '󰦛 ',
-            icon_hl = 'Title',
-            desc = 'Restore last session',
-            desc_hl = 'String',
-            key = 'l',
-            key_hl = 'Number',
-            action = ':lua require("persistence").load({ last = true })',
-          },
-          {
-            icon = ' ',
-            icon_hl = 'Title',
-            desc = 'Quit Neovim',
-            desc_hl = 'String',
-            key = 'q',
-            key_hl = 'Number',
-            action = ':qa',
-          },
-        },
-        footer = {},
-      },
-    },
+      }
+
+      for _, button in ipairs(opts.config.center) do
+        button.desc = button.desc .. string.rep(' ', 43 - #button.desc)
+        button.key_format = '  %s'
+      end
+
+      -- Close Lazy and re-open when the dashboard is ready
+      if vim.o.filetype == 'lazy' then
+        vim.cmd.close()
+        vim.api.nvim_create_autocmd('User', {
+          pattern = 'DashboardLoaded',
+          callback = function()
+            require('lazy').show()
+          end,
+        })
+      end
+
+      return opts
+    end,
   },
 
   -- which-key.nvim
