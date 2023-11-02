@@ -165,7 +165,18 @@ return {
             color_correction = 'static',
           },
         },
-        lualine_x = { 'fileformat', 'filetype' },
+        lualine_x = {
+          'fileformat',
+          { 'filetype', icon_only = true, separator = '', padding = { left = 1, right = 1 } },
+          {
+            function()
+              return require('dap').status()
+            end,
+            cond = function()
+              return package.loaded['dap'] and require('dap').status() ~= ''
+            end,
+          },
+        },
         lualine_y = { 'progress' },
         lualine_z = { 'location' },
       },
