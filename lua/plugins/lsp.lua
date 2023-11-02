@@ -30,21 +30,6 @@ return {
           },
         },
       },
-      {
-        'jay-babu/mason-null-ls.nvim',
-        cmd = { 'NullLsInstall', 'NullLsUninstall' },
-        opts = {
-          ensure_installed = {
-            'stylua',
-            'markdownlint',
-            'mdformat',
-            'selene',
-            'cpplint',
-            'clang_format',
-            'beautysh',
-          },
-        },
-      },
     },
     keys = {
       -- stylua: ignore start
@@ -84,7 +69,24 @@ return {
   {
     'nvimtools/none-ls.nvim',
     main = 'null-ls',
-    dependencies = { 'williamboman/mason.nvim', 'nvim-lua/plenary.nvim' },
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      {
+        'jay-babu/mason-null-ls.nvim',
+        cmd = { 'NullLsInstall', 'NullLsUninstall' },
+        opts = {
+          ensure_installed = {
+            'stylua',
+            'markdownlint',
+            'mdformat',
+            'selene',
+            'cpplint',
+            'clang_format',
+            'beautysh',
+          },
+        },
+      },
+    },
     event = { 'BufReadPre', 'BufNewFile' },
     opts = function()
       local nls = require('null-ls')
