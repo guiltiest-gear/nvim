@@ -47,27 +47,11 @@ return {
       },
     },
     keys = {
-      {
-        'gd',
-        function()
-          return require('telescope.builtin').lsp_definitions()
-        end,
-        desc = 'Goto Definition',
-      },
-      {
-        'gi',
-        function()
-          return require('telescope.builtin').lsp_implementations()
-        end,
-        desc = 'Goto Implementation',
-      },
-      {
-        'gy',
-        function()
-          return require('telescope.builtin').lsp_type_definitions()
-        end,
-        desc = 'Goto T[y]pe Definition',
-      },
+      -- stylua: ignore start
+      { 'gd', function() return require('telescope.builtin').lsp_definitions() end, desc = 'Goto Definition' },
+      { 'gi', function() return require('telescope.builtin').lsp_implementations() end, desc = 'Goto Implementation' },
+      { 'gy', function() return require('telescope.builtin').lsp_type_definitions() end, desc = 'Goto T[y]pe Definition' },
+      -- stylua: ignore end
       { 'gD', vim.lsp.buf.declaration, desc = 'Goto Declaration' },
       { 'K', vim.lsp.buf.hover, desc = 'Hover' },
       { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
@@ -288,21 +272,10 @@ return {
       {
         'rcarriga/nvim-dap-ui',
         keys = {
-          {
-            '<leader>du',
-            function()
-              return require('dapui').toggle()
-            end,
-            desc = 'Dap UI',
-          },
-          {
-            '<leader>de',
-            function()
-              return require('dapui').eval()
-            end,
-            desc = 'Eval',
-            mode = { 'n', 'v' },
-          },
+          -- stylua: ignore start
+          { '<leader>du', function() return require('dapui').toggle() end, desc = 'Dap UI' },
+          { '<leader>de', function() return require('dapui').eval() end, desc = 'Eval', mode = { 'n', 'v' } },
+          -- stylua: ignore end
         },
         config = function()
           local dap = require('dap')
