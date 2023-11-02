@@ -11,7 +11,7 @@ map('n', '<C-l>', '<C-w>l', { desc = 'Go to right window', remap = true })
 
 -- Quit neovim
 map('n', '<leader>qq', function()
-  vim.cmd.q()
+  vim.cmd.qa()
 end, { desc = 'Quit the current file' })
 
 -- Quick write
