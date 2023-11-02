@@ -99,20 +99,6 @@ return {
   -- searching, so this will have to do until I can find an event for that or until neovim creates that event
   -- Related: https://github.com/neovim/neovim/issues/18879
 
-  -- nvim-hlslens
-  {
-    'kevinhwang91/nvim-hlslens',
-    config = true,
-    keys = {
-      { 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]] },
-      { 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]] },
-      { '*', [[*<Cmd>lua require('hlslens').start()<CR>]] },
-      { '#', [[#<Cmd>lua require('hlslens').start()<CR>]] },
-      { 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]] },
-      { 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]] },
-    },
-  },
-
   -- neo-tree.nvim
   {
     'nvim-neo-tree/neo-tree.nvim',
