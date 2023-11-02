@@ -354,13 +354,8 @@ return {
         end,
         desc = 'Delete Buffer',
       },
-      {
-        '<leader>bK',
-        function()
-          require('mini.bufremove').delete(0, true)
-        end,
-        desc = 'Delete buffer forcefully',
-      },
+      -- stylua: ignore
+      { '<leader>bK', function() require('mini.bufremove').delete(0, true) end, desc = 'Delete buffer forcefully' },
     },
   },
 
