@@ -319,14 +319,10 @@ return {
         end,
         mode = 'buffers',
         diagnostics = 'nvim_lsp',
-        ---@diagnostic disable-next-line: unused-local
-        diagnostics_indicator = function(count, level, diagnostics_dict, context)
-          local s = ' '
-          for e, n in pairs(diagnostics_dict) do
-            local sym = e == 'error' and ' ' or (e == 'warning' and ' ' or ' ')
-            s = s .. n .. sym
-          end
-          return s
+        diagnostics_indicator = function(_, _, diag)
+          local ret = (diag.error and ' ' .. diag.error .. ' ' or '')
+            .. (diag.warning and ' ' .. diag.warning or '')
+          return vim.trim(ret)
         end,
         offsets = {
           {
