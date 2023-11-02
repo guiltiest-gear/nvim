@@ -321,118 +321,24 @@ return {
       },
     },
     keys = {
-      {
-        '<leader>dB',
-        function()
-          return require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))
-        end,
-        desc = 'Breakpoint Condition',
-      },
-      {
-        '<leader>db',
-        function()
-          return require('dap').toggle_breakpoint()
-        end,
-        desc = 'Toggle Breakpoint',
-      },
-      {
-        '<leader>dc',
-        function()
-          return require('dap').continue()
-        end,
-        desc = 'Continue',
-      },
-      {
-        '<leader>dC',
-        function()
-          return require('dap').run_to_cursor()
-        end,
-        desc = 'Run to Cursor',
-      },
-      {
-        '<leader>dg',
-        function()
-          return require('dap').goto_()
-        end,
-        desc = 'Go to line (no execute)',
-      },
-      {
-        '<leader>di',
-        function()
-          return require('dap').step_into()
-        end,
-        desc = 'Step Into',
-      },
-      {
-        '<leader>dj',
-        function()
-          return require('dap').down()
-        end,
-        desc = 'Down',
-      },
-      {
-        '<leader>dk',
-        function()
-          return require('dap').up()
-        end,
-        desc = 'Up',
-      },
-      {
-        '<leader>dl',
-        function()
-          return require('dap').run_last()
-        end,
-        desc = 'Run Last',
-      },
-      {
-        '<leader>dO',
-        function()
-          return require('dap').step_out()
-        end,
-        desc = 'Step Out',
-      },
-      {
-        '<leader>do',
-        function()
-          return require('dap').step_over()
-        end,
-        desc = 'Step Over',
-      },
-      {
-        '<leader>dp',
-        function()
-          return require('dap').pause()
-        end,
-        desc = 'Pause',
-      },
-      {
-        '<leader>dr',
-        function()
-          return require('dap').repl.toggle()
-        end,
-        desc = 'Toggle REPL',
-      },
-      {
-        '<leader>ds',
-        function()
-          return require('dap').session()
-        end,
-        desc = 'Session',
-      },
-      {
-        '<leader>dt',
-        function()
-          return require('dap').terminate()
-        end,
-        desc = 'Terminate',
-      },
-      {
-        '<leader>dw',
-        function()
-          return require('dap.ui.widgets').hover()
-        end,
-        desc = 'Widgets',
-      },
+      -- stylua: ignore start
+      { '<leader>dB', function() return require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = 'Breakpoint Condition' },
+      { '<leader>db', function() return require('dap').toggle_breakpoint() end, desc = 'Toggle Breakpoint' },
+      { '<leader>dc', function() return require('dap').continue() end, desc = 'Continue' },
+      { '<leader>dC', function() return require('dap').run_to_cursor() end, desc = 'Run to Cursor' },
+      { '<leader>dg', function() return require('dap').goto_() end, desc = 'Go to line (no execute)' },
+      { '<leader>di', function() return require('dap').step_into() end, desc = 'Step Into' },
+      { '<leader>dj', function() return require('dap').down() end, desc = 'Down' },
+      { '<leader>dk', function() return require('dap').up() end, desc = 'Up' },
+      { '<leader>dl', function() return require('dap').run_last() end, desc = 'Run Last' },
+      { '<leader>dO', function() return require('dap').step_out() end, desc = 'Step Out' },
+      { '<leader>do', function() return require('dap').step_over() end, desc = 'Step Over' },
+      { '<leader>dp', function() return require('dap').pause() end, desc = 'Pause' },
+      { '<leader>dr', function() return require('dap').repl.toggle() end, desc = 'Toggle REPL' },
+      { '<leader>ds', function() return require('dap').session() end, desc = 'Session' },
+      { '<leader>dt', function() return require('dap').terminate() end, desc = 'Terminate' },
+      { '<leader>dw', function() return require('dap.ui.widgets').hover() end, desc = 'Widgets' },
+      -- stylua: ignore end
     },
     config = function()
       vim.api.nvim_set_hl(0, 'DapStoppedLine', { default = true, link = 'Visual' })
