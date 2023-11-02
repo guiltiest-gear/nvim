@@ -6,20 +6,10 @@ return {
     event = { 'BufReadPost', 'BufNewFile' },
     config = true,
     keys = {
-      {
-        ']t',
-        function()
-          return require('todo-comments').jump_next()
-        end,
-        desc = 'Jump to next todo comment',
-      },
-      {
-        '[t',
-        function()
-          return require('todo-comments').jump_prev()
-        end,
-        desc = 'Jump to previous todo comment',
-      },
+      -- stylua: ignore start
+      { ']t', function() return require('todo-comments').jump_next() end, desc = 'Jump to next todo comment' },
+      { '[t', function() return require('todo-comments').jump_prev() end, desc = 'Jump to previous todo comment' },
+      -- stylua: ignore end
     },
   },
 
