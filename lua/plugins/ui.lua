@@ -260,7 +260,7 @@ return {
   -- which-key.nvim
   {
     'folke/which-key.nvim',
-    keys = { '<leader>', '"', "'", '`', 'c', 'y', 'd', 'z', 'g' },
+    keys = { '<leader>', '"', "'", '`', 'c', 'y', 'd', 'z', 'g', '[', ']' },
     opts = {
       operators = { gc = 'Comments', gb = 'Block comments' },
       defaults = {
