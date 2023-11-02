@@ -84,6 +84,7 @@ return {
             'clang_format',
             'beautysh',
           },
+          handlers = {},
         },
       },
     },
