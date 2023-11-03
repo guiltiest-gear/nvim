@@ -58,7 +58,10 @@ return {
         },
         init_options = { usePlaceholders = true },
       })
-      lspconfig.lua_ls.setup({ log_level = 0 })
+      lspconfig.lua_ls.setup({
+        log_level = 0,
+        settings = { Lua = { workspace = { checkThirdParty = false }, completion = { callSnippet = 'Replace' } } },
+      })
       lspconfig.marksman.setup({})
       lspconfig.bashls.setup({ filetypes = { 'sh', 'zsh', 'bash' } })
       lspconfig.taplo.setup({})
