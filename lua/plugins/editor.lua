@@ -460,7 +460,7 @@ return {
   {
     'folke/persistence.nvim',
     event = 'BufReadPre',
-    config = true,
+    opts = { options = vim.opt.sessionoptions:get() },
     keys = {
       -- stylua: ignore start
       { '<leader>qs', function() return require('persistence').load() end, desc = 'Restore the session for the current dir' },
