@@ -123,6 +123,9 @@ opt.virtualedit = 'block'
 -- Command-line completion mode
 opt.wildmode = 'longest:full,full'
 
+-- What is saved upon saving your session
+opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprtp', 'folds' }
+
 -- Set diagnostic config for lsp_lines.nvim
 vim.diagnostic.config({
   virtual_text = false,
