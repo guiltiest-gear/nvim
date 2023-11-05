@@ -85,7 +85,7 @@ return {
         'L3MON4D3/LuaSnip',
         build = 'make install_jsregexp',
         version = 'v2.*',
-        config = true,
+        opts = { history = true, delete_check_events = 'TextChanged' },
       },
     },
     event = 'InsertEnter',
