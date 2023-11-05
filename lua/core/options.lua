@@ -129,6 +129,9 @@ opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'glob
 -- Enable autowrite
 opt.autowrite = true
 
+-- Maximum number of undo changes
+opt.undolevels = 10000
+
 -- Disable lsp logging
 vim.lsp.set_log_level('off')
 
