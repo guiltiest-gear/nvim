@@ -100,8 +100,8 @@ opt.splitkeep = 'screen'
 -- Set completion options
 opt.completeopt = 'menu,menuone,noselect'
 
--- Set key timeout to 500ms
-opt.timeoutlen = 500
+-- Set key timeout to 300ms
+opt.timeoutlen = 300
 
 -- Window config
 opt.winwidth = 5
