@@ -440,6 +440,8 @@ return {
 
       return {
         defaults = {
+          prompt_prefix = ' ',
+          selection_caret = ' ',
           mappings = { n = { ['q'] = actions.close } },
           vimgrep_arguments = vimgrep_arguments,
           theme = 'tokyonight',
