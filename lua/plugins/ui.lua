@@ -4,6 +4,7 @@ return {
     'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
+    commit = 'e1e8ff2c8ff2bdc90ce35697291a5917adc8db5c',
     opts = {
       style = 'night',
       transparent = true,
