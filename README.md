@@ -53,6 +53,7 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 ## Plugins
 
 - [BufOnly.nvim](https://github.com/numToStr/BufOnly.nvim)
+- [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim)
 - [animation.nvim](https://github.com/anuvyklack/animation.nvim)
@@ -90,7 +91,6 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [mini.ai](https://github.com/echasnovski/mini.ai)
 - [mini.animate](https://github.com/echasnovski/mini.animate)
 - [mini.bufremove](https://github.com/echasnovski/mini.bufremove)
-- [mini.comment](https://github.com/echasnovski/mini.comment)
 - [mini.indentscope](https://github.com/echasnovski/mini.indentscope)
 - [mini.move](https://github.com/echasnovski/mini.move)
 - [mini.surround](https://github.com/echasnovski/mini.surround)
