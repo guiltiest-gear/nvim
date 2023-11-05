@@ -3,10 +3,7 @@ return {
   {
     'echasnovski/mini.comment',
     config = true,
-    keys = {
-      { 'gc', mode = { 'n', 'v' }, desc = 'Toggle comments' },
-      { 'gb', mode = { 'n', 'v' }, desc = 'Toggle block comments' },
-    },
+    keys = { { 'gc', mode = { 'n', 'v' }, desc = 'Toggle comments' } },
   },
 
   -- dial.nvim
