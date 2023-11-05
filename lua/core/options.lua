@@ -126,6 +126,9 @@ opt.wildmode = 'longest:full,full'
 -- What is saved upon saving your session
 opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprtp', 'folds' }
 
+-- Enable autowrite
+opt.autowrite = true
+
 -- Disable lsp logging
 vim.lsp.set_log_level('off')
 
