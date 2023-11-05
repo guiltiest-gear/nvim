@@ -126,12 +126,6 @@ opt.wildmode = 'longest:full,full'
 -- What is saved upon saving your session
 opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprtp', 'folds' }
 
--- Set diagnostic config for lsp_lines.nvim
-vim.diagnostic.config({
-  virtual_text = false,
-  virtual_lines = { highlight_whole_line = false },
-})
-
 -- Disable lsp logging
 vim.lsp.set_log_level('off')
 
