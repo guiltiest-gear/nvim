@@ -270,6 +270,7 @@ return {
         mode = { 'n', 'v' },
         ['g'] = { name = '+goto' },
         ['gc'] = { name = '+comments' },
+        ['gb'] = { name = '+block comments' },
         ['gz'] = { name = '+surrounds' },
         [']'] = { name = '+next' },
         ['['] = { name = '+prev' },
