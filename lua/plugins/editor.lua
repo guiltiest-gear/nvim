@@ -392,6 +392,7 @@ return {
       },
     },
     branch = '0.1.x',
+    cmd = 'Telescope',
     keys = {
       -- stylua: ignore start
       { '<leader>ff', function() return require('telescope.builtin').find_files() end, desc = 'Files' },
