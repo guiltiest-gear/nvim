@@ -60,3 +60,7 @@ map('n', '[w', diagnostic_goto(false, 'WARN'), { desc = 'Prev Warning' })
 
 -- Switch to other buffer
 map('n', '<leader>bb', '<cmd>e #<CR>', { desc = 'Switch to other buffer' })
+
+-- Better up/down
+map({ 'n', 'x' }, 'j', 'v:count == 0 ? "gj" : "j"', { expr = true, silent = true })
+map({ 'n', 'x' }, 'k', 'v:count == 0 ? "gk" : "k"', { expr = true, silent = true })
