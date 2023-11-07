@@ -123,7 +123,7 @@ opt.virtualedit = 'block'
 -- Command-line completion mode
 opt.wildmode = 'longest:full,full'
 
--- What is saved upon saving your session
+-- Session save options
 opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprtp', 'folds' }
 
 -- Enable autowrite
