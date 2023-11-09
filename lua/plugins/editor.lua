@@ -421,6 +421,7 @@ return {
       { '<leader>go', function() return require('telescope.builtin').git_status() end, desc = 'Seach through changed files' },
       { '<leader>gb', function() return require('telescope.builtin').git_branches() end, desc = 'Search through git branches' },
       { '<leader>gc', function() return require('telescope.builtin').git_commits() end, desc = 'Search and checkout git commits' },
+      { '<leader>gO', function() return require('telescope.builtin').git_stash() end, desc = 'Search through stash' },
       -- stylua: ignore end
     },
     opts = function()
