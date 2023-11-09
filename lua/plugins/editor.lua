@@ -417,10 +417,10 @@ return {
       { '<leader>fd', function() return require('telescope.builtin').diagnostics({ bufnr = 0 }) end, desc = 'Document diagnostics' },
       { '<leader>fD', function() return require('telescope.builtin').diagnostics() end, desc = 'Workspace diagnostics' },
       { '<leader>fs', function() return require('telescope.builtin').lsp_document_symbols() end, desc = 'Document symbols' },
+      { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo comments' },
       { '<leader>go', function() return require('telescope.builtin').git_status() end, desc = 'Seach through changed files' },
       { '<leader>gb', function() return require('telescope.builtin').git_branches() end, desc = 'Search through git branches' },
       { '<leader>gc', function() return require('telescope.builtin').git_commits() end, desc = 'Search and checkout git commits' },
-      { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo comments' },
       -- stylua: ignore end
     },
     opts = function()
