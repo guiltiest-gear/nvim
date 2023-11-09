@@ -3,6 +3,9 @@ local map = vim.keymap.set
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Disable space since I'm using it as my leader key
+map({ 'n', 'v' }, '<Space>', '<Nop>', { expr = true, silent = true })
+
 -- Better split navigation
 map('n', '<C-h>', '<C-w>h', { desc = 'Go to left window', remap = true })
 map('n', '<C-j>', '<C-w>j', { desc = 'Go to lower window', remap = true })
