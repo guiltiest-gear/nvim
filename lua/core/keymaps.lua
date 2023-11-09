@@ -27,7 +27,7 @@ map('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { desc = 'Increase window w
 
 -- Lazy keymap
 map('n', '<leader>l', function()
-  return require('lazy').home()
+  return require('lazy').show()
 end, { desc = 'Open lazy.nvim' })
 
 -- Better indenting
