@@ -19,7 +19,7 @@
   "dashboard-nvim": { "branch": "master", "commit": "63df28409d940f9cac0a925df09d3dc369db9841" },
   "dial.nvim": { "branch": "master", "commit": "019bbe9daea397c93a99adc747f8f071379fee5c" },
   "dressing.nvim": { "branch": "master", "commit": "fe3071330a0720ce3695ac915820c8134b22d1b0" },
-  "fidget.nvim": { "branch": "main", "commit": "a67951793619a5827d3d08681926e4fa309c21aa" },
+  "fidget.nvim": { "branch": "main", "commit": "d3edb8d2f9958cdbe6d1a51bfff9d8761aa46f20" },
   "flit.nvim": { "branch": "main", "commit": "f4e9af572a62c808c8de214da672f2a115a98c35" },
   "friendly-snippets": { "branch": "main", "commit": "43727c2ff84240e55d4069ec3e6158d74cb534b6" },
   "gitsigns.nvim": { "branch": "main", "commit": "af0f583cd35286dd6f0e3ed52622728703237e50" },
