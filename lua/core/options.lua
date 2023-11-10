@@ -133,7 +133,7 @@ opt.autowrite = true
 opt.undolevels = 10000
 
 -- Disable lsp logging
-vim.lsp.set_log_level('off')
+vim.lsp.set_log_level('OFF')
 
 -- Disable certain builtins
 g.loaded_netrw = 1
