@@ -253,6 +253,7 @@ return {
         function()
           return require('actions-preview').code_actions()
         end,
+        mode = { 'n', 'v' },
         desc = 'Open actions-preview.nvim',
       },
     },
