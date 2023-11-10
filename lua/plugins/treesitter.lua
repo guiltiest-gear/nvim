@@ -29,8 +29,6 @@ return {
       ignore_install = { '' },
       auto_install = true,
       -- vim-matchup config
-      -- NOTE: I'm not sure about the quote matching feature for vim-matchup
-      -- May remove this in the future
       matchup = { enable = true, include_match_words = true, enable_quotes = true },
     },
     config = function(_, opts)
