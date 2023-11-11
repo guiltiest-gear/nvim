@@ -212,7 +212,11 @@ return {
   {
     'j-hui/fidget.nvim',
     event = 'LspAttach',
-    opts = { notification = { window = { winblend = 0 } }, logger = { level = vim.log.levels.OFF } },
+    opts = {
+      notification = { window = { winblend = 0 } },
+      logger = { level = vim.log.levels.OFF },
+      suppress_on_insert = true,
+    },
   },
 
   -- lsp_lines.nvim
