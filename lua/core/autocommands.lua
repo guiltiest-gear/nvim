@@ -60,9 +60,9 @@ autocmd('FileType', {
 
 -- Go to the last loc when opening a buffer
 autocmd('BufReadPost', {
-  callback = function()
+  callback = function(event)
     local exclude = { 'gitcommit', 'NeogitCommitMessage' }
-    local buf = vim.api.nvim_get_current_buf()
+    local buf = event.buf
     -- stylua: ignore
     if vim.tbl_contains(exclude, vim.bo[buf].filetype) then return end
     local mark = vim.api.nvim_buf_get_mark(buf, '"')
