@@ -131,6 +131,7 @@ return {
                   async = false,
                   bufnr = bufnr,
                   -- Only use none-ls.nvim for formatting
+                  -- selene: allow(shadowing)
                   ---@diagnostic disable-next-line: redefined-local
                   filter = function(client)
                     return client.name == 'null-ls'
