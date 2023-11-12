@@ -42,8 +42,9 @@ autocmd('FileType', {
 -- Auto create dir when saving a file where some intermediate directory does not exist
 autocmd('BufWritePre', {
   callback = function(event)
-    -- stylua: ignore
-    if event.match:match('^%w%w+://') then return end
+    if event.match:match('^%w%w+://') then
+      return
+    end
     local file = vim.loop.fs_realpath(event.match) or event.match
     vim.fn.mkdir(vim.fn.fnamemodify(file, ':p:h'), 'p')
   end,
