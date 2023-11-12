@@ -296,10 +296,6 @@ return {
     version = '*',
     event = 'UIEnter',
     keys = {
-      { '<S-h>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to next buffer' },
-      { '<S-l>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to previous buffer' },
-      { '[b', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to next buffer' },
-      { ']b', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to previous buffer' },
       { '<Tab>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to next buffer' },
       { '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to previous buffer' },
       -- stylua: ignore start
