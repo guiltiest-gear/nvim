@@ -13,14 +13,10 @@ map('n', '<C-k>', '<C-w>k', { desc = 'Go to upper window', remap = true })
 map('n', '<C-l>', '<C-w>l', { desc = 'Go to right window', remap = true })
 
 -- Quit neovim
-map('n', '<leader>qq', function()
-  vim.cmd.qa()
-end, { desc = 'Quit the current file' })
+map('n', '<leader>qq', '<cmd>qa<CR>', { desc = 'Quit the current file' })
 
 -- Quick write
-map('n', '<leader>w', function()
-  vim.cmd.w()
-end, { desc = 'Save the current file' })
+map('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save the current file' })
 
 -- Resize splits with arrow keys
 map('n', '<C-Up>', '<cmd>resize +2<CR>', { desc = 'Increase window height' })
@@ -29,9 +25,7 @@ map('n', '<C-Left>', '<cmd>vertical resize -2<CR>', { desc = 'Decrease window wi
 map('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { desc = 'Increase window width' })
 
 -- Lazy keymap
-map('n', '<leader>l', function()
-  return require('lazy').show()
-end, { desc = 'Open lazy.nvim' })
+map('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim' })
 
 -- Better indenting
 map('v', '<', '<gv')
