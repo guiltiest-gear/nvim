@@ -3,11 +3,7 @@
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Remove trailing whitespaces
-autocmd('BufWritePre', {
-  callback = function()
-    vim.cmd('%s/\\s\\+$//e')
-  end,
-})
+autocmd('BufWritePre', { command = '%s/\\s\\+$//e' })
 
 -- Highlight text on yank
 autocmd('TextYankPost', {
@@ -17,18 +13,10 @@ autocmd('TextYankPost', {
 })
 
 -- Automatically rebalance windows on vim resize
-autocmd('VimResized', {
-  callback = function()
-    vim.cmd('tabdo wincmd =')
-  end,
-})
+autocmd('VimResized', { command = 'tabdo wincmd =' })
 
 -- Never insert line as a comment when using 'o' to enter insert mode
-autocmd('BufWinEnter', {
-  callback = function()
-    vim.cmd('setlocal formatoptions-=o')
-  end,
-})
+autocmd('BufWinEnter', { command = 'setlocal formatoptions-=o' })
 
 -- Close man and help with just <q>
 autocmd('FileType', {
@@ -76,11 +64,7 @@ autocmd('BufReadPost', {
 })
 
 -- Check if the file needs to be reloaded when it's changed
-autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
-  callback = function()
-    vim.cmd.checktime()
-  end,
-})
+autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, { command = 'checktime' })
 
 -- Toggle relative numbers based on certain events
 autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }, {
