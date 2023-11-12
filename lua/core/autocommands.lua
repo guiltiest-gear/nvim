@@ -63,8 +63,9 @@ autocmd('BufReadPost', {
   callback = function(event)
     local exclude = { 'gitcommit', 'NeogitCommitMessage' }
     local buf = event.buf
-    -- stylua: ignore
-    if vim.tbl_contains(exclude, vim.bo[buf].filetype) then return end
+    if vim.tbl_contains(exclude, vim.bo[buf].filetype) then
+      return
+    end
     local mark = vim.api.nvim_buf_get_mark(buf, '"')
     local lcount = vim.api.nvim_buf_line_count(buf)
     if mark[1] > 0 and mark[1] <= lcount then
