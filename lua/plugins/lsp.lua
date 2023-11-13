@@ -216,7 +216,10 @@ return {
     opts = {
       notification = { window = { winblend = 0 } },
       logger = { level = vim.log.levels.OFF },
-      suppress_on_insert = true,
+      progress = {
+        suppress_on_insert = true,
+        display = { render_limit = 3 },
+      },
     },
   },
 
