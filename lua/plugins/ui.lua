@@ -303,7 +303,14 @@ return {
     keys = {
       { '<Tab>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to next buffer' },
       { '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to previous buffer' },
+      -- TODO: Figure out if there's maybe a better key for this keymap in particular
+      { '<S-l>', '<cmd>BufferLineMoveNext<CR>', desc = 'Move current buffer forwards' },
+      { '<S-h>', '<cmd>BufferLineMovePrev<CR>', desc = 'Move current buffer backwards' },
+      { '<leader>bn', '<cmd>BufferLineMoveNext<CR>', desc = 'Move current buffer forwards' },
+      { '<leader>bp', '<cmd>BufferLineMovePrev<CR>', desc = 'Move current buffer backwards' },
       -- stylua: ignore start
+      { '<leader>bf', function() return require('bufferline').move_to(1) end, desc = 'Move buffer to beginning' },
+      { '<leader>bl', function() return require('bufferline').move_to(-1) end, desc = 'Move buffer to end' },
       { '<leader>b1', function() return require('bufferline').go_to(1, true) end, desc = 'Jump to first buffer' },
       { '<leader>b2', function() return require('bufferline').go_to(2, true) end, desc = 'Jump to second buffer' },
       { '<leader>b3', function() return require('bufferline').go_to(3, true) end, desc = 'Jump to third buffer' },
