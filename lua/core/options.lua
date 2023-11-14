@@ -61,7 +61,7 @@ opt.sidescrolloff = 5
 -- Disable wrapping
 opt.wrap = false
 
--- Enable list
+-- Show invisible characters
 opt.list = true
 
 -- Fill chars
