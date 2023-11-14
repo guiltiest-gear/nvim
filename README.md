@@ -76,6 +76,7 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [flit.nvim](https://github.com/ggandor/flit.nvim)
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [goto-breakpoints.nvim](https://github.com/ofirgall/goto-breakpoints.nvim)
 - [highlight-undo.nvim](https://github.com/tzachar/highlight-undo.nvim)
 - [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)

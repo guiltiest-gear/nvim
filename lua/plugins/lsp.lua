@@ -289,6 +289,17 @@ return {
         },
       },
 
+      -- goto-breakpoints.nvim
+      {
+        'ofirgall/goto-breakpoints.nvim',
+        keys = {
+          -- stylua: ignore start
+          { ']d', function() return require('goto-breakpoints').next() end, desc = 'Next breakpoint' },
+          { '[d', function() return require('goto-breakpoints').prev() end, desc = 'Previous breakpoint' },
+          -- stylua: ignore end
+        },
+      },
+
       -- nvim-dap-ui
       {
         'rcarriga/nvim-dap-ui',
