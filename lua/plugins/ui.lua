@@ -160,7 +160,12 @@ return {
         },
         lualine_x = {
           'fileformat',
-          { 'filetype', icon_only = true, separator = '', padding = { left = 1, right = 1 } },
+          {
+            'filetype',
+            -- icon_only = true,
+            separator = '',
+            padding = { left = 1, right = 1 },
+          },
           {
             function()
               return require('dap').status()
