@@ -214,15 +214,8 @@ return {
       },
     },
     opts = { plugins = { kitty = { enabled = true, font = '+4' } } },
-    keys = {
-      {
-        '<leader>z',
-        function()
-          return require('zen-mode').toggle()
-        end,
-        desc = 'Toggle zen-mode.nvim',
-      },
-    },
+    -- stylua: ignore
+    keys = { { '<leader>z', function() return require('zen-mode').toggle() end, desc = 'Toggle zen-mode.nvim' } },
   },
 
   -- neogit
