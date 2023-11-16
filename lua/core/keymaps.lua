@@ -40,7 +40,7 @@ map('x', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Previous search re
 map('o', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Previous search result' })
 
 -- Jump to diagnostics
-local diagnostic_goto = function(next, severity)
+local function diagnostic_goto(next, severity)
   local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
   severity = severity and vim.diagnostic.severity[severity] or nil
   return function()
