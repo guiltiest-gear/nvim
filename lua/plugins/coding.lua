@@ -1,5 +1,5 @@
 return {
-  -- mini.comment
+  -- Comment.nvim
   {
     'numToStr/Comment.nvim',
     config = true,
