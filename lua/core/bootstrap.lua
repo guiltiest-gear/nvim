@@ -27,7 +27,6 @@ local opts = {
         'tutor',
         'zipPlugin',
         'rplugin',
-        'editorconfig',
         'matchparen',
         'matchit',
       },
