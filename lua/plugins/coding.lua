@@ -76,8 +76,7 @@ return {
       'hrsh7th/cmp-nvim-lua',
       'hrsh7th/cmp-nvim-lsp-signature-help',
       'saadparwaiz1/cmp_luasnip',
-      -- NOTE: Not too sure about this source, maybe remove later?
-      'rcarriga/cmp-dap',
+      'rcarriga/cmp-dap', -- NOTE: Not too sure about this source, maybe remove later?
       'windwp/nvim-autopairs',
       {
         'rafamadriz/friendly-snippets',
