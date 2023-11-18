@@ -64,7 +64,6 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-calc](https://github.com/hrsh7th/cmp-calc)
 - [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
-- [cmp-dap](https://github.com/rcarriga/cmp-dap)
 - [cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 - [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)
