@@ -275,7 +275,7 @@ return {
     'mfussenegger/nvim-dap',
     dependencies = {
       -- nvim-dap-virtual-text
-      { 'theHamsta/nvim-dap-virtual-text', config = true },
+      { 'theHamsta/nvim-dap-virtual-text', opts = { highlight_new_as_changed = true } },
 
       -- mason-nvim-dap.nvim
       {
