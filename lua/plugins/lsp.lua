@@ -3,7 +3,10 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
+      -- neodev.nvim
       { 'folke/neodev.nvim', lazy = true },
+
+      -- mason.nvim
       {
         'williamboman/mason.nvim',
         cmd = 'Mason',
@@ -17,6 +20,8 @@ return {
           },
         },
       },
+
+      -- mason-lspconfig.nvim
       {
         'williamboman/mason-lspconfig.nvim',
         cmd = { 'LspInstall', 'LspUninstall' },
@@ -73,7 +78,7 @@ return {
     'nvimtools/none-ls.nvim',
     main = 'null-ls',
     dependencies = {
-      'nvim-lua/plenary.nvim',
+      -- mason-null-ls.nvim
       {
         'jay-babu/mason-null-ls.nvim',
         cmd = { 'NullLsInstall', 'NullLsUninstall' },
@@ -90,6 +95,7 @@ return {
           handlers = {},
         },
       },
+      'nvim-lua/plenary.nvim',
     },
     event = { 'BufReadPre', 'BufNewFile' },
     opts = function()
