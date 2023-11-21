@@ -37,6 +37,8 @@ return {
       { '<leader>xq', function() return require('trouble').toggle('quickfix') end, desc = 'Open quickfix' },
       { '<leader>xl', function() return require('trouble').toggle('loclist') end, desc = 'Open location list' },
       { 'gR', function() return require('trouble').toggle('lsp_references') end, desc = 'References' },
+      { '<leader>xt', '<cmd>TodoTrouble<CR>', desc = 'Todo (Trouble)' },
+      { '<leader>xT', '<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme (Trouble)' },
       -- stylua: ignore end
       {
         '[q',
