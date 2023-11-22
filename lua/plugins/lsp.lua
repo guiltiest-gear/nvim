@@ -18,6 +18,7 @@ return {
               package_uninstalled = '',
             },
           },
+          log_level = vim.log.levels.OFF,
         },
       },
 
