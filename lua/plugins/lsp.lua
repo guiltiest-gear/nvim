@@ -82,7 +82,7 @@ return {
       -- mason-null-ls.nvim
       {
         'jay-babu/mason-null-ls.nvim',
-        cmd = { 'NullLsInstall', 'NullLsUninstall' },
+        cmd = { 'NullLsInstall', 'NullLsUninstall', 'NoneLsInstall', 'NoneLsUninstall' },
         opts = {
           ensure_installed = {
             'stylua',
