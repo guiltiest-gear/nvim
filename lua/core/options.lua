@@ -133,7 +133,6 @@ opt.autowrite = true
 opt.undolevels = 10000
 
 -- Only display 20 items in a completion menu
--- NOTE: Mixed feelings about this, maybe disable later
 opt.pumheight = 20
 
 -- Disable lsp logging
