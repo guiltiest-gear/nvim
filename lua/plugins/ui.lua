@@ -303,7 +303,6 @@ return {
     keys = {
       { '<Tab>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to next buffer' },
       { '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to previous buffer' },
-      -- TODO: Figure out if there's maybe a better key for this keymap in particular
       { '<S-l>', '<cmd>BufferLineMoveNext<CR>', desc = 'Move current buffer forwards' },
       { '<S-h>', '<cmd>BufferLineMovePrev<CR>', desc = 'Move current buffer backwards' },
       { '<leader>bn', '<cmd>BufferLineMoveNext<CR>', desc = 'Move current buffer forwards' },
