@@ -173,6 +173,7 @@ return {
             end,
             desc = 'Close directory',
           },
+          ['<space>'] = 'none',
         },
       },
     },
