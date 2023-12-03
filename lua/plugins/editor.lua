@@ -140,6 +140,13 @@ return {
         follow_current_file = { enabled = true },
         use_libuv_file_watcher = true,
       },
+      default_component_configs = {
+        indent = {
+          with_expanders = true,
+          expander_collapsed = '',
+          expander_expanded = '',
+        },
+      },
       window = {
         mappings = {
           ['h'] = {
