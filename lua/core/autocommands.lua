@@ -97,16 +97,16 @@ autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, 
 })
 
 -- Set cmdheight to 1 when recording, and put it back to normal when it stops
-autocmd('RecordingEnter', {
-  group = augroup('macro_cmdheight_on'),
-  callback = function()
-    vim.opt.cmdheight = 1
-  end,
-})
-
-autocmd('RecordingLeave', {
-  group = augroup('macro_cmdheight_off'),
-  callback = function()
-    vim.opt.cmdheight = 0
-  end,
-})
+-- autocmd('RecordingEnter', {
+--   group = augroup('macro_cmdheight_on'),
+--   callback = function()
+--     vim.opt.cmdheight = 1
+--   end,
+-- })
+--
+-- autocmd('RecordingLeave', {
+--   group = augroup('macro_cmdheight_off'),
+--   callback = function()
+--     vim.opt.cmdheight = 0
+--   end,
+-- })
