@@ -26,16 +26,7 @@ return {
       {
         'williamboman/mason-lspconfig.nvim',
         cmd = { 'LspInstall', 'LspUninstall' },
-        opts = {
-          ensure_installed = {
-            'lua_ls',
-            'clangd',
-            'marksman',
-            'bashls',
-            'taplo',
-            'typos_lsp',
-          },
-        },
+        opts = { ensure_installed = { 'lua_ls', 'clangd', 'marksman', 'bashls', 'taplo', 'typos_lsp' } },
       },
     },
     keys = {
@@ -87,15 +78,7 @@ return {
         dependencies = 'williamboman/mason.nvim',
         cmd = { 'NullLsInstall', 'NullLsUninstall', 'NoneLsInstall', 'NoneLsUninstall' },
         opts = {
-          ensure_installed = {
-            'stylua',
-            'markdownlint',
-            'mdformat',
-            'selene',
-            'cpplint',
-            'clang_format',
-            'beautysh',
-          },
+          ensure_installed = { 'stylua', 'markdownlint', 'mdformat', 'selene', 'cpplint', 'clang_format', 'beautysh' },
           handlers = {},
         },
       },
