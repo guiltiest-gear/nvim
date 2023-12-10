@@ -275,8 +275,6 @@ return {
       -- stylua: ignore start
       { '<leader>gj', function() return require('gitsigns').next_hunk() end, desc = 'Next hunk' },
       { '<leader>gk', function() return require('gitsigns').prev_hunk() end, desc = 'Previous hunk' },
-      { ']g', function() return require('gitsigns').next_hunk() end, desc = 'Next hunk' },
-      { '[g', function() return require('gitsigns').prev_hunk() end, desc = 'Previous hunk' },
       { '<leader>gl', function() return require('gitsigns').blame_line() end, desc = 'Open git blame' },
       { '<leader>gp', function() return require('gitsigns').preview_hunk() end, desc = 'Preview the hunk' },
       { '<leader>gr', function() return require('gitsigns').reset_hunk() end, mode = { 'n', 'v' }, desc = 'Reset the hunk' },
@@ -285,6 +283,8 @@ return {
       { '<leader>gS', function() return require('gitsigns').stage_buffer() end, desc = 'Stage the buffer' },
       { '<leader>gu', function() return require('gitsigns').undo_stage_hunk() end, desc = 'Unstage the hunk' },
       { '<leader>gd', function() return require('gitsigns').diffthis() end, desc = 'Open a diff' },
+      { ']g', function() return require('gitsigns').next_hunk() end, desc = 'Next hunk' },
+      { '[g', function() return require('gitsigns').prev_hunk() end, desc = 'Previous hunk' },
       -- stylua: ignore end
     },
     opts = {
