@@ -196,6 +196,23 @@ return {
       leap.add_default_mappings(true)
       vim.keymap.del({ 'x', 'o' }, 'x')
       vim.keymap.del({ 'x', 'o' }, 'X')
+
+      -- HACK: Until https://github.com/neovim/neovim/issues/20793 is fixed, keep this here
+      -- Hide cursor while in using leap.nvim, restore it afterwards
+      vim.api.nvim_create_autocmd('User', {
+        pattern = 'LeapEnter',
+        callback = function()
+          vim.cmd.hi('Cursor', 'blend=100')
+          vim.opt.guicursor:append({ 'a:Cursor/lCursor' })
+        end,
+      })
+      vim.api.nvim_create_autocmd('User', {
+        pattern = 'LeapLeave',
+        callback = function()
+          vim.cmd.hi('Cursor', 'blend=0')
+          vim.opt.guicursor:remove({ 'a:Cursor/lCursor' })
+        end,
+      })
     end,
   },
 
