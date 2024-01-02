@@ -79,9 +79,6 @@ opt.confirm = true
 -- Hide * markup for bold and italic
 opt.conceallevel = 3
 
--- Hide the command line unless needed
--- opt.cmdheight = 0
-
 -- Use ripgrep as the grep program for neovim
 opt.grepprg = 'rg --vimgrep'
 
