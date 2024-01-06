@@ -496,9 +496,6 @@ return {
     },
   },
 
-  -- vim-kitty
-  { 'fladson/vim-kitty', ft = 'kitty' },
-
   -- mini.surround
   {
     'echasnovski/mini.surround',
@@ -523,4 +520,7 @@ return {
       },
     },
   },
+
+  -- vim-kitty
+  { 'fladson/vim-kitty', ft = 'kitty' },
 }
