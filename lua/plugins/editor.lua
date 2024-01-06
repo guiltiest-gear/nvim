@@ -234,6 +234,7 @@ return {
   -- NOTE: I've not used this plugin in some time, maybe time to disable or give it the boot?
   {
     'folke/zen-mode.nvim',
+    enabled = false,
     dependencies = {
       {
         'folke/twilight.nvim',
