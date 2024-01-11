@@ -72,6 +72,7 @@ return {
     'nvimtools/none-ls.nvim',
     main = 'null-ls',
     dependencies = {
+      'nvim-lua/plenary.nvim',
       -- mason-null-ls.nvim
       {
         'jay-babu/mason-null-ls.nvim',
@@ -82,7 +83,6 @@ return {
           handlers = {},
         },
       },
-      'nvim-lua/plenary.nvim',
     },
     event = { 'BufReadPre', 'BufNewFile' },
     opts = function()
