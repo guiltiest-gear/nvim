@@ -121,7 +121,7 @@ opt.virtualedit = 'block'
 opt.wildmode = 'longest:full,full'
 
 -- Session save options
-opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprtp', 'folds' }
+opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprtp', 'folds', 'winpos' }
 
 -- Enable autowrite
 opt.autowrite = true
