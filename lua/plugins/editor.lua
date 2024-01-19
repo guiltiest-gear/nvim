@@ -48,7 +48,6 @@ return {
           else
             local ok, err = pcall(vim.cmd.cprevious)
             if not ok then
-              ---@diagnostic disable-next-line: param-type-mismatch
               vim.notify(err, vim.log.levels.ERROR)
             end
           end
@@ -63,7 +62,6 @@ return {
           else
             local ok, err = pcall(vim.cmd.cnext)
             if not ok then
-              ---@diagnostic disable-next-line: param-type-mismatch
               vim.notify(err, vim.log.levels.ERROR)
             end
           end
