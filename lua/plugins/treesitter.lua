@@ -3,9 +3,6 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    -- HACK: Keep version of nvim-treesitter pinned until this issue is fixed
-    -- Related: https://github.com/folke/tokyonight.nvim/issues/477
-    version = '0.9.2',
     event = { 'BufReadPost', 'BufNewFile' },
     opts = {
       ensure_installed = {
