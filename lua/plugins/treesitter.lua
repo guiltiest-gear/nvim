@@ -24,6 +24,7 @@ return {
         'bash',
         'toml',
         'ssh_config',
+        'zathurarc',
       },
       highlight = { enable = true },
       indent = { enable = true },
