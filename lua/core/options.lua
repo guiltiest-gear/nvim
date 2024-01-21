@@ -139,3 +139,16 @@ vim.lsp.set_log_level('OFF')
 g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
+
+-- Fix zathurarc not being recognized
+-- HACK: As far as I'm aware, there doesn't appear to be a zathurarc filetype officially in neovim
+-- This will do until then
+vim.filetype.add({
+  filename = {
+    ['zathurarc'] = 'zathurarc',
+    ['/etc/zathurarc'] = 'zathurarc',
+  },
+  pattern = {
+    ['${XDG_CONFIG_HOME}/zathura/zathurarc'] = 'zathurarc',
+  },
+})
