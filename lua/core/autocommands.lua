@@ -54,7 +54,15 @@ autocmd('FileType', {
 })
 
 -- Check if the file needs to be reloaded when it's changed
-autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, { group = augroup('checktime'), command = 'checktime' })
+autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
+  group = augroup('checktime'),
+  callback = function()
+    -- Skip checktime if the buffer type is nofile
+    if vim.o.buftype ~= 'nofile' then
+      vim.cmd.checktime()
+    end
+  end,
+})
 
 -- Toggle relative numbers based on certain events
 autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }, {
