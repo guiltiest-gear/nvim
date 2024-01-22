@@ -85,3 +85,12 @@ autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, 
     end
   end,
 })
+
+-- Disable conceallevel for json filetypes
+autocmd({ 'FileType' }, {
+  group = augroup('json_conceal'),
+  pattern = { 'json', 'jsonc', 'json5' },
+  callback = function()
+    vim.wo.conceallevel = 0
+  end,
+})
