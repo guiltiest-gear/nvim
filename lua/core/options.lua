@@ -76,8 +76,8 @@ opt.laststatus = 3
 -- Confirm to save changed before exiting the modified buffer
 opt.confirm = true
 
--- Hide * markup for bold and italic
-opt.conceallevel = 3
+-- Hide * markup for bold and italic, but not markers with substitutions
+opt.conceallevel = 2
 
 -- Use ripgrep as the grep program for neovim
 opt.grepprg = 'rg --vimgrep'
