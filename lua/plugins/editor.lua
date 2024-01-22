@@ -147,6 +147,7 @@ return {
       },
       window = {
         mappings = {
+          ['<space>'] = 'none',
           ['h'] = {
             function(state)
               local node = state.tree:get_node()
@@ -171,7 +172,6 @@ return {
             end,
             desc = 'Close directory',
           },
-          ['<space>'] = 'none',
         },
       },
     },
