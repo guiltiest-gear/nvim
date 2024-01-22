@@ -25,6 +25,7 @@ return {
         'toml',
         'ssh_config',
         'zathurarc',
+        'printf',
       },
       highlight = { enable = true },
       indent = { enable = true },
