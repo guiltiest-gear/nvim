@@ -292,7 +292,7 @@ return {
       { '<leader>gj', function() return require('gitsigns').next_hunk() end, desc = 'Next hunk' },
       { '<leader>gk', function() return require('gitsigns').prev_hunk() end, desc = 'Previous hunk' },
       { '<leader>gl', function() return require('gitsigns').blame_line() end, desc = 'Open git blame' },
-      { '<leader>gp', function() return require('gitsigns').preview_hunk() end, desc = 'Preview the hunk' },
+      { '<leader>gp', function() return require('gitsigns').preview_hunk_inline() end, desc = 'Preview the hunk' },
       { '<leader>gr', function() return require('gitsigns').reset_hunk() end, mode = { 'n', 'v' }, desc = 'Reset the hunk' },
       { '<leader>gR', function() return require('gitsigns').reset_buffer() end, desc = 'Reset the buffer' },
       { '<leader>gs', function() return require('gitsigns').stage_hunk() end, mode = { 'n', 'v' }, desc = 'Stage the hunk' },
