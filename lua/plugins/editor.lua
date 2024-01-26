@@ -82,8 +82,6 @@ return {
         end,
         desc = 'References',
       },
-      { '<leader>xt', '<cmd>TodoTrouble<CR>', desc = 'Todo (Trouble)' },
-      { '<leader>xT', '<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme (Trouble)' },
       {
         '[q',
         function()
@@ -112,6 +110,8 @@ return {
         end,
         desc = 'Next trouble/quickfix item',
       },
+      { '<leader>xt', '<cmd>TodoTrouble<CR>', desc = 'Todo (Trouble)' },
+      { '<leader>xT', '<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme (Trouble)' },
     },
   },
 
