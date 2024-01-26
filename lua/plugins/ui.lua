@@ -83,10 +83,20 @@ return {
     dependencies = 'kevinhwang91/promise-async',
     event = { 'BufReadPost', 'BufNewFile' },
     keys = {
-      -- stylua: ignore start
-      { 'zR', function() return require('ufo').openAllFolds() end, desc = 'Open all folds' },
-      { 'zM', function() return require('ufo').closeAllFolds() end, desc = 'Close all folds' },
-      -- stylua: ignore end
+      {
+        'zR',
+        function()
+          return require('ufo').openAllFolds()
+        end,
+        desc = 'Open all folds',
+      },
+      {
+        'zM',
+        function()
+          return require('ufo').closeAllFolds()
+        end,
+        desc = 'Close all folds',
+      },
     },
     opts = {
       provider_selector = function(_, filetype, buftype)
@@ -221,18 +231,26 @@ return {
             '                                   ',
           },
           center = {
-            -- stylua: ignore start
             { action = 'Telescope find_files', desc = ' Find file', icon = '󰈞 ', key = 'f' },
             { action = 'ene | startinsert', desc = ' New file', icon = ' ', key = 'e' },
             { action = 'Telescope oldfiles', desc = ' Recent files', icon = '󰄉 ', key = 'r' },
             { action = 'Telescope live_grep', desc = ' Find text', icon = '󰊄 ', key = 'w' },
-            { action = 'cd ~/.config/nvim | e ~/.config/nvim/init.lua', desc = ' Configuration', icon = '󰊄 ', key = 'c' },
+            {
+              action = 'cd ~/.config/nvim | e ~/.config/nvim/init.lua',
+              desc = ' Configuration',
+              icon = '󰊄 ',
+              key = 'c',
+            },
             { action = 'Lazy update', desc = ' Update plugins', icon = ' ', key = 'u' },
             { action = 'Mason', desc = ' Mason', icon = ' ', key = 'm' },
             { action = 'Neogit', desc = ' NeoGit', icon = ' ', key = 'g' },
-            { action = 'lua require("persistence").load({ last = true })', desc = ' Restore last session', icon = '󰦛 ', key = 'l' },
+            {
+              action = 'lua require("persistence").load({ last = true })',
+              desc = ' Restore last session',
+              icon = '󰦛 ',
+              key = 'l',
+            },
             { action = 'qa', desc = ' Quit Neovim', icon = ' ', key = 'q' },
-            -- stylua: ignore end
           },
           footer = function()
             local stats = require('lazy').stats()
@@ -304,20 +322,90 @@ return {
       { '<S-h>', '<cmd>BufferLineMovePrev<CR>', desc = 'Move current buffer backwards' },
       { '<leader>bn', '<cmd>BufferLineMoveNext<CR>', desc = 'Move current buffer forwards' },
       { '<leader>bp', '<cmd>BufferLineMovePrev<CR>', desc = 'Move current buffer backwards' },
-      -- stylua: ignore start
-      { '<leader>bf', function() return require('bufferline').move_to(1) end, desc = 'Move buffer to beginning' },
-      { '<leader>bl', function() return require('bufferline').move_to(-1) end, desc = 'Move buffer to end' },
-      { '<leader>b1', function() return require('bufferline').go_to(1, true) end, desc = 'Jump to first buffer' },
-      { '<leader>b2', function() return require('bufferline').go_to(2, true) end, desc = 'Jump to second buffer' },
-      { '<leader>b3', function() return require('bufferline').go_to(3, true) end, desc = 'Jump to third buffer' },
-      { '<leader>b4', function() return require('bufferline').go_to(4, true) end, desc = 'Jump to fourth buffer' },
-      { '<leader>b5', function() return require('bufferline').go_to(5, true) end, desc = 'Jump to fifth buffer' },
-      { '<leader>b6', function() return require('bufferline').go_to(6, true) end, desc = 'Jump to sixth buffer' },
-      { '<leader>b7', function() return require('bufferline').go_to(7, true) end, desc = 'Jump to seventh buffer' },
-      { '<leader>b8', function() return require('bufferline').go_to(8, true) end, desc = 'Jump to eighth buffer' },
-      { '<leader>b9', function() return require('bufferline').go_to(9, true) end, desc = 'Jump to ninth buffer' },
-      { '<leader>b$', function() return require('bufferline').go_to(-1, true) end, desc = 'Jump to last buffer' },
-      -- stylua: ignore end
+      {
+        '<leader>bf',
+        function()
+          return require('bufferline').move_to(1)
+        end,
+        desc = 'Move buffer to beginning',
+      },
+      {
+        '<leader>bl',
+        function()
+          return require('bufferline').move_to(-1)
+        end,
+        desc = 'Move buffer to end',
+      },
+      {
+        '<leader>b1',
+        function()
+          return require('bufferline').go_to(1, true)
+        end,
+        desc = 'Jump to first buffer',
+      },
+      {
+        '<leader>b2',
+        function()
+          return require('bufferline').go_to(2, true)
+        end,
+        desc = 'Jump to second buffer',
+      },
+      {
+        '<leader>b3',
+        function()
+          return require('bufferline').go_to(3, true)
+        end,
+        desc = 'Jump to third buffer',
+      },
+      {
+        '<leader>b4',
+        function()
+          return require('bufferline').go_to(4, true)
+        end,
+        desc = 'Jump to fourth buffer',
+      },
+      {
+        '<leader>b5',
+        function()
+          return require('bufferline').go_to(5, true)
+        end,
+        desc = 'Jump to fifth buffer',
+      },
+      {
+        '<leader>b6',
+        function()
+          return require('bufferline').go_to(6, true)
+        end,
+        desc = 'Jump to sixth buffer',
+      },
+      {
+        '<leader>b7',
+        function()
+          return require('bufferline').go_to(7, true)
+        end,
+        desc = 'Jump to seventh buffer',
+      },
+      {
+        '<leader>b8',
+        function()
+          return require('bufferline').go_to(8, true)
+        end,
+        desc = 'Jump to eighth buffer',
+      },
+      {
+        '<leader>b9',
+        function()
+          return require('bufferline').go_to(9, true)
+        end,
+        desc = 'Jump to ninth buffer',
+      },
+      {
+        '<leader>b$',
+        function()
+          return require('bufferline').go_to(-1, true)
+        end,
+        desc = 'Jump to last buffer',
+      },
     },
     opts = {
       options = {

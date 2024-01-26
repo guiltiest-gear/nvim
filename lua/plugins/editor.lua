@@ -6,10 +6,20 @@ return {
     event = { 'BufReadPost', 'BufNewFile' },
     config = true,
     keys = {
-      -- stylua: ignore start
-      { ']t', function() return require('todo-comments').jump_next() end, desc = 'Jump to next todo comment' },
-      { '[t', function() return require('todo-comments').jump_prev() end, desc = 'Jump to previous todo comment' },
-      -- stylua: ignore end
+      {
+        ']t',
+        function()
+          return require('todo-comments').jump_next()
+        end,
+        desc = 'Jump to next todo comment',
+      },
+      {
+        '[t',
+        function()
+          return require('todo-comments').jump_prev()
+        end,
+        desc = 'Jump to previous todo comment',
+      },
     },
   },
 
@@ -30,16 +40,50 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     opts = { use_diagnostic_signs = true },
     keys = {
-      -- stylua: ignore start
-      { '<leader>xx', function() return require('trouble').toggle() end, desc = 'Toggle trouble.nvim' },
-      { '<leader>xw', function() return require('trouble').toggle('workspace_diagnostics') end, desc = 'Open workspace diagnostics' },
-      { '<leader>xd', function() return require('trouble').toggle('document_diagnostics') end, desc = 'Open document diagnostics' },
-      { '<leader>xq', function() return require('trouble').toggle('quickfix') end, desc = 'Open quickfix' },
-      { '<leader>xl', function() return require('trouble').toggle('loclist') end, desc = 'Open location list' },
-      { 'gR', function() return require('trouble').toggle('lsp_references') end, desc = 'References' },
+      {
+        '<leader>xx',
+        function()
+          return require('trouble').toggle()
+        end,
+        desc = 'Toggle trouble.nvim',
+      },
+      {
+        '<leader>xw',
+        function()
+          return require('trouble').toggle('workspace_diagnostics')
+        end,
+        desc = 'Open workspace diagnostics',
+      },
+      {
+        '<leader>xd',
+        function()
+          return require('trouble').toggle('document_diagnostics')
+        end,
+        desc = 'Open document diagnostics',
+      },
+      {
+        '<leader>xq',
+        function()
+          return require('trouble').toggle('quickfix')
+        end,
+        desc = 'Open quickfix',
+      },
+      {
+        '<leader>xl',
+        function()
+          return require('trouble').toggle('loclist')
+        end,
+        desc = 'Open location list',
+      },
+      {
+        'gR',
+        function()
+          return require('trouble').toggle('lsp_references')
+        end,
+        desc = 'References',
+      },
       { '<leader>xt', '<cmd>TodoTrouble<CR>', desc = 'Todo (Trouble)' },
       { '<leader>xT', '<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme (Trouble)' },
-      -- stylua: ignore end
       {
         '[q',
         function()
@@ -234,10 +278,20 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
     cmd = 'Neogit',
     keys = {
-      -- stylua: ignore start
-      { '<leader>gg', function() return require('neogit').open() end, desc = 'Open neogit' },
-      { '<leader>gC', function() return require('neogit').open({ 'commit' }) end, desc = 'Open neogit commit popup' },
-      -- stylua: ignore end
+      {
+        '<leader>gg',
+        function()
+          return require('neogit').open()
+        end,
+        desc = 'Open neogit',
+      },
+      {
+        '<leader>gC',
+        function()
+          return require('neogit').open({ 'commit' })
+        end,
+        desc = 'Open neogit commit popup',
+      },
     },
     opts = {
       disable_insert_on_commit = 'auto',
@@ -271,20 +325,92 @@ return {
     end,
     ft = 'gitcommit',
     keys = {
-      -- stylua: ignore start
-      { '<leader>gj', function() return require('gitsigns').next_hunk() end, desc = 'Next hunk' },
-      { '<leader>gk', function() return require('gitsigns').prev_hunk() end, desc = 'Previous hunk' },
-      { '<leader>gl', function() return require('gitsigns').blame_line() end, desc = 'Open git blame' },
-      { '<leader>gp', function() return require('gitsigns').preview_hunk_inline() end, desc = 'Preview the hunk' },
-      { '<leader>gr', function() return require('gitsigns').reset_hunk() end, mode = { 'n', 'v' }, desc = 'Reset the hunk' },
-      { '<leader>gR', function() return require('gitsigns').reset_buffer() end, desc = 'Reset the buffer' },
-      { '<leader>gs', function() return require('gitsigns').stage_hunk() end, mode = { 'n', 'v' }, desc = 'Stage the hunk' },
-      { '<leader>gS', function() return require('gitsigns').stage_buffer() end, desc = 'Stage the buffer' },
-      { '<leader>gu', function() return require('gitsigns').undo_stage_hunk() end, desc = 'Unstage the hunk' },
-      { '<leader>gd', function() return require('gitsigns').diffthis() end, desc = 'Open a diff' },
-      { ']g', function() return require('gitsigns').next_hunk() end, desc = 'Next hunk' },
-      { '[g', function() return require('gitsigns').prev_hunk() end, desc = 'Previous hunk' },
-      -- stylua: ignore end
+      {
+        '<leader>gj',
+        function()
+          return require('gitsigns').next_hunk()
+        end,
+        desc = 'Next hunk',
+      },
+      {
+        '<leader>gk',
+        function()
+          return require('gitsigns').prev_hunk()
+        end,
+        desc = 'Previous hunk',
+      },
+      {
+        '<leader>gl',
+        function()
+          return require('gitsigns').blame_line()
+        end,
+        desc = 'Open git blame',
+      },
+      {
+        '<leader>gp',
+        function()
+          return require('gitsigns').preview_hunk_inline()
+        end,
+        desc = 'Preview the hunk',
+      },
+      {
+        '<leader>gr',
+        function()
+          return require('gitsigns').reset_hunk()
+        end,
+        mode = { 'n', 'v' },
+        desc = 'Reset the hunk',
+      },
+      {
+        '<leader>gR',
+        function()
+          return require('gitsigns').reset_buffer()
+        end,
+        desc = 'Reset the buffer',
+      },
+      {
+        '<leader>gs',
+        function()
+          return require('gitsigns').stage_hunk()
+        end,
+        mode = { 'n', 'v' },
+        desc = 'Stage the hunk',
+      },
+      {
+        '<leader>gS',
+        function()
+          return require('gitsigns').stage_buffer()
+        end,
+        desc = 'Stage the buffer',
+      },
+      {
+        '<leader>gu',
+        function()
+          return require('gitsigns').undo_stage_hunk()
+        end,
+        desc = 'Unstage the hunk',
+      },
+      {
+        '<leader>gd',
+        function()
+          return require('gitsigns').diffthis()
+        end,
+        desc = 'Open a diff',
+      },
+      {
+        ']g',
+        function()
+          return require('gitsigns').next_hunk()
+        end,
+        desc = 'Next hunk',
+      },
+      {
+        '[g',
+        function()
+          return require('gitsigns').prev_hunk()
+        end,
+        desc = 'Previous hunk',
+      },
     },
     opts = {
       signs = {
@@ -342,8 +468,13 @@ return {
         end,
         desc = 'Delete Buffer',
       },
-      -- stylua: ignore
-      { '<leader>bK', function() require('mini.bufremove').delete(0, true) end, desc = 'Delete buffer forcefully' },
+      {
+        '<leader>bK',
+        function()
+          require('mini.bufremove').delete(0, true)
+        end,
+        desc = 'Delete buffer forcefully',
+      },
     },
   },
 
@@ -395,28 +526,134 @@ return {
     branch = '0.1.x',
     cmd = 'Telescope',
     keys = {
-      -- stylua: ignore start
-      { '<leader>ff', function() return require('telescope.builtin').find_files() end, desc = 'Files' },
-      { '<leader>fw', function() return require('telescope.builtin').live_grep() end, desc = 'Words' },
-      { '<leader>fb', function() return require('telescope.builtin').buffers() end, desc = 'Buffers' },
-      { '<leader>fh', function() return require('telescope.builtin').help_tags() end, desc = 'Help' },
-      { '<leader>fm', function() return require('telescope.builtin').man_pages() end, desc = 'Man pages' },
-      { '<leader>fr', function() return require('telescope.builtin').oldfiles() end, desc = 'Recently opened' },
-      { '<leader>fR', function() return require('telescope.builtin').registers() end, desc = 'Registers' },
-      { '<leader>fk', function() return require('telescope.builtin').keymaps() end, desc = 'Keymaps' },
-      { '<leader>fc', function() return require('telescope.builtin').commands() end, desc = 'Commands' },
-      { '<leader>fC', function() return require('telescope.builtin').command_history() end, desc = 'Command history'},
-      { '<leader>fl', function() return require('telescope.builtin').resume() end, desc = 'Resume' },
-      { '<leader>fd', function() return require('telescope.builtin').diagnostics({ bufnr = 0 }) end, desc = 'Document diagnostics' },
-      { '<leader>fD', function() return require('telescope.builtin').diagnostics() end, desc = 'Workspace diagnostics' },
-      { '<leader>fs', function() return require('telescope.builtin').lsp_document_symbols() end, desc = 'Document symbols' },
+      {
+        '<leader>ff',
+        function()
+          return require('telescope.builtin').find_files()
+        end,
+        desc = 'Files',
+      },
+      {
+        '<leader>fw',
+        function()
+          return require('telescope.builtin').live_grep()
+        end,
+        desc = 'Words',
+      },
+      {
+        '<leader>fb',
+        function()
+          return require('telescope.builtin').buffers()
+        end,
+        desc = 'Buffers',
+      },
+      {
+        '<leader>fh',
+        function()
+          return require('telescope.builtin').help_tags()
+        end,
+        desc = 'Help',
+      },
+      {
+        '<leader>fm',
+        function()
+          return require('telescope.builtin').man_pages()
+        end,
+        desc = 'Man pages',
+      },
+      {
+        '<leader>fr',
+        function()
+          return require('telescope.builtin').oldfiles()
+        end,
+        desc = 'Recently opened',
+      },
+      {
+        '<leader>fR',
+        function()
+          return require('telescope.builtin').registers()
+        end,
+        desc = 'Registers',
+      },
+      {
+        '<leader>fk',
+        function()
+          return require('telescope.builtin').keymaps()
+        end,
+        desc = 'Keymaps',
+      },
+      {
+        '<leader>fc',
+        function()
+          return require('telescope.builtin').commands()
+        end,
+        desc = 'Commands',
+      },
+      {
+        '<leader>fC',
+        function()
+          return require('telescope.builtin').command_history()
+        end,
+        desc = 'Command history',
+      },
+      {
+        '<leader>fl',
+        function()
+          return require('telescope.builtin').resume()
+        end,
+        desc = 'Resume',
+      },
+      {
+        '<leader>fd',
+        function()
+          return require('telescope.builtin').diagnostics({ bufnr = 0 })
+        end,
+        desc = 'Document diagnostics',
+      },
+      {
+        '<leader>fD',
+        function()
+          return require('telescope.builtin').diagnostics()
+        end,
+        desc = 'Workspace diagnostics',
+      },
+      {
+        '<leader>fs',
+        function()
+          return require('telescope.builtin').lsp_document_symbols()
+        end,
+        desc = 'Document symbols',
+      },
       { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo' },
       { '<leader>fT', '<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme' },
-      { '<leader>go', function() return require('telescope.builtin').git_status() end, desc = 'Search through changed files' },
-      { '<leader>gb', function() return require('telescope.builtin').git_branches() end, desc = 'Search through git branches' },
-      { '<leader>gc', function() return require('telescope.builtin').git_commits() end, desc = 'Search and checkout git commits' },
-      { '<leader>gO', function() return require('telescope.builtin').git_stash() end, desc = 'Search through stash' },
-      -- stylua: ignore end
+      {
+        '<leader>go',
+        function()
+          return require('telescope.builtin').git_status()
+        end,
+        desc = 'Search through changed files',
+      },
+      {
+        '<leader>gb',
+        function()
+          return require('telescope.builtin').git_branches()
+        end,
+        desc = 'Search through git branches',
+      },
+      {
+        '<leader>gc',
+        function()
+          return require('telescope.builtin').git_commits()
+        end,
+        desc = 'Search and checkout git commits',
+      },
+      {
+        '<leader>gO',
+        function()
+          return require('telescope.builtin').git_stash()
+        end,
+        desc = 'Search through stash',
+      },
     },
     opts = function()
       -- File and text search in hidden files and directories
@@ -469,11 +706,27 @@ return {
     event = 'BufReadPre',
     opts = { options = vim.opt.sessionoptions:get() },
     keys = {
-      -- stylua: ignore start
-      { '<leader>qs', function() return require('persistence').load() end, desc = 'Restore the session for the current dir' },
-      { '<leader>ql', function() return require('persistence').load({ last = true }) end, desc = 'Restore the last session' },
-      { '<leader>qd', function() return require('persistence').stop() end, desc = 'Stop persistence' },
-      -- stylua: ignore end
+      {
+        '<leader>qs',
+        function()
+          return require('persistence').load()
+        end,
+        desc = 'Restore the session for the current dir',
+      },
+      {
+        '<leader>ql',
+        function()
+          return require('persistence').load({ last = true })
+        end,
+        desc = 'Restore the last session',
+      },
+      {
+        '<leader>qd',
+        function()
+          return require('persistence').stop()
+        end,
+        desc = 'Stop persistence',
+      },
     },
   },
 
