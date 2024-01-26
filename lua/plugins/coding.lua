@@ -77,13 +77,13 @@ return {
       'hrsh7th/cmp-nvim-lsp-signature-help',
       'saadparwaiz1/cmp_luasnip',
       'windwp/nvim-autopairs',
+      { 'L3MON4D3/LuaSnip', build = 'make install_jsregexp', version = 'v2.*', config = true },
       {
         'rafamadriz/friendly-snippets',
         config = function()
           require('luasnip.loaders.from_vscode').lazy_load()
         end,
       },
-      { 'L3MON4D3/LuaSnip', build = 'make install_jsregexp', version = 'v2.*', config = true },
     },
     event = 'InsertEnter',
     opts = function()
