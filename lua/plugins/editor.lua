@@ -228,23 +228,6 @@ return {
     end,
   },
 
-  -- zen-mode.nvim
-  -- NOTE: I've not used this plugin in some time, maybe time to disable or give it the boot?
-  {
-    'folke/zen-mode.nvim',
-    enabled = false,
-    dependencies = {
-      {
-        'folke/twilight.nvim',
-        keys = { { '<leader>t', '<cmd>Twilight<CR>', desc = 'Toggle twilight.nvim' } },
-        config = true,
-      },
-    },
-    opts = { plugins = { kitty = { enabled = true, font = '+4' } } },
-    -- stylua: ignore
-    keys = { { '<leader>z', function() return require('zen-mode').toggle() end, desc = 'Toggle zen-mode.nvim' } },
-  },
-
   -- neogit
   {
     'NeogitOrg/neogit',
