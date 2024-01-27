@@ -4,7 +4,7 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       -- neodev.nvim
-      { 'folke/neodev.nvim', lazy = true, config = true },
+      { 'folke/neodev.nvim', config = true },
 
       -- mason.nvim
       {
