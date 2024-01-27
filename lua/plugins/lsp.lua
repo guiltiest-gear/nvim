@@ -26,7 +26,7 @@ return {
       {
         'williamboman/mason-lspconfig.nvim',
         cmd = { 'LspInstall', 'LspUninstall' },
-        opts = { ensure_installed = { 'lua_ls', 'clangd', 'marksman', 'bashls', 'taplo', 'typos_lsp' } },
+        opts = { ensure_installed = { 'lua_ls', 'clangd', 'marksman', 'bashls', 'taplo' } },
       },
     },
     keys = {
@@ -74,7 +74,6 @@ return {
       lspconfig.marksman.setup({})
       lspconfig.bashls.setup({ filetypes = { 'sh', 'zsh', 'bash' } })
       lspconfig.taplo.setup({})
-      lspconfig.typos_lsp.setup({})
     end,
   },
 
