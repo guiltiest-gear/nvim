@@ -64,12 +64,7 @@ return {
       lspconfig.clangd.setup({
         -- Fix clangd offset encoding
         capabilities = { offsetEncoding = { 'utf-16' } },
-        cmd = {
-          'clangd',
-          '--fallback-style=Google',
-          '--completion-style=detailed',
-          '--function-arg-placeholders',
-        },
+        cmd = { 'clangd', '--fallback-style=Google', '--completion-style=detailed', '--function-arg-placeholders' },
         init_options = { usePlaceholders = true },
       })
       lspconfig.lua_ls.setup({
