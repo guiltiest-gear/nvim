@@ -59,7 +59,6 @@ return {
     config = function()
       local lspconfig = require('lspconfig')
       -- Load neodev.nvim before loading everything else
-      -- require('neodev').setup({ library = { plugins = { 'nvim-dap-ui' }, types = true } })
       require('neodev').setup()
       lspconfig.clangd.setup({
         -- Fix clangd offset encoding
