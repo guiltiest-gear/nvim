@@ -4,7 +4,7 @@ return {
     'neovim/nvim-lspconfig',
     dependencies = {
       -- neodev.nvim
-      { 'folke/neodev.nvim', lazy = true },
+      { 'folke/neodev.nvim', lazy = true, config = true },
 
       -- mason.nvim
       {
@@ -58,8 +58,6 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lspconfig = require('lspconfig')
-      -- Load neodev.nvim before loading everything else
-      require('neodev').setup()
       lspconfig.clangd.setup({
         -- Fix clangd offset encoding
         capabilities = { offsetEncoding = { 'utf-16' } },
