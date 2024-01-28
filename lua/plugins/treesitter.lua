@@ -25,7 +25,6 @@ return {
         'toml',
         'ssh_config',
         'zathurarc',
-        'printf',
         'json',
       },
       highlight = { enable = true },
