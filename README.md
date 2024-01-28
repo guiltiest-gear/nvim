@@ -124,7 +124,6 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [treesj](https://github.com/Wansmer/treesj)
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
-- [twilight.nvim](https://github.com/folke/twilight.nvim)
 - [undotree](https://github.com/mbbill/undotree)
 - [vim-cool](https://github.com/romainl/vim-cool)
 - [vim-illuminate](https://github.com/RRethy/vim-illuminate)
@@ -133,7 +132,6 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [vim-repeat](https://github.com/tpope/vim-repeat)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
 - [windows.nvim](https://github.com/anuvyklack/windows.nvim)
-- [zen-mode.nvim](https://github.com/folke/zen-mode.nvim)
 
 ## License
 
