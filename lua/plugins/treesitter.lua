@@ -26,6 +26,7 @@ return {
         'ssh_config',
         'zathurarc',
         'printf',
+        'json',
       },
       highlight = { enable = true },
       indent = { enable = true },
