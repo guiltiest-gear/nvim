@@ -624,6 +624,13 @@ return {
         end,
         desc = 'Document symbols',
       },
+      {
+        '<leader>fg',
+        function()
+          return require('telescope.builtin').git_files()
+        end,
+        desc = 'Git files',
+      },
       { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo' },
       { '<leader>fT', '<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme' },
       {
