@@ -126,7 +126,7 @@ return {
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
-      'FelipeLema/cmp-async-path',
+      'https://codeberg.org/FelipeLema/cmp-async-path',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-calc',
       'hrsh7th/cmp-cmdline',
