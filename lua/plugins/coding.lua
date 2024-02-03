@@ -248,7 +248,7 @@ return {
         },
         experimental = { ghost_text = { hl_group = 'CmpGhostText' } },
         sorting = defaults.sorting,
-        window = { completion = cmp.config.window.bordered(), documentation = cmp.config.window.bordered() },
+        -- window = { completion = cmp.config.window.bordered(), documentation = cmp.config.window.bordered() },
         view = { entries = { name = 'custom', selection_order = 'near_cursor' } },
       }
     end,
