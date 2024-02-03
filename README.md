@@ -59,7 +59,7 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [animation.nvim](https://github.com/anuvyklack/animation.nvim)
 - [better-escape.nvim](https://github.com/max397574/better-escape.nvim)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
-- [cmp-async-path](https://github.com/FelipeLema/cmp-async-path)
+- [cmp-async-path](https://codeberg.org/FelipeLema/cmp-async-path)
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-calc](https://github.com/hrsh7th/cmp-calc)
 - [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
