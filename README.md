@@ -93,7 +93,6 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [mini.indentscope](https://github.com/echasnovski/mini.indentscope)
 - [mini.move](https://github.com/echasnovski/mini.move)
 - [mini.surround](https://github.com/echasnovski/mini.surround)
-- [mini.trailspace](https://github.com/echasnovski/mini.trailspace)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [neodev.nvim](https://github.com/folke/neodev.nvim)
 - [neogit](https://github.com/NeogitOrg/neogit)
