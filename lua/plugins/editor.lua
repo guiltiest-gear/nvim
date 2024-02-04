@@ -325,7 +325,7 @@ return {
     end,
     ft = 'gitcommit',
     keys = {
-      {
+      --[[ {
         '<leader>gj',
         function()
           return require('gitsigns').next_hunk()
@@ -338,7 +338,7 @@ return {
           return require('gitsigns').prev_hunk()
         end,
         desc = 'Previous hunk',
-      },
+      }, ]]
       {
         '<leader>gl',
         function()
