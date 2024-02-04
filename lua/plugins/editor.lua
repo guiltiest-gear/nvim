@@ -644,13 +644,13 @@ return {
         end,
         desc = 'Search and checkout git commits',
       },
-      {
+      --[[ {
         '<leader>gO',
         function()
           return require('telescope.builtin').git_stash()
         end,
         desc = 'Search through stash',
-      },
+      }, ]]
     },
     opts = function()
       -- File and text search in hidden files and directories
