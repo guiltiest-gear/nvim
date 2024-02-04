@@ -333,7 +333,7 @@ return {
         desc = 'Previous hunk',
       }, ]]
       {
-        '<leader>gl',
+        '<leader>gB',
         function()
           return require('gitsigns').blame_line()
         end,
