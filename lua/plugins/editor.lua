@@ -285,13 +285,6 @@ return {
         end,
         desc = 'Open neogit',
       },
-      {
-        '<leader>gC',
-        function()
-          return require('neogit').open({ 'commit' })
-        end,
-        desc = 'Open neogit commit popup',
-      },
     },
     opts = {
       disable_insert_on_commit = 'auto',
