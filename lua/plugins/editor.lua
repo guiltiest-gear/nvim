@@ -624,7 +624,7 @@ return {
       { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo' },
       { '<leader>fT', '<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme' },
       {
-        '<leader>go',
+        '<leader>gc',
         function()
           return require('telescope.builtin').git_status()
         end,
