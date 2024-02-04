@@ -506,7 +506,7 @@ return {
       keys = function()
         return vim.api.nvim_win_get_cursor(0)[2] > 1 and '<esc>l' or '<esc>'
       end,
-      timeout = 300,
+      timeout = vim.opt.timeoutlen:get(),
     },
   },
 
