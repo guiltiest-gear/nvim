@@ -638,7 +638,7 @@ return {
         desc = 'Search through git branches',
       },
       {
-        '<leader>gc',
+        '<leader>gC',
         function()
           return require('telescope.builtin').git_commits()
         end,
