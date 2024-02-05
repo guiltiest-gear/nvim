@@ -391,6 +391,27 @@ return {
         desc = 'Open a diff',
       },
       {
+        '<leader>gq',
+        function()
+          return require('gitsigns').setqflist()
+        end,
+        desc = 'Open quickfix list with hunks',
+      },
+      {
+        '<leader>gl',
+        function()
+          return require('gitsigns').setloclist()
+        end,
+        desc = 'Open location list with hunks',
+      },
+      {
+        '<leader>gL',
+        function()
+          return require('gitsigns').toggle_current_line_blame()
+        end,
+        desc = 'Toggle line blame',
+      },
+      {
         ']g',
         function()
           return require('gitsigns').next_hunk()
