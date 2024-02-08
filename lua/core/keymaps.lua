@@ -3,7 +3,7 @@ local map = vim.keymap.set
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Disable space since I'm using it as my leader key
+-- Disable the space key
 map({ 'n', 'v' }, '<Space>', '<Nop>', { expr = true, silent = true })
 
 -- Better split navigation
@@ -24,7 +24,7 @@ map('n', '<C-Down>', '<cmd>resize -2<CR>', { desc = 'Decrease window height' })
 map('n', '<C-Left>', '<cmd>vertical resize -2<CR>', { desc = 'Decrease window width' })
 map('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { desc = 'Increase window width' })
 
--- Lazy keymap
+-- Open lazy.nvim
 map('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim' })
 
 -- Better indenting
