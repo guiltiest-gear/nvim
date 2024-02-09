@@ -676,12 +676,9 @@ return {
     opts = function()
       -- File and text search in hidden files and directories
       local telescopeConfig = require('telescope.config')
-
       -- Clone the default Telescope configuration
       local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
-
       local actions = require('telescope.actions')
-
       -- I want to search in hidden/dot files.
       table.insert(vimgrep_arguments, '--hidden')
       -- I don't want to search in the `.git` directory.
