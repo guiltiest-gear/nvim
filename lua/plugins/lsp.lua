@@ -150,7 +150,7 @@ return {
     'smjonas/inc-rename.nvim',
     keys = {
       {
-        'gr',
+        'gR',
         function()
           return ':IncRename ' .. vim.fn.expand('<cword>')
         end,
