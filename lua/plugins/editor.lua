@@ -76,7 +76,7 @@ return {
         desc = 'Open location list',
       },
       {
-        'gr',
+        'gR',
         function()
           return require('trouble').toggle('lsp_references')
         end,
