@@ -68,7 +68,7 @@ autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }
   group = augroup('auto_relative_numbers_on'),
   pattern = '*',
   callback = function()
-    if vim.o.nu and vim.api.nvim_get_mode() ~= 'i' then
+    if vim.o.number and vim.api.nvim_get_mode() ~= 'i' then
       vim.opt.relativenumber = true
     end
   end,
@@ -78,7 +78,7 @@ autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, 
   group = augroup('auto_relative_numbers_off'),
   pattern = '*',
   callback = function()
-    if vim.o.nu then
+    if vim.o.number then
       vim.opt.relativenumber = false
       vim.cmd.redraw()
     end
