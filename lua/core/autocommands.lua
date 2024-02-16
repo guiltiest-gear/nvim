@@ -43,7 +43,7 @@ autocmd('BufWritePre', {
   end,
 })
 
--- Check for spelling in text filetypes and enable wrapping, and set gj and gk keymaps
+-- Check for spelling in text filetypes and enable wrapping
 autocmd('FileType', {
   group = augroup('wrap_spell'),
   pattern = { 'gitcommit', 'markdown', 'text', 'NeogitCommitMessage' },
