@@ -57,7 +57,6 @@ autocmd('FileType', {
 autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
   group = augroup('checktime'),
   callback = function()
-    -- Skip checktime if the buffer type is nofile
     if vim.o.buftype ~= 'nofile' then
       vim.cmd.checktime()
     end
