@@ -1,13 +1,13 @@
 -- Safely require files
-local function safeRequire(module)
-  local success, loadedModule = pcall(require, module)
+local function safe_require(module)
+  local success, loaded_module = pcall(require, module)
   if success then
-    return loadedModule
+    return loaded_module
   end
   vim.cmd.echo('Error loading ' .. module)
 end
 
-safeRequire('core.options')
-safeRequire('core.keymaps')
-safeRequire('core.autocommands')
-safeRequire('core.bootstrap')
+safe_require('core.options')
+safe_require('core.keymaps')
+safe_require('core.autocommands')
+safe_require('core.bootstrap')
