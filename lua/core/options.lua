@@ -144,7 +144,7 @@ opt.undolevels = 10000
 opt.pumheight = 20
 
 -- Disable lsp logging
-vim.lsp.set_log_level('OFF')
+vim.lsp.set_log_level(vim.lsp.log_levels.OFF)
 
 -- Disable provider warnings in the healthcheck
 g.loaded_node_provider = 0
