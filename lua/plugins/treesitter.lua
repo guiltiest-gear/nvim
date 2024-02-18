@@ -18,7 +18,7 @@ return {
         'gitignore',
         -- 'gitattributes',
         'diff',
-        -- 'vim',
+        'vim',
         'vimdoc',
         -- 'regex',
         'bash',
