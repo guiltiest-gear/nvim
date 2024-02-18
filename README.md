@@ -116,6 +116,7 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [promise-async](https://github.com/kevinhwang91/promise-async)
 - [rainbow-delimiters.nvim](https://github.com/hiphish/rainbow-delimiters.nvim)
+- [telescope-dap.nvim](https://github.com/nvim-telescope/telescope-dap.nvim)
 - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
