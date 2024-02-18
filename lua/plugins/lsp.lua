@@ -277,6 +277,52 @@ return {
         },
       },
 
+      -- telescope-dap.nvim
+      {
+        'nvim-telescope/telescope-dap.nvim',
+        dependencies = 'nvim-telescope/telescope.nvim',
+        config = function()
+          require('telescope').load_extension('dap')
+        end,
+        keys = {
+          {
+            '<leader>dtc',
+            function()
+              return require('telescope').extensions.dap.commands({})
+            end,
+            desc = 'Commands',
+          },
+          {
+            '<leader>dtC',
+            function()
+              return require('telescope').extensions.dap.configurations({})
+            end,
+            desc = 'Configurations',
+          },
+          {
+            '<leader>dtb',
+            function()
+              return require('telescope').extensions.dap.list_breakpoints({})
+            end,
+            desc = 'List breakpoints',
+          },
+          {
+            '<leader>dtv',
+            function()
+              return require('telescope').extensions.dap.variables({})
+            end,
+            desc = 'Variables',
+          },
+          {
+            '<leader>dtf',
+            function()
+              return require('telescope').extensions.dap.frames({})
+            end,
+            desc = 'Frames',
+          },
+        },
+      },
+
       -- goto-breakpoints.nvim
       {
         'ofirgall/goto-breakpoints.nvim',
