@@ -434,7 +434,7 @@ return {
         desc = 'Session',
       },
       {
-        '<leader>dt',
+        '<leader>dT',
         function()
           return require('dap').terminate()
         end,
