@@ -80,7 +80,6 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [leap.nvim](https://github.com/ggandor/leap.nvim)
-- [lsp_lines.nvim](https://git.sr.ht/~whynothugo/lsp_lines.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
 - [mason-null-ls.nvim](https://github.com/jay-babu/mason-null-ls.nvim)
