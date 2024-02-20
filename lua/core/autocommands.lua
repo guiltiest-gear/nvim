@@ -84,7 +84,7 @@ autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, 
 })
 
 -- Disable conceallevel for json filetypes
-autocmd({ 'FileType' }, {
+autocmd('FileType', {
   group = augroup('json_conceal'),
   pattern = { 'json', 'jsonc', 'json5' },
   callback = function()
