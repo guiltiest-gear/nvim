@@ -150,8 +150,8 @@ return {
             function()
               local ok, m = pcall(require, 'better_escape')
               return ok and m.waiting and '✺' or ''
-            end, ]]
-          },
+            end,
+          }, ]]
         },
         lualine_c = {
           'filename',
