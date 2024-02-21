@@ -68,3 +68,6 @@ map({ 'n', 'x' }, '<Up>', 'v:count == 0 ? "gk" : "k"', { expr = true, silent = t
 map('i', ',', ',<c-g>u')
 map('i', '.', '.<c-g>u')
 map('i', ';', ';<c-g>u')
+
+-- Do not copy anything with x
+map({ 'n', 'v' }, 'x', '"_x', { noremap = true, silent = true })
