@@ -77,6 +77,9 @@ return {
   -- none-ls.nvim
   {
     'nvimtools/none-ls.nvim',
+    -- NOTE: There is talk of removing modules, pay attention to the issue and discussion
+    -- Related: https://github.com/nvimtools/none-ls.nvim/issues/58
+    -- Related: https://github.com/nvimtools/none-ls.nvim/discussions/81
     commit = 'bb680d752cec37949faca7a1f509e2fe67ab418a',
     main = 'null-ls',
     dependencies = {
