@@ -31,6 +31,16 @@ autocmd('FileType', {
   end,
 })
 
+-- Fix manpage bugs
+autocmd('FileType', {
+  group = augroup('man_bugfixes'),
+  pattern = { 'man' },
+  callback = function(event)
+    vim.opt_local.signcolumn = 'no'
+    vim.bo[event.buf].buflisted = false
+  end,
+})
+
 -- Auto create dir when saving a file where some intermediate directory does not exist
 autocmd('BufWritePre', {
   group = augroup('auto_create_dir'),
