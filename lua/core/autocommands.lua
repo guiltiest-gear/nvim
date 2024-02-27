@@ -24,7 +24,7 @@ autocmd('BufWinEnter', { group = augroup('no_comment_on_o'), command = 'setlocal
 -- Close man and help with just <q>
 autocmd('FileType', {
   group = augroup('close_with_q'),
-  pattern = { 'help', 'man', 'lspinfo', 'checkhealth', 'qf', 'query', 'notify' },
+  pattern = { 'help', 'lspinfo', 'checkhealth', 'qf', 'query', 'notify' },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
     vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = event.buf, silent = true })
