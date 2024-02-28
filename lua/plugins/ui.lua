@@ -80,7 +80,7 @@ return {
   -- nvim-ufo
   {
     'kevinhwang91/nvim-ufo',
-    enabled = false,
+    -- enabled = false,
     dependencies = 'kevinhwang91/promise-async',
     event = { 'BufReadPost', 'BufNewFile' },
     keys = {
