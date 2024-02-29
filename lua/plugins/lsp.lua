@@ -84,6 +84,7 @@ return {
     main = 'null-ls',
     dependencies = {
       'nvim-lua/plenary.nvim',
+      'nvimtools/none-ls-extras.nvim',
       -- mason-null-ls.nvim
       {
         'jay-babu/mason-null-ls.nvim',
@@ -111,9 +112,9 @@ return {
           nls.builtins.diagnostics.markdownlint,
           -- cpp
           nls.builtins.formatting.clang_format,
-          nls.builtins.diagnostics.cpplint,
+          require('none-ls.diagnostics.cpplint'),
           -- shell
-          nls.builtins.formatting.beautysh.with({ extra_args = { '-i', '2' } }),
+          require('none-ls.formatting.beautysh').with({ extra_args = { '-i', '2' } }),
           nls.builtins.diagnostics.zsh,
           -- toml
           nls.builtins.formatting.taplo,
