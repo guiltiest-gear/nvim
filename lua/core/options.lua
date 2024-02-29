@@ -150,3 +150,6 @@ vim.lsp.set_log_level(vim.lsp.log_levels.OFF)
 g.loaded_node_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_python3_provider = 0
+
+-- Suppress the notification from none-ls.nvim
+g.nonels_suppress_issue58 = true
