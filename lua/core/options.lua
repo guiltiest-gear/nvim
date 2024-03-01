@@ -42,9 +42,6 @@ opt.foldcolumn = '1'
 -- Decrease update time
 opt.updatetime = 200
 
--- Disable swapfile
-opt.swapfile = false
-
 -- Enable persistent undo
 opt.undofile = true
 
