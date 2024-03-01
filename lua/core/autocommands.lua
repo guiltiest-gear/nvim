@@ -27,7 +27,7 @@ autocmd('FileType', {
   pattern = { 'help', 'lspinfo', 'checkhealth', 'qf', 'query', 'notify' },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
-    vim.keymap.set('n', 'q', '<cmd>close<cr>', { buffer = event.buf, silent = true })
+    vim.keymap.set('n', 'q', vim.cmd.close, { buffer = event.buf, silent = true })
   end,
 })
 
