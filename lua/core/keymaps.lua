@@ -63,9 +63,9 @@ map({ 'n', 'x' }, 'j', 'v:count == 0 ? "gj" : "j"', { expr = true, silent = true
 map({ 'n', 'x' }, 'k', 'v:count == 0 ? "gk" : "k"', { expr = true, silent = true })
 
 -- Add undo breakpoints
-map('i', ',', ',<c-g>u')
-map('i', '.', '.<c-g>u')
-map('i', ';', ';<c-g>u')
+map('i', ',', ',<C-g>u')
+map('i', '.', '.<C-g>u')
+map('i', ';', ';<C-g>u')
 
 -- Do not copy anything with x
 map({ 'n', 'v' }, 'x', '"_x', { noremap = true, silent = true })
