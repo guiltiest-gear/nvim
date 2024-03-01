@@ -116,8 +116,6 @@ return {
           -- shell
           require('none-ls.formatting.beautysh').with({ extra_args = { '-i', '2' } }),
           nls.builtins.diagnostics.zsh,
-          -- toml
-          nls.builtins.formatting.taplo,
           -- code actions
           nls.builtins.code_actions.gitrebase,
         },
