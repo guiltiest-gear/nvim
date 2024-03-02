@@ -102,6 +102,7 @@ return {
   },
 
   -- mini.ai
+  -- NOTE: I don't really use this all that much, maybe time to drop or disable?
   {
     'echasnovski/mini.ai',
     keys = { { 'a', mode = { 'x', 'o' } }, { 'i', mode = { 'x', 'o' } } },
