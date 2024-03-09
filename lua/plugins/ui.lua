@@ -439,7 +439,7 @@ return {
     opts = function()
       local animate = require('mini.animate')
       return {
-        -- This is already handled by windows.nvim
+        -- These are already handled by windows.nvim
         resize = { enable = false },
         open = { enable = false },
         close = { enable = false },
