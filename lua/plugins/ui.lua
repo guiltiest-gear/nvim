@@ -292,7 +292,7 @@ return {
         ['g'] = { name = '+goto' },
         ['gc'] = { name = '+comments' },
         ['gb'] = { name = '+block comments' },
-        ['gz'] = { name = '+surrounds' },
+        ['gz'] = { name = '+surround' },
         ['z'] = { name = '+folds' },
         [']'] = { name = '+next' },
         ['['] = { name = '+prev' },
