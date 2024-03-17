@@ -67,5 +67,6 @@ map('i', ',', ',<C-g>u')
 map('i', '.', '.<C-g>u')
 map('i', ';', ';<C-g>u')
 
--- Do not copy anything with x
+-- Do not copy anything with x or c
 map({ 'n', 'v' }, 'x', '"_x', { noremap = true, silent = true })
+map({ 'n', 'v' }, 'c', '"_c', { noremap = true, silent = true })
