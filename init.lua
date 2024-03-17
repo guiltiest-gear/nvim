@@ -7,7 +7,7 @@ local function safe_require(module)
   if success then
     return loaded
   end
-  vim.api.nvim_echo({ { 'Error loading' .. module } }, true, {})
+  vim.api.nvim_echo({ { 'Error loading' .. module .. '\n' } }, true, {})
 end
 
 safe_require('core.options')
