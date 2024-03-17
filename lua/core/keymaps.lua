@@ -25,7 +25,7 @@ map('n', '<C-Left>', '<cmd>vertical resize -2<CR>', { desc = 'Decrease window wi
 map('n', '<C-Right>', '<cmd>vertical resize +2<CR>', { desc = 'Increase window width' })
 
 -- Open lazy.nvim
-map('n', '<leader>l', '<cmd>Lazy<CR>', { desc = 'Open lazy.nvim' })
+map('n', '<leader>l', vim.cmd.Lazy, { desc = 'Open lazy.nvim' })
 
 -- Better indenting
 map('v', '<', '<gv')
