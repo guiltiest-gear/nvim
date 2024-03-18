@@ -106,6 +106,7 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [nvim-navic](https://github.com/SmiteshP/nvim-navic)
+- [nvim-nio](https://github.com/nvim-neotest/nvim-nio)
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [nvim-origami](https://github.com/chrisgrieser/nvim-origami)
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
