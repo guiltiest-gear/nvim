@@ -10,6 +10,7 @@ local function safe_require(module)
   vim.api.nvim_echo({ { 'Error loading' .. module .. '\n' } }, true, {})
 end
 
+-- Load the files
 safe_require('core.options')
 safe_require('core.keymaps')
 safe_require('core.autocommands')
