@@ -41,6 +41,9 @@ map('x', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Previous search re
 map('o', 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Previous search result' })
 
 -- Jump to diagnostics
+---@param next boolean
+---@param severity any
+---@return function
 local function diagnostic_goto(next, severity)
   local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
   severity = severity and vim.diagnostic.severity[severity] or nil
@@ -73,6 +76,7 @@ map({ 'n', 'v' }, 'x', '"_x', { noremap = true, silent = true })
 map({ 'n', 'v' }, 'c', '"_c', { noremap = true, silent = true })
 
 -- Only cut with dd when the line contains something
+---@return string
 map('n', 'dd', function()
   if vim.fn.getline('.') == '' then
     return '"_dd'

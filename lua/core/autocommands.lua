@@ -1,5 +1,7 @@
 -- Define local variables
 local autocmd = vim.api.nvim_create_autocmd
+---@param name string
+---@return number
 local function augroup(name)
   return vim.api.nvim_create_augroup(name, { clear = true })
 end
