@@ -5,7 +5,7 @@ vim.loader.enable()
 ---@param module string
 ---@return unknown|nil
 local function safe_require(module)
-  ---@type boolean, unknown
+  ---@type boolean, any
   local success, loaded = pcall(require, module)
   if success then
     return loaded
