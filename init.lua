@@ -3,10 +3,10 @@ vim.loader.enable()
 
 -- Use pcall to load the modules
 ---@param module string
+---@return unknown|nil
 local function safe_require(module)
   ---@type boolean, unknown
   local success, loaded = pcall(require, module)
-  ---@return unknown
   if success then
     return loaded
   end
