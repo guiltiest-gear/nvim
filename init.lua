@@ -10,7 +10,7 @@ local function safe_require(module)
   if success then
     return loaded
   end
-  vim.api.nvim_echo({ { 'Error loading' .. module .. '\n' } }, true, {})
+  vim.notify('Error loading ' .. module, vim.log.levels.ERROR)
 end
 
 -- Load the files
