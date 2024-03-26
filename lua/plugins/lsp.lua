@@ -110,7 +110,8 @@ return {
           nls.builtins.formatting.clang_format,
           require('none-ls.diagnostics.cpplint'),
           -- shell
-          require('none-ls.formatting.beautysh').with({ extra_args = { '-i', '2' } }),
+          -- require('none-ls.formatting.beautysh').with({ extra_args = { '-i', '2' } }),
+          require('none-ls.formatting.beautysh'),
           nls.builtins.diagnostics.zsh,
           -- code actions
           nls.builtins.code_actions.gitrebase,
