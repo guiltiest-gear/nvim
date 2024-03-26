@@ -13,11 +13,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
-  git = {
-    log = { '--since=3 days ago' },
-    timeout = 60,
-  },
   ui = { custom_keys = { false } },
+  git = { log = { '--since=3 days ago' }, timeout = 60 },
   install = { colorscheme = { 'tokyonight' } },
   checker = { enabled = true },
   performance = {
