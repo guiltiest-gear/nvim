@@ -17,6 +17,10 @@ local opts = {
   ui = { custom_keys = { false }, backdrop = 100 },
   install = { colorscheme = { 'tokyonight' } },
   checker = { enabled = true },
+  diff = {
+    cmd = 'terminal_git',
+    -- cmd = 'git',
+  },
   performance = {
     rtp = {
       disabled_plugins = {
