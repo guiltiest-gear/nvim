@@ -105,7 +105,8 @@ autocmd('FileType', {
   end,
 })
 
--- Fix luasnip session logic to avoid random jumps with tab
+-- Fix luasnip session logic to avoid random jumps with tab. Copied from:
+-- https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1429989436
 autocmd('ModeChanged', {
   group = augroup('fix_luasnip_session_logic'),
   pattern = '*',
