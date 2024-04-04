@@ -267,7 +267,7 @@ return {
       end
 
       -- Close Lazy and re-open when the dashboard is ready
-      if vim.o.filetype == 'lazy' then
+      if vim.opt.filetype:get() == 'lazy' then
         vim.cmd.close()
         vim.api.nvim_create_autocmd('User', {
           pattern = 'DashboardLoaded',
