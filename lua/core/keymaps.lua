@@ -40,7 +40,7 @@ map({ 'x', 'o' }, 'N', "'nN'[v:searchforward]", { expr = true, desc = 'Previous 
 
 -- Jump to diagnostics
 ---@param next boolean
----@param severity any
+---@param severity? string|integer
 ---@return function
 local function diagnostic_goto(next, severity)
   local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
