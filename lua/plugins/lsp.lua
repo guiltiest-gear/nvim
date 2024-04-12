@@ -61,7 +61,14 @@ return {
       lspconfig.clangd.setup({
         -- Fix clangd offset encoding
         capabilities = { offsetEncoding = { 'utf-16' } },
-        cmd = { 'clangd', '--fallback-style=Google', '--completion-style=detailed', '--function-arg-placeholders' },
+        cmd = {
+          'clangd',
+          '--clang-tidy',
+          '--fallback-style=Google',
+          '--completion-style=detailed',
+          '--function-arg-placeholders',
+          '--header-insertion=iwyu',
+        },
         init_options = { usePlaceholders = true },
       })
       lspconfig.lua_ls.setup({
@@ -87,7 +94,7 @@ return {
         dependencies = 'williamboman/mason.nvim',
         cmd = { 'NullLsInstall', 'NullLsUninstall', 'NoneLsInstall', 'NoneLsUninstall' },
         opts = {
-          ensure_installed = { 'stylua', 'markdownlint', 'mdformat', 'selene', 'cpplint', 'clang_format', 'beautysh' },
+          ensure_installed = { 'stylua', 'markdownlint', 'mdformat', 'selene', 'clang_format', 'beautysh' },
           handlers = {},
         },
       },
@@ -108,7 +115,6 @@ return {
           nls.builtins.diagnostics.markdownlint,
           -- cpp
           nls.builtins.formatting.clang_format,
-          require('none-ls.diagnostics.cpplint'),
           -- shell
           -- require('none-ls.formatting.beautysh').with({ extra_args = { '-i', '2' } }),
           require('none-ls.formatting.beautysh'),
