@@ -69,7 +69,11 @@ return {
           '--function-arg-placeholders',
           '--header-insertion=iwyu',
         },
-        init_options = { usePlaceholders = true },
+        init_options = {
+          usePlaceholders = true,
+          completeUnimported = true,
+          clangdFileStatus = true,
+        },
       })
       lspconfig.lua_ls.setup({
         log_level = 0,
