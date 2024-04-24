@@ -160,7 +160,6 @@ return {
       if vim.fn.argc(-1) == 1 then
         ---@diagnostic disable-next-line: param-type-mismatch
         local stat = (vim.uv or vim.loop).fs_stat(vim.fn.argv(0))
-        -- local stat = vim.uv.fs_stat(vim.fn.argv(0))
         if stat and stat.type == 'directory' then
           require('lazy').load({ plugins = { 'neo-tree.nvim' } })
         end
