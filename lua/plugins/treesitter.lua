@@ -27,6 +27,7 @@ return {
         'zathurarc',
         'json',
         'printf',
+        'ini',
       },
       highlight = { enable = true },
       indent = { enable = true },
