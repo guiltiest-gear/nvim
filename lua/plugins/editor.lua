@@ -241,6 +241,7 @@ return {
 
       -- HACK: Remove this after upgrading to neovim 0.10
       -- Hide cursor while in using leap.nvim, restore it afterwards
+      -- Related: https://github.com/neovim/neovim/issues/20793
       vim.api.nvim_create_autocmd('User', {
         pattern = 'LeapEnter',
         callback = function()
