@@ -494,14 +494,6 @@ return {
     },
   },
 
-  -- BufOnly.nvim
-  -- NOTE: Maybe it's time to give this the boot, based on how little I use it
-  {
-    'numToStr/BufOnly.nvim',
-    enabled = false,
-    keys = { { '<leader>bo', '<cmd>BufOnly<CR>', desc = 'Delete all other buffers' } },
-  },
-
   -- highlight-undo.nvim
   { 'tzachar/highlight-undo.nvim', keys = { 'u', '<C-r>' }, config = true },
 
