@@ -23,7 +23,7 @@ autocmd('VimResized', { group = augroup('resize_splits'), command = 'tabdo wincm
 -- Never insert line as a comment when using 'o' to enter insert mode
 autocmd('BufWinEnter', { group = augroup('no_comment_on_o'), command = 'setlocal formatoptions-=o' })
 
--- Close man and help with just <q>
+-- Close various file types with just <q>
 autocmd('FileType', {
   group = augroup('close_with_q'),
   pattern = { 'help', 'lspinfo', 'checkhealth', 'qf', 'query', 'notify' },
