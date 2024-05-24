@@ -270,7 +270,6 @@ return {
       },
     },
     opts = {
-      disable_insert_on_commit = 'auto',
       kind = 'replace',
       status = { recent_commit_count = 25 },
       integrations = { telescope = true },
