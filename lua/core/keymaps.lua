@@ -14,7 +14,7 @@ map('n', '<C-k>', '<C-w>k', { desc = 'Go to upper window', remap = true })
 map('n', '<C-l>', '<C-w>l', { desc = 'Go to right window', remap = true })
 
 -- Quit neovim
-map('n', '<leader>qq', vim.cmd.qa, { desc = 'Quit the current file' })
+map('n', '<leader>qq', vim.cmd.qa, { desc = 'Quit neovim' })
 
 -- Quick write
 map('n', '<leader>w', vim.cmd.w, { desc = 'Save the current file' })
