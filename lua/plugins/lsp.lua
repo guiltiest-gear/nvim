@@ -3,9 +3,6 @@ return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      -- neodev.nvim
-      { 'folke/neodev.nvim', config = true },
-
       -- mason.nvim
       {
         'williamboman/mason.nvim',
@@ -89,6 +86,20 @@ return {
       lspconfig.taplo.setup({})
     end,
   },
+
+  -- lazydev.nvim
+  {
+    'folke/lazydev.nvim',
+    ft = 'lua',
+    opts = {
+      library = {
+        vim.env.LAZY .. '/luvit-meta/library',
+      },
+    },
+  },
+
+  -- luvit-meta
+  { 'Bilal2453/luvit-meta', lazy = true },
 
   -- none-ls.nvim
   {
