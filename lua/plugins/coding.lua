@@ -210,6 +210,7 @@ return {
           { name = 'async_path' },
           { name = 'calc' },
           { name = 'nvim_lsp_signature_help' },
+          { name = 'lazydev', group_index = 0 },
         }),
         formatting = {
           format = function(_, item)
