@@ -114,7 +114,7 @@ return {
         dependencies = 'williamboman/mason.nvim',
         cmd = { 'NullLsInstall', 'NullLsUninstall', 'NoneLsInstall', 'NoneLsUninstall' },
         opts = {
-          ensure_installed = { 'stylua', 'markdownlint', 'mdformat', 'selene', 'clang_format', 'beautysh' },
+          ensure_installed = { 'stylua', 'markdownlint', 'mdformat', 'selene', 'clang_format', 'shfmt' },
           handlers = {},
         },
       },
@@ -139,6 +139,10 @@ return {
           -- require('none-ls.formatting.beautysh').with({ extra_args = { '-i', '2' } }),
           -- require('none-ls.formatting.beautysh'),
           nls.builtins.diagnostics.zsh,
+          nls.builtins.formatting.shfmt.with({
+            extra_args = { '-i', '2', '-ci', '-bn' },
+            extra_filetypes = { 'bash', 'zsh' },
+          }),
           -- code actions
           nls.builtins.code_actions.gitrebase,
         },
