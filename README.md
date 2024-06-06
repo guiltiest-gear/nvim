@@ -94,7 +94,9 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [mini.surround](https://github.com/echasnovski/mini.surround)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [neogit](https://github.com/NeogitOrg/neogit)
-- [none-ls-extras.nvim](https://github.com/nvimtools/none-ls-extras.nvim)
+
+<!--- [none-ls-extras.nvim](https://github.com/nvimtools/none-ls-extras.nvim)-->
+
 - [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)
 - [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
