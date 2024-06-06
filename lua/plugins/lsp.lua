@@ -107,7 +107,7 @@ return {
     main = 'null-ls',
     dependencies = {
       'nvim-lua/plenary.nvim',
-      'nvimtools/none-ls-extras.nvim',
+      -- 'nvimtools/none-ls-extras.nvim',
       -- mason-null-ls.nvim
       {
         'jay-babu/mason-null-ls.nvim',
@@ -137,7 +137,7 @@ return {
           nls.builtins.formatting.clang_format,
           -- shell
           -- require('none-ls.formatting.beautysh').with({ extra_args = { '-i', '2' } }),
-          require('none-ls.formatting.beautysh'),
+          -- require('none-ls.formatting.beautysh'),
           nls.builtins.diagnostics.zsh,
           -- code actions
           nls.builtins.code_actions.gitrebase,
