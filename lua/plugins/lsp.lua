@@ -141,7 +141,7 @@ return {
           nls.builtins.diagnostics.zsh,
           nls.builtins.formatting.shfmt.with({
             extra_args = { '-i', '2', '-ci', '-bn' },
-            extra_filetypes = { 'bash', 'zsh' },
+            extra_filetypes = { 'zsh' },
           }),
           -- code actions
           nls.builtins.code_actions.gitrebase,
