@@ -112,7 +112,10 @@ return {
         },
       },
       filesystem = {
-        filtered_items = { hide_dotfiles = false, hide_by_name = { '.git' } },
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_by_name = { '.git' },
+        },
         follow_current_file = { enabled = true },
         use_libuv_file_watcher = true,
       },
