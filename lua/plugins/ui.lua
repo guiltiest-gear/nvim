@@ -434,8 +434,10 @@ return {
   },
 
   -- mini.animate
+  -- NOTE: I have mixed feelings about this plugin, maybe time to give it the boot or disable it for now?
   {
     'echasnovski/mini.animate',
+    enabled = false,
     event = { 'BufReadPost', 'BufNewFile' },
     opts = function()
       local animate = require('mini.animate')
