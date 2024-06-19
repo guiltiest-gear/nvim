@@ -352,7 +352,15 @@ return {
     keys = [[<C-\>]],
     opts = {
       open_mapping = [[<C-\>]],
-      size = 20,
+      size = function(term)
+        if term.direction == 'horizontal' then
+          return 15
+        elseif term.direction == 'vertical' then
+          return math.ceil(vim.opt.columns:get() * 0.4)
+        else
+          return 20
+        end
+      end,
       hide_numbers = true,
       shell = vim.opt.shell:get(),
       shade_terminals = true,
