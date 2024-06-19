@@ -349,9 +349,12 @@ return {
   {
     'akinsho/toggleterm.nvim',
     version = '*',
-    keys = [[<C-\>]],
+    keys = {
+      { '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', desc = 'Open a vertial terminal' },
+      { '<leader>th', '<cmd>ToggleTerm direction=horizontal<CR>', desc = 'Open a horizontal terminal' },
+      { '<leader>tf', '<cmd>ToggleTerm direction=float<CR>', desc = 'Open a floating terminal' },
+    },
     opts = {
-      open_mapping = [[<C-\>]],
       size = function(term)
         if term.direction == 'horizontal' then
           return 15

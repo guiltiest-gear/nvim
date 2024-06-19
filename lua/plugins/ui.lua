@@ -302,6 +302,7 @@ return {
         ['<leader>g'] = { name = '+git' },
         ['<leader>x'] = { name = '+diagnostics/quickfix' },
         ['<leader>d'] = { name = '+debugger' },
+        ['<leader>t'] = { name = '+terminal' },
       },
     },
     config = function(_, opts)
