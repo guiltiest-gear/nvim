@@ -447,6 +447,7 @@ return {
         open = { enable = false },
         close = { enable = false },
         scroll = {
+          -- TODO: Consider a different duration for scrolling, maybe that's why it feels slugish sometimes?
           timing = animate.gen_timing.linear({ duration = 150, unit = 'total' }),
           subscroll = animate.gen_subscroll.equal({
             predicate = function(total_scroll)
