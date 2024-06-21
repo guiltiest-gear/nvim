@@ -66,6 +66,7 @@ return {
     'Wansmer/treesj',
     dependencies = 'nvim-treesitter/nvim-treesitter',
     opts = { max_join_length = 150 },
+    -- TODO: Think of better keys for this plugin
     keys = {
       {
         '<leader>m',
