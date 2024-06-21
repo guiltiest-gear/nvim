@@ -76,7 +76,7 @@ autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
 })
 
 -- Toggle relative numbers based on certain events
-autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }, {
+autocmd({ 'BufEnter', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }, {
   group = augroup('auto_relative_numbers_on'),
   callback = function()
     if vim.opt.number:get() and vim.api.nvim_get_mode() ~= 'i' then
@@ -85,7 +85,7 @@ autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }
   end,
 })
 
-autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, {
+autocmd({ 'BufLeave', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, {
   group = augroup('auto_relative_numbers_off'),
   callback = function()
     if vim.opt.number:get() then
