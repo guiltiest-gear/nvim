@@ -3,14 +3,15 @@ vim.loader.enable()
 
 -- Use pcall to load the modules
 ---@param module string
----@return any
 local function safe_require(module)
   ---@type boolean, any
-  local success, loaded = pcall(require, module)
-  if success then
-    return loaded
+  local success, err_msg = pcall(require, module)
+  if not success then
+    local msg = ('Error loading %s\n%s'):format(module, err_msg)
+    vim.defer_fn(function()
+      vim.notify(msg, vim.log.levels.ERROR)
+    end, 1000)
   end
-  vim.notify('Error loading ' .. module, vim.log.levels.ERROR)
 end
 
 -- Load the files
