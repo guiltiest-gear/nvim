@@ -81,3 +81,7 @@ map('n', 'dd', function()
   end
   return 'dd'
 end, { expr = true })
+
+-- Add a blank line above current line
+map('n', '=', 'mzO<Esc>`z', { desc = 'Blank line above' })
+map('n', '_', 'mzo<Esc>`z', { desc = 'Blank line below' })
