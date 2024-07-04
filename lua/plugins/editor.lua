@@ -565,6 +565,13 @@ return {
         end,
         desc = 'Git files',
       },
+      {
+        '<leader>fo',
+        function()
+          return require('telescope.builtin').vim_options()
+        end,
+        desc = 'Options',
+      },
       { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo' },
       { '<leader>fT', '<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme' },
       {
