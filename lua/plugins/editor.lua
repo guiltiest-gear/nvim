@@ -426,11 +426,21 @@ return {
     'max397574/better-escape.nvim',
     event = 'InsertCharPre',
     opts = {
-      mapping = { 'jk' },
-      keys = function()
-        return vim.api.nvim_win_get_cursor(0)[2] > 1 and '<esc>l' or '<esc>'
-      end,
-      timeout = vim.opt.timeoutlen:get(),
+      i = {
+        j = {
+          j = false,
+        },
+      },
+      c = {
+        j = {
+          j = false,
+        },
+      },
+      t = {
+        j = {
+          j = false,
+        },
+      },
     },
   },
 
