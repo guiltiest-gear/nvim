@@ -85,3 +85,7 @@ end, { expr = true })
 -- Add a blank line above current line
 map('n', '=', 'mzO<Esc>`z', { desc = 'Blank line above', silent = true })
 map('n', '_', 'mzo<Esc>`z', { desc = 'Blank line below', silent = true })
+
+-- Comment above and below
+map('n', 'gco', 'o<Esc>Vcx<Esc><cmd>normal gcc<CR>fxa<bs>', { desc = 'Add comment below' })
+map('n', 'gcO', 'O<Esc>Vcx<Esc><cmd>normal gcc<CR>fxa<bs>', { desc = 'Add comment above' })
