@@ -424,7 +424,7 @@ return {
   -- better-escape.nvim
   {
     'max397574/better-escape.nvim',
-    event = 'InsertCharPre',
+    event = 'InsertEnter',
     opts = {
       i = {
         j = {
