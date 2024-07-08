@@ -140,6 +140,9 @@ opt.undolevels = 10000
 -- Only display 20 items in a completion menu
 opt.pumheight = 20
 
+-- Enable smooth scrolling
+opt.smoothscroll = true
+
 -- Disable lsp logging
 vim.lsp.set_log_level(vim.lsp.log_levels.OFF)
 
