@@ -284,31 +284,31 @@ return {
   -- which-key.nvim
   {
     'folke/which-key.nvim',
-    keys = { '<leader>', '"', "'", '`', 'c', 'y', 'd', 'z', 'g', '[', ']', '<C-w>' },
+    event = 'VeryLazy',
     opts = {
-      operators = { gc = 'Comments', gb = 'Block comments' },
-      defaults = {
-        mode = { 'n', 'v' },
-        ['g'] = { name = '+goto' },
-        ['gc'] = { name = '+comments' },
-        ['gb'] = { name = '+block comments' },
-        ['gz'] = { name = '+surround' },
-        ['z'] = { name = '+folds' },
-        [']'] = { name = '+next' },
-        ['['] = { name = '+prev' },
-        ['<leader>q'] = { name = '+quit/session' },
-        ['<leader>f'] = { name = '+find' },
-        ['<leader>b'] = { name = '+buffers' },
-        ['<leader>g'] = { name = '+git' },
-        ['<leader>x'] = { name = '+diagnostics/quickfix' },
-        ['<leader>d'] = { name = '+debugger' },
-        ['<leader>t'] = { name = '+terminal' },
+      defaults = {},
+      spec = {
+        {
+          mode = { 'n', 'v' },
+          { '<leader>q', group = 'quit/session' },
+          { '<leader>f', group = 'find' },
+          { '<leader>b', group = 'buffers' },
+          { '<leader>g', group = 'git' },
+          { '<leader>x', group = 'diagnostics/quickfix' },
+          { '<leader>d', group = 'debugger' },
+          { '<leader>t', group = 'terminal' },
+          { '[', group = 'prev' },
+          { ']', group = 'next' },
+          { 'g', group = 'goto' },
+          { 'gz', group = 'surround' },
+          { 'z', group = 'fold' },
+        },
       },
     },
     config = function(_, opts)
       local wk = require('which-key')
       wk.setup(opts)
-      wk.register(opts.defaults)
+      wk.add(opts.spec)
     end,
   },
 
