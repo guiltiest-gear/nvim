@@ -286,7 +286,6 @@ return {
     'folke/which-key.nvim',
     event = 'VeryLazy',
     opts = {
-      defaults = {},
       spec = {
         {
           mode = { 'n', 'v' },
