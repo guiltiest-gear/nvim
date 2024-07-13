@@ -432,7 +432,7 @@ return {
   -- undotree
   {
     'mbbill/undotree',
-    keys = { { '<leader>u', '<cmd>UndotreeToggle<CR>', desc = 'Open undo tree' } },
+    keys = { { '<leader>u', '<cmd>UndotreeToggle<CR>', desc = 'Open undotree' } },
     config = function()
       vim.g.undotree_WindowLayout = 2
       vim.g.undotree_ShortIndicators = 1
