@@ -141,7 +141,7 @@ opt.undolevels = 10000
 opt.pumheight = 20
 
 -- Enable smooth scrolling
-opt.smoothscroll = true
+-- opt.smoothscroll = true
 
 -- Disable lsp logging
 vim.lsp.set_log_level(vim.lsp.log_levels.OFF)
