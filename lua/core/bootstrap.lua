@@ -14,6 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {
+  rocks = { enabled = false },
   git = { log = { '--since=3 days ago' }, timeout = 60 },
   ui = { custom_keys = { false }, backdrop = 100 },
   install = { colorscheme = { 'tokyonight' } },
