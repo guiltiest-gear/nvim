@@ -1,4 +1,3 @@
--- Define local variables
 local autocmd = vim.api.nvim_create_autocmd
 ---@param name string
 ---@return integer
