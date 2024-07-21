@@ -239,7 +239,7 @@ return {
             {
               action = 'cd ~/.config/nvim | e ~/.config/nvim/init.lua',
               desc = ' Configuration',
-              icon = '󰊄 ',
+              icon = ' ',
               key = 'c',
             },
             { action = 'Lazy update', desc = ' Update plugins', icon = ' ', key = 'u' },
