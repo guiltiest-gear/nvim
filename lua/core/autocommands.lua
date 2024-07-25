@@ -68,7 +68,7 @@ autocmd('FileType', {
 autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
   group = augroup('checktime'),
   callback = function()
-    if vim.opt.buftype:get() ~= 'nofile' then
+    if vim.o.buftype ~= 'nofile' then
       vim.cmd.checktime()
     end
   end,
@@ -78,7 +78,7 @@ autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
 autocmd({ 'BufEnter', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }, {
   group = augroup('auto_relative_numbers_on'),
   callback = function()
-    if vim.opt.number:get() and vim.api.nvim_get_mode() ~= 'i' then
+    if vim.o.number and vim.api.nvim_get_mode() ~= 'i' then
       vim.opt.relativenumber = true
     end
   end,
@@ -87,7 +87,7 @@ autocmd({ 'BufEnter', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }, {
 autocmd({ 'BufLeave', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, {
   group = augroup('auto_relative_numbers_off'),
   callback = function()
-    if vim.opt.number:get() then
+    if vim.o.number then
       vim.opt.relativenumber = false
       vim.cmd.redraw()
     end
