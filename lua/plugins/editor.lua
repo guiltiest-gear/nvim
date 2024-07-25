@@ -377,13 +377,13 @@ return {
         if term.direction == 'horizontal' then
           return 15
         elseif term.direction == 'vertical' then
-          return math.ceil(vim.opt.columns:get() * 0.4)
+          return math.ceil(vim.o.columns * 0.4)
         else
           return 20
         end
       end,
       hide_numbers = true,
-      shell = vim.opt.shell:get(),
+      shell = vim.o.shell,
       shade_terminals = true,
       shading_factor = 2,
       persist_size = true,
