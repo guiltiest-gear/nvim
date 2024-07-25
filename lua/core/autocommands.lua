@@ -12,7 +12,7 @@ autocmd('BufWritePre', { group = augroup('trailing_space'), command = '%s/\\s\\+
 autocmd('TextYankPost', {
   group = augroup('highlight_yank'),
   callback = function()
-    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = '700' })
+    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = '500' })
   end,
 })
 
