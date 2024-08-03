@@ -33,7 +33,7 @@ return {
       indent = { enable = true },
       auto_install = true,
       -- vim-matchup config
-      matchup = { enable = true, include_match_words = true, enable_quotes = true },
+      matchup = { enable = true, include_match_words = true },
     },
     config = function(_, opts)
       require('nvim-treesitter.configs').setup(opts)
