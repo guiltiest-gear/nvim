@@ -297,6 +297,7 @@ return {
           { '<leader>x', group = 'diagnostics/quickfix' },
           { '<leader>d', group = 'debugger' },
           { '<leader>t', group = 'terminal' },
+          { '<leader>p', group = 'precognition' },
           { '[', group = 'prev' },
           { ']', group = 'next' },
           { 'g', group = 'goto' },
