@@ -718,6 +718,28 @@ return {
     },
   },
 
+  -- precognition.nvim
+  {
+    'tris203/precognition.nvim',
+    keys = {
+      {
+        '<leader>pP',
+        function()
+          return require('precognition').toggle()
+        end,
+        desc = 'Toggle precognition.nvim',
+      },
+      {
+        '<leader>pp',
+        function()
+          return require('precognition').peek()
+        end,
+        desc = 'Peek precognition.nvim',
+      },
+    },
+    opts = { startVisible = false },
+  },
+
   -- vim-kitty
   { 'fladson/vim-kitty', ft = 'kitty' },
 

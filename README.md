@@ -113,6 +113,7 @@ being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072e
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [persistence.nvim](https://github.com/folke/persistence.nvim)
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+- [precognition.nvim](https://github.com/tris203/precognition.nvim)
 - [promise-async](https://github.com/kevinhwang91/promise-async)
 - [rainbow-delimiters.nvim](https://github.com/hiphish/rainbow-delimiters.nvim)
 - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
