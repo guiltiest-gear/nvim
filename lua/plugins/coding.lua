@@ -96,6 +96,7 @@ return {
           augend.constant.alias.Alpha,
           augend.constant.new({ elements = { 'and', 'or' }, word = true, cyclic = true }),
           augend.constant.new({ elements = { '&&', '||' }, word = false, cyclic = true }),
+          augend.constant.new({ elements = { 'yes', 'no' }, word = true, cyclic = true }),
           augend.constant.new({
             elements = {
               'Monday',
