@@ -651,9 +651,9 @@ return {
     end,
   },
 
-  -- mini.move
+  -- nvim-gomove
   {
-    'echasnovski/mini.move',
+    'booperlv/nvim-gomove',
     config = true,
     keys = {
       { '<A-h>', mode = { 'n', 'v' }, desc = 'Block left' },
