@@ -8,7 +8,6 @@ This isn't anything all too special, just your standard config.
   - [IMPORTANT NOTICES](#important-notices)
   - [Installation](#installation)
   - [Dependencies](#dependencies)
-  - [Screenshots](#screenshots)
   - [Plugins](#plugins)
   - [License](#license)
 
@@ -42,13 +41,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 | git        | To install the config and plugins      |
 | npm        | Used to install certain mason packages |
 | ripgrep    | Used to give telescope results         |
-
-## Screenshots
-
-![A screenshot of my neovim config first opening, with dashboard-nvim
-being the start screen](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072efd164ee4efd378d37f47e0ac81/assets/Screenshot_2023-11-02_15-49-52.png)
-![A screenshot of various files open, including ui.lua, lsp.lua, and editor.lua](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072efd164ee4efd378d37f47e0ac81/assets/Screenshot_2023-11-02_16-03-21.png)
-![A screenshot of telescope.nvim open, hovering over LICENSE.md](https://codeberg.org/j4de/nvim/raw/commit/65ba70a45e072efd164ee4efd378d37f47e0ac81/assets/Screenshot_2023-11-02_16-04-00.png)
 
 ## Plugins
 
