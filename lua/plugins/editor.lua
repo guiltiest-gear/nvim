@@ -245,6 +245,7 @@ return {
         end,
       })
     end,
+    cmd = 'Gitsigns',
     ft = 'gitcommit',
     keys = {
       { '<leader>gB', '<cmd>Gitsigns blame_line<CR>', desc = 'Open git blame' },
