@@ -520,20 +520,8 @@ return {
   {
     'tris203/precognition.nvim',
     keys = {
-      {
-        '<leader>pP',
-        function()
-          return require('precognition').toggle()
-        end,
-        desc = 'Toggle precognition.nvim',
-      },
-      {
-        '<leader>pp',
-        function()
-          return require('precognition').peek()
-        end,
-        desc = 'Peek precognition.nvim',
-      },
+      { '<leader>pP', '<cmd>Precognition toggle<CR>', desc = 'Toggle precognition.nvim' },
+      { '<leader>pp', '<cmd>Precognition peek<CR>', desc = 'Peek precognition.nvim' },
     },
     opts = { startVisible = false },
   },
