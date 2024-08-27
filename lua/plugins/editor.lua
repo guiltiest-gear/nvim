@@ -732,6 +732,20 @@ return {
     opts = { startVisible = false },
   },
 
+  -- in-and-out.nvim
+  {
+    'ysmb-wtsg/in-and-out.nvim',
+    keys = {
+      {
+        '<C-CR>',
+        function()
+          return require('in-and-out').in_and_out()
+        end,
+        mode = 'i',
+      },
+    },
+  },
+
   -- vim-kitty
   { 'fladson/vim-kitty', ft = 'kitty' },
 
