@@ -390,141 +390,27 @@ return {
     branch = '0.1.x',
     cmd = 'Telescope',
     keys = {
-      {
-        '<leader>ff',
-        function()
-          return require('telescope.builtin').find_files()
-        end,
-        desc = 'Files',
-      },
-      {
-        '<leader>fw',
-        function()
-          return require('telescope.builtin').live_grep()
-        end,
-        desc = 'Words',
-      },
-      {
-        '<leader>fb',
-        function()
-          return require('telescope.builtin').buffers()
-        end,
-        desc = 'Buffers',
-      },
-      {
-        '<leader>fh',
-        function()
-          return require('telescope.builtin').help_tags()
-        end,
-        desc = 'Help',
-      },
-      {
-        '<leader>fm',
-        function()
-          return require('telescope.builtin').man_pages()
-        end,
-        desc = 'Man pages',
-      },
-      {
-        '<leader>fr',
-        function()
-          return require('telescope.builtin').oldfiles()
-        end,
-        desc = 'Recently opened',
-      },
-      {
-        '<leader>fR',
-        function()
-          return require('telescope.builtin').registers()
-        end,
-        desc = 'Registers',
-      },
-      {
-        '<leader>fk',
-        function()
-          return require('telescope.builtin').keymaps()
-        end,
-        desc = 'Keymaps',
-      },
-      {
-        '<leader>fc',
-        function()
-          return require('telescope.builtin').commands()
-        end,
-        desc = 'Commands',
-      },
-      {
-        '<leader>fC',
-        function()
-          return require('telescope.builtin').command_history()
-        end,
-        desc = 'Command history',
-      },
-      {
-        '<leader>fl',
-        function()
-          return require('telescope.builtin').resume()
-        end,
-        desc = 'Resume',
-      },
-      {
-        '<leader>fd',
-        function()
-          return require('telescope.builtin').diagnostics({ bufnr = 0 })
-        end,
-        desc = 'Document diagnostics',
-      },
-      {
-        '<leader>fD',
-        function()
-          return require('telescope.builtin').diagnostics()
-        end,
-        desc = 'Workspace diagnostics',
-      },
-      {
-        '<leader>fs',
-        function()
-          return require('telescope.builtin').lsp_document_symbols()
-        end,
-        desc = 'Document symbols',
-      },
-      {
-        '<leader>fg',
-        function()
-          return require('telescope.builtin').git_files()
-        end,
-        desc = 'Git files',
-      },
-      {
-        '<leader>fo',
-        function()
-          return require('telescope.builtin').vim_options()
-        end,
-        desc = 'Options',
-      },
+      { '<leader>ff', '<cmd>Telescope find_files<CR>', desc = 'Files' },
+      { '<leader>fw', '<cmd>Telescope live_grep<CR>', desc = 'Words' },
+      { '<leader>fb', '<cmd>Telescope buffers<CR>', desc = 'Buffers' },
+      { '<leader>fh', '<cmd>Telescope help_tags<CR>', desc = 'Help' },
+      { '<leader>fm', '<cmd>Telescope man_pages<CR>', desc = 'Man pages' },
+      { '<leader>fr', '<cmd>Telescope oldfiles<CR>', desc = 'Recently opened' },
+      { '<leader>fR', '<cmd>Telescope registers<CR>', desc = 'Registers' },
+      { '<leader>fk', '<cmd>Telescope keymaps<CR>', desc = 'Keymaps' },
+      { '<leader>fc', '<cmd>Telescope commands<CR>', desc = 'Commands' },
+      { '<leader>fC', '<cmd>Telescope command_history<CR>', desc = 'Command history' },
+      { '<leader>fl', '<cmd>Telescope resume<CR>', desc = 'Resume' },
+      { '<leader>fd', '<cmd>Telescope diagnostics bufnr=0<CR>', desc = 'Document diagnostics' },
+      { '<leader>fD', '<cmd>Telescope diagnostics<CR>', desc = 'Workspace diagnostics' },
+      { '<leader>fs', '<cmd>Telescope lsp_document_symbols<CR>', desc = 'Document symbols' },
+      { '<leader>fg', '<cmd>Telescope git_files<CR>', desc = 'Git files' },
+      { '<leader>fo', '<cmd>Telescope vim_options<CR>', desc = 'Options' },
       { '<leader>ft', '<cmd>TodoTelescope<CR>', desc = 'Todo' },
       { '<leader>fT', '<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme' },
-      {
-        '<leader>gc',
-        function()
-          return require('telescope.builtin').git_status()
-        end,
-        desc = 'Search through changed files',
-      },
-      {
-        '<leader>gb',
-        function()
-          return require('telescope.builtin').git_branches()
-        end,
-        desc = 'Search through git branches',
-      },
-      {
-        '<leader>gC',
-        function()
-          return require('telescope.builtin').git_commits()
-        end,
-        desc = 'Search and checkout git commits',
-      },
+      { '<leader>gc', '<cmd>Telescope git_status<CR>', desc = 'Search through changed files' },
+      { '<leader>gb', '<cmd>Telescope git_branches<CR>', desc = 'Search through git branches' },
+      { '<leader>gC', '<cmd>Telescope git_commits<CR>', desc = 'Search and checkout git commits' },
       --[[ {
         '<leader>gO',
         function()
