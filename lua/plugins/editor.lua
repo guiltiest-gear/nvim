@@ -215,15 +215,7 @@ return {
     'NeogitOrg/neogit',
     dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
     cmd = 'Neogit',
-    keys = {
-      {
-        '<leader>gg',
-        function()
-          return require('neogit').open()
-        end,
-        desc = 'Open neogit',
-      },
-    },
+    keys = { { '<leader>gg', '<cmd>Neogit<CR>', desc = 'Open neogit' } },
     opts = {
       kind = 'replace',
       status = { recent_commit_count = 25 },
