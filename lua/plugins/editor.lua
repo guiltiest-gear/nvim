@@ -247,99 +247,19 @@ return {
     end,
     ft = 'gitcommit',
     keys = {
-      {
-        '<leader>gB',
-        function()
-          return require('gitsigns').blame_line()
-        end,
-        desc = 'Open git blame',
-      },
-      {
-        '<leader>gp',
-        function()
-          return require('gitsigns').preview_hunk_inline()
-        end,
-        desc = 'Preview the hunk',
-      },
-      {
-        '<leader>gr',
-        function()
-          return require('gitsigns').reset_hunk()
-        end,
-        mode = { 'n', 'v' },
-        desc = 'Reset the hunk',
-      },
-      {
-        '<leader>gR',
-        function()
-          return require('gitsigns').reset_buffer()
-        end,
-        desc = 'Reset the buffer',
-      },
-      {
-        '<leader>gs',
-        function()
-          return require('gitsigns').stage_hunk()
-        end,
-        mode = { 'n', 'v' },
-        desc = 'Stage the hunk',
-      },
-      {
-        '<leader>gS',
-        function()
-          return require('gitsigns').stage_buffer()
-        end,
-        desc = 'Stage the buffer',
-      },
-      {
-        '<leader>gu',
-        function()
-          return require('gitsigns').undo_stage_hunk()
-        end,
-        desc = 'Unstage the hunk',
-      },
-      {
-        '<leader>gd',
-        function()
-          return require('gitsigns').diffthis()
-        end,
-        desc = 'Open a diff',
-      },
-      {
-        '<leader>gq',
-        function()
-          return require('gitsigns').setqflist()
-        end,
-        desc = 'Open quickfix list with hunks',
-      },
-      {
-        '<leader>gl',
-        function()
-          return require('gitsigns').setloclist()
-        end,
-        desc = 'Open location list with hunks',
-      },
-      {
-        '<leader>gL',
-        function()
-          return require('gitsigns').toggle_current_line_blame()
-        end,
-        desc = 'Toggle line blame',
-      },
-      {
-        ']g',
-        function()
-          return require('gitsigns').next_hunk()
-        end,
-        desc = 'Next hunk',
-      },
-      {
-        '[g',
-        function()
-          return require('gitsigns').prev_hunk()
-        end,
-        desc = 'Previous hunk',
-      },
+      { '<leader>gB', '<cmd>Gitsigns blame_line<CR>', desc = 'Open git blame' },
+      { '<leader>gp', '<cmd>Gitsigns preview_hunk_inline<CR>', desc = 'Preview the hunk' },
+      { '<leader>gr', '<cmd>Gitsigns reset_hunk<CR>', mode = { 'n', 'v' }, desc = 'Reset the hunk' },
+      { '<leader>gR', '<cmd>Gitsigns reset_buffer<CR>', desc = 'Reset the buffer' },
+      { '<leader>gs', '<cmd>Gitsigns stage_hunk<CR>', mode = { 'n', 'v' }, desc = 'Stage the hunk' },
+      { '<leader>gS', '<cmd>Gitsigns stage_buffer<CR>', desc = 'Stage the buffer' },
+      { '<leader>gu', '<cmd>Gitsigns undo_stage_hunk<CR>', desc = 'Unstage the hunk' },
+      { '<leader>gd', '<cmd>Gitsigns diffthis<CR>', desc = 'Open a diff' },
+      { '<leader>gq', '<cmd>Gitsigns setqflist<CR>', desc = 'Open quickfix list with hunks' },
+      { '<leader>gl', '<cmd>Gitsigns setloclist<CR>', desc = 'Open location list with hunks' },
+      { '<leader>gL', '<cmd>Gitsigns toggle_current_line_blame<CR>', desc = 'Toggle line blame' },
+      { ']g', '<cmd>Gitsigns next_hunk<CR>', desc = 'Next hunk' },
+      { '[g', '<cmd>Gitsigns prev_hunk<CR>', desc = 'Previous hunk' },
     },
     opts = {
       signs = {
