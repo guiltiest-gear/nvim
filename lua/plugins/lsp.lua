@@ -27,27 +27,9 @@ return {
       },
     },
     keys = {
-      {
-        'gd',
-        function()
-          return require('telescope.builtin').lsp_definitions()
-        end,
-        desc = 'Goto Definition',
-      },
-      {
-        'gi',
-        function()
-          return require('telescope.builtin').lsp_implementations()
-        end,
-        desc = 'Goto Implementation',
-      },
-      {
-        'gy',
-        function()
-          return require('telescope.builtin').lsp_type_definitions()
-        end,
-        desc = 'Goto T[y]pe Definition',
-      },
+      { 'gd', '<cmd>Telescope lsp_definitions<CR>', desc = 'Goto Definition' },
+      { 'gi', '<cmd>Telescope lsp_implementations<CR>', desc = 'Goto Implementation' },
+      { 'gy', '<cmd>Telescope lsp_type_definitions<CR>', desc = 'Goto T[y]pe Definition' },
       { 'gD', vim.lsp.buf.declaration, desc = 'Goto Declaration' },
       { 'K', vim.lsp.buf.hover, desc = 'Hover' },
       { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
