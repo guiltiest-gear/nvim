@@ -15,7 +15,7 @@ return {
         'git_config',
         'git_rebase',
         'gitcommit',
-        -- 'gitignore',
+        'gitignore',
         -- 'gitattributes',
         'diff',
         'vim',
