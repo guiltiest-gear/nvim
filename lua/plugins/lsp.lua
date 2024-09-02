@@ -31,6 +31,8 @@ return {
             'bashls',
             'taplo',
             'html',
+            'eslint',
+            'tsserver',
           },
         },
       },
@@ -76,6 +78,14 @@ return {
       lspconfig.bashls.setup({ filetypes = { 'sh', 'zsh', 'bash' } })
       lspconfig.taplo.setup({})
       lspconfig.html.setup({})
+      lspconfig.eslint.setup({})
+      lspconfig.tsserver.setup({
+        init_options = {
+          preferences = {
+            disableSuggestions = true,
+          },
+        },
+      })
     end,
   },
 
