@@ -30,6 +30,7 @@ return {
             'marksman',
             'bashls',
             'taplo',
+            'html',
           },
         },
       },
@@ -74,6 +75,7 @@ return {
       lspconfig.marksman.setup({})
       lspconfig.bashls.setup({ filetypes = { 'sh', 'zsh', 'bash' } })
       lspconfig.taplo.setup({})
+      lspconfig.html.setup({})
     end,
   },
 
