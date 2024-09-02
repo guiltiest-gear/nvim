@@ -109,7 +109,6 @@ return {
           ensure_installed = {
             'stylua',
             'markdownlint',
-            'mdformat',
             'selene',
             'clang_format',
             'shfmt',
@@ -129,8 +128,6 @@ return {
           nls.builtins.formatting.stylua,
           nls.builtins.diagnostics.selene,
           -- markdown
-          nls.builtins.formatting.mdformat,
-          -- nls.builtins.formatting.markdownlint,
           nls.builtins.diagnostics.markdownlint,
           -- cpp
           nls.builtins.formatting.clang_format,
