@@ -23,7 +23,15 @@ return {
       {
         'williamboman/mason-lspconfig.nvim',
         cmd = { 'LspInstall', 'LspUninstall' },
-        opts = { ensure_installed = { 'lua_ls', 'clangd', 'marksman', 'bashls', 'taplo' } },
+        opts = {
+          ensure_installed = {
+            'lua_ls',
+            'clangd',
+            'marksman',
+            'bashls',
+            'taplo',
+          },
+        },
       },
     },
     keys = {
@@ -75,7 +83,10 @@ return {
     ft = 'lua',
     opts = {
       library = {
-        { path = 'luvit-meta/library', words = { 'vim%.uv' } },
+        {
+          path = 'luvit-meta/library',
+          words = { 'vim%.uv' },
+        },
       },
     },
   },
@@ -95,7 +106,14 @@ return {
         dependencies = 'williamboman/mason.nvim',
         cmd = { 'NullLsInstall', 'NullLsUninstall', 'NoneLsInstall', 'NoneLsUninstall' },
         opts = {
-          ensure_installed = { 'stylua', 'markdownlint', 'mdformat', 'selene', 'clang_format', 'shfmt' },
+          ensure_installed = {
+            'stylua',
+            'markdownlint',
+            'mdformat',
+            'selene',
+            'clang_format',
+            'shfmt',
+          },
           handlers = {},
         },
       },
