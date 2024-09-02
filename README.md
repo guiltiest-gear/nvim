@@ -15,7 +15,7 @@ This isn't anything all too special, just your standard config.
 
 ## IMPORTANT NOTICES
 
-1. This config is oriented with ***myself*** in mind, so there may possibly be
+1. This config is oriented with **_myself_** in mind, so there may possibly be
    confusing or otherwise strange choices made in the config. Regardless, it works
    for me. Decide for yourself if I made a janky shitbox of a config, or something
    actually usable for people other than me.
@@ -24,7 +24,7 @@ This isn't anything all too special, just your standard config.
    change and break. Again, this is a config for myself, not for the masses. Use
    at your own risk.
 
-1. This config was build around the ***latest*** version of neovim, as I run an
+1. This config was build around the **_latest_** version of neovim, as I run an
    Arch-linux based distro. Do not expect this to work without the latest
    neovim package.
 
@@ -37,7 +37,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 ## Dependencies
 
 | Dependency | Reason                                 |
-|------------|----------------------------------------|
+| ---------- | -------------------------------------- |
 | git        | To install the config and plugins      |
 | npm        | Used to install certain mason packages |
 | ripgrep    | Used to give telescope results         |
