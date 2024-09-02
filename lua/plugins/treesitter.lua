@@ -28,6 +28,7 @@ return {
         'json',
         'printf',
         'ini',
+        'html',
       },
       highlight = { enable = true },
       indent = { enable = true },
