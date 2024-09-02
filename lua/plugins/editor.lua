@@ -110,6 +110,7 @@ return {
     end,
     branch = 'v3.x',
     keys = { { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Open neo-tree.nvim' } },
+    cmd = 'Neotree',
     opts = {
       event_handlers = {
         {
