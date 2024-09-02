@@ -85,6 +85,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [mini.indentscope](https://github.com/echasnovski/mini.indentscope)
 - [mini.surround](https://github.com/echasnovski/mini.surround)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [neotree-file-nesting-config](https://github.com/saifulapm/neotree-file-nesting-config)
 - [neogit](https://github.com/NeogitOrg/neogit)
 - [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)
 - [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
