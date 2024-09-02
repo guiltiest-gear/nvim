@@ -112,6 +112,7 @@ return {
             'selene',
             'clang_format',
             'shfmt',
+            'prettierd',
           },
           handlers = {},
         },
@@ -124,6 +125,7 @@ return {
       return {
         log_level = 'off',
         sources = {
+          nls.builtins.formatting.prettierd,
           -- lua
           nls.builtins.formatting.stylua,
           nls.builtins.diagnostics.selene,
