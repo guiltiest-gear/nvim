@@ -29,6 +29,7 @@ return {
         'printf',
         'ini',
         'html',
+        'javascript',
       },
       highlight = { enable = true },
       indent = { enable = true },
