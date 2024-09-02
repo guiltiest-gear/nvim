@@ -125,6 +125,7 @@ return {
             'clang_format',
             'shfmt',
             'prettier',
+            'markuplint',
           },
           handlers = {},
         },
@@ -151,6 +152,8 @@ return {
             extra_args = { '-i', '2', '-ci', '-bn' },
             extra_filetypes = { 'zsh' },
           }),
+          -- html
+          nls.builtins.diagnostics.markuplint,
           -- code actions
           nls.builtins.code_actions.gitrebase,
         },
