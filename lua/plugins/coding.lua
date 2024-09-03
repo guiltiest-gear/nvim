@@ -2,11 +2,22 @@ return {
   -- Comment.nvim
   {
     'numToStr/Comment.nvim',
-    config = true,
     keys = {
       { 'gc', mode = { 'n', 'v' }, desc = 'Toggle comments' },
       { 'gb', mode = { 'n', 'v' }, desc = 'Toggle block comments' },
     },
+    opts = {
+      pre_hook = function()
+        return require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook()
+      end,
+    },
+  },
+
+  -- nvim-ts-context-commentstring
+  {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    lazy = true,
+    opts = { enable_autocmd = false },
   },
 
   -- dial.nvim
