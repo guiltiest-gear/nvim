@@ -103,7 +103,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [nvim-origami](https://github.com/chrisgrieser/nvim-origami)
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
 - [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [persistence.nvim](https://github.com/folke/persistence.nvim)
