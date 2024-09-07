@@ -44,8 +44,12 @@ return {
       { '<leader>xw', '<cmd>Trouble diagnostics<cr>', desc = 'Open workspace diagnostics' },
       { '<leader>xd', '<cmd>Trouble diagnostics toggle filter.buf=0<cr>', desc = 'Open document diagnostics' },
       { 'gR', '<cmd>Trouble lsp toggle<cr>', desc = 'References' },
-      { '<leader>xt', '<cmd>TodoTrouble<CR>', desc = 'Todo (Trouble)' },
-      { '<leader>xT', '<cmd>TodoTrouble keywords=TODO,FIX,FIXME<CR>', desc = 'Todo/Fix/Fixme (Trouble)' },
+      { '<leader>xt', '<cmd>Trouble todo toggle<CR>', desc = 'Todo (Trouble)' },
+      {
+        '<leader>xT',
+        '<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<CR>',
+        desc = 'Todo/Fix/Fixme (Trouble)',
+      },
     },
   },
 
