@@ -26,7 +26,7 @@ return {
         opts = {
           ensure_installed = {
             'lua_ls',
-            'clangd',
+            -- 'clangd',
             'marksman',
             'bashls',
             'taplo',
@@ -48,7 +48,7 @@ return {
     event = { 'BufReadPre', 'BufNewFile' },
     config = function()
       local lspconfig = require('lspconfig')
-      lspconfig.clangd.setup({
+      --[[ lspconfig.clangd.setup({
         -- Fix clangd offset encoding
         capabilities = { offsetEncoding = { 'utf-16' } },
         cmd = {
@@ -64,7 +64,7 @@ return {
           completeUnimported = true,
           clangdFileStatus = true,
         },
-      })
+      }) ]]
       lspconfig.lua_ls.setup({
         log_level = 0,
         settings = {
@@ -122,7 +122,7 @@ return {
             'stylua',
             'markdownlint',
             'selene',
-            'clang_format',
+            -- 'clang_format',
             'shfmt',
             'markuplint',
             'prettierd',
@@ -145,7 +145,7 @@ return {
           -- markdown
           nls.builtins.diagnostics.markdownlint,
           -- cpp
-          nls.builtins.formatting.clang_format,
+          -- nls.builtins.formatting.clang_format,
           -- shell
           nls.builtins.diagnostics.zsh,
           nls.builtins.formatting.shfmt.with({
@@ -314,7 +314,9 @@ return {
         opts = {
           automatic_installation = true,
           handlers = {},
-          ensure_installed = { 'codelldb' },
+          ensure_installed = {
+            -- 'codelldb',
+          },
         },
       },
 
