@@ -114,7 +114,29 @@ return {
       })
     end,
     branch = 'v3.x',
-    keys = { { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Open neo-tree.nvim' } },
+    keys = {
+      {
+        '<leader>e',
+        function()
+          return require('neo-tree.command').execute({ toggle = true, dir = vim.uv.cwd() })
+        end,
+        desc = 'Open neo-tree.nvim',
+      },
+      {
+        '<leader>ge',
+        function()
+          return require('neo-tree.command').execute({ source = 'git_status', toggle = true })
+        end,
+        desc = 'Git explorer',
+      },
+      {
+        '<leader>be',
+        function()
+          return require('neo-tree.command').execute({ source = 'buffers', toggle = true })
+        end,
+        desc = 'Buffer explorer',
+      },
+    },
     cmd = 'Neotree',
     opts = {
       event_handlers = {
