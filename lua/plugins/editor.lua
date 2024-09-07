@@ -493,6 +493,13 @@ return {
         desc = 'Restore the last session',
       },
       {
+        '<leader>qS',
+        function()
+          return require('persistence').select()
+        end,
+        desc = 'Select session',
+      },
+      {
         '<leader>qd',
         function()
           return require('persistence').stop()
