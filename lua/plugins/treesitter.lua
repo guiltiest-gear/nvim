@@ -30,6 +30,7 @@ return {
         'ini',
         'html',
         'javascript',
+        'css',
       },
       highlight = { enable = true },
       indent = { enable = true },
