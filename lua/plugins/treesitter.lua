@@ -30,6 +30,7 @@ return {
         'ini',
         'html',
         'javascript',
+        'jsdoc',
         'css',
       },
       highlight = { enable = true },
