@@ -25,7 +25,7 @@ return {
         'toml',
         'ssh_config',
         'zathurarc',
-        'json',
+        -- 'json',
         -- 'printf',
         'ini',
         'html',
