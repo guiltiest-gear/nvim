@@ -33,6 +33,7 @@ return {
             'html',
             'eslint',
             'ts_ls',
+            'cssls',
           },
         },
       },
@@ -86,6 +87,7 @@ return {
           },
         },
       })
+      lspconfig.cssls.setup({})
     end,
   },
 
@@ -126,6 +128,7 @@ return {
             'shfmt',
             'markuplint',
             'prettierd',
+            'stylelint',
           },
           handlers = {},
         },
@@ -154,6 +157,8 @@ return {
           }),
           -- html
           nls.builtins.diagnostics.markuplint,
+          -- css
+          nls.builtins.formatting.stylelint,
           -- code actions
           nls.builtins.code_actions.gitrebase,
         },
