@@ -34,6 +34,7 @@ return {
             'eslint',
             'ts_ls',
             'cssls',
+            'css_variables',
           },
         },
       },
@@ -88,6 +89,7 @@ return {
         },
       })
       lspconfig.cssls.setup({})
+      lspconfig.css_variables.setup({})
     end,
   },
 
