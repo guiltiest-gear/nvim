@@ -584,6 +584,13 @@ return {
     },
   },
 
+  -- nvim-colorizer.lua
+  {
+    'NvChad/nvim-colorizer.lua',
+    ft = { 'html', 'css', 'javascript' },
+    config = true,
+  },
+
   -- vim-kitty
   { 'fladson/vim-kitty', ft = 'kitty' },
 
