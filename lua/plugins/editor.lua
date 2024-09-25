@@ -582,6 +582,7 @@ return {
   -- nvim-colorizer.lua
   {
     'NvChad/nvim-colorizer.lua',
+    enabled = false,
     ft = { 'html', 'css', 'javascript' },
     config = true,
   },

@@ -90,7 +90,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua)
+<!--- [nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua)-->
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 - [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
