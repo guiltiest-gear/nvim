@@ -96,7 +96,6 @@ return {
       'nvim-lua/plenary.nvim',
       'nvim-tree/nvim-web-devicons',
       'MunifTanjim/nui.nvim',
-      -- 'saifulapm/neotree-file-nesting-config',
     },
     -- Load neo-tree.nvim if we provide a directory as an argument
     init = function()
@@ -206,10 +205,6 @@ return {
         },
       },
     },
-    --[[ config = function(_, opts)
-      opts.nesting_rules = require('neotree-file-nesting-config').nesting_rules
-      require('neo-tree').setup(opts)
-    end, ]]
   },
 
   -- leap.nvim
