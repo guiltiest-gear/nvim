@@ -142,7 +142,6 @@ return {
       return {
         log_level = 'off',
         sources = {
-          nls.builtins.formatting.prettierd,
           -- lua
           nls.builtins.diagnostics.selene,
           -- markdown
