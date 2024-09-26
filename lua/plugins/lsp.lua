@@ -19,6 +19,7 @@ return {
   {
     'williamboman/mason-lspconfig.nvim',
     dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
+    event = { 'BufReadPre', 'BufNewFile' },
     cmd = { 'LspInstall', 'LspUninstall' },
     opts = {
       ensure_installed = {
@@ -39,6 +40,7 @@ return {
   {
     'jay-babu/mason-null-ls.nvim',
     dependencies = { 'williamboman/mason.nvim', 'nvimtools/none-ls.nvim' },
+    event = { 'BufReadPre', 'BufNewFile' },
     cmd = { 'NullLsInstall', 'NullLsUninstall', 'NoneLsInstall', 'NoneLsUninstall' },
     opts = {
       ensure_installed = {
