@@ -1,43 +1,64 @@
 return {
+  -- mason.nvim
+  {
+    'williamboman/mason.nvim',
+    cmd = 'Mason',
+    opts = {
+      ui = {
+        icons = {
+          package_installed = '',
+          package_pending = '',
+          package_uninstalled = '',
+        },
+      },
+      log_level = vim.log.levels.OFF,
+    },
+  },
+
+  -- mason-lspconfig.nvim
+  {
+    'williamboman/mason-lspconfig.nvim',
+    dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
+    cmd = { 'LspInstall', 'LspUninstall' },
+    opts = {
+      ensure_installed = {
+        'lua_ls',
+        -- 'clangd',
+        'marksman',
+        'bashls',
+        'taplo',
+        'html',
+        'eslint',
+        'ts_ls',
+        'cssls',
+      },
+    },
+  },
+
+  -- mason-null-ls.nvim
+  {
+    'jay-babu/mason-null-ls.nvim',
+    dependencies = { 'williamboman/mason.nvim', 'nvimtools/none-ls.nvim' },
+    cmd = { 'NullLsInstall', 'NullLsUninstall', 'NoneLsInstall', 'NoneLsUninstall' },
+    opts = {
+      ensure_installed = {
+        'stylua',
+        'markdownlint',
+        'selene',
+        -- 'clang_format',
+        'shfmt',
+        'markuplint',
+        'prettierd',
+        'stylelint',
+      },
+      handlers = {},
+    },
+  },
+
   -- nvim-lspconfig
   {
     'neovim/nvim-lspconfig',
-    dependencies = {
-      -- mason.nvim
-      {
-        'williamboman/mason.nvim',
-        cmd = 'Mason',
-        opts = {
-          ui = {
-            icons = {
-              package_installed = '',
-              package_pending = '',
-              package_uninstalled = '',
-            },
-          },
-          log_level = vim.log.levels.OFF,
-        },
-      },
-
-      -- mason-lspconfig.nvim
-      {
-        'williamboman/mason-lspconfig.nvim',
-        cmd = { 'LspInstall', 'LspUninstall' },
-        opts = {
-          ensure_installed = {
-            'lua_ls',
-            -- 'clangd',
-            'marksman',
-            'bashls',
-            'taplo',
-            'html',
-            'eslint',
-            'ts_ls',
-            'cssls',
-          },
-        },
-      },
-    },
+    dependencies = 'williamboman/mason.nvim',
     keys = {
       { 'gd', '<cmd>Telescope lsp_definitions<CR>', desc = 'Goto Definition' },
       { 'gi', '<cmd>Telescope lsp_implementations<CR>', desc = 'Goto Implementation' },
