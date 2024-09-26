@@ -172,6 +172,10 @@ return {
         lua = { 'stylua' },
         sh = { 'shfmt' },
         markdown = { 'prettierd' },
+        html = { 'prettierd' },
+        javascript = { 'prettierd' },
+        css = { 'prettierd' },
+        json = { 'prettierd' },
         -- cpp = { 'clang-format' },
         -- Trim whitespace on all filetypes
         ['*'] = {
