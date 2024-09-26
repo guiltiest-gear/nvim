@@ -144,7 +144,6 @@ return {
         sources = {
           nls.builtins.formatting.prettierd,
           -- lua
-          nls.builtins.formatting.stylua,
           nls.builtins.diagnostics.selene,
           -- markdown
           nls.builtins.diagnostics.markdownlint,
