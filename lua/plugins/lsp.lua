@@ -139,7 +139,7 @@ return {
     lazy = true,
     main = 'null-ls',
     dependencies = 'nvim-lua/plenary.nvim',
-    --[[ opts = function()
+    opts = function()
       local nls = require('null-ls')
       return {
         log_level = 'off',
@@ -148,7 +148,7 @@ return {
           nls.builtins.code_actions.gitrebase,
         },
       }
-    end, ]]
+    end,
   },
 
   -- conform.nvim
