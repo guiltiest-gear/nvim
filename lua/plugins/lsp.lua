@@ -144,7 +144,6 @@ return {
       return {
         log_level = 'off',
         sources = {
-          -- code actions
           nls.builtins.code_actions.gitrebase,
         },
       }
