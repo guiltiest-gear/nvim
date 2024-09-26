@@ -5,9 +5,6 @@ local function augroup(name)
   return vim.api.nvim_create_augroup(name, { clear = true })
 end
 
--- Remove trailing whitespaces
-autocmd('BufWritePre', { group = augroup('trailing_space'), command = '%s/\\s\\+$//e' })
-
 -- Highlight text on yank
 autocmd('TextYankPost', {
   group = augroup('highlight_yank'),
