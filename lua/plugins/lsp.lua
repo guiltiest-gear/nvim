@@ -199,13 +199,6 @@ return {
           prepend_args = { '-i', '2', '-ci', '-bn' },
         },
       },
-      options = {
-        ignore_errors = false,
-        lang_to_ext = {
-          bash = 'sh',
-          zsh = 'sh',
-        },
-      },
     },
   },
 
