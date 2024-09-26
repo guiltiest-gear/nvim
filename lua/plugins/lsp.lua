@@ -113,6 +113,7 @@ return {
   -- nvim-lint and conform.nvim respectively
   {
     'nvimtools/none-ls.nvim',
+    lazy = true,
     main = 'null-ls',
     dependencies = {
       'nvim-lua/plenary.nvim',
