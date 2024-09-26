@@ -137,9 +137,8 @@ return {
       },
     },
     event = { 'BufReadPre', 'BufNewFile' },
-    opts = function()
+    --[[ opts = function()
       local nls = require('null-ls')
-      local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
       return {
         log_level = 'off',
         sources = {
@@ -164,33 +163,8 @@ return {
           -- code actions
           nls.builtins.code_actions.gitrebase,
         },
-        on_attach = function(client, bufnr)
-          -- Autoformat on save if supported
-          if client.supports_method('textDocument/formatting') then
-            vim.api.nvim_clear_autocmds({
-              group = augroup,
-              buffer = bufnr,
-            })
-            vim.api.nvim_create_autocmd('BufWritePre', {
-              group = augroup,
-              buffer = bufnr,
-              callback = function()
-                vim.lsp.buf.format({
-                  async = false,
-                  bufnr = bufnr,
-                  -- Only use none-ls.nvim for formatting
-                  -- selene: allow(shadowing)
-                  ---@diagnostic disable-next-line: redefined-local
-                  filter = function(client)
-                    return client.name == 'null-ls'
-                  end,
-                })
-              end,
-            })
-          end
-        end,
       }
-    end,
+    end, ]]
   },
 
   -- inc-rename.nvim
