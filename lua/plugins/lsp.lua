@@ -109,6 +109,8 @@ return {
   { 'Bilal2453/luvit-meta', lazy = true },
 
   -- none-ls.nvim
+  -- NOTE: Keep only the code actions, designate linters and formatters to
+  -- nvim-lint and conform.nvim respectively
   {
     'nvimtools/none-ls.nvim',
     main = 'null-ls',
