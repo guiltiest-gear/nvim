@@ -175,6 +175,7 @@ return {
         javascript = { 'prettierd' },
         css = { 'prettierd' },
         json = { 'prettierd' },
+        toml = { 'taplo' },
         -- cpp = { 'clang-format' },
         -- Trim whitespace on all filetypes
         ['*'] = {
