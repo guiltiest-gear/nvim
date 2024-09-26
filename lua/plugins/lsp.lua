@@ -176,7 +176,10 @@ return {
         sh = { 'shfmt' },
         markdown = { 'prettierd' },
         -- Trim whitespace on all filetypes
-        ['*'] = { 'trim_whitespace' },
+        ['*'] = {
+          'trim_whitespace',
+          'squeeze_blanks',
+        },
       },
       -- Default options
       default_format_opts = {
