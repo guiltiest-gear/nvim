@@ -147,8 +147,6 @@ return {
           nls.builtins.diagnostics.selene,
           -- markdown
           nls.builtins.diagnostics.markdownlint,
-          -- cpp
-          -- nls.builtins.formatting.clang_format,
           -- shell
           nls.builtins.diagnostics.zsh,
           -- html
@@ -174,6 +172,7 @@ return {
         lua = { 'stylua' },
         sh = { 'shfmt' },
         markdown = { 'prettierd' },
+        -- cpp = { 'clang-format' },
         -- Trim whitespace on all filetypes
         ['*'] = {
           'trim_whitespace',
