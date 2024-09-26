@@ -168,7 +168,6 @@ return {
         json = { 'prettierd' },
         toml = { 'taplo' },
         -- cpp = { 'clang-format' },
-        -- Trim whitespace on all filetypes
         ['*'] = {
           'trim_whitespace',
           'squeeze_blanks',
