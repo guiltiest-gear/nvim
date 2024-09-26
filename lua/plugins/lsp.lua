@@ -186,8 +186,6 @@ return {
       -- Default options
       default_format_opts = {
         lsp_format = 'fallback',
-        async = false,
-        quiet = false,
       },
       -- Set up format-on-save
       format_on_save = {
