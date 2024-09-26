@@ -152,10 +152,6 @@ return {
           -- nls.builtins.formatting.clang_format,
           -- shell
           nls.builtins.diagnostics.zsh,
-          nls.builtins.formatting.shfmt.with({
-            extra_args = { '-i', '2', '-ci', '-bn' },
-            extra_filetypes = { 'zsh' },
-          }),
           -- html
           nls.builtins.diagnostics.markuplint,
           -- css
@@ -165,6 +161,38 @@ return {
         },
       }
     end, ]]
+  },
+
+  -- conform.nvim
+  {
+    'stevearc/conform.nvim',
+    event = 'BufWritePre',
+    cmd = 'ConformInfo',
+    opts = {
+      formatters_by_ft = {
+        lua = { 'stylua' },
+        sh = { 'shfmt' },
+        markdown = { 'prettierd' },
+        -- Trim whitespace on all filetypes
+        ['*'] = { 'trim_whitespace' },
+      },
+      -- Default options
+      default_format_opts = {
+        lsp_format = 'fallback',
+        async = false,
+        quiet = false,
+      },
+      -- Set up format-on-save
+      format_on_save = {
+        timeout_ms = 500,
+      },
+      -- Customize formatters
+      formatters = {
+        shfmt = {
+          prepend_args = { '-i', '2', '-ci', '-bn' },
+        },
+      },
+    },
   },
 
   -- inc-rename.nvim
