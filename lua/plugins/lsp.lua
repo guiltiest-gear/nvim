@@ -144,16 +144,6 @@ return {
       return {
         log_level = 'off',
         sources = {
-          -- lua
-          nls.builtins.diagnostics.selene,
-          -- markdown
-          nls.builtins.diagnostics.markdownlint,
-          -- shell
-          nls.builtins.diagnostics.zsh,
-          -- html
-          nls.builtins.diagnostics.markuplint,
-          -- css
-          nls.builtins.formatting.stylelint,
           -- code actions
           nls.builtins.code_actions.gitrebase,
         },
@@ -200,6 +190,31 @@ return {
         },
       },
     },
+  },
+
+  -- nvim-lint
+  {
+    'mfussenegger/nvim-lint',
+    event = 'BufWritePost',
+    config = function()
+      local lint = require('lint')
+      lint.linters_by_ft = {
+        lua = { 'selene' },
+        bash = { 'bash' },
+        zsh = { 'zsh' },
+        markdown = { 'markdownlint' },
+        html = { 'markuplint' },
+        css = { 'stylelint' },
+      }
+
+      -- Attempt to lint the document
+      vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+        group = vim.api.nvim_create_augroup('nvim-lint', { clear = true }),
+        callback = function()
+          lint.try_lint()
+        end,
+      })
+    end,
   },
 
   -- inc-rename.nvim

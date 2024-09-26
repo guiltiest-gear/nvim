@@ -97,6 +97,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 - [nvim-gomove](https://github.com/booperlv/nvim-gomove)
 - [nvim-lightbulb](https://github.com/kosayoda/nvim-lightbulb)
+- [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [nvim-navic](https://github.com/SmiteshP/nvim-navic)
 - [nvim-nio](https://github.com/nvim-neotest/nvim-nio)
