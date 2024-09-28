@@ -203,6 +203,7 @@ return {
         markdown = { 'markdownlint' },
         html = { 'markuplint' },
         css = { 'stylelint' },
+        -- cpp = { 'clang-tidy' },
       }
 
       -- Attempt to lint the document
