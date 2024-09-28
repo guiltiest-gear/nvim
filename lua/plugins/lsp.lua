@@ -52,6 +52,7 @@ return {
         'markuplint',
         'prettierd',
         'stylelint',
+        'codespell',
       },
       handlers = {},
     },
