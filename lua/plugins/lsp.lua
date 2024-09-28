@@ -213,6 +213,7 @@ return {
           -- Attempt to lint the document
           lint.try_lint()
 
+          -- Use codespell on all filetypes
           lint.try_lint('codespell')
         end,
       })
