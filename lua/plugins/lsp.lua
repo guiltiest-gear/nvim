@@ -207,10 +207,10 @@ return {
         -- cpp = { 'clang-tidy' },
       }
 
-      -- Attempt to lint the document
       vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
         group = vim.api.nvim_create_augroup('nvim-lint', { clear = true }),
         callback = function()
+          -- Attempt to lint the document
           lint.try_lint()
 
           lint.try_lint('codespell')
