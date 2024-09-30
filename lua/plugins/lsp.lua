@@ -169,7 +169,8 @@ return {
         json = { 'prettierd' },
         toml = { 'taplo' },
         -- cpp = { 'clang-format' },
-        ['*'] = {
+        -- ['*'] = {},
+        ['_'] = {
           'trim_whitespace',
           'squeeze_blanks',
         },
