@@ -162,6 +162,7 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         sh = { 'shfmt' },
+        zsh = { 'shfmt' },
         markdown = { 'prettierd' },
         html = { 'prettierd' },
         javascript = { 'prettierd' },
