@@ -203,7 +203,7 @@ return {
   {
     'nvimdev/dashboard-nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
-    event = 'UIEnter',
+    event = 'VimEnter',
     opts = function()
       local opts = {
         theme = 'doom',
