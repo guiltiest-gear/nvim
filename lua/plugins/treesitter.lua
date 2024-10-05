@@ -115,4 +115,7 @@ return {
       exclude = { filetypes = { 'lazy', 'dashboard', 'mason' } },
     },
   },
+
+  -- helpview.nvim
+  { 'OXY2DEV/helpview.nvim', ft = 'help', dependencies = 'nvim-treesitter/nvim-treesitter' },
 }

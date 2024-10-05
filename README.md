@@ -67,6 +67,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [goto-breakpoints.nvim](https://github.com/ofirgall/goto-breakpoints.nvim)
+- [helpview.nvim](https://github.com/OXY2DEV/helpview.nvim)
 - [highlight-undo.nvim](https://github.com/tzachar/highlight-undo.nvim)
 - [in-and-out.nvim](https://github.com/ysmb-wtsg/in-and-out.nvim)
 - [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim)
