@@ -15,35 +15,30 @@ return {
     },
   },
 
-  -- mason-lspconfig.nvim
+  -- mason-tool-installer.nvim
   {
-    'williamboman/mason-lspconfig.nvim',
-    dependencies = { 'williamboman/mason.nvim', 'neovim/nvim-lspconfig' },
-    event = { 'BufReadPre', 'BufNewFile' },
-    cmd = { 'LspInstall', 'LspUninstall' },
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    dependencies = 'williamboman/mason.nvim',
+    cmd = {
+      'MasonToolsInstall',
+      'MasonToolsInstallSync',
+      'MasonToolsUpdate',
+      'MasonToolsUpdateSync',
+      'MasonToolsClean',
+    },
     opts = {
       ensure_installed = {
-        'lua_ls',
+        -- Language serverss
+        'lua-language-server',
         -- 'clangd',
         'marksman',
-        'bashls',
+        'bash-language-server',
         'taplo',
-        'html',
-        'eslint',
-        'ts_ls',
-        'cssls',
-      },
-    },
-  },
-
-  -- mason-null-ls.nvim
-  {
-    'jay-babu/mason-null-ls.nvim',
-    dependencies = { 'williamboman/mason.nvim', 'nvimtools/none-ls.nvim' },
-    event = { 'BufReadPre', 'BufNewFile' },
-    cmd = { 'NullLsInstall', 'NullLsUninstall', 'NoneLsInstall', 'NoneLsUninstall' },
-    opts = {
-      ensure_installed = {
+        'html-lsp',
+        'eslint-lsp',
+        'typescript-language-server',
+        'css-lsp',
+        -- Linters and formatters
         'stylua',
         'markdownlint',
         'selene',
@@ -53,8 +48,10 @@ return {
         'prettierd',
         'stylelint',
         'codespell',
+        -- Debuggers
+        -- codelldb
       },
-      handlers = {},
+      run_on_start = true,
     },
   },
 
@@ -131,25 +128,6 @@ return {
 
   -- luvit-meta
   { 'Bilal2453/luvit-meta', lazy = true },
-
-  -- none-ls.nvim
-  -- NOTE: Keep only the code actions, designate linters and formatters to
-  -- nvim-lint and conform.nvim respectively
-  {
-    'nvimtools/none-ls.nvim',
-    lazy = true,
-    main = 'null-ls',
-    dependencies = 'nvim-lua/plenary.nvim',
-    opts = function()
-      local nls = require('null-ls')
-      return {
-        log_level = 'off',
-        sources = {
-          nls.builtins.code_actions.gitrebase,
-        },
-      }
-    end,
-  },
 
   -- conform.nvim
   {
@@ -374,20 +352,6 @@ return {
     dependencies = {
       -- nvim-dap-virtual-text
       { 'theHamsta/nvim-dap-virtual-text', opts = { highlight_new_as_changed = true } },
-
-      -- mason-nvim-dap.nvim
-      {
-        'jay-babu/mason-nvim-dap.nvim',
-        cmd = { 'DapInstall', 'DapUninstall' },
-        dependencies = 'williamboman/mason.nvim',
-        opts = {
-          automatic_installation = true,
-          handlers = {},
-          ensure_installed = {
-            -- 'codelldb',
-          },
-        },
-      },
 
       -- goto-breakpoints.nvim
       {
