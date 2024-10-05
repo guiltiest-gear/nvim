@@ -2,7 +2,6 @@ return {
   -- mason.nvim
   {
     'williamboman/mason.nvim',
-    cmd = 'Mason',
     opts = {
       ui = {
         icons = {
