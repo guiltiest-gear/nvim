@@ -82,71 +82,112 @@ return {
         desc = "Multiline decrement",
       },
     },
-    config = function()
+    opts = function()
       local augend = require("dial.augend")
-      require("dial.config").augends:register_group({
+
+      local ordinal_numbers = augend.constant.new({
+        elements = {
+          "first",
+          "second",
+          "third",
+          "fourth",
+          "fifth",
+          "sixth",
+          "seventh",
+          "eighth",
+          "ninth",
+          "tenth",
+        },
+        word = false,
+        cyclic = true,
+      })
+
+      local weekdays = augend.constant.new({
+        elements = {
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        },
+        word = true,
+        cyclic = true,
+      })
+
+      local months = augend.constant.new({
+        elements = {
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        },
+        word = true,
+        cyclic = true,
+      })
+
+      local captialized_boolean = augend.constant.new({
+        elements = {
+          "True",
+          "False",
+        },
+        word = true,
+        cyclic = true,
+      })
+
+      return {
         default = {
-          augend.integer.alias.decimal,
           augend.integer.alias.decimal_int,
-          augend.integer.alias.hex,
-          augend.integer.alias.octal,
-          augend.integer.alias.binary,
-          augend.constant.alias.bool,
           augend.constant.alias.alpha,
           augend.constant.alias.Alpha,
-          augend.constant.new({
-            elements = { "and", "or" },
-            word = true,
-            cyclic = true,
-          }),
+          augend.integer.alias.hex,
+          augend.date.alias["%m/%d/%Y"],
+          augend.constant.alias.bool,
+          augend.misc.alias.markdown_header,
+          ordinal_numbers,
+          weekdays,
+          months,
+          captialized_boolean,
           augend.constant.new({
             elements = { "&&", "||" },
             word = false,
             cyclic = true,
           }),
           augend.constant.new({
+            elements = { "and", "or" },
+            word = true,
+            cyclic = true,
+          }),
+          augend.constant.new({
+            elements = { "let", "const" },
+            cyclic = true,
+            word = true,
+          }),
+          augend.constant.new({
             elements = { "yes", "no" },
             word = true,
             cyclic = true,
           }),
-          augend.constant.new({
-            elements = {
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-              "Sunday",
-            },
-            word = true,
-            cyclic = true,
+          augend.hexcolor.new({
+            case = "lower",
           }),
-          augend.constant.new({
-            elements = {
-              "January",
-              "February",
-              "March",
-              "April",
-              "May",
-              "June",
-              "July",
-              "August",
-              "September",
-              "October",
-              "November",
-              "December",
-            },
-            word = true,
-            cyclic = true,
-          }),
-          augend.constant.new({
-            elements = { "True", "False" },
-            word = true,
-            cyclic = true,
+          augend.hexcolor.new({
+            case = "upper",
           }),
         },
-      })
+      }
+    end,
+    config = function(_, opts)
+      require("dial.config").augends:register_group(opts)
     end,
   },
 
