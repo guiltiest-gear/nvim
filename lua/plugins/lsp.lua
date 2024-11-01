@@ -67,47 +67,54 @@ return {
       { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
     },
     event = { 'BufReadPre', 'BufNewFile' },
-    config = function()
+    opts = {
+      servers = {
+        --[[ clangd = {
+          -- Fix clangd offset encoding
+          capabilities = { offsetEncoding = { 'utf-16' } },
+          cmd = {
+            'clangd',
+            '--clang-tidy',
+            '--fallback-style=Google',
+            '--completion-style=detailed',
+            '--function-arg-placeholders',
+            '--header-insertion=iwyu',
+          },
+          init_options = {
+            usePlaceholders = true,
+            completeUnimported = true,
+            clangdFileStatus = true,
+          },
+        }, ]]
+        lua_ls = {
+          log_level = 0,
+          settings = {
+            Lua = {
+              workspace = { checkThirdParty = false },
+              completion = { callSnippet = 'Replace' },
+            },
+          },
+        },
+        marksman = {},
+        bashls = { filetypes = { 'sh', 'zsh', 'bash' } },
+        taplo = {},
+        html = {},
+        eslint = {},
+        ts_ls = {
+          init_options = {
+            preferences = {
+              disableSuggestions = true,
+            },
+          },
+        },
+        cssls = {},
+      },
+    },
+    config = function(_, opts)
       local lspconfig = require('lspconfig')
-      --[[ lspconfig.clangd.setup({
-        -- Fix clangd offset encoding
-        capabilities = { offsetEncoding = { 'utf-16' } },
-        cmd = {
-          'clangd',
-          '--clang-tidy',
-          '--fallback-style=Google',
-          '--completion-style=detailed',
-          '--function-arg-placeholders',
-          '--header-insertion=iwyu',
-        },
-        init_options = {
-          usePlaceholders = true,
-          completeUnimported = true,
-          clangdFileStatus = true,
-        },
-      }) ]]
-      lspconfig.lua_ls.setup({
-        log_level = 0,
-        settings = {
-          Lua = {
-            workspace = { checkThirdParty = false },
-            completion = { callSnippet = 'Replace' },
-          },
-        },
-      })
-      lspconfig.marksman.setup({})
-      lspconfig.bashls.setup({ filetypes = { 'sh', 'zsh', 'bash' } })
-      lspconfig.taplo.setup({})
-      lspconfig.html.setup({})
-      lspconfig.eslint.setup({})
-      lspconfig.ts_ls.setup({
-        init_options = {
-          preferences = {
-            disableSuggestions = true,
-          },
-        },
-      })
-      lspconfig.cssls.setup({})
+      for server, config in pairs(opts.servers) do
+        lspconfig[server].setup(config)
+      end
     end,
   },
 
