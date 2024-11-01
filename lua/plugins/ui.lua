@@ -1,16 +1,16 @@
 return {
   -- tokyonight.nvim
   {
-    'folke/tokyonight.nvim',
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {
-      style = 'night',
+      style = "night",
       transparent = true,
       lualine_bold = true,
       terminal_colors = true,
       on_highlights = function(hl, c)
-        local prompt = '#2d3149'
+        local prompt = "#2d3149"
         hl.TelescopeNormal = { bg = c.bg_dark, fg = c.fg_dark }
         hl.TelescopeBorder = { bg = c.bg_dark, fg = c.bg_dark }
         hl.TelescopePromptNormal = { bg = prompt }
@@ -21,7 +21,7 @@ return {
       end,
     },
     config = function(_, opts)
-      local tokyonight = require('tokyonight')
+      local tokyonight = require("tokyonight")
       tokyonight.setup(opts)
       tokyonight.load()
     end,
@@ -29,8 +29,8 @@ return {
 
   -- nvim-notify
   {
-    'rcarriga/nvim-notify',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "rcarriga/nvim-notify",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
       timeout = 3000,
       max_height = function()
@@ -44,7 +44,7 @@ return {
       end,
     },
     config = function(_, opts)
-      local notify = require('notify')
+      local notify = require("notify")
       notify.setup(opts)
       vim.notify = notify
     end,
@@ -52,17 +52,17 @@ return {
 
   -- dressing.nvim
   {
-    'stevearc/dressing.nvim',
+    "stevearc/dressing.nvim",
     lazy = true,
     init = function()
       ---@diagnostic disable-next-line: duplicate-set-field
       vim.ui.select = function(...)
-        require('lazy').load({ plugins = { 'dressing.nvim' } })
+        require("lazy").load({ plugins = { "dressing.nvim" } })
         return vim.ui.select(...)
       end
       ---@diagnostic disable-next-line: duplicate-set-field
       vim.ui.input = function(...)
-        require('lazy').load({ plugins = { 'dressing.nvim' } })
+        require("lazy").load({ plugins = { "dressing.nvim" } })
         return vim.ui.input(...)
       end
     end,
@@ -79,74 +79,74 @@ return {
 
   -- nvim-ufo
   {
-    'kevinhwang91/nvim-ufo',
-    dependencies = 'kevinhwang91/promise-async',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "kevinhwang91/nvim-ufo",
+    dependencies = "kevinhwang91/promise-async",
+    event = { "BufReadPost", "BufNewFile" },
     keys = {
       {
-        'zR',
+        "zR",
         function()
-          return require('ufo').openAllFolds()
+          return require("ufo").openAllFolds()
         end,
-        desc = 'Open all folds',
+        desc = "Open all folds",
       },
       {
-        'zM',
+        "zM",
         function()
-          return require('ufo').closeAllFolds()
+          return require("ufo").closeAllFolds()
         end,
-        desc = 'Close all folds',
+        desc = "Close all folds",
       },
     },
     opts = {
       provider_selector = function(_, filetype, buftype)
-        return (filetype == '' or buftype == 'nofile') and 'indent' or { 'treesitter', 'indent' }
+        return (filetype == "" or buftype == "nofile") and "indent" or { "treesitter", "indent" }
       end,
     },
   },
 
   -- nvim-origami
-  { 'chrisgrieser/nvim-origami', event = { 'BufReadPost', 'BufNewFile' }, config = true },
+  { "chrisgrieser/nvim-origami", event = { "BufReadPost", "BufNewFile" }, config = true },
 
   -- windows.nvim
   {
-    'anuvyklack/windows.nvim',
-    dependencies = { 'anuvyklack/animation.nvim', 'anuvyklack/middleclass' },
+    "anuvyklack/windows.nvim",
+    dependencies = { "anuvyklack/animation.nvim", "anuvyklack/middleclass" },
     config = true,
     keys = {
-      { '<C-w>z', '<cmd>WindowsMaximize<CR>', desc = 'Max out current window' },
-      { '<C-w>_', '<cmd>WindowsMaximizeVertically<CR>', desc = 'Max out window height' },
-      { '<C-w>|', '<cmd>WindowsMaximizeHorizontally<CR>', desc = 'Max out window width' },
-      { '<C-w>=', '<cmd>WindowsEqualize<CR>', desc = 'Equalize windows' },
-      { '<C-w>v' },
-      { '<C-w>s' },
+      { "<C-w>z", "<cmd>WindowsMaximize<CR>", desc = "Max out current window" },
+      { "<C-w>_", "<cmd>WindowsMaximizeVertically<CR>", desc = "Max out window height" },
+      { "<C-w>|", "<cmd>WindowsMaximizeHorizontally<CR>", desc = "Max out window width" },
+      { "<C-w>=", "<cmd>WindowsEqualize<CR>", desc = "Equalize windows" },
+      { "<C-w>v" },
+      { "<C-w>s" },
     },
   },
 
   -- lualine.nvim
   {
-    'nvim-lualine/lualine.nvim',
-    dependencies = 'nvim-tree/nvim-web-devicons',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "nvim-lualine/lualine.nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
       options = {
-        theme = 'auto',
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        theme = "auto",
+        component_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
         disabled_filetypes = {
-          'dashboard',
-          'NeogitStatus',
-          'NeogitCommitView',
-          'NeogitPopup',
-          'NeogitConsole',
+          "dashboard",
+          "NeogitStatus",
+          "NeogitCommitView",
+          "NeogitPopup",
+          "NeogitConsole",
         },
       },
       sections = {
-        lualine_a = { 'mode' },
+        lualine_a = { "mode" },
         lualine_b = {
-          'branch',
-          'diff',
-          { 'diagnostics', sources = { 'nvim_lsp', 'nvim_diagnostic' } },
+          "branch",
+          "diff",
+          { "diagnostics", sources = { "nvim_lsp", "nvim_diagnostic" } },
           --[[ {
             function()
               local ok, m = pcall(require, 'better_escape')
@@ -155,124 +155,124 @@ return {
           }, ]]
         },
         lualine_c = {
-          'filename',
+          "filename",
           {
             function()
-              return require('nvim-navic').get_location()
+              return require("nvim-navic").get_location()
             end,
             cond = function()
-              return package.loaded['nvim-navic'] and require('nvim-navic').is_available()
+              return package.loaded["nvim-navic"] and require("nvim-navic").is_available()
             end,
-            color_correction = 'static',
+            color_correction = "static",
           },
         },
         lualine_x = {
-          'fileformat',
+          "fileformat",
           {
-            'filetype',
+            "filetype",
             icon_only = true,
-            separator = '',
+            separator = "",
             padding = { left = 1 },
           },
           {
             function()
-              return require('dap').status()
+              return require("dap").status()
             end,
             cond = function()
-              return package.loaded['dap'] and require('dap').status() ~= ''
+              return package.loaded["dap"] and require("dap").status() ~= ""
             end,
           },
         },
-        lualine_y = { 'progress' },
-        lualine_z = { 'location' },
+        lualine_y = { "progress" },
+        lualine_z = { "location" },
       },
       extensions = {
-        'man',
-        'quickfix',
-        'mason',
-        'toggleterm',
-        'neo-tree',
-        'trouble',
-        'lazy',
-        'nvim-dap-ui',
+        "man",
+        "quickfix",
+        "mason",
+        "toggleterm",
+        "neo-tree",
+        "trouble",
+        "lazy",
+        "nvim-dap-ui",
       },
     },
   },
 
   -- dashboard-nvim
   {
-    'nvimdev/dashboard-nvim',
-    dependencies = 'nvim-tree/nvim-web-devicons',
-    event = 'VimEnter',
+    "nvimdev/dashboard-nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    event = "VimEnter",
     opts = function()
       local opts = {
-        theme = 'doom',
+        theme = "doom",
         config = {
           header = {
-            '                                   ',
-            '                                   ',
-            '                                   ',
-            '                                   ',
-            '                                   ',
-            '                                   ',
-            '                                   ',
-            '                                   ',
-            '   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ',
-            '    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ',
-            '          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ',
-            '           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ',
-            '          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ',
-            '   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ',
-            '  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ',
-            ' ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ',
-            ' ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ',
-            '      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ',
-            '       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ',
-            '                                   ',
-            '                                   ',
+            "                                   ",
+            "                                   ",
+            "                                   ",
+            "                                   ",
+            "                                   ",
+            "                                   ",
+            "                                   ",
+            "                                   ",
+            "   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
+            "    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ",
+            "          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ",
+            "           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ",
+            "          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ",
+            "   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ",
+            "  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ",
+            " ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ",
+            " ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ",
+            "      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ",
+            "       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
+            "                                   ",
+            "                                   ",
           },
           center = {
-            { action = 'Telescope find_files', desc = ' Find file', icon = '󰈞 ', key = 'f' },
-            { action = 'ene | startinsert', desc = ' New file', icon = ' ', key = 'e' },
-            { action = 'Telescope oldfiles', desc = ' Recent files', icon = '󰄉 ', key = 'r' },
-            { action = 'Telescope live_grep', desc = ' Find text', icon = '󰊄 ', key = 'w' },
+            { action = "Telescope find_files", desc = " Find file", icon = "󰈞 ", key = "f" },
+            { action = "ene | startinsert", desc = " New file", icon = " ", key = "e" },
+            { action = "Telescope oldfiles", desc = " Recent files", icon = "󰄉 ", key = "r" },
+            { action = "Telescope live_grep", desc = " Find text", icon = "󰊄 ", key = "w" },
             {
-              action = 'cd ~/.config/nvim | e ~/.config/nvim/init.lua',
-              desc = ' Configuration',
-              icon = ' ',
-              key = 'c',
+              action = "cd ~/.config/nvim | e ~/.config/nvim/init.lua",
+              desc = " Configuration",
+              icon = " ",
+              key = "c",
             },
-            { action = 'Lazy update', desc = ' Update plugins', icon = ' ', key = 'u' },
-            { action = 'Mason', desc = ' Mason', icon = ' ', key = 'm' },
-            { action = 'Neogit', desc = ' NeoGit', icon = ' ', key = 'g' },
+            { action = "Lazy update", desc = " Update plugins", icon = " ", key = "u" },
+            { action = "Mason", desc = " Mason", icon = " ", key = "m" },
+            { action = "Neogit", desc = " NeoGit", icon = " ", key = "g" },
             {
               action = 'lua require("persistence").load({ last = true })',
-              desc = ' Restore last session',
-              icon = '󰦛 ',
-              key = 'l',
+              desc = " Restore last session",
+              icon = "󰦛 ",
+              key = "l",
             },
-            { action = 'qa', desc = ' Quit Neovim', icon = ' ', key = 'q' },
+            { action = "qa", desc = " Quit Neovim", icon = " ", key = "q" },
           },
           footer = function()
-            local stats = require('lazy').stats()
+            local stats = require("lazy").stats()
             local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-            return { 'Neovim loaded ' .. stats.loaded .. '/' .. stats.count .. ' plugins in ' .. ms .. 'ms' }
+            return { "Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
           end,
         },
       }
 
       for _, button in ipairs(opts.config.center) do
-        button.desc = button.desc .. string.rep(' ', 43 - #button.desc)
-        button.key_format = '  %s'
+        button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
+        button.key_format = "  %s"
       end
 
       -- Close Lazy and re-open when the dashboard is ready
-      if vim.o.filetype == 'lazy' then
+      if vim.o.filetype == "lazy" then
         vim.cmd.close()
-        vim.api.nvim_create_autocmd('User', {
-          pattern = 'DashboardLoaded',
+        vim.api.nvim_create_autocmd("User", {
+          pattern = "DashboardLoaded",
           callback = function()
-            require('lazy').show()
+            require("lazy").show()
           end,
         })
       end
@@ -283,31 +283,31 @@ return {
 
   -- which-key.nvim
   {
-    'folke/which-key.nvim',
-    event = 'VeryLazy',
+    "folke/which-key.nvim",
+    event = "VeryLazy",
     opts = {
       icons = { rules = false },
       spec = {
         {
-          mode = { 'n', 'v' },
-          { '<leader>q', group = 'quit/session' },
-          { '<leader>f', group = 'find' },
-          { '<leader>b', group = 'buffers' },
-          { '<leader>g', group = 'git' },
-          { '<leader>x', group = 'diagnostics/quickfix' },
-          { '<leader>d', group = 'debugger' },
-          { '<leader>t', group = 'terminal' },
-          { '<leader>p', group = 'precognition' },
-          { '[', group = 'prev' },
-          { ']', group = 'next' },
-          { 'g', group = 'goto' },
-          { 'gz', group = 'surround' },
-          { 'z', group = 'fold' },
+          mode = { "n", "v" },
+          { "<leader>q", group = "quit/session" },
+          { "<leader>f", group = "find" },
+          { "<leader>b", group = "buffers" },
+          { "<leader>g", group = "git" },
+          { "<leader>x", group = "diagnostics/quickfix" },
+          { "<leader>d", group = "debugger" },
+          { "<leader>t", group = "terminal" },
+          { "<leader>p", group = "precognition" },
+          { "[", group = "prev" },
+          { "]", group = "next" },
+          { "g", group = "goto" },
+          { "gz", group = "surround" },
+          { "z", group = "fold" },
         },
       },
     },
     config = function(_, opts)
-      local wk = require('which-key')
+      local wk = require("which-key")
       wk.setup(opts)
       wk.add(opts.spec)
     end,
@@ -315,120 +315,120 @@ return {
 
   -- bufferline.nvim
   {
-    'akinsho/bufferline.nvim',
-    dependencies = 'nvim-tree/nvim-web-devicons',
-    version = '*',
-    event = 'UIEnter',
+    "akinsho/bufferline.nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    version = "*",
+    event = "UIEnter",
     keys = {
-      { '<Tab>', '<cmd>BufferLineCycleNext<CR>', desc = 'Go to next buffer' },
-      { '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>', desc = 'Go to previous buffer' },
-      { '<S-l>', '<cmd>BufferLineMoveNext<CR>', desc = 'Move current buffer forwards' },
-      { '<S-h>', '<cmd>BufferLineMovePrev<CR>', desc = 'Move current buffer backwards' },
-      { '<leader>bn', '<cmd>BufferLineMoveNext<CR>', desc = 'Move current buffer forwards' },
-      { '<leader>bp', '<cmd>BufferLineMovePrev<CR>', desc = 'Move current buffer backwards' },
+      { "<Tab>", "<cmd>BufferLineCycleNext<CR>", desc = "Go to next buffer" },
+      { "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Go to previous buffer" },
+      { "<S-l>", "<cmd>BufferLineMoveNext<CR>", desc = "Move current buffer forwards" },
+      { "<S-h>", "<cmd>BufferLineMovePrev<CR>", desc = "Move current buffer backwards" },
+      { "<leader>bn", "<cmd>BufferLineMoveNext<CR>", desc = "Move current buffer forwards" },
+      { "<leader>bp", "<cmd>BufferLineMovePrev<CR>", desc = "Move current buffer backwards" },
       {
-        '<leader>bf',
+        "<leader>bf",
         function()
-          return require('bufferline').move_to(1)
+          return require("bufferline").move_to(1)
         end,
-        desc = 'Move buffer to beginning',
+        desc = "Move buffer to beginning",
       },
       {
-        '<leader>bl',
+        "<leader>bl",
         function()
-          return require('bufferline').move_to(-1)
+          return require("bufferline").move_to(-1)
         end,
-        desc = 'Move buffer to end',
+        desc = "Move buffer to end",
       },
       {
-        '<leader>b1',
+        "<leader>b1",
         function()
-          return require('bufferline').go_to(1, true)
+          return require("bufferline").go_to(1, true)
         end,
-        desc = 'Jump to first buffer',
+        desc = "Jump to first buffer",
       },
       {
-        '<leader>b2',
+        "<leader>b2",
         function()
-          return require('bufferline').go_to(2, true)
+          return require("bufferline").go_to(2, true)
         end,
-        desc = 'Jump to second buffer',
+        desc = "Jump to second buffer",
       },
       {
-        '<leader>b3',
+        "<leader>b3",
         function()
-          return require('bufferline').go_to(3, true)
+          return require("bufferline").go_to(3, true)
         end,
-        desc = 'Jump to third buffer',
+        desc = "Jump to third buffer",
       },
       {
-        '<leader>b4',
+        "<leader>b4",
         function()
-          return require('bufferline').go_to(4, true)
+          return require("bufferline").go_to(4, true)
         end,
-        desc = 'Jump to fourth buffer',
+        desc = "Jump to fourth buffer",
       },
       {
-        '<leader>b5',
+        "<leader>b5",
         function()
-          return require('bufferline').go_to(5, true)
+          return require("bufferline").go_to(5, true)
         end,
-        desc = 'Jump to fifth buffer',
+        desc = "Jump to fifth buffer",
       },
       {
-        '<leader>b6',
+        "<leader>b6",
         function()
-          return require('bufferline').go_to(6, true)
+          return require("bufferline").go_to(6, true)
         end,
-        desc = 'Jump to sixth buffer',
+        desc = "Jump to sixth buffer",
       },
       {
-        '<leader>b7',
+        "<leader>b7",
         function()
-          return require('bufferline').go_to(7, true)
+          return require("bufferline").go_to(7, true)
         end,
-        desc = 'Jump to seventh buffer',
+        desc = "Jump to seventh buffer",
       },
       {
-        '<leader>b8',
+        "<leader>b8",
         function()
-          return require('bufferline').go_to(8, true)
+          return require("bufferline").go_to(8, true)
         end,
-        desc = 'Jump to eighth buffer',
+        desc = "Jump to eighth buffer",
       },
       {
-        '<leader>b9',
+        "<leader>b9",
         function()
-          return require('bufferline').go_to(9, true)
+          return require("bufferline").go_to(9, true)
         end,
-        desc = 'Jump to ninth buffer',
+        desc = "Jump to ninth buffer",
       },
       {
-        '<leader>b$',
+        "<leader>b$",
         function()
-          return require('bufferline').go_to(-1, true)
+          return require("bufferline").go_to(-1, true)
         end,
-        desc = 'Jump to last buffer',
+        desc = "Jump to last buffer",
       },
     },
     opts = {
       options = {
         numbers = function(opts)
-          return string.format('%s', opts.ordinal)
+          return string.format("%s", opts.ordinal)
         end,
-        mode = 'buffers',
-        diagnostics = 'nvim_lsp',
+        mode = "buffers",
+        diagnostics = "nvim_lsp",
         diagnostics_indicator = function(_, _, diag)
-          local ret = (diag.error and ' ' .. diag.error .. ' ' or '')
-            .. (diag.warning and ' ' .. diag.warning or '')
+          local ret = (diag.error and " " .. diag.error .. " " or "")
+            .. (diag.warning and " " .. diag.warning or "")
           return vim.trim(ret)
         end,
         offsets = {
           {
-            filetype = 'neo-tree',
-            text = 'Neo-tree',
-            highlight = 'Directory',
-            text_align = 'left',
+            filetype = "neo-tree",
+            text = "Neo-tree",
+            highlight = "Directory",
+            text_align = "left",
           },
         },
       },
@@ -437,18 +437,18 @@ return {
 
   -- mini.animate
   {
-    'echasnovski/mini.animate',
+    "echasnovski/mini.animate",
     -- enabled = false,
-    event = { 'BufReadPost', 'BufNewFile' },
+    event = { "BufReadPost", "BufNewFile" },
     opts = function()
-      local animate = require('mini.animate')
+      local animate = require("mini.animate")
       return {
         -- These are already handled by windows.nvim
         resize = { enable = false },
         open = { enable = false },
         close = { enable = false },
         scroll = {
-          timing = animate.gen_timing.linear({ duration = 150, unit = 'total' }),
+          timing = animate.gen_timing.linear({ duration = 150, unit = "total" }),
           subscroll = animate.gen_subscroll.equal({
             predicate = function(total_scroll)
               return total_scroll > 1
@@ -461,20 +461,20 @@ return {
 
   -- mini.indentscope
   {
-    'echasnovski/mini.indentscope',
+    "echasnovski/mini.indentscope",
     init = function()
-      vim.api.nvim_create_autocmd('FileType', {
+      vim.api.nvim_create_autocmd("FileType", {
         pattern = {
-          'help',
-          'dashboard',
-          'neo-tree',
-          'Trouble',
-          'trouble',
-          'lazy',
-          'mason',
-          'notify',
-          'toggleterm',
-          'lazyterm',
+          "help",
+          "dashboard",
+          "neo-tree",
+          "Trouble",
+          "trouble",
+          "lazy",
+          "mason",
+          "notify",
+          "toggleterm",
+          "lazyterm",
         },
         callback = function()
           ---@diagnostic disable-next-line: inject-field
@@ -482,7 +482,7 @@ return {
         end,
       })
     end,
-    event = { 'BufReadPost', 'BufNewFile' },
-    opts = { symbol = '│', options = { try_as_border = true } },
+    event = { "BufReadPost", "BufNewFile" },
+    opts = { symbol = "│", options = { try_as_border = true } },
   },
 }

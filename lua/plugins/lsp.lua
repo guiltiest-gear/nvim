@@ -1,13 +1,13 @@
 return {
   -- mason.nvim
   {
-    'williamboman/mason.nvim',
+    "williamboman/mason.nvim",
     opts = {
       ui = {
         icons = {
-          package_installed = '',
-          package_pending = '',
-          package_uninstalled = '',
+          package_installed = "",
+          package_pending = "",
+          package_uninstalled = "",
         },
       },
       log_level = vim.log.levels.OFF,
@@ -16,37 +16,37 @@ return {
 
   -- mason-tool-installer.nvim
   {
-    'WhoIsSethDaniel/mason-tool-installer.nvim',
-    dependencies = 'williamboman/mason.nvim',
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = "williamboman/mason.nvim",
     cmd = {
-      'MasonToolsInstall',
-      'MasonToolsInstallSync',
-      'MasonToolsUpdate',
-      'MasonToolsUpdateSync',
-      'MasonToolsClean',
+      "MasonToolsInstall",
+      "MasonToolsInstallSync",
+      "MasonToolsUpdate",
+      "MasonToolsUpdateSync",
+      "MasonToolsClean",
     },
     opts = {
       ensure_installed = {
         -- Language serverss
-        'lua-language-server',
+        "lua-language-server",
         -- 'clangd',
-        'marksman',
-        'bash-language-server',
-        'taplo',
-        'html-lsp',
-        'eslint-lsp',
-        'typescript-language-server',
-        'css-lsp',
+        "marksman",
+        "bash-language-server",
+        "taplo",
+        "html-lsp",
+        "eslint-lsp",
+        "typescript-language-server",
+        "css-lsp",
         -- Linters and formatters
-        'stylua',
-        'markdownlint',
-        'selene',
+        "stylua",
+        "markdownlint",
+        "selene",
         -- 'clang_format',
-        'shfmt',
-        'markuplint',
-        'prettierd',
-        'stylelint',
-        'codespell',
+        "shfmt",
+        "markuplint",
+        "prettierd",
+        "stylelint",
+        "codespell",
         -- Debuggers
         -- codelldb
       },
@@ -56,29 +56,29 @@ return {
 
   -- nvim-lspconfig
   {
-    'neovim/nvim-lspconfig',
-    dependencies = 'williamboman/mason.nvim',
+    "neovim/nvim-lspconfig",
+    dependencies = "williamboman/mason.nvim",
     keys = {
-      { 'gd', '<cmd>Telescope lsp_definitions<CR>', desc = 'Goto Definition' },
-      { 'gi', '<cmd>Telescope lsp_implementations<CR>', desc = 'Goto Implementation' },
-      { 'gy', '<cmd>Telescope lsp_type_definitions<CR>', desc = 'Goto T[y]pe Definition' },
-      { 'gD', vim.lsp.buf.declaration, desc = 'Goto Declaration' },
-      { 'K', vim.lsp.buf.hover, desc = 'Hover' },
-      { 'gK', vim.lsp.buf.signature_help, desc = 'Signature Help' },
+      { "gd", "<cmd>Telescope lsp_definitions<CR>", desc = "Goto Definition" },
+      { "gi", "<cmd>Telescope lsp_implementations<CR>", desc = "Goto Implementation" },
+      { "gy", "<cmd>Telescope lsp_type_definitions<CR>", desc = "Goto T[y]pe Definition" },
+      { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
+      { "K", vim.lsp.buf.hover, desc = "Hover" },
+      { "gK", vim.lsp.buf.signature_help, desc = "Signature Help" },
     },
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = { "BufReadPre", "BufNewFile" },
     opts = {
       servers = {
         --[[ clangd = {
           -- Fix clangd offset encoding
-          capabilities = { offsetEncoding = { 'utf-16' } },
+          capabilities = { offsetEncoding = { "utf-16" } },
           cmd = {
-            'clangd',
-            '--clang-tidy',
-            '--fallback-style=Google',
-            '--completion-style=detailed',
-            '--function-arg-placeholders',
-            '--header-insertion=iwyu',
+            "clangd",
+            "--clang-tidy",
+            "--fallback-style=Google",
+            "--completion-style=detailed",
+            "--function-arg-placeholders",
+            "--header-insertion=iwyu",
           },
           init_options = {
             usePlaceholders = true,
@@ -91,12 +91,12 @@ return {
           settings = {
             Lua = {
               workspace = { checkThirdParty = false },
-              completion = { callSnippet = 'Replace' },
+              completion = { callSnippet = "Replace" },
             },
           },
         },
         marksman = {},
-        bashls = { filetypes = { 'sh', 'zsh', 'bash' } },
+        bashls = { filetypes = { "sh", "zsh", "bash" } },
         taplo = {},
         html = {},
         eslint = {},
@@ -111,7 +111,7 @@ return {
       },
     },
     config = function(_, opts)
-      local lspconfig = require('lspconfig')
+      local lspconfig = require("lspconfig")
       for server, config in pairs(opts.servers) do
         lspconfig[server].setup(config)
       end
@@ -120,28 +120,28 @@ return {
 
   -- lazydev.nvim
   {
-    'folke/lazydev.nvim',
-    ft = 'lua',
+    "folke/lazydev.nvim",
+    ft = "lua",
     opts = {
       library = {
         {
-          path = 'luvit-meta/library',
-          words = { 'vim%.uv' },
+          path = "luvit-meta/library",
+          words = { "vim%.uv" },
         },
       },
     },
   },
 
   -- luvit-meta
-  { 'Bilal2453/luvit-meta', lazy = true },
+  { "Bilal2453/luvit-meta", lazy = true },
 
   -- conform.nvim
   {
-    'stevearc/conform.nvim',
-    event = 'BufWritePre',
-    cmd = 'ConformInfo',
+    "stevearc/conform.nvim",
+    event = "BufWritePre",
+    cmd = "ConformInfo",
     init = function()
-      vim.api.nvim_create_user_command('FormatDisable', function(args)
+      vim.api.nvim_create_user_command("FormatDisable", function(args)
         if args.bang then
           -- FormatDisable! will disable formatting just for this buffer
           vim.b.disable_autoformat = true
@@ -149,40 +149,40 @@ return {
           vim.g.disable_autoformat = true
         end
       end, {
-        desc = 'Disable autoformat-on-save',
+        desc = "Disable autoformat-on-save",
         bang = true,
       })
-      vim.api.nvim_create_user_command('FormatEnable', function()
+      vim.api.nvim_create_user_command("FormatEnable", function()
         vim.b.disable_autoformat = false
         vim.g.disable_autoformat = false
       end, {
-        desc = 'Re-enable autoformat-on-save',
+        desc = "Re-enable autoformat-on-save",
       })
     end,
     ---@module 'conform'
     ---@type conform.setupOpts
     opts = {
       formatters_by_ft = {
-        lua = { 'stylua' },
-        sh = { 'shfmt' },
-        zsh = { 'shfmt' },
-        markdown = { 'prettierd' },
-        html = { 'prettierd' },
-        javascript = { 'prettierd' },
-        css = { 'prettierd' },
-        json = { 'prettierd' },
-        toml = { 'taplo' },
+        lua = { "stylua" },
+        sh = { "shfmt" },
+        zsh = { "shfmt" },
+        markdown = { "prettierd" },
+        html = { "prettierd" },
+        javascript = { "prettierd" },
+        css = { "prettierd" },
+        json = { "prettierd" },
+        toml = { "taplo" },
         -- cpp = { 'clang-format' },
-        ['*'] = {
-          'trim_whitespace',
+        ["*"] = {
+          "trim_whitespace",
         },
-        ['_'] = {
-          'squeeze_blanks',
+        ["_"] = {
+          "squeeze_blanks",
         },
       },
       -- Default options
       default_format_opts = {
-        lsp_format = 'fallback',
+        lsp_format = "fallback",
       },
       -- Set up format-on-save
       format_on_save = function(bufnr)
@@ -190,14 +190,14 @@ return {
           return
         end
         return {
-          lsp_format = 'fallback',
+          lsp_format = "fallback",
           timeout_ms = 500,
         }
       end,
       -- Customize formatters
       formatters = {
         shfmt = {
-          prepend_args = { '-i', '2', '-ci', '-bn' },
+          prepend_args = { "-i", "2", "-ci", "-bn" },
         },
       },
     },
@@ -205,28 +205,28 @@ return {
 
   -- nvim-lint
   {
-    'mfussenegger/nvim-lint',
-    event = 'BufWritePost',
+    "mfussenegger/nvim-lint",
+    event = "BufWritePost",
     config = function()
-      local lint = require('lint')
+      local lint = require("lint")
       lint.linters_by_ft = {
-        lua = { 'selene' },
-        bash = { 'bash' },
-        zsh = { 'zsh' },
-        markdown = { 'markdownlint' },
-        html = { 'markuplint' },
-        css = { 'stylelint' },
+        lua = { "selene" },
+        bash = { "bash" },
+        zsh = { "zsh" },
+        markdown = { "markdownlint" },
+        html = { "markuplint" },
+        css = { "stylelint" },
         -- cpp = { 'clang-tidy' },
       }
 
-      vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
-        group = vim.api.nvim_create_augroup('nvim-lint', { clear = true }),
+      vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+        group = vim.api.nvim_create_augroup("nvim-lint", { clear = true }),
         callback = function()
           -- Attempt to lint the document
           lint.try_lint()
 
           -- Use codespell on all filetypes
-          lint.try_lint('codespell')
+          lint.try_lint("codespell")
         end,
       })
     end,
@@ -234,72 +234,72 @@ return {
 
   -- inc-rename.nvim
   {
-    'smjonas/inc-rename.nvim',
+    "smjonas/inc-rename.nvim",
     keys = {
       {
-        'gr',
+        "gr",
         function()
-          return ':IncRename ' .. vim.fn.expand('<cword>')
+          return ":IncRename " .. vim.fn.expand("<cword>")
         end,
         expr = true,
-        desc = 'Rename',
+        desc = "Rename",
       },
     },
-    opts = { input_buffer_type = 'dressing' },
+    opts = { input_buffer_type = "dressing" },
   },
 
   -- nvim-navic
   {
-    'SmiteshP/nvim-navic',
-    event = 'LspAttach',
+    "SmiteshP/nvim-navic",
+    event = "LspAttach",
     opts = {
       highlight = true,
       lsp = { auto_attach = true },
       lazy_update_context = true,
       icons = {
-        Array = ' ',
-        Boolean = ' ',
-        Class = ' ',
-        Color = ' ',
-        Constant = ' ',
-        Constructor = ' ',
-        Copilot = ' ',
-        Enum = ' ',
-        EnumMember = ' ',
-        Event = ' ',
-        Field = ' ',
-        File = ' ',
-        Folder = ' ',
-        Function = ' ',
-        Interface = ' ',
-        Key = ' ',
-        Keyword = ' ',
-        Method = ' ',
-        Module = ' ',
-        Namespace = ' ',
-        Null = ' ',
-        Number = ' ',
-        Object = ' ',
-        Operator = ' ',
-        Package = ' ',
-        Property = ' ',
-        Reference = ' ',
-        Snippet = ' ',
-        String = ' ',
-        Struct = ' ',
-        Text = ' ',
-        TypeParameter = ' ',
-        Unit = ' ',
-        Value = ' ',
-        Variable = ' ',
+        Array = " ",
+        Boolean = " ",
+        Class = " ",
+        Color = " ",
+        Constant = " ",
+        Constructor = " ",
+        Copilot = " ",
+        Enum = " ",
+        EnumMember = " ",
+        Event = " ",
+        Field = " ",
+        File = " ",
+        Folder = " ",
+        Function = " ",
+        Interface = " ",
+        Key = " ",
+        Keyword = " ",
+        Method = " ",
+        Module = " ",
+        Namespace = " ",
+        Null = " ",
+        Number = " ",
+        Object = " ",
+        Operator = " ",
+        Package = " ",
+        Property = " ",
+        Reference = " ",
+        Snippet = " ",
+        String = " ",
+        Struct = " ",
+        Text = " ",
+        TypeParameter = " ",
+        Unit = " ",
+        Value = " ",
+        Variable = " ",
       },
     },
   },
 
   -- fidget.nvim
   {
-    'j-hui/fidget.nvim',
-    event = 'LspAttach',
+    "j-hui/fidget.nvim",
+    event = "LspAttach",
     opts = {
       notification = { window = { winblend = 0 } },
       logger = { level = vim.log.levels.OFF },
@@ -309,43 +309,43 @@ return {
 
   -- actions-preview.nvim
   {
-    'aznhe21/actions-preview.nvim',
-    dependencies = 'nvim-telescope/telescope.nvim',
+    "aznhe21/actions-preview.nvim",
+    dependencies = "nvim-telescope/telescope.nvim",
     opts = function()
-      local hl = require('actions-preview.highlight')
+      local hl = require("actions-preview.highlight")
       return {
         telescope = {
-          sorting_strategy = 'ascending',
-          layout_strategy = 'vertical',
+          sorting_strategy = "ascending",
+          layout_strategy = "vertical",
           layout_config = {
             width = 0.8,
             height = 0.9,
-            prompt_position = 'top',
+            prompt_position = "top",
             preview_cutoff = 20,
             preview_height = function(_, _, max_lines)
               return max_lines - 15
             end,
           },
         },
-        highlight_command = { hl.delta('delta --side-by-side') },
+        highlight_command = { hl.delta("delta --side-by-side") },
       }
     end,
     keys = {
       {
-        'gf',
+        "gf",
         function()
-          return require('actions-preview').code_actions()
+          return require("actions-preview").code_actions()
         end,
-        mode = { 'n', 'v' },
-        desc = 'Open actions-preview.nvim',
+        mode = { "n", "v" },
+        desc = "Open actions-preview.nvim",
       },
     },
   },
 
   -- nvim-lightbulb
   {
-    'kosayoda/nvim-lightbulb',
-    event = 'LspAttach',
+    "kosayoda/nvim-lightbulb",
+    event = "LspAttach",
     opts = {
       autocmd = {
         enabled = true,
@@ -355,64 +355,64 @@ return {
 
   -- nvim-dap
   {
-    'mfussenegger/nvim-dap',
+    "mfussenegger/nvim-dap",
     dependencies = {
       -- nvim-dap-virtual-text
-      { 'theHamsta/nvim-dap-virtual-text', opts = { highlight_new_as_changed = true } },
+      { "theHamsta/nvim-dap-virtual-text", opts = { highlight_new_as_changed = true } },
 
       -- goto-breakpoints.nvim
       {
-        'ofirgall/goto-breakpoints.nvim',
+        "ofirgall/goto-breakpoints.nvim",
         keys = {
           {
-            ']b',
+            "]b",
             function()
-              return require('goto-breakpoints').next()
+              return require("goto-breakpoints").next()
             end,
-            desc = 'Next breakpoint',
+            desc = "Next breakpoint",
           },
           {
-            '[b',
+            "[b",
             function()
-              return require('goto-breakpoints').prev()
+              return require("goto-breakpoints").prev()
             end,
-            desc = 'Previous breakpoint',
+            desc = "Previous breakpoint",
           },
         },
       },
 
       -- nvim-dap-ui
       {
-        'rcarriga/nvim-dap-ui',
-        dependencies = 'nvim-neotest/nvim-nio',
+        "rcarriga/nvim-dap-ui",
+        dependencies = "nvim-neotest/nvim-nio",
         keys = {
           {
-            '<leader>du',
+            "<leader>du",
             function()
-              return require('dapui').toggle()
+              return require("dapui").toggle()
             end,
-            desc = 'Dap UI',
+            desc = "Dap UI",
           },
           {
-            '<leader>de',
+            "<leader>de",
             function()
-              return require('dapui').eval()
+              return require("dapui").eval()
             end,
-            desc = 'Eval',
-            mode = { 'n', 'v' },
+            desc = "Eval",
+            mode = { "n", "v" },
           },
         },
         config = function()
-          local dap = require('dap')
-          local dapui = require('dapui')
+          local dap = require("dap")
+          local dapui = require("dapui")
           dapui.setup()
-          dap.listeners.after.event_initialized['dapui_config'] = function()
+          dap.listeners.after.event_initialized["dapui_config"] = function()
             dapui.open()
           end
-          dap.listeners.before.event_terminated['dapui_config'] = function()
+          dap.listeners.before.event_terminated["dapui_config"] = function()
             dapui.close()
           end
-          dap.listeners.before.event_exited['dapui_config'] = function()
+          dap.listeners.before.event_exited["dapui_config"] = function()
             dapui.close()
           end
         end,
@@ -420,120 +420,120 @@ return {
     },
     keys = {
       {
-        '<leader>dB',
+        "<leader>dB",
         function()
-          return require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))
+          return require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
         end,
-        desc = 'Breakpoint Condition',
+        desc = "Breakpoint Condition",
       },
       {
-        '<leader>db',
+        "<leader>db",
         function()
-          return require('dap').toggle_breakpoint()
+          return require("dap").toggle_breakpoint()
         end,
-        desc = 'Toggle Breakpoint',
+        desc = "Toggle Breakpoint",
       },
       {
-        '<leader>dc',
+        "<leader>dc",
         function()
-          return require('dap').continue()
+          return require("dap").continue()
         end,
-        desc = 'Continue',
+        desc = "Continue",
       },
       {
-        '<leader>dC',
+        "<leader>dC",
         function()
-          return require('dap').run_to_cursor()
+          return require("dap").run_to_cursor()
         end,
-        desc = 'Run to Cursor',
+        desc = "Run to Cursor",
       },
       {
-        '<leader>dg',
+        "<leader>dg",
         function()
-          return require('dap').goto_()
+          return require("dap").goto_()
         end,
-        desc = 'Go to line (no execute)',
+        desc = "Go to line (no execute)",
       },
       {
-        '<leader>di',
+        "<leader>di",
         function()
-          return require('dap').step_into()
+          return require("dap").step_into()
         end,
-        desc = 'Step Into',
+        desc = "Step Into",
       },
       {
-        '<leader>dj',
+        "<leader>dj",
         function()
-          return require('dap').down()
+          return require("dap").down()
         end,
-        desc = 'Down',
+        desc = "Down",
       },
       {
-        '<leader>dk',
+        "<leader>dk",
         function()
-          return require('dap').up()
+          return require("dap").up()
         end,
-        desc = 'Up',
+        desc = "Up",
       },
       {
-        '<leader>dl',
+        "<leader>dl",
         function()
-          return require('dap').run_last()
+          return require("dap").run_last()
         end,
-        desc = 'Run Last',
+        desc = "Run Last",
       },
       {
-        '<leader>dO',
+        "<leader>dO",
         function()
-          return require('dap').step_out()
+          return require("dap").step_out()
         end,
-        desc = 'Step Out',
+        desc = "Step Out",
       },
       {
-        '<leader>do',
+        "<leader>do",
         function()
-          return require('dap').step_over()
+          return require("dap").step_over()
         end,
-        desc = 'Step Over',
+        desc = "Step Over",
       },
       {
-        '<leader>dp',
+        "<leader>dp",
         function()
-          return require('dap').pause()
+          return require("dap").pause()
         end,
-        desc = 'Pause',
+        desc = "Pause",
       },
       {
-        '<leader>dr',
+        "<leader>dr",
         function()
-          return require('dap').repl.toggle()
+          return require("dap").repl.toggle()
         end,
-        desc = 'Toggle REPL',
+        desc = "Toggle REPL",
       },
       {
-        '<leader>ds',
+        "<leader>ds",
         function()
-          return require('dap').session()
+          return require("dap").session()
         end,
-        desc = 'Session',
+        desc = "Session",
       },
       {
-        '<leader>dt',
+        "<leader>dt",
         function()
-          return require('dap').terminate()
+          return require("dap").terminate()
         end,
-        desc = 'Terminate',
+        desc = "Terminate",
       },
       {
-        '<leader>dw',
+        "<leader>dw",
         function()
-          return require('dap.ui.widgets').hover()
+          return require("dap.ui.widgets").hover()
         end,
-        desc = 'Widgets',
+        desc = "Widgets",
       },
     },
     config = function()
-      vim.api.nvim_set_hl(0, 'DapStoppedLine', { default = true, link = 'Visual' })
+      vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
     end,
   },
 }

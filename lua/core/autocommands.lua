@@ -6,55 +6,55 @@ local function augroup(name)
 end
 
 -- Highlight text on yank
-autocmd('TextYankPost', {
-  group = augroup('highlight_yank'),
+autocmd("TextYankPost", {
+  group = augroup("highlight_yank"),
   callback = function()
-    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = '500' })
+    vim.highlight.on_yank({ higroup = "IncSearch", timeout = "500" })
   end,
 })
 
 -- Automatically rebalance windows on vim resize
-autocmd('VimResized', { group = augroup('resize_splits'), command = 'tabdo wincmd =' })
+autocmd("VimResized", { group = augroup("resize_splits"), command = "tabdo wincmd =" })
 
 -- Never insert line as a comment when using 'o' to enter insert mode
-autocmd('BufWinEnter', { group = augroup('no_comment_on_o'), command = 'setlocal formatoptions-=o' })
+autocmd("BufWinEnter", { group = augroup("no_comment_on_o"), command = "setlocal formatoptions-=o" })
 
 -- Close various file types with just <q>
-autocmd('FileType', {
-  group = augroup('close_with_q'),
-  pattern = { 'help', 'lspinfo', 'checkhealth', 'qf', 'query', 'notify' },
+autocmd("FileType", {
+  group = augroup("close_with_q"),
+  pattern = { "help", "lspinfo", "checkhealth", "qf", "query", "notify" },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
-    vim.keymap.set('n', 'q', vim.cmd.close, { buffer = event.buf, silent = true })
+    vim.keymap.set("n", "q", vim.cmd.close, { buffer = event.buf, silent = true })
   end,
 })
 
 -- Fix manpage bugs
-autocmd('FileType', {
-  group = augroup('man_bugfixes'),
-  pattern = { 'man' },
+autocmd("FileType", {
+  group = augroup("man_bugfixes"),
+  pattern = { "man" },
   callback = function(event)
-    vim.opt_local.signcolumn = 'no'
+    vim.opt_local.signcolumn = "no"
     vim.bo[event.buf].buflisted = false
   end,
 })
 
 -- Auto create dir when saving a file where some intermediate directory does not exist
-autocmd('BufWritePre', {
-  group = augroup('auto_create_dir'),
+autocmd("BufWritePre", {
+  group = augroup("auto_create_dir"),
   callback = function(event)
-    if event.match:match('^%w%w+:[\\/][\\/]') then
+    if event.match:match("^%w%w+:[\\/][\\/]") then
       return
     end
     local file = vim.uv.fs_realpath(event.match) or event.match
-    vim.fn.mkdir(vim.fn.fnamemodify(file, ':p:h'), 'p')
+    vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,
 })
 
 -- Check for spelling in text filetypes and enable wrapping
-autocmd('FileType', {
-  group = augroup('wrap_spell'),
-  pattern = { 'gitcommit', 'markdown', 'text', 'NeogitCommitMessage' },
+autocmd("FileType", {
+  group = augroup("wrap_spell"),
+  pattern = { "gitcommit", "markdown", "text", "NeogitCommitMessage" },
   callback = function()
     vim.opt_local.spell = true
     vim.opt_local.wrap = true
@@ -62,27 +62,27 @@ autocmd('FileType', {
 })
 
 -- Check if the file needs to be reloaded when it's changed
-autocmd({ 'FocusGained', 'TermClose', 'TermLeave' }, {
-  group = augroup('checktime'),
+autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
+  group = augroup("checktime"),
   callback = function()
-    if vim.o.buftype ~= 'nofile' then
+    if vim.o.buftype ~= "nofile" then
       vim.cmd.checktime()
     end
   end,
 })
 
 -- Toggle relative numbers based on certain events
-autocmd({ 'BufEnter', 'InsertLeave', 'CmdlineLeave', 'WinEnter' }, {
-  group = augroup('auto_relative_numbers_on'),
+autocmd({ "BufEnter", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
+  group = augroup("auto_relative_numbers_on"),
   callback = function()
-    if vim.o.number and vim.api.nvim_get_mode() ~= 'i' then
+    if vim.o.number and vim.api.nvim_get_mode() ~= "i" then
       vim.opt.relativenumber = true
     end
   end,
 })
 
-autocmd({ 'BufLeave', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, {
-  group = augroup('auto_relative_numbers_off'),
+autocmd({ "BufLeave", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
+  group = augroup("auto_relative_numbers_off"),
   callback = function()
     if vim.o.number then
       vim.opt.relativenumber = false
@@ -92,9 +92,9 @@ autocmd({ 'BufLeave', 'InsertEnter', 'CmdlineEnter', 'WinLeave' }, {
 })
 
 -- Disable conceallevel for json filetypes
-autocmd('FileType', {
-  group = augroup('json_conceal'),
-  pattern = { 'json', 'jsonc', 'json5' },
+autocmd("FileType", {
+  group = augroup("json_conceal"),
+  pattern = { "json", "jsonc", "json5" },
   callback = function()
     vim.opt_local.conceallevel = 0
   end,
@@ -102,16 +102,16 @@ autocmd('FileType', {
 
 -- Fix luasnip session logic to avoid random jumps with tab. Copied from:
 -- https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1429989436
-autocmd('ModeChanged', {
-  group = augroup('fix_luasnip_session_logic'),
-  pattern = '*',
+autocmd("ModeChanged", {
+  group = augroup("fix_luasnip_session_logic"),
+  pattern = "*",
   callback = function()
     if
-      ((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
-      and require('luasnip').session.current_nodes[vim.api.nvim_get_current_buf()]
-      and not require('luasnip').session.jump_active
+      ((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
+      and require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
+      and not require("luasnip").session.jump_active
     then
-      require('luasnip').unlink_current()
+      require("luasnip").unlink_current()
     end
   end,
 })
@@ -120,9 +120,9 @@ autocmd('ModeChanged', {
 -- HACK: If there are other instances of neovim open with prettierd active,
 -- it will also kill those instances as well
 -- Borrowed from: https://github.com/fsouza/prettierd/issues/645#issuecomment-2143341193
-autocmd('VimLeavePre', {
-  group = augroup('kill_neovim_daemons'),
+autocmd("VimLeavePre", {
+  group = augroup("kill_neovim_daemons"),
   callback = function()
-    vim.fn.jobstart('killall prettierd', { detach = true })
+    vim.fn.jobstart("killall prettierd", { detach = true })
   end,
 })

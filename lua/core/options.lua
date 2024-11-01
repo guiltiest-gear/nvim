@@ -17,7 +17,7 @@ opt.ignorecase = true
 opt.termguicolors = true
 
 -- Make neovim use the system clipboard
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
 -- Disable old vim status
 opt.showmode = false
@@ -37,7 +37,7 @@ opt.shiftround = true
 -- Code folding
 opt.foldlevel = 99
 opt.foldlevelstart = 99
-opt.foldcolumn = '1'
+opt.foldcolumn = "1"
 
 -- Decrease update time
 opt.updatetime = 200
@@ -49,7 +49,7 @@ opt.undofile = true
 opt.showtabline = 0
 
 -- Disable mouse support
-opt.mouse = ''
+opt.mouse = ""
 
 -- Scrolloff
 opt.scrolloff = 5
@@ -62,7 +62,7 @@ opt.wrap = false
 opt.list = true
 
 -- Fill chars
-opt.fillchars = { foldopen = '', foldclose = '', fold = ' ', foldsep = ' ', diff = '╱', eob = ' ' }
+opt.fillchars = { foldopen = "", foldclose = "", fold = " ", foldsep = " ", diff = "╱", eob = " " }
 
 -- Enable lazy redraw for performance
 opt.lazyredraw = true
@@ -77,10 +77,10 @@ opt.confirm = true
 opt.conceallevel = 2
 
 -- Use ripgrep as the grep program for neovim
-opt.grepprg = 'rg --vimgrep'
+opt.grepprg = "rg --vimgrep"
 
 -- Set the grep format
-opt.grepformat = '%f:%l:%c:%m'
+opt.grepformat = "%f:%l:%c:%m"
 
 -- shortmess options
 opt.shortmess:append({ W = true, I = true, c = true, C = true })
@@ -89,10 +89,10 @@ opt.shortmess:append({ W = true, I = true, c = true, C = true })
 opt.autowrite = true
 
 -- Keep cursor to the same screen line when opening a split
-opt.splitkeep = 'screen'
+opt.splitkeep = "screen"
 
 -- Set completion options
-opt.completeopt = 'menu,menuone,noselect'
+opt.completeopt = "menu,menuone,noselect"
 
 -- Set key timeout to 300ms
 opt.timeoutlen = 300
@@ -103,32 +103,32 @@ opt.winminwidth = 5
 opt.equalalways = false
 
 -- Always show the signcolumn
-opt.signcolumn = 'yes'
+opt.signcolumn = "yes"
 
 -- Formatting options
-opt.formatoptions = 'jcroqlnt'
+opt.formatoptions = "jcroqlnt"
 
 -- Put the cursor at the start of the line for large jumps
 opt.startofline = true
 
 -- Allow cursor to move where this is no text is visual block mode
-opt.virtualedit = 'block'
+opt.virtualedit = "block"
 
 -- Command-line completion mode
-opt.wildmode = 'longest:full,full'
+opt.wildmode = "longest:full,full"
 
 -- Session save options
 opt.sessionoptions = {
-  'buffers',
-  'curdir',
-  'tabpages',
-  'winsize',
-  'help',
-  'globals',
-  'skiprtp',
-  'folds',
-  'winpos',
-  'resize',
+  "buffers",
+  "curdir",
+  "tabpages",
+  "winsize",
+  "help",
+  "globals",
+  "skiprtp",
+  "folds",
+  "winpos",
+  "resize",
 }
 
 -- Enable autowrite

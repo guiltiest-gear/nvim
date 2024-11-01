@@ -1,37 +1,37 @@
 return {
   -- nvim-treesitter
   {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
       ensure_installed = {
-        'lua',
-        'luadoc',
-        'luap',
+        "lua",
+        "luadoc",
+        "luap",
         -- 'cpp',
-        'markdown',
-        'markdown_inline',
-        'git_config',
-        'git_rebase',
-        'gitcommit',
-        'gitignore',
+        "markdown",
+        "markdown_inline",
+        "git_config",
+        "git_rebase",
+        "gitcommit",
+        "gitignore",
         -- 'gitattributes',
-        'diff',
-        'vim',
-        'vimdoc',
+        "diff",
+        "vim",
+        "vimdoc",
         -- 'regex',
-        'bash',
-        'toml',
-        'ssh_config',
-        'zathurarc',
+        "bash",
+        "toml",
+        "ssh_config",
+        "zathurarc",
         -- 'json',
         -- 'printf',
-        'ini',
-        'html',
-        'javascript',
-        'jsdoc',
-        'css',
+        "ini",
+        "html",
+        "javascript",
+        "jsdoc",
+        "css",
       },
       highlight = { enable = true },
       indent = { enable = true },
@@ -40,25 +40,25 @@ return {
       matchup = { enable = true, include_match_words = true },
     },
     config = function(_, opts)
-      require('nvim-treesitter.configs').setup(opts)
+      require("nvim-treesitter.configs").setup(opts)
       -- Use the bash ts parser for zsh
-      vim.treesitter.language.register('bash', 'zsh')
+      vim.treesitter.language.register("bash", "zsh")
     end,
   },
 
   -- nvim-treesitter-context
   {
-    'nvim-treesitter/nvim-treesitter-context',
-    dependencies = 'nvim-treesitter/nvim-treesitter',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "nvim-treesitter/nvim-treesitter-context",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPost", "BufNewFile" },
     opts = { max_lines = 3 },
   },
 
   -- vim-matchup
   {
-    'andymass/vim-matchup',
-    dependencies = 'nvim-treesitter/nvim-treesitter',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "andymass/vim-matchup",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       vim.g.matchup_matchparen_offscreen = {}
       vim.g.matchup_matchparen_deferred = 1
@@ -67,55 +67,55 @@ return {
 
   -- treesj
   {
-    'Wansmer/treesj',
-    dependencies = 'nvim-treesitter/nvim-treesitter',
+    "Wansmer/treesj",
+    dependencies = "nvim-treesitter/nvim-treesitter",
     opts = { max_join_length = 150 },
     -- TODO: Think of better keys for this plugin
     keys = {
       {
-        '<leader>m',
+        "<leader>m",
         function()
-          return require('treesj').toggle()
+          return require("treesj").toggle()
         end,
-        desc = 'Toggle node under cursor',
+        desc = "Toggle node under cursor",
       },
       {
-        '<leader>j',
+        "<leader>j",
         function()
-          return require('treesj').join()
+          return require("treesj").join()
         end,
-        desc = 'Join node under cursor',
+        desc = "Join node under cursor",
       },
       {
-        '<leader>s',
+        "<leader>s",
         function()
-          return require('treesj').split()
+          return require("treesj").split()
         end,
-        desc = 'Split node under cursor',
+        desc = "Split node under cursor",
       },
     },
   },
 
   -- rainbow-delimiters.nvim
   {
-    'hiphish/rainbow-delimiters.nvim',
-    dependencies = 'nvim-treesitter/nvim-treesitter',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "hiphish/rainbow-delimiters.nvim",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPost", "BufNewFile" },
   },
 
   -- indent-blankline.nvim
   {
-    'lukas-reineke/indent-blankline.nvim',
-    main = 'ibl',
-    dependencies = 'nvim-treesitter/nvim-treesitter',
-    event = { 'BufReadPost', 'BufNewFile' },
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
-      indent = { char = '│', tab_char = '│' },
+      indent = { char = "│", tab_char = "│" },
       scope = { enabled = false },
-      exclude = { filetypes = { 'lazy', 'dashboard', 'mason' } },
+      exclude = { filetypes = { "lazy", "dashboard", "mason" } },
     },
   },
 
   -- helpview.nvim
-  { 'OXY2DEV/helpview.nvim', ft = 'help', dependencies = 'nvim-treesitter/nvim-treesitter' },
+  { "OXY2DEV/helpview.nvim", ft = "help", dependencies = "nvim-treesitter/nvim-treesitter" },
 }
