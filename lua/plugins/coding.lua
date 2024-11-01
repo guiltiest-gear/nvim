@@ -191,6 +191,17 @@ return {
     end,
   },
 
+  {
+    "Saghen/blink.cmp",
+    enabled = false,
+    lazy = false,
+    dependencies = "rafamadriz/friendly-snippets",
+    version = "v0.*",
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    opts = {},
+  },
+
   -- nvim-cmp
   {
     "hrsh7th/nvim-cmp",
