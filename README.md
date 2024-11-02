@@ -45,20 +45,20 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 ## Plugins
 
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
-- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+<!--- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)-->
 - [actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim)
 - [animation.nvim](https://github.com/anuvyklack/animation.nvim)
 - [better-escape.nvim](https://github.com/max397574/better-escape.nvim)
 - [blink.cmp](https://github.com/Saghen/blink.cmp)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
-- [cmp-async-path](https://codeberg.org/FelipeLema/cmp-async-path)
-- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
-- [cmp-calc](https://github.com/hrsh7th/cmp-calc)
-- [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
-- [cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)
-- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
-- [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)
-- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+  <!--- [cmp-async-path](https://codeberg.org/FelipeLema/cmp-async-path)-->
+  <!--- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)-->
+  <!--- [cmp-calc](https://github.com/hrsh7th/cmp-calc)-->
+  <!--- [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)-->
+  <!--- [cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help)-->
+  <!--- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)-->
+  <!--- [cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua)-->
+  <!--- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)-->
 - [conform.nvim](https://github.com/stevearc/conform.nvim)
 - [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 - [dial.nvim](https://github.com/monaqa/dial.nvim)
@@ -89,7 +89,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [neogit](https://github.com/NeogitOrg/neogit)
 - [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+<!--- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)-->
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 - [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
