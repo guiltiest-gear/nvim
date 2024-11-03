@@ -196,7 +196,6 @@ return {
     enabled = false,
     lazy = false,
     dependencies = "rafamadriz/friendly-snippets",
-    -- NOTE: Wait until next version is released, as the keymaps I want are there
     version = "v0.*",
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
