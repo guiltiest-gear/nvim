@@ -57,7 +57,7 @@ return {
   -- nvim-lspconfig
   {
     "neovim/nvim-lspconfig",
-    dependencies = "williamboman/mason.nvim",
+    dependencies = { "williamboman/mason.nvim", "Saghen/blink.cmp" },
     keys = {
       { "gd", "<cmd>Telescope lsp_definitions<CR>", desc = "Goto Definition" },
       { "gi", "<cmd>Telescope lsp_implementations<CR>", desc = "Goto Implementation" },
@@ -113,6 +113,7 @@ return {
     config = function(_, opts)
       local lspconfig = require("lspconfig")
       for server, config in pairs(opts.servers) do
+        config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
         lspconfig[server].setup(config)
       end
     end,
