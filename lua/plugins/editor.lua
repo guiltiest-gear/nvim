@@ -312,7 +312,7 @@ return {
     "akinsho/toggleterm.nvim",
     version = "*",
     keys = {
-      { "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", desc = "Open a vertial terminal" },
+      { "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", desc = "Open a vertical terminal" },
       { "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", desc = "Open a horizontal terminal" },
       { "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", desc = "Open a floating terminal" },
     },
