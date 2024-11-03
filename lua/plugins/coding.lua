@@ -191,6 +191,7 @@ return {
     end,
   },
 
+  -- blink.cmp
   {
     "Saghen/blink.cmp",
     lazy = false,
