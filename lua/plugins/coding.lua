@@ -227,6 +227,7 @@ return {
       trigger = {
         signature_help = { enabled = true },
       },
+      nerd_font_variant = "mono",
       windows = {
         autocomplete = {
           selection = "auto_insert",
