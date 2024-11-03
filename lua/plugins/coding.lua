@@ -204,7 +204,7 @@ return {
 
   -- blink.cmp
   {
-    "Saghen/blink.cmp",
+    "saghen/blink.cmp",
     event = "InsertEnter",
     dependencies = "rafamadriz/friendly-snippets",
     version = "v0.*",
