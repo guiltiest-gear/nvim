@@ -102,7 +102,7 @@ autocmd("FileType", {
 
 -- Fix luasnip session logic to avoid random jumps with tab. Copied from:
 -- https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1429989436
-autocmd("ModeChanged", {
+--[[ autocmd("ModeChanged", {
   group = augroup("fix_luasnip_session_logic"),
   pattern = "*",
   callback = function()
@@ -114,7 +114,7 @@ autocmd("ModeChanged", {
       require("luasnip").unlink_current()
     end
   end,
-})
+}) ]]
 
 -- Kill prettierd after leaving neovim
 -- HACK: If there are other instances of neovim open with prettierd active,
