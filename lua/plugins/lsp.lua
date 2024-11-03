@@ -176,10 +176,9 @@ return {
         -- cpp = { 'clang-format' },
         ["*"] = {
           "trim_whitespace",
-        },
-        ["_"] = {
           "squeeze_blanks",
         },
+        -- ["_"] = {},
       },
       -- Default options
       default_format_opts = {
