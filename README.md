@@ -47,6 +47,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - [actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim)
 - [animation.nvim](https://github.com/anuvyklack/animation.nvim)
+- [auto-indent.nvim](https://github.com/VidocqH/auto-indent.nvim)
 - [better-escape.nvim](https://github.com/max397574/better-escape.nvim)
 - [blink.cmp](https://github.com/Saghen/blink.cmp)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
