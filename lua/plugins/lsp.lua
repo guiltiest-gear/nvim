@@ -92,6 +92,13 @@ return {
             Lua = {
               workspace = { checkThirdParty = false },
               completion = { callSnippet = "Replace" },
+              doc = {
+                privateName = { "^_" },
+              },
+              hint = {
+                enable = true,
+                arrrayIndex = "Disable",
+              },
             },
           },
         },
