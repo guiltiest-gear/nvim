@@ -68,6 +68,14 @@ return {
     },
     event = { "BufReadPre", "BufNewFile" },
     opts = {
+      ---@type vim.diagnostic.Opts
+      diagnostics = {
+        virtual_text = {
+          spacing = 4,
+          source = "if_many",
+        },
+        severity_sort = true,
+      },
       servers = {
         --[[ clangd = {
           -- Fix clangd offset encoding
@@ -123,6 +131,8 @@ return {
         config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
         lspconfig[server].setup(config)
       end
+
+      vim.diagnostic.config(vim.deepcopy(opts.diagnostics))
     end,
   },
 
