@@ -194,7 +194,7 @@ return {
   -- blink.cmp
   {
     "Saghen/blink.cmp",
-    lazy = false,
+    event = "InsertEnter",
     dependencies = "rafamadriz/friendly-snippets",
     version = "v0.*",
     ---@module 'blink.cmp'
