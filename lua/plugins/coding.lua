@@ -206,7 +206,7 @@ return {
   -- nvim-cmp
   {
     "hrsh7th/nvim-cmp",
-    -- enabled = false,
+    enabled = false,
     dependencies = {
       "https://codeberg.org/FelipeLema/cmp-async-path",
       "hrsh7th/cmp-buffer",
