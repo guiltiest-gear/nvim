@@ -324,8 +324,6 @@ return {
       { "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Go to previous buffer" },
       { "<S-l>", "<cmd>BufferLineMoveNext<CR>", desc = "Move current buffer forwards" },
       { "<S-h>", "<cmd>BufferLineMovePrev<CR>", desc = "Move current buffer backwards" },
-      { "<leader>bn", "<cmd>BufferLineMoveNext<CR>", desc = "Move current buffer forwards" },
-      { "<leader>bp", "<cmd>BufferLineMovePrev<CR>", desc = "Move current buffer backwards" },
       {
         "<leader>bf",
         function()
