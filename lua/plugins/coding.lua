@@ -206,7 +206,6 @@ return {
         ["<C-e>"] = { "hide" },
         ["<CR>"] = { "accept", "fallback" },
         ["<Tab>"] = {
-          "show",
           "select_next",
           "snippet_forward",
           "fallback",
@@ -217,6 +216,7 @@ return {
           "fallback",
         },
         ["<C-Space>"] = {
+          "show",
           "show_documentation",
           "hide_documentation",
         },
