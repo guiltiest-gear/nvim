@@ -234,7 +234,7 @@ return {
           draw = "reversed",
         },
         documentation = {
-          auto_show = true,
+          auto_show = false,
         },
       },
       sources = {
