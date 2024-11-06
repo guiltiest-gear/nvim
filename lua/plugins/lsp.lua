@@ -37,6 +37,7 @@ return {
         "eslint-lsp",
         "typescript-language-server",
         "css-lsp",
+        "perlnavigator",
         -- Linters and formatters
         "stylua",
         "markdownlint",
@@ -123,6 +124,7 @@ return {
           },
         },
         cssls = {},
+        perlnavigator = {},
       },
     },
     config = function(_, opts)
