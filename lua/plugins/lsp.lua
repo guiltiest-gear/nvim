@@ -374,6 +374,7 @@ return {
   {
     "mfussenegger/nvim-dap",
     dependencies = {
+      "nvim-lua/plenary.nvim",
       -- nvim-dap-virtual-text
       { "theHamsta/nvim-dap-virtual-text", opts = { highlight_new_as_changed = true } },
 
@@ -551,6 +552,13 @@ return {
     },
     config = function()
       vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
+
+      -- Set up dap config by vscode launch.json file
+      local vscode = require("dap.ext.vscode")
+      local json = require("plenary.json")
+      vscode.json_decode = function(str)
+        return vim.json.decode(json.json_strip_comments(str))
+      end
     end,
   },
 }
