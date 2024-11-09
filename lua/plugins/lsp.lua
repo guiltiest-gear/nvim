@@ -50,6 +50,7 @@ return {
         "codespell",
         -- Debuggers
         -- "codelldb",
+        "bash-debug-adapter",
       },
       run_on_start = true,
     },
