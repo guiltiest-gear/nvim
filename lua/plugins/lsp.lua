@@ -49,7 +49,7 @@ return {
         "stylelint",
         "codespell",
         -- Debuggers
-        -- codelldb
+        -- "codelldb",
       },
       run_on_start = true,
     },
