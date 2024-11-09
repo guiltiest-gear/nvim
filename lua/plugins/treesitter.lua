@@ -30,6 +30,7 @@ return {
         "ini",
         "html",
         "javascript",
+        "typescript",
         "jsdoc",
         "css",
       },
