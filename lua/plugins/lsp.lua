@@ -560,10 +560,13 @@ return {
           command = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
           name = "bashdb",
         },
-        lldb = {
-          type = "executable",
-          command = vim.fn.stdpath("data") .. "/mason/packages/codelldb/codelldb",
-          name = "lldb",
+        codelldb = {
+          type = "server",
+          port = "${port}",
+          executable = {
+            command = vim.fn.stdpath("data") .. "/mason/packages/codelldb/codelldb",
+            args = { "--port", "${port}" },
+          },
         },
         firefox = {
           type = "executable",
@@ -597,15 +600,14 @@ return {
         },
         cpp = {
           {
-            name = "Launch",
-            type = "lldb",
+            name = "Launch file",
+            type = "codelldb",
             request = "launch",
             program = function()
               return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
             end,
             cwd = "${workspaceFolder}",
             stopOnEntry = false,
-            args = {},
           },
         },
         javascript = {
