@@ -604,7 +604,7 @@ return {
             terminalKind = "integrated",
           },
         },
-        cpp = {
+        --[[ cpp = {
           {
             name = "Launch file",
             type = "codelldb",
@@ -627,7 +627,7 @@ return {
             cwd = "${workspaceFolder}",
             stopOnEntry = false,
           },
-        },
+        }, ]]
         javascript = {
           {
             name = "Debug with Firefox",
