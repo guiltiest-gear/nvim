@@ -27,7 +27,7 @@ return {
         "ssh_config",
         "zathurarc",
         -- 'json',
-        -- 'printf',
+        "printf",
         "ini",
         "html",
         "javascript",
