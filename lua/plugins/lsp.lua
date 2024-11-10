@@ -236,7 +236,7 @@ return {
         markdown = { "markdownlint" },
         html = { "markuplint" },
         css = { "stylelint" },
-        -- cpp = { 'clang-tidy' },
+        cpp = { "clang-tidy" },
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
