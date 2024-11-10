@@ -236,7 +236,10 @@ return {
       local lint = require("lint")
       lint.linters_by_ft = {
         lua = { "selene" },
-        bash = { "bash", "shellcheck" },
+        bash = {
+          "bash",
+          -- "shellcheck",
+        },
         zsh = { "zsh" },
         markdown = { "markdownlint" },
         html = { "markuplint" },
