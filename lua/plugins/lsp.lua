@@ -42,7 +42,7 @@ return {
         "markdownlint",
         "selene",
         "shellcheck",
-        -- 'clang_format',
+        "clang_format",
         "shfmt",
         "markuplint",
         "prettierd",
@@ -193,7 +193,8 @@ return {
         css = { "prettierd" },
         json = { "prettierd" },
         toml = { "taplo" },
-        -- cpp = { 'clang-format' },
+        cpp = { "clang-format" },
+        c = { "clang-format" },
         ["*"] = {
           "trim_whitespace",
           "squeeze_blanks",
