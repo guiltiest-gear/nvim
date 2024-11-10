@@ -81,7 +81,7 @@ return {
         severity_sort = true,
       },
       servers = {
-        clangd = {
+        --[[ clangd = {
           -- Fix clangd offset encoding
           capabilities = { offsetEncoding = { "utf-16" } },
           cmd = {
@@ -97,7 +97,7 @@ return {
             completeUnimported = true,
             clangdFileStatus = true,
           },
-        },
+        }, ]]
         lua_ls = {
           log_level = 0,
           settings = {
