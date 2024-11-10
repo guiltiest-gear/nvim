@@ -557,19 +557,19 @@ return {
       adapters = {
         bashdb = {
           type = "executable",
-          command = vim.env.MASON .. "/packages/bash-debug-adapter/bash-debug-adapter",
+          command = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
           name = "bashdb",
         },
         lldb = {
           type = "executable",
-          command = vim.env.MASON .. "/packages/codelldb/codelldb",
+          command = vim.fn.stdpath("data") .. "/mason/packages/codelldb/codelldb",
           name = "lldb",
         },
         firefox = {
           type = "executable",
           command = "node",
           args = {
-            vim.env.MASON .. "/packages/firefox-debug-adapter/dist/adapter.bundle.js",
+            vim.fn.stdpath("data") .. "/mason/packages/firefox-debug-adapter/dist/adapter.bundle.js",
           },
         },
       },
@@ -580,8 +580,8 @@ return {
             request = "launch",
             name = "Launch file",
             showDebugOutput = true,
-            pathBashdb = vim.env.MASON .. "/packages/bash-debug-adapter/extension/bashdb_dir/bashdb",
-            pathBashdbLib = vim.env.MASON .. "/packages/bash-debug-adapter/extension/bashdb_dir",
+            pathBashdb = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/extension/bashdb_dir/bashdb",
+            pathBashdbLib = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/extension/bashdb_dir",
             trace = true,
             file = "${file}",
             program = "${file}",
