@@ -194,8 +194,8 @@ return {
         css = { "prettierd" },
         json = { "prettierd" },
         toml = { "taplo" },
-        cpp = { "clang-format" },
-        c = { "clang-format" },
+        --[[ cpp = { "clang-format" },
+        c = { "clang-format" }, ]]
         ["*"] = {
           "trim_whitespace",
           "squeeze_blanks",
@@ -221,9 +221,9 @@ return {
         shfmt = {
           prepend_args = { "-i", "2", "-ci", "-bn" },
         },
-        clang_format = {
+        --[[ clang_format = {
           prepend_args = { "--style=Google" },
-        },
+        }, ]]
       },
     },
   },
