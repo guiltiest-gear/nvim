@@ -51,6 +51,7 @@ return {
         -- Debuggers
         -- "codelldb",
         "bash-debug-adapter",
+        "firefox-debug-adapter",
       },
       run_on_start = true,
     },
