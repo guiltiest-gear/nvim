@@ -179,7 +179,7 @@ return {
         desc = "Re-enable autoformat-on-save",
       })
     end,
-    ---@module 'conform'
+    ---@module "conform"
     ---@type conform.setupOpts
     opts = {
       formatters_by_ft = {
