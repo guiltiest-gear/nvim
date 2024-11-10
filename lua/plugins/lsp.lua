@@ -43,6 +43,7 @@ return {
         "selene",
         "shellcheck",
         "clang-format",
+        "cpplint",
         "shfmt",
         "markuplint",
         "prettierd",
