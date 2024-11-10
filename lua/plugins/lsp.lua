@@ -29,7 +29,7 @@ return {
       ensure_installed = {
         -- Language serverss
         "lua-language-server",
-        "clangd",
+        -- "clangd",
         "marksman",
         "bash-language-server",
         "taplo",
@@ -41,9 +41,9 @@ return {
         "stylua",
         "markdownlint",
         "selene",
-        "shellcheck",
-        "clang-format",
-        "cpplint",
+        -- "shellcheck",
+        -- "clang-format",
+        -- "cpplint",
         "shfmt",
         "markuplint",
         "prettierd",
