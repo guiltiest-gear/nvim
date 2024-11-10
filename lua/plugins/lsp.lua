@@ -42,7 +42,7 @@ return {
         "markdownlint",
         "selene",
         "shellcheck",
-        "clang_format",
+        "clang-format",
         "shfmt",
         "markuplint",
         "prettierd",
