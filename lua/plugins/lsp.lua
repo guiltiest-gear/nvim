@@ -221,6 +221,9 @@ return {
         shfmt = {
           prepend_args = { "-i", "2", "-ci", "-bn" },
         },
+        clang_format = {
+          prepend_args = { "--style=Google" },
+        },
       },
     },
   },
