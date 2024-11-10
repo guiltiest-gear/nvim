@@ -553,15 +553,84 @@ return {
         desc = "Widgets",
       },
     },
-    config = function()
-      vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
-
-      -- Set up dap config by vscode launch.json file
-      local vscode = require("dap.ext.vscode")
-      local json = require("plenary.json")
-      vscode.json_decode = function(str)
-        return vim.json.decode(json.json_strip_comments(str))
+    opts = {
+      adapters = {
+        bashdb = {
+          type = "executable",
+          command = vim.env.MASON .. "/packages/bash-debug-adapter/bash-debug-adapter",
+          name = "bashdb",
+        },
+        lldb = {
+          type = "executable",
+          command = vim.env.MASON .. "/packages/codelldb/codelldb",
+          name = "lldb",
+        },
+        firefox = {
+          type = "executable",
+          command = "node",
+          args = {
+            vim.env.MASON .. "/packages/firefox-debug-adapter/dist/adapter.bundle.js",
+          },
+        },
+      },
+      configurations = {
+        sh = {
+          {
+            type = "bashdb",
+            request = "launch",
+            name = "Launch file",
+            showDebugOutput = true,
+            pathBashdb = vim.env.MASON .. "/packages/bash-debug-adapter/extension/bashdb_dir/bashdb",
+            pathBashdbLib = vim.env.MASON .. "/packages/bash-debug-adapter/extension/bashdb_dir",
+            trace = true,
+            file = "${file}",
+            program = "${file}",
+            cwd = "${workspaceFolder}",
+            pathCat = "cat",
+            pathBash = "/bin/bash",
+            pathMkfifo = "mkfifo",
+            pathPkill = "pkill",
+            args = {},
+            env = {},
+            terminalKind = "integrated",
+          },
+        },
+        cpp = {
+          {
+            name = "Launch",
+            type = "lldb",
+            request = "launch",
+            program = function()
+              return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+            end,
+            cwd = "${workspaceFolder}",
+            stopOnEntry = false,
+            args = {},
+          },
+        },
+        javascript = {
+          {
+            name = "Debug with Firefox",
+            type = "firefox",
+            request = "launch",
+            reAttach = true,
+            url = "http://localhost:3000",
+            webRoot = "${workspaceFolder}",
+            firefoxExecutable = "/usr/bin/firefox",
+          },
+        },
+      },
+    },
+    config = function(_, opts)
+      local dap = require("dap")
+      for debugger, config in pairs(opts.adapters) do
+        dap.adapters[debugger] = config
       end
+      for ft, config in pairs(opts.configurations) do
+        dap.configurations[ft] = config
+      end
+
+      vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
     end,
   },
 }
