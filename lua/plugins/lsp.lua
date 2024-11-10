@@ -50,7 +50,7 @@ return {
         "stylelint",
         "codespell",
         -- Debuggers
-        "codelldb",
+        -- "codelldb",
         "bash-debug-adapter",
         "firefox-debug-adapter",
       },
