@@ -225,6 +225,7 @@ return {
         auto_brackets = { enabled = true },
       },
       trigger = {
+        completion = { keyword_range = "full" },
         signature_help = { enabled = true },
       },
       nerd_font_variant = "mono",
