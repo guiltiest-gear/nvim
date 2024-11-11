@@ -18,13 +18,13 @@ return {
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     dependencies = "williamboman/mason.nvim",
-    cmd = {
+    --[[ cmd = {
       "MasonToolsInstall",
       "MasonToolsInstallSync",
       "MasonToolsUpdate",
       "MasonToolsUpdateSync",
       "MasonToolsClean",
-    },
+    }, ]]
     opts = {
       ensure_installed = {
         -- Language serverss
