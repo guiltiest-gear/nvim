@@ -222,11 +222,11 @@ return {
         },
       },
       accept = {
-        auto_brackets = { enabled = true },
+        auto_brackets = { enabled = false },
       },
       trigger = {
         completion = { keyword_range = "full" },
-        signature_help = { enabled = true },
+        signature_help = { enabled = false },
       },
       nerd_font_variant = "mono",
       windows = {
