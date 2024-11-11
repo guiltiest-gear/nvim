@@ -194,8 +194,8 @@ return {
         css = { "prettierd" },
         json = { "prettierd" },
         toml = { "taplo" },
-        --[[ cpp = { "clang-format" },
-        c = { "clang-format" }, ]]
+        -- cpp = { "clang-format" },
+        -- c = { "clang-format" },
         ["*"] = {
           "trim_whitespace",
           "squeeze_blanks",
@@ -244,8 +244,8 @@ return {
         markdown = { "markdownlint" },
         html = { "markuplint" },
         css = { "stylelint" },
-        --[[ cpp = { "cpplint" },
-        c = { "cpplint" }, ]]
+        -- cpp = { "cpplint" },
+        -- c = { "cpplint" },
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
