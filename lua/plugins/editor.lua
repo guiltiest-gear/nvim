@@ -373,7 +373,6 @@ return {
   -- highlight-undo.nvim
   {
     "tzachar/highlight-undo.nvim",
-    commit = "c87a6ec1ded241ef223269077cbd5f97a6f0d5bf",
     keys = { "u", "<C-r>" },
     config = true,
   },
