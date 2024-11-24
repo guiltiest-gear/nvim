@@ -222,7 +222,7 @@ return {
         },
       },
       accept = {
-        auto_brackets = { enabled = false },
+        auto_brackets = { enabled = true },
       },
       trigger = {
         completion = { keyword_range = "full" },
