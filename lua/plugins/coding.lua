@@ -228,11 +228,18 @@ return {
         completion = { keyword_range = "full" },
         signature_help = { enabled = false },
       },
-      nerd_font_variant = "mono",
       windows = {
         autocomplete = {
           selection = "auto_insert",
-          draw = "reversed",
+          ---@diagnostic disable-next-line: missing-fields
+          draw = {
+            padding = 1,
+            gap = 1,
+            columns = {
+              { "label", "label_description", gap = 1 },
+              { "kind_icon", "kind" },
+            },
+          },
         },
         documentation = {
           auto_show = false,
