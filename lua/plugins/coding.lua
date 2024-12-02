@@ -224,9 +224,17 @@ return {
       accept = {
         auto_brackets = { enabled = true },
       },
-      trigger = {
-        completion = { keyword_range = "full" },
-        signature_help = { enabled = false },
+      completion = {
+        accept = {
+          auto_brackets = {
+            enabled = true,
+          },
+        },
+        keyword = { range = "full" },
+        ghost_text = { enabled = true },
+      },
+      signature = {
+        enabled = true,
       },
       windows = {
         autocomplete = {
