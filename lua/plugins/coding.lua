@@ -221,45 +221,39 @@ return {
           "hide_documentation",
         },
       },
-      accept = {
-        auto_brackets = { enabled = true },
-      },
       completion = {
         accept = {
-          auto_brackets = {
-            enabled = true,
-          },
+          auto_brackets = { enabled = true },
         },
         keyword = { range = "full" },
         ghost_text = { enabled = true },
-      },
-      signature = {
-        enabled = true,
-      },
-      windows = {
-        autocomplete = {
-          selection = "auto_insert",
-          ---@diagnostic disable-next-line: missing-fields
+        list = { selection = "auto_insert" },
+        menu = {
           draw = {
-            padding = 1,
-            gap = 1,
             columns = {
               { "label", "label_description", gap = 1 },
               { "kind_icon", "kind" },
             },
           },
         },
-        documentation = {
-          auto_show = false,
-        },
+      },
+      signature = {
+        enabled = true,
       },
       sources = {
-        completion = {
-          enabled_providers = { "lsp", "path", "snippets", "buffer", "lazydev" },
+        default = {
+          "lazydev",
+          "lsp",
+          "path",
+          "snippets",
+          "buffer",
         },
         providers = {
-          lsp = { fallback_for = { "lazydev" } },
-          lazydev = { name = "LazyDev", module = "lazydev.integrations.blink" },
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
+          },
         },
       },
     },
