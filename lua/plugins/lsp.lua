@@ -235,7 +235,7 @@ return {
     config = function()
       local lint = require("lint")
       lint.linters_by_ft = {
-        lua = { "selene" },
+        lua = { "luac", "selene" },
         bash = {
           "bash",
           -- "shellcheck",
