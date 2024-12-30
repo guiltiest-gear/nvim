@@ -29,11 +29,11 @@ return {
         -- 'json',
         "printf",
         "ini",
-        "html",
+        --[[ "html",
         "javascript",
         "typescript",
         "jsdoc",
-        "css",
+        "css", ]]
       },
       highlight = { enable = true },
       indent = { enable = true },
