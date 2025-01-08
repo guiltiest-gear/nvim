@@ -227,7 +227,9 @@ return {
         },
         keyword = { range = "full" },
         ghost_text = { enabled = true },
-        list = { selection = "auto_insert" },
+        list = {
+          selection = {},
+        },
         menu = {
           draw = {
             columns = {
