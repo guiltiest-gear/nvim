@@ -222,9 +222,7 @@ return {
         },
       },
       completion = {
-        accept = {
-          auto_brackets = { enabled = true },
-        },
+        accept = { auto_brackets = { enabled = true } },
         keyword = { range = "full" },
         ghost_text = { enabled = true },
         list = {
@@ -239,9 +237,7 @@ return {
           },
         },
       },
-      signature = {
-        enabled = true,
-      },
+      signature = { enabled = true },
       sources = {
         default = {
           "lazydev",
