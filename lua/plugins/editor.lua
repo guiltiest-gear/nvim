@@ -285,13 +285,24 @@ return {
       { "<leader>gR", "<cmd>Gitsigns reset_buffer<CR>", desc = "Reset the buffer" },
       { "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", mode = { "n", "v" }, desc = "Stage the hunk" },
       { "<leader>gS", "<cmd>Gitsigns stage_buffer<CR>", desc = "Stage the buffer" },
-      { "<leader>gu", "<cmd>Gitsigns undo_stage_hunk<CR>", desc = "Unstage the hunk" },
       { "<leader>gd", "<cmd>Gitsigns diffthis<CR>", desc = "Open a diff" },
       { "<leader>gq", "<cmd>Gitsigns setqflist<CR>", desc = "Open quickfix list with hunks" },
       { "<leader>gl", "<cmd>Gitsigns setloclist<CR>", desc = "Open location list with hunks" },
       { "<leader>gL", "<cmd>Gitsigns toggle_current_line_blame<CR>", desc = "Toggle line blame" },
-      { "]g", "<cmd>Gitsigns next_hunk<CR>", desc = "Next hunk" },
-      { "[g", "<cmd>Gitsigns prev_hunk<CR>", desc = "Previous hunk" },
+      {
+        "]g",
+        function()
+          return require("gitsigns").nav_hunk("next", { wrap = false })
+        end,
+        desc = "Next hunk",
+      },
+      {
+        "[g",
+        function()
+          return require("gitsigns").nav_hunk("prev", { wrap = false })
+        end,
+        desc = "Previous hunk",
+      },
     },
     opts = {
       signs = {
