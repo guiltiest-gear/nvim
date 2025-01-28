@@ -216,6 +216,19 @@ return {
       { "S", mode = { "n", "x", "o" }, desc = "Leap backward to" },
       { "gs", mode = { "n", "x", "o" }, desc = "Leap from windows" },
     },
+    opts = {
+      -- Disable auto-jumping to first match
+      safe_labels = {},
+
+      -- Define equivalence classes for brackets and quotes, in addition to
+      -- the default whitespace group:
+      equivalence_classes = {
+        " \t\r\n",
+        "([{",
+        "}])",
+        "\"'`",
+      },
+    },
     config = function(_, opts)
       local leap = require("leap")
       for k, v in pairs(opts) do
