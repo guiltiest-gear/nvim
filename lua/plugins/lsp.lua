@@ -33,26 +33,26 @@ return {
         "marksman",
         "bash-language-server",
         "taplo",
-        -- "html-lsp",
-        -- "eslint-lsp",
-        -- "typescript-language-server",
-        -- "css-lsp",
+        --[[ "html-lsp",
+        "eslint-lsp",
+        "typescript-language-server",
+        "css-lsp", ]]
         -- Linters and formatters
         "stylua",
         "markdownlint",
         "selene",
-        -- "shellcheck",
-        -- "clang-format",
-        -- "cpplint",
+        --[[ "shellcheck",
+        "clang-format",
+        "cpplint", ]]
         "shfmt",
         -- "markuplint",
         "prettierd",
         -- "stylelint",
         "codespell",
         -- Debuggers
-        -- "codelldb",
-        -- "bash-debug-adapter",
-        -- "firefox-debug-adapter",
+        --[[ "codelldb",
+        "bash-debug-adapter",
+        "firefox-debug-adapter", ]]
       },
       run_on_start = true,
     },
@@ -117,16 +117,16 @@ return {
         marksman = {},
         bashls = { filetypes = { "sh", "zsh", "bash" } },
         taplo = {},
-        -- html = {},
-        -- eslint = {},
-        --[[ ts_ls = {
+        --[[ html = {},
+        eslint = {},
+        ts_ls = {
           init_options = {
             preferences = {
               disableSuggestions = true,
             },
           },
-        }, ]]
-        -- cssls = {},
+        },
+        cssls = {}, ]]
       },
     },
     config = function(_, opts)
@@ -191,13 +191,13 @@ return {
         sh = { "shfmt" },
         zsh = { "shfmt" },
         markdown = { "prettierd" },
-        -- html = { "prettierd" },
-        -- javascript = { "prettierd" },
-        -- css = { "prettierd" },
+        --[[ html = { "prettierd" },
+        javascript = { "prettierd" },
+        css = { "prettierd" }, ]]
         json = { "prettierd" },
         toml = { "taplo" },
-        -- cpp = { "clang-format" },
-        -- c = { "clang-format" },
+        --[[ cpp = { "clang-format" },
+        c = { "clang-format" }, ]]
         ["*"] = {
           "trim_whitespace",
           "squeeze_blanks",
@@ -244,10 +244,10 @@ return {
         },
         zsh = { "zsh" },
         markdown = { "markdownlint" },
-        -- html = { "markuplint" },
-        -- css = { "stylelint" },
-        -- cpp = { "cpplint" },
-        -- c = { "cpplint" },
+        --[[ html = { "markuplint" },
+        css = { "stylelint" },
+        cpp = { "cpplint" },
+        c = { "cpplint" }, ]]
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
@@ -571,7 +571,7 @@ return {
           command = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
           name = "bashdb",
         },
-        codelldb = {
+        --[[ codelldb = {
           type = "server",
           port = "${port}",
           executable = {
@@ -585,7 +585,7 @@ return {
           args = {
             vim.fn.stdpath("data") .. "/mason/packages/firefox-debug-adapter/dist/adapter.bundle.js",
           },
-        },
+        }, ]]
       },
       configurations = {
         sh = {
@@ -632,7 +632,7 @@ return {
             cwd = "${workspaceFolder}",
             stopOnEntry = false,
           },
-        }, ]]
+        },
         javascript = {
           {
             name = "Debug with Firefox",
@@ -643,7 +643,7 @@ return {
             webRoot = "${workspaceFolder}",
             firefoxExecutable = "/usr/bin/firefox",
           },
-        },
+        }, ]]
       },
     },
     config = function(_, opts)
