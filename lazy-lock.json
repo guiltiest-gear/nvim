@@ -66,5 +66,4 @@
   "vim-repeat": { "branch": "master", "commit": "65846025c15494983dafe5e3b46c8f88ab2e9635" },
   "which-key.nvim": { "branch": "main", "commit": "0e76a87ac51772569aec678dc74baa8e2a86100c" },
   "windows.nvim": { "branch": "main", "commit": "c7492552b23d0ab30325e90b56066ec51242adc8" },
-  "zathurarc.vim": { "branch": "main", "commit": "8280bfd4bb0e1e7be5ef70f48f6f3a0e63200294" }
 }

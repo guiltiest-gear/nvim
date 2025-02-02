@@ -609,7 +609,4 @@ return {
 
   -- vim-kitty
   { "fladson/vim-kitty", ft = "kitty" },
-
-  -- zathurarc.vim
-  { "Freed-Wu/zathurarc.vim", ft = "zathurarc" },
 }

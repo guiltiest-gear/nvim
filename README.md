@@ -115,7 +115,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [vim-repeat](https://github.com/tpope/vim-repeat)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
 - [windows.nvim](https://github.com/anuvyklack/windows.nvim)
-- [zathurarc.vim](https://github.com/Freed-Wu/zathurarc.vim)
 
 ## License
 
