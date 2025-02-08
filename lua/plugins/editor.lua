@@ -61,6 +61,7 @@ return {
       -- providers = { 'lsp', 'treesitter', 'regex' },
       large_file_cuttoff = 2000,
       large_file_overrides = { providers = { "lsp" } },
+      disable_keymaps = true,
     },
     config = function(_, opts)
       require("illuminate").configure(opts)
