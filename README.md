@@ -106,7 +106,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [undotree](https://github.com/mbbill/undotree)
 - [vim-cool](https://github.com/romainl/vim-cool)
-- [vim-illuminate](https://github.com/RRethy/vim-illuminate)
 - [vim-kitty](https://github.com/fladson/vim-kitty)
 - [vim-matchup](https://github.com/andymass/vim-matchup)
 - [vim-repeat](https://github.com/tpope/vim-repeat)
