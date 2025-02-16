@@ -105,19 +105,6 @@ return {
     event = { "BufReadPost", "BufNewFile" },
   },
 
-  -- indent-blankline.nvim
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    dependencies = "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPost", "BufNewFile" },
-    opts = {
-      indent = { char = "│", tab_char = "│" },
-      scope = { enabled = false },
-      exclude = { filetypes = { "lazy", "dashboard", "mason" } },
-    },
-  },
-
   -- helpview.nvim
   { "OXY2DEV/helpview.nvim", ft = "help", dependencies = "nvim-treesitter/nvim-treesitter" },
 }
