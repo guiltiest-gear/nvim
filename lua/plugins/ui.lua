@@ -409,7 +409,6 @@ return {
   -- mini.animate
   {
     "echasnovski/mini.animate",
-    -- enabled = false,
     event = { "BufReadPost", "BufNewFile" },
     opts = function()
       local animate = require("mini.animate")
