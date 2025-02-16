@@ -256,6 +256,13 @@ return {
       },
       signature = { enabled = true },
       sources = {
+        min_keyword_length = function(ctx)
+          -- Only applies when typing a command, doesn't apply to arguments
+          if ctx.mode == "cmdline" and string.find(ctx.line, " ") == nil then
+            return 2
+          end
+          return 0
+        end,
         default = {
           "lazydev",
           "lsp",
