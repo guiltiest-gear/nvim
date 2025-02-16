@@ -200,6 +200,13 @@ return {
     ---@module "blink.cmp"
     ---@type blink.cmp.Config
     opts = {
+      fuzzy = {
+        sorts = {
+          "exact",
+          "score",
+          "sort_text",
+        },
+      },
       keymap = {
         ["<C-b>"] = { "scroll_documentation_up" },
         ["<C-f>"] = { "scroll_documentation_down" },
