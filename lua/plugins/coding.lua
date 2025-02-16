@@ -200,6 +200,9 @@ return {
     ---@module "blink.cmp"
     ---@type blink.cmp.Config
     opts = {
+      enabled = function()
+        return vim.bo.buftype ~= "prompt" and vim.b.completion ~= false
+      end,
       fuzzy = {
         sorts = {
           "exact",
