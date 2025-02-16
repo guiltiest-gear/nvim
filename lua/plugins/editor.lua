@@ -332,15 +332,48 @@ return {
     },
   },
 
+  -- snacks.nvim
   {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    ---@module "snacks"
+    ---@type snacks.Config
+    opts = {
+      quickfile = { enabled = true },
+      bigfile = { enabled = true },
+      image = { enabled = true },
+      indent = { enabled = true },
+      scope = { enabled = true },
+      words = {
+        enabled = true,
+        debounce = 100,
+      },
+      bufdelete = { enabled = true },
+    },
     keys = {
       {
+        "]]",
         function()
+          Snacks.words.jump(vim.v.count1)
         end,
+        desc = "Next Reference",
+        mode = { "n", "t" },
       },
       {
+        "[[",
         function()
+          Snacks.words.jump(-vim.v.count1)
         end,
+        desc = "Previous Reference",
+        mode = { "n", "t" },
+      },
+      {
+        "<leader>bd",
+        function()
+          Snacks.bufdelete()
+        end,
+        desc = "Delete Buffer",
       },
     },
   },
