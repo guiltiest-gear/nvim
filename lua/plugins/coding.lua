@@ -197,7 +197,7 @@ return {
     event = "InsertEnter",
     dependencies = "rafamadriz/friendly-snippets",
     version = "*",
-    ---@module 'blink.cmp'
+    ---@module "blink.cmp"
     ---@type blink.cmp.Config
     opts = {
       keymap = {
