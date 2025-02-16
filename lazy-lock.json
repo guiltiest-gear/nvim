@@ -3,7 +3,7 @@
   "actions-preview.nvim": { "branch": "master", "commit": "a778d4063676bfdb9c792d39bc9bcd7972d2b7e7" },
   "animation.nvim": { "branch": "main", "commit": "fb77091ab72ec9971aee0562e7081182527aaa6a" },
   "better-escape.nvim": { "branch": "master", "commit": "199dcc2643dec5d8dbdab4ec672cf405224dcb3b" },
-  "blink.cmp": { "branch": "main", "commit": "4780af2dc6dfef6eb2a0fbf27574ae88dcf83e83" },
+  "blink.cmp": { "branch": "main", "commit": "cc2f10e9d8b6420324d4743a4d9a428de427e2cf" },
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "conform.nvim": { "branch": "master", "commit": "a6f5bdb78caa305496357d17e962bbc4c0b392e2" },
   "dashboard-nvim": { "branch": "master", "commit": "000448d837f6e7a47f8f342f29526c4d7e49e9ce" },
