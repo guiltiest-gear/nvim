@@ -51,7 +51,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [blink.cmp](https://github.com/saghen/blink.cmp)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [conform.nvim](https://github.com/stevearc/conform.nvim)
-- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 - [dial.nvim](https://github.com/monaqa/dial.nvim)
 - [fidget.nvim](https://github.com/j-hui/fidget.nvim)
 - [flit.nvim](https://github.com/ggandor/flit.nvim)

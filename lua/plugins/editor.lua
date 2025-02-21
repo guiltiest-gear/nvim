@@ -351,6 +351,39 @@ return {
       },
       bufdelete = { enabled = true },
       input = { enabled = true },
+      dashboard = {
+        enabled = true,
+        preset = {
+          pick = "telescope.nvim",
+          keys = {
+            { icon = "󰈞", key = "f", desc = "Find file", action = ":Telescope find_files" },
+            { icon = "", key = "e", desc = "New file", action = ":ene | startinsert" },
+            { icon = "󰄉", key = "r", desc = "Recent files", action = ":Telescope oldfiles" },
+            { icon = "󰊄", key = "w", desc = "Find text", action = ":Telescope live_grep" },
+            {
+              icon = "",
+              key = "c",
+              desc = "Configuration",
+              action = ":cd ~/.config/nvim | e ~/.config/nvim/init.lua",
+            },
+            { icon = "", key = "u", desc = "Update plugins", action = ":Lazy update" },
+            { icon = "", key = "m", desc = "Mason", action = ":Mason" },
+            { icon = "", key = "g", desc = "NeoGit", action = ":Neogit" },
+            {
+              icon = "󰦛",
+              key = "l",
+              desc = "Restore last session",
+              action = ":lua require('persistence').load({ last = true })",
+            },
+            { icon = "", key = "q", desc = "Quit Neovim", action = ":qa" },
+          },
+        },
+        sections = {
+          { section = "header" },
+          { section = "keys", gap = 1, padding = 1 },
+          { section = "startup" },
+        },
+      },
     },
     keys = {
       {
