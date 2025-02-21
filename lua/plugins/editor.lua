@@ -350,6 +350,7 @@ return {
         debounce = 100,
       },
       bufdelete = { enabled = true },
+      input = { enabled = true },
     },
     keys = {
       {
