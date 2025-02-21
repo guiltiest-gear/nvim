@@ -97,6 +97,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [rainbow-delimiters.nvim](https://github.com/hiphish/rainbow-delimiters.nvim)
 - [snacks.nvim](https://github.com/folke/snacks.nvim)
 - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
+- [telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
