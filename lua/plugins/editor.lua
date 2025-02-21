@@ -481,7 +481,7 @@ return {
       },
     },
     branch = "0.1.x",
-    cmd = "Telescope",
+    event = "VeryLazy",
     keys = {
       { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Files" },
       { "<leader>fw", "<cmd>Telescope live_grep<CR>", desc = "Words" },
