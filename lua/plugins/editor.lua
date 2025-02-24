@@ -349,7 +349,6 @@ return {
         enabled = true,
         debounce = 100,
       },
-      bufdelete = { enabled = true },
       input = { enabled = true },
       dashboard = {
         enabled = true,
