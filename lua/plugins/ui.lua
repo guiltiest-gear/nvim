@@ -323,27 +323,4 @@ return {
       },
     },
   },
-
-  -- mini.animate
-  {
-    "echasnovski/mini.animate",
-    event = { "BufReadPost", "BufNewFile" },
-    opts = function()
-      local animate = require("mini.animate")
-      return {
-        -- These are already handled by windows.nvim
-        resize = { enable = false },
-        open = { enable = false },
-        close = { enable = false },
-        scroll = {
-          timing = animate.gen_timing.linear({ duration = 150, unit = "total" }),
-          subscroll = animate.gen_subscroll.equal({
-            predicate = function(total_scroll)
-              return total_scroll > 1
-            end,
-          }),
-        },
-      }
-    end,
-  },
 }

@@ -362,6 +362,13 @@ return {
           patterns = { "GitSign" },
         },
       },
+      scroll = {
+        animate = {
+          duration = {
+            total = 150,
+          },
+        },
+      },
       dashboard = {
         enabled = true,
         preset = {

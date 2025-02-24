@@ -69,7 +69,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [mason-tool-installer.nvim](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [middleclass](https://github.com/anuvyklack/middleclass)
-- [mini.animate](https://github.com/echasnovski/mini.animate)
 - [mini.surround](https://github.com/echasnovski/mini.surround)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [neogit](https://github.com/NeogitOrg/neogit)
