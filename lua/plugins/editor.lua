@@ -351,7 +351,7 @@ return {
       },
       input = { enabled = true },
       statuscolumn = {
-        enabled = true,
+        enabled = false,
         left = { "fold", "git" },
         right = { "mark", "sign" },
         folds = {
