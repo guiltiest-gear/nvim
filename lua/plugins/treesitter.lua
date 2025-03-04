@@ -29,6 +29,7 @@ return {
         --[[ "json",
         "printf", ]]
         "ini",
+        "sxhkdrc",
         --[[ "html",
         "javascript",
         "typescript",
