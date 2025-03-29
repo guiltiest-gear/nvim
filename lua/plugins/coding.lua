@@ -231,6 +231,11 @@ return {
           "hide_documentation",
         },
       },
+      cmdline = {
+        completion = {
+          menu = { auto_show = true },
+        },
+      },
       completion = {
         accept = { auto_brackets = { enabled = true } },
         keyword = { range = "full" },
