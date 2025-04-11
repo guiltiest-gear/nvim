@@ -22,8 +22,18 @@ map("n", "<leader>w", vim.cmd.w, { desc = "Save the current file" })
 -- Resize splits with arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<CR>", { desc = "Increase window height" })
 map("n", "<C-Down>", "<cmd>resize -2<CR>", { desc = "Decrease window height" })
-map("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
-map("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Increase window width" })
+map(
+  "n",
+  "<C-Left>",
+  "<cmd>vertical resize -2<CR>",
+  { desc = "Decrease window width" }
+)
+map(
+  "n",
+  "<C-Right>",
+  "<cmd>vertical resize +2<CR>",
+  { desc = "Increase window width" }
+)
 
 -- Open lazy.nvim
 map("n", "<leader>l", vim.cmd.Lazy, { desc = "Open lazy.nvim" })
@@ -33,10 +43,30 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-map("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next search result" })
-map({ "x", "o" }, "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next search result" })
-map("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Previous search result" })
-map({ "x", "o" }, "N", "'nN'[v:searchforward]", { expr = true, desc = "Previous search result" })
+map(
+  "n",
+  "n",
+  "'Nn'[v:searchforward].'zv'",
+  { expr = true, desc = "Next search result" }
+)
+map(
+  { "x", "o" },
+  "n",
+  "'Nn'[v:searchforward]",
+  { expr = true, desc = "Next search result" }
+)
+map(
+  "n",
+  "N",
+  "'nN'[v:searchforward].'zv'",
+  { expr = true, desc = "Previous search result" }
+)
+map(
+  { "x", "o" },
+  "N",
+  "'nN'[v:searchforward]",
+  { expr = true, desc = "Previous search result" }
+)
 
 -- Jump to diagnostics
 ---@param next boolean
@@ -61,8 +91,18 @@ map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 map("n", "<leader>bb", "<cmd>e #<CR>", { desc = "Switch to other buffer" })
 
 -- Better up/down
-map({ "n", "x" }, "j", 'v:count == 0 ? "gj" : "j"', { desc = "Down", expr = true, silent = true })
-map({ "n", "x" }, "k", 'v:count == 0 ? "gk" : "k"', { desc = "Up", expr = true, silent = true })
+map(
+  { "n", "x" },
+  "j",
+  'v:count == 0 ? "gj" : "j"',
+  { desc = "Down", expr = true, silent = true }
+)
+map(
+  { "n", "x" },
+  "k",
+  'v:count == 0 ? "gk" : "k"',
+  { desc = "Up", expr = true, silent = true }
+)
 
 -- Add undo breakpoints
 map("i", ",", ",<C-g>u")

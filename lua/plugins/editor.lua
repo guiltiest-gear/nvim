@@ -40,9 +40,21 @@ return {
     dependencies = "nvim-tree/nvim-web-devicons",
     opts = { use_diagnostic_signs = true, focus = true },
     keys = {
-      { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Toggle trouble.nvim" },
-      { "<leader>xw", "<cmd>Trouble diagnostics<cr>", desc = "Open workspace diagnostics" },
-      { "<leader>xd", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Open document diagnostics" },
+      {
+        "<leader>xx",
+        "<cmd>Trouble diagnostics toggle<cr>",
+        desc = "Toggle trouble.nvim",
+      },
+      {
+        "<leader>xw",
+        "<cmd>Trouble diagnostics<cr>",
+        desc = "Open workspace diagnostics",
+      },
+      {
+        "<leader>xd",
+        "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+        desc = "Open document diagnostics",
+      },
       { "gR", "<cmd>Trouble lsp toggle<cr>", desc = "References" },
       { "<leader>xt", "<cmd>Trouble todo toggle<CR>", desc = "Todo (Trouble)" },
       {
@@ -70,7 +82,10 @@ return {
     -- Load neo-tree.nvim if we provide a directory as an argument
     init = function()
       vim.api.nvim_create_autocmd("BufEnter", {
-        group = vim.api.nvim_create_augroup("Neotree_start_directory", { clear = true }),
+        group = vim.api.nvim_create_augroup(
+          "Neotree_start_directory",
+          { clear = true }
+        ),
         desc = "Start neo-tree with directory",
         once = true,
         callback = function()
@@ -91,21 +106,30 @@ return {
       {
         "<leader>e",
         function()
-          return require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
+          return require("neo-tree.command").execute({
+            toggle = true,
+            dir = vim.uv.cwd(),
+          })
         end,
         desc = "Open neo-tree.nvim",
       },
       {
         "<leader>ge",
         function()
-          return require("neo-tree.command").execute({ source = "git_status", toggle = true })
+          return require("neo-tree.command").execute({
+            source = "git_status",
+            toggle = true,
+          })
         end,
         desc = "Git explorer",
       },
       {
         "<leader>be",
         function()
-          return require("neo-tree.command").execute({ source = "buffers", toggle = true })
+          return require("neo-tree.command").execute({
+            source = "buffers",
+            toggle = true,
+          })
         end,
         desc = "Buffer explorer",
       },
@@ -143,9 +167,15 @@ return {
             function(state)
               local node = state.tree:get_node()
               if node.type == "directory" and node:is_expanded() then
-                require("neo-tree.sources.filesystem").toggle_directory(state, node)
+                require("neo-tree.sources.filesystem").toggle_directory(
+                  state,
+                  node
+                )
               else
-                require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+                require("neo-tree.ui.renderer").focus_node(
+                  state,
+                  node:get_parent_id()
+                )
               end
             end,
             desc = "Open directory",
@@ -155,9 +185,15 @@ return {
               local node = state.tree:get_node()
               if node.type == "directory" then
                 if not node:is_expanded() then
-                  require("neo-tree.sources.filesystem").toggle_directory(state, node)
+                  require("neo-tree.sources.filesystem").toggle_directory(
+                    state,
+                    node
+                  )
                 elseif node:has_children() then
-                  require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
+                  require("neo-tree.ui.renderer").focus_node(
+                    state,
+                    node:get_child_ids()[1]
+                  )
                 end
               end
             end,
@@ -182,9 +218,24 @@ return {
     "ggandor/leap.nvim",
     dependencies = { "tpope/vim-repeat", keys = { "." } },
     keys = {
-      { "s", "<Plug>(leap-forward)", mode = { "n", "x", "o" }, desc = "Leap forward" },
-      { "S", "<Plug>(leap-backward)", mode = { "n", "x", "o" }, desc = "Leap backward" },
-      { "gs", "<Plug>(leap-from-window)", mode = { "n", "x", "o" }, desc = "Leap from windows" },
+      {
+        "s",
+        "<Plug>(leap-forward)",
+        mode = { "n", "x", "o" },
+        desc = "Leap forward",
+      },
+      {
+        "S",
+        "<Plug>(leap-backward)",
+        mode = { "n", "x", "o" },
+        desc = "Leap backward",
+      },
+      {
+        "gs",
+        "<Plug>(leap-from-window)",
+        mode = { "n", "x", "o" },
+        desc = "Leap from windows",
+      },
     },
     opts = {
       -- Disable auto-jumping to first match
@@ -201,7 +252,10 @@ return {
 
       -- Define a preview filter (skip the middle of alphanumeric words):
       preview_filter = function(ch0, ch1, ch2)
-        return not (ch1:match("%s") or ch0:match("%w") and ch1:match("%w") and ch2:match("%w"))
+        return not (
+          ch1:match("%s")
+          or ch0:match("%w") and ch1:match("%w") and ch2:match("%w")
+        )
       end,
     },
   },
@@ -243,9 +297,14 @@ return {
     init = function()
       -- load gitsigns only when a git file is opened
       vim.api.nvim_create_autocmd("BufRead", {
-        group = vim.api.nvim_create_augroup("GitSignsLazyLoad", { clear = true }),
+        group = vim.api.nvim_create_augroup(
+          "GitSignsLazyLoad",
+          { clear = true }
+        ),
         callback = function()
-          vim.fn.system("git -C " .. '"' .. vim.fn.expand("%:p:h") .. '"' .. " rev-parse")
+          vim.fn.system(
+            "git -C " .. '"' .. vim.fn.expand("%:p:h") .. '"' .. " rev-parse"
+          )
           if vim.v.shell_error == 0 then
             vim.api.nvim_del_augroup_by_name("GitSignsLazyLoad")
             vim.schedule(function()
@@ -259,15 +318,49 @@ return {
     ft = "gitcommit",
     keys = {
       { "<leader>gB", "<cmd>Gitsigns blame_line<CR>", desc = "Open git blame" },
-      { "<leader>gp", "<cmd>Gitsigns preview_hunk_inline<CR>", desc = "Preview the hunk" },
-      { "<leader>gr", "<cmd>Gitsigns reset_hunk<CR>", mode = { "n", "v" }, desc = "Reset the hunk" },
-      { "<leader>gR", "<cmd>Gitsigns reset_buffer<CR>", desc = "Reset the buffer" },
-      { "<leader>gs", "<cmd>Gitsigns stage_hunk<CR>", mode = { "n", "v" }, desc = "Stage the hunk" },
-      { "<leader>gS", "<cmd>Gitsigns stage_buffer<CR>", desc = "Stage the buffer" },
+      {
+        "<leader>gp",
+        "<cmd>Gitsigns preview_hunk_inline<CR>",
+        desc = "Preview the hunk",
+      },
+      {
+        "<leader>gr",
+        "<cmd>Gitsigns reset_hunk<CR>",
+        mode = { "n", "v" },
+        desc = "Reset the hunk",
+      },
+      {
+        "<leader>gR",
+        "<cmd>Gitsigns reset_buffer<CR>",
+        desc = "Reset the buffer",
+      },
+      {
+        "<leader>gs",
+        "<cmd>Gitsigns stage_hunk<CR>",
+        mode = { "n", "v" },
+        desc = "Stage the hunk",
+      },
+      {
+        "<leader>gS",
+        "<cmd>Gitsigns stage_buffer<CR>",
+        desc = "Stage the buffer",
+      },
       { "<leader>gd", "<cmd>Gitsigns diffthis<CR>", desc = "Open a diff" },
-      { "<leader>gq", "<cmd>Gitsigns setqflist<CR>", desc = "Open quickfix list with hunks" },
-      { "<leader>gl", "<cmd>Gitsigns setloclist<CR>", desc = "Open location list with hunks" },
-      { "<leader>gL", "<cmd>Gitsigns toggle_current_line_blame<CR>", desc = "Toggle line blame" },
+      {
+        "<leader>gq",
+        "<cmd>Gitsigns setqflist<CR>",
+        desc = "Open quickfix list with hunks",
+      },
+      {
+        "<leader>gl",
+        "<cmd>Gitsigns setloclist<CR>",
+        desc = "Open location list with hunks",
+      },
+      {
+        "<leader>gL",
+        "<cmd>Gitsigns toggle_current_line_blame<CR>",
+        desc = "Toggle line blame",
+      },
       {
         "]g",
         function()
@@ -302,9 +395,21 @@ return {
     "akinsho/toggleterm.nvim",
     version = "*",
     keys = {
-      { "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", desc = "Open a vertical terminal" },
-      { "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", desc = "Open a horizontal terminal" },
-      { "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", desc = "Open a floating terminal" },
+      {
+        "<leader>tv",
+        "<cmd>ToggleTerm direction=vertical<CR>",
+        desc = "Open a vertical terminal",
+      },
+      {
+        "<leader>th",
+        "<cmd>ToggleTerm direction=horizontal<CR>",
+        desc = "Open a horizontal terminal",
+      },
+      {
+        "<leader>tf",
+        "<cmd>ToggleTerm direction=float<CR>",
+        desc = "Open a floating terminal",
+      },
     },
     opts = {
       size = function(term)
@@ -370,17 +475,42 @@ return {
         preset = {
           pick = "telescope.nvim",
           keys = {
-            { icon = "󰈞", key = "f", desc = "Find file", action = ":Telescope find_files" },
-            { icon = "", key = "e", desc = "New file", action = ":ene | startinsert" },
-            { icon = "󰄉", key = "r", desc = "Recent files", action = ":Telescope oldfiles" },
-            { icon = "󰊄", key = "w", desc = "Find text", action = ":Telescope live_grep" },
+            {
+              icon = "󰈞",
+              key = "f",
+              desc = "Find file",
+              action = ":Telescope find_files",
+            },
+            {
+              icon = "",
+              key = "e",
+              desc = "New file",
+              action = ":ene | startinsert",
+            },
+            {
+              icon = "󰄉",
+              key = "r",
+              desc = "Recent files",
+              action = ":Telescope oldfiles",
+            },
+            {
+              icon = "󰊄",
+              key = "w",
+              desc = "Find text",
+              action = ":Telescope live_grep",
+            },
             {
               icon = "",
               key = "c",
               desc = "Configuration",
               action = ":cd ~/.config/nvim | e ~/.config/nvim/init.lua",
             },
-            { icon = "", key = "u", desc = "Update plugins", action = ":Lazy update" },
+            {
+              icon = "",
+              key = "u",
+              desc = "Update plugins",
+              action = ":Lazy update",
+            },
             { icon = "", key = "m", desc = "Mason", action = ":Mason" },
             { icon = "", key = "g", desc = "NeoGit", action = ":Neogit" },
             {
@@ -451,7 +581,9 @@ return {
   -- undotree
   {
     "mbbill/undotree",
-    keys = { { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Open undotree" } },
+    keys = {
+      { "<leader>u", "<cmd>UndotreeToggle<CR>", desc = "Open undotree" },
+    },
     config = function()
       vim.g.undotree_WindowLayout = 2
       vim.g.undotree_ShortIndicators = 1
@@ -512,18 +644,50 @@ return {
       { "<leader>fR", "<cmd>Telescope registers<CR>", desc = "Registers" },
       { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
       { "<leader>fc", "<cmd>Telescope commands<CR>", desc = "Commands" },
-      { "<leader>fC", "<cmd>Telescope command_history<CR>", desc = "Command history" },
+      {
+        "<leader>fC",
+        "<cmd>Telescope command_history<CR>",
+        desc = "Command history",
+      },
       { "<leader>fl", "<cmd>Telescope resume<CR>", desc = "Resume" },
-      { "<leader>fd", "<cmd>Telescope diagnostics bufnr=0<CR>", desc = "Document diagnostics" },
-      { "<leader>fD", "<cmd>Telescope diagnostics<CR>", desc = "Workspace diagnostics" },
-      { "<leader>fs", "<cmd>Telescope lsp_document_symbols<CR>", desc = "Document symbols" },
+      {
+        "<leader>fd",
+        "<cmd>Telescope diagnostics bufnr=0<CR>",
+        desc = "Document diagnostics",
+      },
+      {
+        "<leader>fD",
+        "<cmd>Telescope diagnostics<CR>",
+        desc = "Workspace diagnostics",
+      },
+      {
+        "<leader>fs",
+        "<cmd>Telescope lsp_document_symbols<CR>",
+        desc = "Document symbols",
+      },
       { "<leader>fg", "<cmd>Telescope git_files<CR>", desc = "Git files" },
       { "<leader>fo", "<cmd>Telescope vim_options<CR>", desc = "Options" },
       { "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Todo" },
-      { "<leader>fT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>", desc = "Todo/Fix/Fixme" },
-      { "<leader>gc", "<cmd>Telescope git_status<CR>", desc = "Search through changed files" },
-      { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "Search through git branches" },
-      { "<leader>gC", "<cmd>Telescope git_commits<CR>", desc = "Search and checkout git commits" },
+      {
+        "<leader>fT",
+        "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<CR>",
+        desc = "Todo/Fix/Fixme",
+      },
+      {
+        "<leader>gc",
+        "<cmd>Telescope git_status<CR>",
+        desc = "Search through changed files",
+      },
+      {
+        "<leader>gb",
+        "<cmd>Telescope git_branches<CR>",
+        desc = "Search through git branches",
+      },
+      {
+        "<leader>gC",
+        "<cmd>Telescope git_commits<CR>",
+        desc = "Search and checkout git commits",
+      },
       --[[ {
         '<leader>gO',
         function()
@@ -536,7 +700,8 @@ return {
       -- File and text search in hidden files and directories
       local telescopeConfig = require("telescope.config")
       -- Clone the default Telescope configuration
-      local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
+      local vimgrep_arguments =
+        { unpack(telescopeConfig.values.vimgrep_arguments) }
       local actions = require("telescope.actions")
       -- I want to search in hidden/dot files.
       table.insert(vimgrep_arguments, "--hidden")
@@ -557,7 +722,17 @@ return {
           layout_config = { prompt_position = "top" },
           sorting_strategy = "ascending",
         },
-        pickers = { find_files = { find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" } } },
+        pickers = {
+          find_files = {
+            find_command = {
+              "rg",
+              "--files",
+              "--hidden",
+              "--glob",
+              "!**/.git/*",
+            },
+          },
+        },
       }
     end,
   },
@@ -640,8 +815,16 @@ return {
   {
     "tris203/precognition.nvim",
     keys = {
-      { "<leader>pP", "<cmd>Precognition toggle<CR>", desc = "Toggle precognition.nvim" },
-      { "<leader>pp", "<cmd>Precognition peek<CR>", desc = "Peek precognition.nvim" },
+      {
+        "<leader>pP",
+        "<cmd>Precognition toggle<CR>",
+        desc = "Toggle precognition.nvim",
+      },
+      {
+        "<leader>pp",
+        "<cmd>Precognition peek<CR>",
+        desc = "Peek precognition.nvim",
+      },
     },
     opts = { startVisible = false },
   },

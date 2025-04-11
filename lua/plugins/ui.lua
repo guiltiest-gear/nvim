@@ -73,13 +73,18 @@ return {
     },
     opts = {
       provider_selector = function(_, filetype, buftype)
-        return (filetype == "" or buftype == "nofile") and "indent" or { "treesitter", "indent" }
+        return (filetype == "" or buftype == "nofile") and "indent"
+          or { "treesitter", "indent" }
       end,
     },
   },
 
   -- nvim-origami
-  { "chrisgrieser/nvim-origami", event = { "BufReadPost", "BufNewFile" }, config = true },
+  {
+    "chrisgrieser/nvim-origami",
+    event = { "BufReadPost", "BufNewFile" },
+    config = true,
+  },
 
   -- windows.nvim
   {
@@ -88,8 +93,16 @@ return {
     config = true,
     keys = {
       { "<C-w>z", "<cmd>WindowsMaximize<CR>", desc = "Max out current window" },
-      { "<C-w>_", "<cmd>WindowsMaximizeVertically<CR>", desc = "Max out window height" },
-      { "<C-w>|", "<cmd>WindowsMaximizeHorizontally<CR>", desc = "Max out window width" },
+      {
+        "<C-w>_",
+        "<cmd>WindowsMaximizeVertically<CR>",
+        desc = "Max out window height",
+      },
+      {
+        "<C-w>|",
+        "<cmd>WindowsMaximizeHorizontally<CR>",
+        desc = "Max out window width",
+      },
       { "<C-w>=", "<cmd>WindowsEqualize<CR>", desc = "Equalize windows" },
       { "<C-w>v" },
       { "<C-w>s" },
@@ -134,7 +147,8 @@ return {
               return require("nvim-navic").get_location()
             end,
             cond = function()
-              return package.loaded["nvim-navic"] and require("nvim-navic").is_available()
+              return package.loaded["nvim-navic"]
+                and require("nvim-navic").is_available()
             end,
             color_correction = "static",
           },
@@ -212,9 +226,21 @@ return {
     event = "UIEnter",
     keys = {
       { "<Tab>", "<cmd>BufferLineCycleNext<CR>", desc = "Go to next buffer" },
-      { "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Go to previous buffer" },
-      { "<S-l>", "<cmd>BufferLineMoveNext<CR>", desc = "Move current buffer forwards" },
-      { "<S-h>", "<cmd>BufferLineMovePrev<CR>", desc = "Move current buffer backwards" },
+      {
+        "<S-Tab>",
+        "<cmd>BufferLineCyclePrev<CR>",
+        desc = "Go to previous buffer",
+      },
+      {
+        "<S-l>",
+        "<cmd>BufferLineMoveNext<CR>",
+        desc = "Move current buffer forwards",
+      },
+      {
+        "<S-h>",
+        "<cmd>BufferLineMovePrev<CR>",
+        desc = "Move current buffer backwards",
+      },
       {
         "<leader>bf",
         function()

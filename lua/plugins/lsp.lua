@@ -64,8 +64,16 @@ return {
     dependencies = { "williamboman/mason.nvim", "Saghen/blink.cmp" },
     keys = {
       { "gd", "<cmd>Telescope lsp_definitions<CR>", desc = "Goto Definition" },
-      { "gi", "<cmd>Telescope lsp_implementations<CR>", desc = "Goto Implementation" },
-      { "gy", "<cmd>Telescope lsp_type_definitions<CR>", desc = "Goto T[y]pe Definition" },
+      {
+        "gi",
+        "<cmd>Telescope lsp_implementations<CR>",
+        desc = "Goto Implementation",
+      },
+      {
+        "gy",
+        "<cmd>Telescope lsp_type_definitions<CR>",
+        desc = "Goto T[y]pe Definition",
+      },
       { "gD", vim.lsp.buf.declaration, desc = "Goto Declaration" },
       { "K", vim.lsp.buf.hover, desc = "Hover" },
       { "gK", vim.lsp.buf.signature_help, desc = "Signature Help" },
@@ -132,7 +140,8 @@ return {
     config = function(_, opts)
       local lspconfig = require("lspconfig")
       for server, config in pairs(opts.servers) do
-        config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+        config.capabilities =
+          require("blink.cmp").get_lsp_capabilities(config.capabilities)
         lspconfig[server].setup(config)
       end
 
@@ -391,7 +400,10 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       -- nvim-dap-virtual-text
-      { "theHamsta/nvim-dap-virtual-text", opts = { highlight_new_as_changed = true } },
+      {
+        "theHamsta/nvim-dap-virtual-text",
+        opts = { highlight_new_as_changed = true },
+      },
 
       -- goto-breakpoints.nvim
       {
@@ -455,7 +467,9 @@ return {
       {
         "<leader>dB",
         function()
-          return require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))
+          return require("dap").set_breakpoint(
+            vim.fn.input("Breakpoint condition: ")
+          )
         end,
         desc = "Breakpoint Condition",
       },
@@ -569,7 +583,8 @@ return {
       adapters = {
         bashdb = {
           type = "executable",
-          command = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
+          command = vim.fn.stdpath("data")
+            .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
           name = "bashdb",
         },
         --[[ codelldb = {
@@ -595,8 +610,10 @@ return {
             request = "launch",
             name = "Launch file",
             showDebugOutput = true,
-            pathBashdb = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/extension/bashdb_dir/bashdb",
-            pathBashdbLib = vim.fn.stdpath("data") .. "/mason/packages/bash-debug-adapter/extension/bashdb_dir",
+            pathBashdb = vim.fn.stdpath("data")
+              .. "/mason/packages/bash-debug-adapter/extension/bashdb_dir/bashdb",
+            pathBashdbLib = vim.fn.stdpath("data")
+              .. "/mason/packages/bash-debug-adapter/extension/bashdb_dir",
             trace = true,
             file = "${file}",
             program = "${file}",
@@ -656,7 +673,11 @@ return {
         dap.configurations[ft] = config
       end
 
-      vim.api.nvim_set_hl(0, "DapStoppedLine", { default = true, link = "Visual" })
+      vim.api.nvim_set_hl(
+        0,
+        "DapStoppedLine",
+        { default = true, link = "Visual" }
+      )
     end,
   },
 }

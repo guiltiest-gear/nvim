@@ -14,10 +14,16 @@ autocmd("TextYankPost", {
 })
 
 -- Automatically rebalance windows on vim resize
-autocmd("VimResized", { group = augroup("resize_splits"), command = "tabdo wincmd =" })
+autocmd(
+  "VimResized",
+  { group = augroup("resize_splits"), command = "tabdo wincmd =" }
+)
 
 -- Never insert line as a comment when using 'o' to enter insert mode
-autocmd("BufWinEnter", { group = augroup("no_comment_on_o"), command = "setlocal formatoptions-=o" })
+autocmd(
+  "BufWinEnter",
+  { group = augroup("no_comment_on_o"), command = "setlocal formatoptions-=o" }
+)
 
 -- Close various file types with just <q>
 autocmd("FileType", {
@@ -25,7 +31,12 @@ autocmd("FileType", {
   pattern = { "help", "lspinfo", "checkhealth", "qf", "query", "notify" },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
-    vim.keymap.set("n", "q", vim.cmd.close, { buffer = event.buf, silent = true })
+    vim.keymap.set(
+      "n",
+      "q",
+      vim.cmd.close,
+      { buffer = event.buf, silent = true }
+    )
   end,
 })
 
