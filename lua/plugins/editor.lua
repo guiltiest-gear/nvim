@@ -198,6 +198,11 @@ return {
         "}])",
         "\"'`",
       },
+
+      -- Define a preview filter (skip the middle of alphanumeric words):
+      preview_filter = function(ch0, ch1, ch2)
+        return not (ch1:match("%s") or ch0:match("%w") and ch1:match("%w") and ch2:match("%w"))
+      end,
     },
   },
 
