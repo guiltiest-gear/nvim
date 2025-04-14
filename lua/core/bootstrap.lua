@@ -22,7 +22,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {
+-- Load the plugins and options
+require("lazy").setup({
+  spec = {
+    { import = "plugins" },
+  },
   rocks = { enabled = false },
   git = { log = { "--since=3 days ago" }, timeout = 60 },
   ui = { custom_keys = { false }, backdrop = 100 },
@@ -47,7 +51,4 @@ local opts = {
       },
     },
   },
-}
-
--- Load the plugins and options
-require("lazy").setup("plugins", opts)
+})
