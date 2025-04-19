@@ -109,7 +109,7 @@ return {
   -- helpview.nvim
   {
     "OXY2DEV/helpview.nvim",
-    ft = "help",
+    lazy = false,
     dependencies = "nvim-treesitter/nvim-treesitter",
   },
 }
