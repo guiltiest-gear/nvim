@@ -452,12 +452,12 @@ return {
       },
       input = { enabled = true },
       statuscolumn = {
-        enabled = false,
+        enabled = true,
         left = { "fold", "git" },
         right = { "mark", "sign" },
         folds = {
           open = true,
-          git_hl = true,
+          git_hl = false,
         },
         git = {
           patterns = { "GitSign" },
