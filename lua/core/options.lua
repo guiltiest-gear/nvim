@@ -37,7 +37,7 @@ opt.shiftround = true
 -- Code folding
 opt.foldlevel = 99
 opt.foldlevelstart = 99
-opt.foldcolumn = "0"
+opt.foldcolumn = "1"
 opt.foldenable = true
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
