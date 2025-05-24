@@ -1,4 +1,6 @@
 return {
+  -- WARNING: The master branch of nvim-treesitter is now frozen and will no longer
+  -- receive updates. Update to main branch as soon as rewrite is in a more usable state
   -- nvim-treesitter
   {
     "nvim-treesitter/nvim-treesitter",
