@@ -2,55 +2,55 @@ return {
   -- WARNING: The master branch of nvim-treesitter is now frozen and will no longer
   -- receive updates. Update to main branch as soon as rewrite is in a more usable state
   -- nvim-treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    branch = "master",
-    lazy = false,
-    opts = {
-      ensure_installed = {
-        "lua",
-        "luadoc",
-        "luap",
-        --[[ "c",
-        "cpp", ]]
-        "markdown",
-        "markdown_inline",
-        "git_config",
-        "git_rebase",
-        "gitcommit",
-        "gitignore",
-        -- "gitattributes",
-        "diff",
-        "vim",
-        "vimdoc",
-        -- "regex",
-        "bash",
-        "toml",
-        "ssh_config",
-        "zathurarc",
-        --[[ "json",
-        "printf", ]]
-        "ini",
-        "sxhkdrc",
-        --[[ "html",
-        "javascript",
-        "typescript",
-        "jsdoc",
-        "css", ]]
-      },
-      highlight = { enable = true },
-      indent = { enable = true },
-      auto_install = true,
-      -- vim-matchup config
-      matchup = { enable = true, include_match_words = true },
-    },
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-      -- Use the bash ts parser for zsh
-      vim.treesitter.language.register("bash", "zsh")
-    end,
-  },
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   build = ":TSUpdate",
+  --   branch = "master",
+  --   lazy = false,
+  --   opts = {
+  --     ensure_installed = {
+  --       "lua",
+  --       "luadoc",
+  --       "luap",
+  --       --[[ "c",
+  --       "cpp", ]]
+  --       "markdown",
+  --       "markdown_inline",
+  --       "git_config",
+  --       "git_rebase",
+  --       "gitcommit",
+  --       "gitignore",
+  --       -- "gitattributes",
+  --       "diff",
+  --       "vim",
+  --       "vimdoc",
+  --       -- "regex",
+  --       "bash",
+  --       "toml",
+  --       "ssh_config",
+  --       "zathurarc",
+  --       --[[ "json",
+  --       "printf", ]]
+  --       "ini",
+  --       "sxhkdrc",
+  --       --[[ "html",
+  --       "javascript",
+  --       "typescript",
+  --       "jsdoc",
+  --       "css", ]]
+  --     },
+  --     highlight = { enable = true },
+  --     indent = { enable = true },
+  --     auto_install = true,
+  --     -- vim-matchup config
+  --     matchup = { enable = true, include_match_words = true },
+  --   },
+  --   config = function(_, opts)
+  --     require("nvim-treesitter.configs").setup(opts)
+  --     -- Use the bash ts parser for zsh
+  --     vim.treesitter.language.register("bash", "zsh")
+  --   end,
+  -- },
 
   -- nvim-treesitter-context
   {
