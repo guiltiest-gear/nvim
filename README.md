@@ -36,11 +36,12 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 
 ## Dependencies
 
-| Dependency | Reason                                 |
-| ---------- | -------------------------------------- |
-| git        | To install the config and plugins      |
-| npm        | Used to install certain mason packages |
-| ripgrep    | Used to give telescope results         |
+| Dependency     | Reason                                  |
+| -------------- | --------------------------------------- |
+| git            | To install the config and plugins       |
+| npm            | Used to install certain mason packages  |
+| ripgrep        | Used to give telescope results          |
+| treesitter-cli | Used to compile nvim-treesitter parsers |
 
 ## Plugins
 
