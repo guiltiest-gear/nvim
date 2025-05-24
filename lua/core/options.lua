@@ -33,6 +33,7 @@ opt.smartindent = true
 opt.shiftwidth = 2
 opt.tabstop = 2
 opt.shiftround = true
+opt.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 
 -- Code folding
 opt.foldlevel = 99
