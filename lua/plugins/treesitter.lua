@@ -33,7 +33,15 @@ return {
       vim.api.nvim_create_autocmd("FileType", {
         pattern = parsers,
         callback = function()
+          -- Syntax highlighting
           vim.treesitter.start()
+
+          -- Folds provided by neovim
+          vim.wo.foldmethod = "expr"
+          vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+          -- Indentation provided by nvim-treesitter
+          vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         end,
       })
 
