@@ -118,7 +118,7 @@ opt.signcolumn = "yes"
 opt.formatoptions = "jcroqlnt"
 
 -- Put the cursor at the start of the line for large jumps
-opt.startofline = true
+-- opt.startofline = true
 
 -- Allow cursor to move where this is no text is visual block mode
 opt.virtualedit = "block"
