@@ -23,7 +23,7 @@ return {
     config = function(_, opts)
       local tokyonight = require("tokyonight")
       tokyonight.setup(opts)
-      tokyonight.load()
+      vim.cmd.colorscheme("tokyonight")
     end,
   },
 
