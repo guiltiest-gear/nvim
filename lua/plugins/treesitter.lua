@@ -24,6 +24,7 @@ return {
         "ssh_config",
         "zathurarc",
         "ini",
+        "xresources",
       }
 
       -- Install the parsers
