@@ -83,6 +83,7 @@ return {
         "zathurarc",
         "ini",
         "xresources",
+        "json",
       },
     },
     ---@param opts TSConfig
