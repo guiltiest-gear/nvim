@@ -51,6 +51,49 @@ return {
     end,
   }, ]]
 
+  {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "master",
+    lazy = vim.fn.argc(-1) == 0, -- Treesitter should load early if a file is being opened from the cmdline
+    event = "VeryLazy",
+    build = ":TSUpdate",
+    ---@type TSConfig
+    ---@diagnostic disable-next-line: missing-fields
+    opts = {
+      highlight = { enable = true },
+      indent = { enable = true },
+      auto_install = true,
+      matchup = { enable = true, include_match_words = true },
+      ensure_installed = {
+        "lua",
+        "luadoc",
+        "luap",
+        "markdown",
+        "markdown_inline",
+        "git_config",
+        "git_rebase",
+        "gitignore",
+        "gitcommit",
+        "diff",
+        "vim",
+        "vimdoc",
+        "bash",
+        "toml",
+        "ssh_config",
+        "zathurarc",
+        "ini",
+        "xresources",
+      },
+    },
+    ---@param opts TSConfig
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
+
+      -- Use bash ts parser for zsh
+      vim.treesitter.language.register("bash", "zsh")
+    end,
+  },
+
   -- nvim-treesitter-context
   {
     "nvim-treesitter/nvim-treesitter-context",
