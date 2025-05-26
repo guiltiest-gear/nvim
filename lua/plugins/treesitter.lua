@@ -1,6 +1,6 @@
 return {
   -- nvim-treesitter
-  {
+  --[[ {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
     branch = "main",
@@ -49,7 +49,7 @@ return {
       -- Use bash ts parser for zsh
       vim.treesitter.language.register("bash", "zsh")
     end,
-  },
+  }, ]]
 
   -- nvim-treesitter-context
   {
