@@ -850,6 +850,15 @@ return {
     },
   },
 
+  -- vim-lastplace
+  {
+    "farmergreg/vim-lastplace",
+    event = { "BufReadPre", "BufNewFile" },
+    init = function()
+      vim.g.lastplace_open_folds = 0
+    end,
+  },
+
   -- vim-kitty
   { "fladson/vim-kitty", ft = "kitty" },
 }
