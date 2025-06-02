@@ -155,7 +155,7 @@ return {
   -- helpview.nvim
   {
     "OXY2DEV/helpview.nvim",
-    priority = 900,
+    enabled = false,
     lazy = false,
     dependencies = "nvim-treesitter/nvim-treesitter",
   },
