@@ -291,7 +291,7 @@ return {
         desc = "Rename",
       },
     },
-    opts = { input_buffer_type = "dressing" },
+    opts = { input_buffer_type = "snacks" },
   },
 
   -- nvim-navic
