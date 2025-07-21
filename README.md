@@ -54,6 +54,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [conform.nvim](https://github.com/stevearc/conform.nvim)
 - [dial.nvim](https://github.com/monaqa/dial.nvim)
 - [fidget.nvim](https://github.com/j-hui/fidget.nvim)
+- [flit.nvim](https://github.com/ggandor/flit.nvim)
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [goto-breakpoints.nvim](https://github.com/ofirgall/goto-breakpoints.nvim)
