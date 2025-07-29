@@ -346,6 +346,7 @@ return {
   {
     "j-hui/fidget.nvim",
     event = "LspAttach",
+    version = "*",
     opts = {
       notification = { window = { winblend = 0 } },
       logger = { level = vim.log.levels.OFF },
