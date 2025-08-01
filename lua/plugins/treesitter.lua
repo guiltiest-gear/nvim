@@ -84,6 +84,8 @@ return {
         "ini",
         "xresources",
         "json",
+        "jsonc",
+        "xml",
       },
     },
     ---@param opts TSConfig
