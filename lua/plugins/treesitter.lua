@@ -25,6 +25,9 @@ return {
         "zathurarc",
         "ini",
         "xresources",
+        "json",
+        "jsonc",
+        "xml",
       }
 
       -- Install the parsers
