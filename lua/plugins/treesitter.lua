@@ -9,6 +9,7 @@ return {
       -- Parsers to install
       local parsers = {
         "bash",
+        "desktop",
         "diff",
         "git_config",
         "git_rebase",
