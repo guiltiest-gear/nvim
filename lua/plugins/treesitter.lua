@@ -33,6 +33,9 @@ return {
         "zathurarc",
       }
 
+      -- Use bash ts parser for zsh
+      vim.treesitter.language.register("bash", "zsh")
+
       -- Install the parsers
       require("nvim-treesitter").install(parsers)
 
@@ -51,9 +54,6 @@ return {
           vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         end,
       })
-
-      -- Use bash ts parser for zsh
-      vim.treesitter.language.register("bash", "zsh")
     end,
   },
 
