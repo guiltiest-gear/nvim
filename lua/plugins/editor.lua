@@ -642,7 +642,7 @@ return {
         end,
       },
     },
-    branch = "0.1.x",
+    -- branch = "0.1.x",
     event = "VeryLazy",
     keys = {
       { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Files" },
