@@ -2,11 +2,9 @@ return {
   -- nvim-treesitter
   {
     "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    --[[ event = "VeryLazy",
-    lazy = vim.fn.argc(-1) == 0, -- Treesitter should load early if a file is being opened from the cmdline ]]
     lazy = false,
     branch = "main",
+    build = ":TSUpdate",
     config = function()
       -- Parsers to install
       local parsers = {
