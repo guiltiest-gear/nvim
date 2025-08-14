@@ -863,4 +863,22 @@ return {
 
   -- vim-kitty
   { "fladson/vim-kitty", ft = "kitty" },
+
+  -- oil.nvim
+  {
+    "stevearc/oil.nvim",
+    lazy = false,
+    dependencies = "nvim-tree/nvim-web-devicons",
+    keys = { { "-", "<cmd>Oil<CR>", desc = "Open parent directory" } },
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {
+      default_file_explorer = false,
+      watch_for_changes = true,
+      view_options = {
+        show_hidden = true,
+        case_insensitive = true,
+      },
+    },
+  },
 }
