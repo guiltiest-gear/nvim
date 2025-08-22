@@ -23,6 +23,7 @@ return {
         "luap",
         "markdown",
         "markdown_inline",
+        "sh",
         "ssh_config",
         "toml",
         "vim",
@@ -30,6 +31,7 @@ return {
         "xml",
         "xresources",
         "zathurarc",
+        "zsh",
       }
 
       -- Use bash ts parser for zsh
@@ -37,13 +39,6 @@ return {
 
       -- Install the parsers
       require("nvim-treesitter").install(parsers)
-
-      -- HACK: While nvim-treesitter does work for the first zsh file opened,
-      -- it doesn't work for the successive files. The only way I can think to
-      -- fix this is to use a shitty monkey patch. I genuinely can't think of a
-      -- better or less hacky way to do this shit. I hate this monkey patching
-      -- badness so much, but what other choice do I have?
-      table.insert(parsers, "zsh")
 
       -- Enable treesitter highlighting
       vim.api.nvim_create_autocmd("FileType", {
