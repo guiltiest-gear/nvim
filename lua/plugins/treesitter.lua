@@ -30,6 +30,7 @@ return {
         "vimdoc",
         "xml",
         "xresources",
+        "yaml",
         "zathurarc",
         "zsh",
       }
