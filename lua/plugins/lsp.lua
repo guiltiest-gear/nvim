@@ -278,22 +278,6 @@ return {
     end,
   },
 
-  -- inc-rename.nvim
-  {
-    "smjonas/inc-rename.nvim",
-    keys = {
-      {
-        "gr",
-        function()
-          return ":IncRename " .. vim.fn.expand("<cword>")
-        end,
-        expr = true,
-        desc = "Rename",
-      },
-    },
-    opts = { input_buffer_type = "snacks" },
-  },
-
   -- nvim-navic
   {
     "SmiteshP/nvim-navic",

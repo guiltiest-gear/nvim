@@ -60,7 +60,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [goto-breakpoints.nvim](https://github.com/ofirgall/goto-breakpoints.nvim)
 - [highlight-undo.nvim](https://github.com/tzachar/highlight-undo.nvim)
 - [in-and-out.nvim](https://github.com/ysmb-wtsg/in-and-out.nvim)
-- [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [lazydev.nvim](https://github.com/folke/lazydev.nvim)
 - [leap.nvim](https://github.com/ggandor/leap.nvim)
