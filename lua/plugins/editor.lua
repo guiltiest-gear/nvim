@@ -797,7 +797,7 @@ return {
 
   -- mini.surround
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     keys = {
       { "gza", mode = { "n", "v" }, desc = "Add surrounding" },
       { "gzd", desc = "Delete surrounding" },
