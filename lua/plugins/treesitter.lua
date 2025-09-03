@@ -9,6 +9,8 @@ return {
       -- Parsers to install
       local parsers = {
         "bash",
+        "c",
+        "cpp",
         "desktop",
         "diff",
         "git_config",
