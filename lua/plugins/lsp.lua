@@ -97,7 +97,7 @@ return {
         },
       },
       servers = {
-        --[[ clangd = {
+        clangd = {
           -- Fix clangd offset encoding
           capabilities = { offsetEncoding = { "utf-16" } },
           cmd = {
@@ -113,7 +113,7 @@ return {
             completeUnimported = true,
             clangdFileStatus = true,
           },
-        }, ]]
+        },
         lua_ls = {
           log_level = 0,
           settings = {
@@ -211,8 +211,8 @@ return {
         css = { "prettierd" }, ]]
         json = { "prettierd" },
         toml = { "taplo" },
-        --[[ cpp = { "clang-format" },
-        c = { "clang-format" }, ]]
+        cpp = { "clang-format" },
+        c = { "clang-format" },
         ["*"] = {
           "trim_whitespace",
           "squeeze_blanks",
@@ -260,9 +260,9 @@ return {
         zsh = { "zsh" },
         markdown = { "markdownlint" },
         --[[ html = { "markuplint" },
-        css = { "stylelint" },
-        cpp = { "cpplint" },
-        c = { "cpplint" }, ]]
+        css = { "stylelint" }, ]]
+        cpp = { "clang-tidy" },
+        c = { "clang-tidy" },
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
@@ -578,21 +578,15 @@ return {
             .. "/mason/packages/bash-debug-adapter/bash-debug-adapter",
           name = "bashdb",
         },
-        --[[ codelldb = {
-          type = "server",
-          port = "${port}",
-          executable = {
-            command = vim.fn.stdpath("data") .. "/mason/packages/codelldb/codelldb",
-            args = { "--port", "${port}" },
+        gdb = {
+          type = "executable",
+          command = "gdb",
+          args = {
+            "--interpreter=dap",
+            "--eval-command",
+            "set pretty print on",
           },
         },
-        firefox = {
-          type = "executable",
-          command = "node",
-          args = {
-            vim.fn.stdpath("data") .. "/mason/packages/firefox-debug-adapter/dist/adapter.bundle.js",
-          },
-        }, ]]
       },
       configurations = {
         sh = {
@@ -618,31 +612,55 @@ return {
             terminalKind = "integrated",
           },
         },
-        --[[ cpp = {
-          {
-            name = "Launch file",
-            type = "codelldb",
-            request = "launch",
-            program = function()
-              return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-            end,
-            cwd = "${workspaceFolder}",
-            stopOnEntry = false,
-          },
-        },
         c = {
           {
-            name = "Launch file",
-            type = "codelldb",
+            name = "Launch",
+            type = "gdb",
             request = "launch",
             program = function()
-              return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+              return vim.fn.input(
+                "Path to executable: ",
+                vim.fn.getcwd() .. "/",
+                "file"
+              )
+            end,
+            args = {}, -- provide arguments if needed
+            cwd = "${workspaceFolder}",
+            stopAtBeginningOfMainSubprogram = false,
+          },
+          {
+            name = "Select and attach to process",
+            type = "gdb",
+            request = "attach",
+            program = function()
+              return vim.fn.input(
+                "Path to executable: ",
+                vim.fn.getcwd() .. "/",
+                "file"
+              )
+            end,
+            pid = function()
+              local name = vim.fn.input("Executable name (filter): ")
+              return require("dap.utils").pick_process({ filter = name })
             end,
             cwd = "${workspaceFolder}",
-            stopOnEntry = false,
+          },
+          {
+            name = "Attach to gdbserver :1234",
+            type = "gdb",
+            request = "attach",
+            target = "localhost:1234",
+            program = function()
+              return vim.fn.input(
+                "Path to executable: ",
+                vim.fn.getcwd() .. "/",
+                "file"
+              )
+            end,
+            cwd = "${workspaceFolder}",
           },
         },
-        javascript = {
+        --[[ javascript = {
           {
             name = "Debug with Firefox",
             type = "firefox",
@@ -663,6 +681,8 @@ return {
       for ft, config in pairs(opts.configurations) do
         dap.configurations[ft] = config
       end
+      -- Reuse c config for cpp
+      opts.configurations.cpp = opts.configurations.c
 
       vim.api.nvim_set_hl(
         0,
