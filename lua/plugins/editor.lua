@@ -316,6 +316,37 @@ return {
     end,
   },
 
+  -- Jump to lines with leap.nvim
+  {
+    "ggandor/leap.nvim",
+    config = function()
+      vim.keymap.set({ "n", "x", "o" }, "|", function()
+        local _, l, c = unpack(vim.fn.getpos("."))
+        -- Some Vim regex magic follows:
+        local pattern = "\\v"
+          -- Skip 3-3 lines around the cursor (`:help /\%l`).
+          .. "(%<"
+          .. (math.max(1, l - 3))
+          .. "l"
+          .. "|"
+          .. "%>"
+          .. (l + 3)
+          .. "l)"
+          -- Cursor column or EOL before the cursor (`:help /\%c`).
+          .. "(%"
+          .. c
+          .. "v"
+          .. "|"
+          .. "%<"
+          .. c
+          .. "v$)"
+
+        require("leap").leap({
+          pattern = pattern,
+          windows = { vim.fn.win_getid() },
+          opts = { safe_labels = "" },
+        })
+      end)
     end,
   },
 
