@@ -236,7 +236,7 @@ return {
     },
     opts = {
       -- Disable auto-jumping to first match
-      safe_labels = {},
+      safe_labels = "",
 
       -- Define equivalence classes for brackets and quotes, in addition to
       -- the default whitespace group:
