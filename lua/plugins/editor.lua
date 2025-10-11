@@ -213,6 +213,7 @@ return {
   -- leap.nvim
   {
     "ggandor/leap.nvim",
+    event = "VeryLazy",
     dependencies = { "tpope/vim-repeat", keys = { "." } },
     keys = {
       {
