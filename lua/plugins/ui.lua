@@ -8,7 +8,7 @@ return {
     ---@type tokyonight.Config
     opts = {
       style = "night",
-      transparent = true,
+      transparent = false,
       lualine_bold = true,
       terminal_colors = true,
       on_highlights = function(hl, c)
