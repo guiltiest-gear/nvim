@@ -20,6 +20,7 @@ return {
         "ini",
         "json",
         "jsonc",
+        "kitty",
         "lua",
         "luadoc",
         "luap",
