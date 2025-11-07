@@ -39,9 +39,6 @@ return {
         "zsh",
       }
 
-      -- Use bash ts parser for zsh
-      vim.treesitter.language.register("bash", "zsh")
-
       -- Install the parsers
       require("nvim-treesitter").install(parsers)
 
