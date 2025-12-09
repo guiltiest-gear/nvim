@@ -212,7 +212,7 @@ return {
 
   -- leap.nvim
   {
-    "ggandor/leap.nvim",
+    "https://codeberg.org/andyg/leap.nvim.git",
     event = "VeryLazy",
     dependencies = { "tpope/vim-repeat", keys = { "." } },
     keys = {
@@ -266,7 +266,7 @@ return {
 
   -- leap.nvim enhanced f/t motions
   {
-    "ggandor/leap.nvim",
+    "https://codeberg.org/andyg/leap.nvim.git",
     config = function()
       do
         -- Returns an argument table for `leap()`, tailored for f/t-motions.
@@ -318,7 +318,7 @@ return {
 
   -- Jump to lines with leap.nvim
   {
-    "ggandor/leap.nvim",
+    "https://codeberg.org/andyg/leap.nvim.git",
     config = function()
       vim.keymap.set({ "n", "x", "o" }, "|", function()
         local _, l, c = unpack(vim.fn.getpos("."))
