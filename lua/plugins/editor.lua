@@ -321,28 +321,11 @@ return {
     "https://codeberg.org/andyg/leap.nvim.git",
     config = function()
       vim.keymap.set({ "n", "x", "o" }, "|", function()
-        local _, l, c = unpack(vim.fn.getpos("."))
-        -- Some Vim regex magic follows:
-        local pattern = "\\v"
-          -- Skip 3-3 lines around the cursor (`:help /\%l`).
-          .. "(%<"
-          .. (math.max(1, l - 3))
-          .. "l"
-          .. "|"
-          .. "%>"
-          .. (l + 3)
-          .. "l)"
-          -- Cursor column or EOL before the cursor (`:help /\%c`).
-          .. "(%"
-          .. c
-          .. "v"
-          .. "|"
-          .. "%<"
-          .. c
-          .. "v$)"
-
+        local line = vim.fn.line(".")
+        -- Skip 3-3 lines around the cursor.
+        local top, bot = unpack({ math.max(1, line - 3), line + 3 })
         require("leap").leap({
-          pattern = pattern,
+          pattern = "\\v(%<" .. top .. "l|%>" .. bot .. "l)$",
           windows = { vim.fn.win_getid() },
           opts = { safe_labels = "" },
         })
