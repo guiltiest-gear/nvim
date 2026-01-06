@@ -19,7 +19,6 @@ return {
         "gitignore",
         "ini",
         "json",
-        "jsonc",
         "kitty",
         "lua",
         "luadoc",
@@ -27,7 +26,6 @@ return {
         "make",
         "markdown",
         "markdown_inline",
-        "sh",
         "ssh_config",
         "toml",
         "vim",
@@ -41,6 +39,11 @@ return {
 
       -- Install the parsers
       require("nvim-treesitter").install(parsers)
+
+      -- HACK: Monkey patch in jsonc and sh strings into the parsers table, so
+      -- the autocommand works correctly
+      table.insert(parsers, "jsonc")
+      table.insert(parsers, "sh")
 
       -- Enable treesitter highlighting
       vim.api.nvim_create_autocmd("FileType", {
