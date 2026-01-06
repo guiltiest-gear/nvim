@@ -387,6 +387,7 @@ return {
   -- nvim-dap
   {
     "mfussenegger/nvim-dap",
+    enabled = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       -- nvim-dap-virtual-text
