@@ -446,6 +446,7 @@ return {
   -- toggleterm.nvim
   {
     "akinsho/toggleterm.nvim",
+    enabled = false,
     version = "*",
     keys = {
       {
