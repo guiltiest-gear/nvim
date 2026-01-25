@@ -118,7 +118,19 @@ return {
           log_level = 0,
           settings = {
             Lua = {
-              workspace = { checkThirdParty = false },
+              runtime = {
+                version = "LuaJIT",
+                path = {
+                  "lua/?.lua",
+                  "lua/?/init.lua",
+                },
+              },
+              workspace = {
+                checkThirdParty = false,
+                library = {
+                  vim.env.VIMRUNTIME,
+                },
+              },
               completion = { callSnippet = "Replace" },
               doc = {
                 privateName = { "^_" },
