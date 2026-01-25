@@ -233,6 +233,18 @@ return {
         "<Plug>(leap-from-window)",
         desc = "Leap from windows",
       },
+      {
+        "x",
+        "<Plug>(leap-forward-till)",
+        mode = { "x", "o" },
+        desc = "Leap forward till",
+      },
+      {
+        "X",
+        "<Plug>(leap-backward-till)",
+        mode = { "x", "o" },
+        desc = "Leap backward till",
+      },
     },
     opts = {
       -- Disable auto-jumping to first match
