@@ -231,7 +231,6 @@ return {
       {
         "gs",
         "<Plug>(leap-from-window)",
-        mode = { "n", "x", "o" },
         desc = "Leap from windows",
       },
     },
