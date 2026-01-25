@@ -32,7 +32,7 @@ return {
         -- "clangd",
         "marksman",
         "bash-language-server",
-        "taplo",
+        "tombi",
         --[[ "html-lsp",
         "eslint-lsp",
         "typescript-language-server",
@@ -132,7 +132,7 @@ return {
         },
         marksman = {},
         bashls = { filetypes = { "sh", "zsh", "bash" } },
-        taplo = {},
+        tombi = {},
         --[[ html = {},
         eslint = {},
         ts_ls = {
@@ -210,7 +210,7 @@ return {
         javascript = { "prettierd" },
         css = { "prettierd" }, ]]
         json = { "prettierd" },
-        toml = { "taplo" },
+        toml = { "tombi" },
         cpp = { "clang-format" },
         c = { "clang-format" },
         ["*"] = {
@@ -263,6 +263,7 @@ return {
         css = { "stylelint" }, ]]
         cpp = { "clangtidy" },
         c = { "clangtidy" },
+        toml = { "tombi" },
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
