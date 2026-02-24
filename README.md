@@ -86,6 +86,8 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+- [oil-git.nvim](https://github.com/malewicz1337/oil-git.nvim)
+- [oil-lsp-diagnostics.nvim](https://github.com/JezerM/oil-lsp-diagnostics.nvim)
 - [oil.nvim](https://github.com/stevearc/oil.nvim)
 - [persistence.nvim](https://github.com/folke/persistence.nvim)
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
