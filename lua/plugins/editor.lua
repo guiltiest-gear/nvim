@@ -164,6 +164,7 @@ return {
             function(state)
               local node = state.tree:get_node()
               if node.type == "directory" and node:is_expanded() then
+                ---@diagnostic disable-next-line: missing-parameter
                 require("neo-tree.sources.filesystem").toggle_directory(
                   state,
                   node
@@ -182,6 +183,7 @@ return {
               local node = state.tree:get_node()
               if node.type == "directory" then
                 if not node:is_expanded() then
+                  ---@diagnostic disable-next-line: missing-parameter
                   require("neo-tree.sources.filesystem").toggle_directory(
                     state,
                     node
