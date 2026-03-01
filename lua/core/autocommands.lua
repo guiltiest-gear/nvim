@@ -115,9 +115,9 @@ autocmd("FileType", {
 -- HACK: If there are other instances of neovim open with prettierd active,
 -- it will also kill those instances as well
 -- Borrowed from: https://github.com/fsouza/prettierd/issues/645#issuecomment-2143341193
-autocmd("VimLeavePre", {
+--[[ autocmd("VimLeavePre", {
   group = augroup("kill_neovim_daemons"),
   callback = function()
     vim.fn.jobstart("killall prettierd", { detach = true })
   end,
-})
+}) ]]

@@ -30,23 +30,24 @@ return {
         -- Language serverss
         "lua-language-server",
         -- "clangd",
-        "marksman",
+        -- "marksman",
         "bash-language-server",
         "tombi",
+        "rumdl",
         --[[ "html-lsp",
         "eslint-lsp",
         "typescript-language-server",
         "css-lsp", ]]
         -- Linters and formatters
         "stylua",
-        "markdownlint",
+        -- "markdownlint",
         "selene",
         --[[ "shellcheck",
         "clang-format",
         "cpplint", ]]
         "shfmt",
         -- "markuplint",
-        "prettierd",
+        -- "prettierd",
         -- "stylelint",
         "codespell",
         -- Debuggers
@@ -142,7 +143,7 @@ return {
             },
           },
         },
-        marksman = {},
+        rumdl = {},
         bashls = { filetypes = { "sh", "zsh", "bash" } },
         tombi = {},
         --[[ html = {},
@@ -217,11 +218,11 @@ return {
         lua = { "stylua" },
         sh = { "shfmt" },
         zsh = { "shfmt" },
-        markdown = { "prettierd" },
+        markdown = { "rumdl" },
         --[[ html = { "prettierd" },
         javascript = { "prettierd" },
-        css = { "prettierd" }, ]]
-        json = { "prettierd" },
+        css = { "prettierd" },
+        json = { "prettierd" }, ]]
         toml = { "tombi" },
         cpp = { "clang-format" },
         c = { "clang-format" },
@@ -270,7 +271,7 @@ return {
           -- "shellcheck",
         },
         zsh = { "zsh" },
-        markdown = { "markdownlint" },
+        markdown = { "rumdl" },
         --[[ html = { "markuplint" },
         css = { "stylelint" }, ]]
         cpp = { "clangtidy" },
