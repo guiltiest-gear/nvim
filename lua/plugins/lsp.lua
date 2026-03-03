@@ -224,8 +224,8 @@ return {
         css = { "prettierd" },
         json = { "prettierd" }, ]]
         toml = { "tombi" },
-        cpp = { "clang-format" },
-        c = { "clang-format" },
+        --[[ cpp = { "clang-format" },
+        c = { "clang-format" }, ]]
         ["*"] = {
           "trim_whitespace",
           "squeeze_blanks",
@@ -274,8 +274,8 @@ return {
         markdown = { "rumdl" },
         --[[ html = { "markuplint" },
         css = { "stylelint" }, ]]
-        cpp = { "clangtidy" },
-        c = { "clangtidy" },
+        --[[ cpp = { "clangtidy" },
+        c = { "clangtidy" }, ]]
         toml = { "tombi" },
       }
 
