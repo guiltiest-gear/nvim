@@ -457,7 +457,7 @@ return {
   -- snacks.nvim
   {
     "folke/snacks.nvim",
-    priority = 1000,
+    priority = 900,
     lazy = false,
     ---@module "snacks"
     ---@type snacks.Config
