@@ -86,7 +86,7 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
-    event = { "BufReadPost", "BufNewFile" },
+    event = "VeryLazy",
     opts = {
       options = {
         theme = "auto",
@@ -196,7 +196,7 @@ return {
     "akinsho/bufferline.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
     version = "*",
-    event = "UIEnter",
+    event = "VeryLazy",
     keys = {
       { "<Tab>", "<cmd>BufferLineCycleNext<CR>", desc = "Go to next buffer" },
       {
