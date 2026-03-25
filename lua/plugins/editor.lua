@@ -896,7 +896,15 @@ return {
   {
     "stevearc/oil.nvim",
     lazy = false,
-    dependencies = "nvim-tree/nvim-web-devicons",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+
+      -- oil-git.nvim
+      { "malewicz1337/oil-git.nvim", opts = { show_ignored_files = true } },
+
+      -- oil-lsp-diagnostics.nvim
+      { "JezerM/oil-lsp-diagnostics.nvim", opts = {} },
+    },
     keys = { { "-", "<cmd>Oil<CR>", desc = "Open parent directory" } },
     ---@module 'oil'
     ---@type oil.SetupOpts
@@ -908,19 +916,5 @@ return {
         case_insensitive = true,
       },
     },
-  },
-
-  -- oil-git.nvim
-  {
-    "malewicz1337/oil-git.nvim",
-    dependencies = "stevearc/oil.nvim",
-    opts = { show_ignored_files = true },
-  },
-
-  -- oil-lsp-diagnostics.nvim
-  {
-    "JezerM/oil-lsp-diagnostics.nvim",
-    dependencies = "stevearc/oil.nvim",
-    opts = {},
   },
 }
