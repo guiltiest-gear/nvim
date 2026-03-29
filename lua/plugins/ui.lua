@@ -3,7 +3,7 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    priority = 1000,
+    priority = 1100,
     ---@module "tokyonight"
     ---@type tokyonight.Config
     opts = {
