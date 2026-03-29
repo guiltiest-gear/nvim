@@ -26,6 +26,7 @@ return {
         "make",
         "markdown",
         "markdown_inline",
+        "regex",
         "ssh_config",
         "toml",
         "vim",
