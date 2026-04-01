@@ -5,6 +5,9 @@ return {
     lazy = false,
     branch = "main",
     build = ":TSUpdate",
+    -- HACK: Temporarily lock nvim-treesitter at commit just before dropping support for nvim 0.11+
+    -- nvim 0.12 is still in testing for the arch repos, hopefully they'll update sooner than later
+    commit = "7caec274fd19c12b55902a5b795100d21531391f",
     config = function()
       -- Parsers to install
       local parsers = {
