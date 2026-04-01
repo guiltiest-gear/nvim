@@ -153,7 +153,7 @@ opt.pumheight = 20
 -- opt.smoothscroll = true
 
 -- Disable lsp logging
-vim.lsp.set_log_level(vim.lsp.log_levels.OFF)
+vim.lsp.log.set_level(vim.lsp.log_levels.OFF)
 
 -- Disable provider warnings in the healthcheck
 g.loaded_node_provider = 0
