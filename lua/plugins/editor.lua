@@ -247,6 +247,21 @@ return {
         mode = { "x", "o" },
         desc = "Leap backward till",
       },
+      {
+        "|",
+        function()
+          local line = vim.fn.line(".")
+          -- Skip 3-3 lines around the cursor
+          local top, bot = unpack({ math.max(1, line - 3), line + 3 })
+          return require("leap").leap({
+            pattern = "\\v(%<" .. top .. "l|%>" .. bot .. "l)$",
+            windows = { vim.fn.win_getid() },
+            opts = { safe_labels = "" },
+          })
+        end,
+        mode = { "n", "x", "o" },
+        desc = "Leap to line",
+      },
     },
     opts = {
       -- Disable auto-jumping to first match
@@ -274,23 +289,6 @@ return {
       for k, v in pairs(opts) do
         leap.opts[k] = v
       end
-    end,
-  },
-
-  -- Jump to lines with leap.nvim
-  {
-    "https://codeberg.org/andyg/leap.nvim.git",
-    config = function()
-      vim.keymap.set({ "n", "x", "o" }, "|", function()
-        local line = vim.fn.line(".")
-        -- Skip 3-3 lines around the cursor.
-        local top, bot = unpack({ math.max(1, line - 3), line + 3 })
-        require("leap").leap({
-          pattern = "\\v(%<" .. top .. "l|%>" .. bot .. "l)$",
-          windows = { vim.fn.win_getid() },
-          opts = { safe_labels = "" },
-        })
-      end)
     end,
   },
 
