@@ -3,7 +3,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
-    branch = "main",
     build = ":TSUpdate",
     -- HACK: Temporarily lock nvim-treesitter at commit just before dropping support for nvim 0.11+
     -- nvim 0.12 is still in testing for the arch repos, hopefully they'll update sooner than later
