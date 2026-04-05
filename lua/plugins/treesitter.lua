@@ -11,8 +11,6 @@ return {
       -- Parsers to install
       local parsers = {
         "bash",
-        "c",
-        "cpp",
         "desktop",
         "diff",
         "git_config",
@@ -33,11 +31,13 @@ return {
         "toml",
         "vim",
         "vimdoc",
-        "xml",
         "xresources",
         "yaml",
         "zathurarc",
         "zsh",
+        -- "c",
+        -- "cpp",
+        -- "xml",
       }
 
       -- Install the parsers
