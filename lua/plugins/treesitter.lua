@@ -11,13 +11,18 @@ return {
       -- Parsers to install
       local parsers = {
         "bash",
+        "css",
         "desktop",
         "diff",
         "git_config",
         "git_rebase",
         "gitcommit",
         "gitignore",
+        "html",
+        "html_tags",
         "ini",
+        "javascript",
+        "jsdoc",
         "json",
         "kitty",
         "lua",
