@@ -42,8 +42,8 @@ return {
         "stylua",
         -- "markdownlint",
         "selene",
-        --[[ "shellcheck",
-        "clang-format",
+        "shellcheck",
+        --[[ "clang-format",
         "cpplint", ]]
         "shfmt",
         -- "markuplint",
@@ -266,10 +266,7 @@ return {
       local lint = require("lint")
       lint.linters_by_ft = {
         lua = { "selene", "luac" },
-        bash = {
-          "bash",
-          -- "shellcheck",
-        },
+        bash = { "bash", "shellcheck" },
         zsh = { "zsh" },
         markdown = { "rumdl" },
         --[[ html = { "markuplint" },
