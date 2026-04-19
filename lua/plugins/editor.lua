@@ -878,18 +878,6 @@ return {
     end,
   },
 
-  -- vim-kitty
-  -- NOTE: Plugin will be depreciated with neovim v0.12+
-  -- Related: https://github.com/fladson/vim-kitty/commit/cd72f2d9cfee8d6aba5a180a5ac3ca265b5d3a46
-  -- Related: https://github.com/neovim/neovim/pull/35809
-  {
-    "fladson/vim-kitty",
-    enabled = function()
-      return vim.fn.has("nvim-0.12") == 0
-    end,
-    ft = "kitty",
-  },
-
   -- oil.nvim
   {
     "stevearc/oil.nvim",
