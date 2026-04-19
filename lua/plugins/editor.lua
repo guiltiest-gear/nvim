@@ -886,10 +886,18 @@ return {
       "nvim-tree/nvim-web-devicons",
 
       -- oil-git.nvim
-      { "malewicz1337/oil-git.nvim", opts = { show_ignored_files = true } },
+      {
+        "malewicz1337/oil-git.nvim",
+        enabled = false,
+        opts = { show_ignored_files = true },
+      },
 
       -- oil-lsp-diagnostics.nvim
-      { "JezerM/oil-lsp-diagnostics.nvim", opts = {} },
+      {
+        "JezerM/oil-lsp-diagnostics.nvim",
+        enabled = false,
+        opts = {},
+      },
     },
     keys = { { "-", "<cmd>Oil<CR>", desc = "Open parent directory" } },
     ---@module 'oil'
