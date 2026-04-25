@@ -34,11 +34,13 @@ return {
         "bash-language-server",
         "tombi",
         "rumdl",
+        "ty",
         --[[ "html-lsp",
         "eslint-lsp",
         "typescript-language-server",
         "css-lsp", ]]
         -- Linters and formatters
+        "ruff",
         "stylua",
         -- "markdownlint",
         "selene",
@@ -146,6 +148,9 @@ return {
         rumdl = {},
         bashls = { filetypes = { "sh", "zsh", "bash" } },
         tombi = {},
+        -- gopls = {},
+        -- rust_analyzer = {},
+        ty = {},
         --[[ html = {},
         eslint = {},
         ts_ls = {
@@ -219,6 +224,9 @@ return {
         sh = { "shfmt" },
         zsh = { "shfmt" },
         markdown = { "rumdl" },
+        -- go = { "gofmt" },
+        -- rust = { "rustfmt" },
+        python = { "ruff_format", "ruff_organize_imports", "ruff_fix" },
         --[[ html = { "prettierd" },
         javascript = { "prettierd" },
         css = { "prettierd" },
@@ -269,6 +277,9 @@ return {
         bash = { "bash", "shellcheck" },
         zsh = { "zsh" },
         markdown = { "rumdl" },
+        python = { "ruff" },
+        -- rust = { "clippy" },
+        -- go = { "revive" },
         --[[ html = { "markuplint" },
         css = { "stylelint" }, ]]
         --[[ cpp = { "clangtidy" },
