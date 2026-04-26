@@ -262,6 +262,31 @@ return {
         mode = { "n", "x", "o" },
         desc = "Leap to line",
       },
+      {
+        "<cr>",
+        function()
+          local clever = require("leap.user").with_traversal_keys
+          return require("leap").leap({
+            ["repeat"] = true,
+            opts = clever("<cr>", "<bs>"),
+          })
+        end,
+        mode = { "n", "x", "o" },
+        desc = "Repeat forward leap",
+      },
+      {
+        "<bs>",
+        function()
+          local clever = require("leap.user").with_traversal_keys
+          return require("leap").leap({
+            ["repeat"] = true,
+            opts = clever("<bs>", "<cr>"),
+            backward = true,
+          })
+        end,
+        mode = { "n", "x", "o" },
+        desc = "Repeat backward leap",
+      },
     },
     opts = {
       -- Disable auto-jumping to first match
