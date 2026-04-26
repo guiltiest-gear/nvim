@@ -220,13 +220,24 @@ return {
     keys = {
       {
         "s",
-        "<Plug>(leap-forward)",
+        function()
+          local clever_s = require("leap.user").with_traversal_keys("s", "S")
+          return require("leap").leap({
+            opts = clever_s,
+          })
+        end,
         mode = { "n", "x", "o" },
         desc = "Leap forward",
       },
       {
         "S",
-        "<Plug>(leap-backward)",
+        function()
+          local clever_s = require("leap.user").with_traversal_keys("s", "S")
+          return require("leap").leap({
+            backward = true,
+            opts = clever_s,
+          })
+        end,
         mode = { "n", "x", "o" },
         desc = "Leap backward",
       },
