@@ -292,6 +292,43 @@ return {
     end,
   },
 
+  -- leap.nvim f/t motions
+  {
+    "https://codeberg.org/andyg/leap.nvim.git",
+    config = function()
+      local function ft(key_specific_args)
+        require("leap").leap(vim.tbl_deep_extend("keep", key_specific_args, {
+          inputlen = 1,
+          inclusive = true,
+          opts = {
+            labels = "",
+            safe_labels = vim.fn.mode(1):match("o") and "" or nil,
+          },
+        }))
+      end
+
+      local clever = require("leap.user").with_traversal_keys
+      local clever_f, clever_t = clever("f", "F"), clever("t", "T")
+      local map = vim.keymap.set
+
+      map({ "n", "x", "o" }, "f", function()
+        ft({ opts = clever_f })
+      end, { desc = "Leap forward (one character)" })
+
+      map({ "n", "x", "o" }, "F", function()
+        ft({ opts = clever_f, backward = true })
+      end, { desc = "Leap backward (one character)" })
+
+      map({ "n", "x", "o" }, "t", function()
+        ft({ opts = clever_t, offset = -1 })
+      end, { desc = "Leap forward till (one character)" })
+
+      map({ "n", "x", "o" }, "T", function()
+        ft({ opts = clever_t, offset = -1, backward = true })
+      end, { desc = "Leap backward till (one character)" })
+    end,
+  },
+
   -- neogit
   {
     "NeogitOrg/neogit",
