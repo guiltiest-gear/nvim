@@ -478,6 +478,14 @@ return {
 
       -- nvim-dap-go
       { "leoluz/nvim-dap-go", config = true },
+
+      -- nvim-dap-python
+      {
+        "https://codeberg.org/mfussenegger/nvim-dap-python",
+        config = function()
+          require("dap-python").setup("debugpy-adapter")
+        end,
+      },
     },
     keys = {
       {
