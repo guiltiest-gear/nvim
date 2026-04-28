@@ -45,12 +45,16 @@ autocmd("FileType", {
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
-    vim.keymap.set(
-      "n",
-      "q",
-      vim.cmd.close,
-      { buffer = event.buf, silent = true }
-    )
+    vim.schedule(function()
+      vim.keymap.set("n", "q", function()
+        vim.cmd("close")
+        pcall(vim.api.nvim_buf_delete, event.buf, { force = true })
+      end, {
+        buf = event.buf,
+        silent = true,
+        desc = "Quit buffer",
+      })
+    end)
   end,
 })
 
