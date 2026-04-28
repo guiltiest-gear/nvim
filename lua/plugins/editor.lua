@@ -836,9 +836,9 @@ return {
     end,
   },
 
-  -- nvim-gomove
+  -- mini.move
   {
-    "booperlv/nvim-gomove",
+    "nvim-mini/mini.move",
     config = true,
     keys = {
       { "<A-h>", mode = { "n", "v" }, desc = "Block left" },
