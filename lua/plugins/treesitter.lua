@@ -15,11 +15,11 @@ return {
         "git_rebase",
         "gitcommit",
         "gitignore",
-        --[[ "go",
+        "go",
         "gomod",
         "gosum",
         "gotmpl",
-        "gowork", ]]
+        "gowork",
         "html",
         "html_tags",
         "ini",
