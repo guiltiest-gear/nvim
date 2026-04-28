@@ -475,6 +475,9 @@ return {
           end
         end,
       },
+
+      -- nvim-dap-go
+      { "leoluz/nvim-dap-go", config = true },
     },
     keys = {
       {
