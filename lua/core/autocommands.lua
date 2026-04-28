@@ -32,7 +32,17 @@ autocmd(
 -- Close various file types with just <q>
 autocmd("FileType", {
   group = augroup("close_with_q"),
-  pattern = { "help", "lspinfo", "checkhealth", "qf", "query", "notify" },
+  pattern = {
+    "help",
+    "lspinfo",
+    "checkhealth",
+    "qf",
+    "query",
+    "notify",
+    "dap-float",
+    "gitsigns-blame",
+    "grug-far",
+  },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
     vim.keymap.set(
