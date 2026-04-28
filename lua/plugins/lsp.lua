@@ -52,6 +52,7 @@ return {
         -- "prettierd",
         -- "stylelint",
         "codespell",
+        "goimports",
         -- Debuggers
         --[[ "codelldb",
         "bash-debug-adapter",
@@ -224,7 +225,7 @@ return {
         sh = { "shfmt" },
         zsh = { "shfmt" },
         markdown = { "rumdl" },
-        go = { "gofumpt" },
+        go = { "goimports", "gofumpt" },
         -- rust = { "rustfmt" },
         python = { "ruff_format", "ruff_organize_imports", "ruff_fix" },
         --[[ html = { "prettierd" },
