@@ -224,7 +224,7 @@ return {
         sh = { "shfmt" },
         zsh = { "shfmt" },
         markdown = { "rumdl" },
-        go = { "gofmt" },
+        go = { "gofumpt" },
         -- rust = { "rustfmt" },
         python = { "ruff_format", "ruff_organize_imports", "ruff_fix" },
         --[[ html = { "prettierd" },
