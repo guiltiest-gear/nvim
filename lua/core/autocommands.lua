@@ -14,10 +14,14 @@ autocmd("TextYankPost", {
 })
 
 -- Automatically rebalance windows on vim resize
-autocmd(
-  "VimResized",
-  { group = augroup("resize_splits"), command = "tabdo wincmd =" }
-)
+autocmd("VimResized", {
+  group = augroup("resize_splits"),
+  callback = function()
+    local current_tab = vim.fn.tabpagenr()
+    vim.cmd("tabdo wincmd =")
+    vim.cmd("tabnext " .. current_tab)
+  end,
+})
 
 -- Never insert line as a comment when using 'o' to enter insert mode
 autocmd(
