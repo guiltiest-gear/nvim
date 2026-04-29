@@ -368,7 +368,7 @@ return {
   -- neogit
   {
     "NeogitOrg/neogit",
-    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+    dependencies = "nvim-telescope/telescope.nvim",
     cmd = "Neogit",
     keys = { { "<leader>gg", "<cmd>Neogit<CR>", desc = "Open neogit" } },
     opts = {
