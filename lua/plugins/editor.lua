@@ -715,7 +715,7 @@ return {
   -- telescope.nvim
   {
     "nvim-telescope/telescope.nvim",
-    version = "v0.1.*",
+    version = "*",
     dependencies = {
       "nvim-lua/plenary.nvim",
       {
