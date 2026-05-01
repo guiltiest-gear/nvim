@@ -535,7 +535,7 @@ return {
     opts = {
       quickfile = { enabled = true },
       bigfile = { enabled = true },
-      image = { enabled = true },
+      image = { enabled = false },
       indent = { enabled = true },
       scope = { enabled = true },
       words = {
