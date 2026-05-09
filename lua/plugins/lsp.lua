@@ -53,7 +53,7 @@ return {
         -- "prettierd",
         -- "stylelint",
         "codespell",
-        "goimports",
+        -- "goimports",
         -- Debuggers
         --[[ "codelldb",
         "bash-debug-adapter",
