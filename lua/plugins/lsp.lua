@@ -34,14 +34,14 @@ return {
         "bash-language-server",
         "tombi",
         "rumdl",
-        "basedpyright",
+        -- "basedpyright",
         -- "ty",
         --[[ "html-lsp",
         "eslint-lsp",
         "typescript-language-server",
         "css-lsp", ]]
         -- Linters and formatters
-        "ruff",
+        -- "ruff",
         "stylua",
         -- "markdownlint",
         "selene",
@@ -150,19 +150,19 @@ return {
         rumdl = {},
         bashls = { filetypes = { "sh", "zsh", "bash" } },
         tombi = {},
-        gopls = {},
-        basedpyright = {},
-        -- rust_analyzer = {},
-        -- ty = {},
-        --[[ html = {},
-        eslint = {},
-        ts_ls = {
+        -- gopls = {},
+        -- basedpyright = {},
+        --[[ ts_ls = {
           init_options = {
             preferences = {
               disableSuggestions = true,
             },
           },
-        },
+        }, ]]
+        -- eslint = {},
+        -- rust_analyzer = {},
+        -- ty = {},
+        --[[ html = {},
         cssls = {}, ]]
       },
     },
@@ -227,11 +227,12 @@ return {
         sh = { "shfmt" },
         zsh = { "shfmt" },
         markdown = { "rumdl" },
-        go = { "goimports", "gofumpt" },
+        -- javascript = { "prettier" },
+        -- html = { "prettier" },
+        -- go = { "goimports", "gofumpt" },
         -- rust = { "rustfmt" },
-        python = { "ruff_format", "ruff_organize_imports", "ruff_fix" },
+        -- python = { "ruff_format", "ruff_organize_imports", "ruff_fix" },
         --[[ html = { "prettierd" },
-        javascript = { "prettierd" },
         css = { "prettierd" },
         json = { "prettierd" }, ]]
         toml = { "tombi" },
@@ -280,9 +281,9 @@ return {
         bash = { "bash", "shellcheck" },
         zsh = { "zsh" },
         markdown = { "rumdl" },
-        python = { "ruff" },
+        -- python = { "ruff" },
         -- rust = { "clippy" },
-        go = { "revive" },
+        -- go = { "revive" },
         --[[ html = { "markuplint" },
         css = { "stylelint" }, ]]
         --[[ cpp = { "clangtidy" },
