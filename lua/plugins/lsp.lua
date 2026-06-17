@@ -272,7 +272,7 @@ return {
 
   -- nvim-lint
   {
-    "mfussenegger/nvim-lint",
+    "https://codeberg.org/mfussenegger/nvim-lint.git",
     event = "BufWritePost",
     config = function()
       local lint = require("lint")
