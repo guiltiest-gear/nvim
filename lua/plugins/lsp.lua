@@ -276,6 +276,35 @@ return {
     event = "BufWritePost",
     config = function()
       local lint = require("lint")
+
+      ---@param linter lint.Linter
+      ---@return lint.Linter
+      local function systemd_run(linter)
+        local cwd = vim.fn.getcwd()
+        local args = {
+          "--user",
+          "--collect",
+          "--same-dir",
+          "--quiet",
+          "--pipe",
+          "-p",
+          "PrivateUsers=true",
+          "-p",
+          "ProtectSystem=true",
+          "-p",
+          "PrivateNetwork=true",
+          "-p",
+          string.format("BindReadOnlyPaths='%s':'%s'", cwd, cwd),
+          "-E",
+          "PATH=" .. os.getenv("PATH"),
+          linter.cmd,
+        }
+        linter.cmd = "systemd-run"
+        vim.list_extend(args, linter.args or {})
+        linter.args = args
+        return linter
+      end
+
       lint.linters_by_ft = {
         lua = { "luac", "selene" },
         bash = { "bash", "shellcheck" },
@@ -295,7 +324,9 @@ return {
         group = vim.api.nvim_create_augroup("nvim-lint", { clear = true }),
         callback = function()
           -- Attempt to lint the document
-          lint.try_lint()
+          lint.try_lint(nil, {
+            wrap_linter = systemd_run,
+          })
 
           -- Use codespell on all filetypes
           lint.try_lint("codespell")
