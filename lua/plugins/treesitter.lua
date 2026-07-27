@@ -35,7 +35,7 @@ return {
         "markdown_inline",
         "python",
         "regex",
-        -- "rust",
+        "rust",
         "ssh_config",
         "toml",
         "vim",
