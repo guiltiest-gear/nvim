@@ -42,7 +42,6 @@ return {
         "vimdoc",
         "xresources",
         "yaml",
-        "zathurarc",
         "zsh",
         -- "c",
         -- "cpp",
