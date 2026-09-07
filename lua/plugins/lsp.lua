@@ -34,6 +34,7 @@ return {
         "bash-language-server",
         "tombi",
         "rumdl",
+        "jls",
         -- "basedpyright",
         -- "ty",
         --[[ "html-lsp",
@@ -46,6 +47,8 @@ return {
         -- "markdownlint",
         "selene",
         "shellcheck",
+        "checkstyle",
+        "palantir-java-format",
         --[[ "clang-format",
         "cpplint", ]]
         "shfmt",
@@ -178,6 +181,13 @@ return {
     end,
   },
 
+  -- nvim-jls
+  {
+    "idelice/nvim-jls",
+    ft = "java",
+    opts = {},
+  },
+
   -- lazydev.nvim
   {
     "folke/lazydev.nvim",
@@ -238,6 +248,7 @@ return {
         toml = { "tombi" },
         --[[ cpp = { "clang-format" },
         c = { "clang-format" }, ]]
+        java = { "palantir-java-format" },
         ["*"] = {
           "trim_whitespace",
           "squeeze_blanks",
@@ -318,6 +329,7 @@ return {
         --[[ cpp = { "clangtidy" },
         c = { "clangtidy" }, ]]
         toml = { "tombi" },
+        java = { "checkstyle" },
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {

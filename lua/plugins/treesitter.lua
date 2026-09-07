@@ -23,6 +23,8 @@ return {
         "html",
         "html_tags",
         "ini",
+        "java",
+        "javadoc",
         "javascript",
         "jsdoc",
         "json",
