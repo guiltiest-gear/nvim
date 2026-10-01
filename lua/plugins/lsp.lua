@@ -181,13 +181,6 @@ return {
     end,
   },
 
-  -- nvim-jls
-  {
-    "idelice/nvim-jls",
-    ft = "java",
-    opts = {},
-  },
-
   -- lazydev.nvim
   {
     "folke/lazydev.nvim",
