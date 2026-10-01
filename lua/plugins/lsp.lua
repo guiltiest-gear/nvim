@@ -34,7 +34,7 @@ return {
         "bash-language-server",
         "tombi",
         "rumdl",
-        "jls",
+        "jdtls",
         -- "basedpyright",
         -- "ty",
         --[[ "html-lsp",
@@ -153,6 +153,7 @@ return {
         rumdl = {},
         bashls = { filetypes = { "sh", "zsh", "bash" } },
         tombi = {},
+        jdtls = {},
         -- gopls = {},
         -- basedpyright = {},
         --[[ ts_ls = {
