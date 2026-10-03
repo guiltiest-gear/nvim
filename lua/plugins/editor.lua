@@ -445,6 +445,11 @@ return {
         desc = "Toggle line blame",
       },
       {
+        "<leader>gu",
+        "<cmd>Gitsigns undo_stage_hunk<CR>",
+        desc = "Unstage the hunk",
+      },
+      {
         "]g",
         function()
           return require("gitsigns").nav_hunk("next", { wrap = false })
