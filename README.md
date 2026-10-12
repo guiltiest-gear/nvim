@@ -45,7 +45,6 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 
 ## Plugins
 
-- [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - [actions-preview.nvim](https://github.com/aznhe21/actions-preview.nvim)
 - [animation.nvim](https://github.com/anuvyklack/animation.nvim)
 - [better-escape.nvim](https://github.com/max397574/better-escape.nvim)
@@ -67,6 +66,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [mason-tool-installer.nvim](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [middleclass](https://github.com/anuvyklack/middleclass)
+- [mini.comment](https://github.com/nvim-mini/mini.comment)
 - [mini.move](https://github.com/nvim-mini/mini.move)
 - [mini.surround](https://github.com/echasnovski/mini.surround)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
@@ -87,6 +87,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [nvim-origami](https://github.com/chrisgrieser/nvim-origami)
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [oil-git.nvim](https://github.com/malewicz1337/oil-git.nvim)
 - [oil-lsp-diagnostics.nvim](https://github.com/JezerM/oil-lsp-diagnostics.nvim)

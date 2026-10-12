@@ -1,12 +1,25 @@
 return {
-  -- Comment.nvim
+  -- mini.comment
   {
-    "numToStr/Comment.nvim",
-    keys = {
-      { "gc", mode = { "n", "v" }, desc = "Toggle comments" },
-      { "gb", mode = { "n", "v" }, desc = "Toggle block comments" },
+    "nvim-mini/mini.comment",
+    event = "VeryLazy",
+    opts = {
+      options = {
+        custom_commentstring = function()
+          return require("ts_context_commentstring.internal").calculate_commentstring()
+            or vim.bo.commentstring
+        end,
+      },
     },
-    config = true,
+  },
+
+  -- nvim-ts-context-commentstring
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    lazy = true,
+    opts = {
+      enable_autocmd = false,
+    },
   },
 
   -- dial.nvim
