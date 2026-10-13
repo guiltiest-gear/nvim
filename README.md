@@ -87,6 +87,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [nvim-origami](https://github.com/chrisgrieser/nvim-origami)
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+- [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [oil-git.nvim](https://github.com/malewicz1337/oil-git.nvim)

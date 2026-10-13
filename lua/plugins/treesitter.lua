@@ -84,6 +84,14 @@ return {
     opts = { max_lines = 3 },
   },
 
+  -- nvim-treesitter-textobjects
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    branch = "main",
+    event = "VeryLazy",
+    opts = {},
+  },
+
   -- vim-matchup
   {
     "andymass/vim-matchup",
