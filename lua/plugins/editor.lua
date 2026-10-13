@@ -761,7 +761,6 @@ return {
       { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help" },
       { "<leader>fm", "<cmd>Telescope man_pages<CR>", desc = "Man pages" },
       { "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Recently opened" },
-      { "<leader>fR", "<cmd>Telescope registers<CR>", desc = "Registers" },
       { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Keymaps" },
       { "<leader>fc", "<cmd>Telescope commands<CR>", desc = "Commands" },
       {
@@ -1000,6 +999,31 @@ return {
       view_options = {
         show_hidden = true,
         case_insensitive = true,
+      },
+    },
+  },
+
+  -- grug-far.nvim
+  {
+    "MagicDuck/grug-far.nvim",
+    enabled = vim.fn.executable("rg") == 1,
+    opts = { headerMaxSwidth = 80 },
+    cmd = { "GrugFar", "GrugFarWithin" },
+    keys = {
+      {
+        "<leader>fR",
+        function()
+          local grug = require("grug-far")
+          local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")
+          grug.open({
+            transient = true,
+            prefills = {
+              filesFilter = ext and ext ~= "" and "*." .. ext or nil,
+            },
+          })
+        end,
+        mode = { "n", "x" },
+        desc = "Find and replace",
       },
     },
   },
