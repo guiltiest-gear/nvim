@@ -2,7 +2,7 @@ return {
   -- nvim-treesitter
   {
     "nvim-treesitter/nvim-treesitter",
-    lazy = false,
+    event = "VeryLazy",
     build = ":TSUpdate",
     config = function()
       -- Parsers to install
