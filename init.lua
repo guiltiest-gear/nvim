@@ -15,7 +15,7 @@ local function safe_require(module)
 end
 
 -- Load the files
-safe_require("core.options")
-safe_require("core.keymaps")
-safe_require("core.autocommands")
-safe_require("core.bootstrap")
+safe_require("config.options")
+safe_require("config.keymaps")
+safe_require("config.autocommands")
+safe_require("config.lazy")
