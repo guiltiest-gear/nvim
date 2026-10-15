@@ -779,13 +779,7 @@ return {
         "<cmd>Telescope diagnostics<CR>",
         desc = "Workspace diagnostics",
       },
-      {
-        "<leader>fs",
-        "<cmd>Telescope lsp_document_symbols<CR>",
-        desc = "Document symbols",
-      },
       { "<leader>fg", "<cmd>Telescope git_files<CR>", desc = "Git files" },
-      { "<leader>fo", "<cmd>Telescope vim_options<CR>", desc = "Options" },
       { "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Todo" },
       {
         "<leader>fT",
