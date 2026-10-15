@@ -389,4 +389,26 @@ return {
       },
     },
   },
+
+  -- outline.nvim
+  {
+    "hedyhli/outline.nvim",
+    cmd = { "Outline", "OutlineOpen" },
+    keys = {
+      { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
+    },
+    opts = {
+      outline_items = {
+        show_symbol_lineno = true,
+      },
+      outline_window = {
+        show_cursorline = true,
+        hide_cursor = true,
+      },
+      keymaps = {
+        up_and_jump = "<up>",
+        down_and_jump = "<down>",
+      },
+    },
+  },
 }

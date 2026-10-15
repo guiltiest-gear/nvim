@@ -93,6 +93,7 @@ git clone --depth 1 https://codeberg.org/j4de/nvim.git ~/.config/nvim && nvim
 - [oil-git.nvim](https://github.com/malewicz1337/oil-git.nvim)
 - [oil-lsp-diagnostics.nvim](https://github.com/JezerM/oil-lsp-diagnostics.nvim)
 - [oil.nvim](https://github.com/stevearc/oil.nvim)
+- [outline.nvim](https://github.com/hedyhli/outline.nvim)
 - [persistence.nvim](https://github.com/folke/persistence.nvim)
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [precognition.nvim](https://github.com/tris203/precognition.nvim)
