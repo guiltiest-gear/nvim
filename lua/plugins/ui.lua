@@ -82,6 +82,14 @@ return {
     },
   },
 
+  {
+    "nvim-tree/nvim-web-devicons",
+    lazy = true,
+    opts = {
+      prefix = true,
+    },
+  },
+
   -- lualine.nvim
   {
     "nvim-lualine/lualine.nvim",
